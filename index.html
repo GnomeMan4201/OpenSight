@@ -1,0 +1,3647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OPENSIGHT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js">
+// ── Claims / Narrative ────────────────────────────────────────────────────────
+async function loadClaims(entityId = null, role = null) {
+  switchTab('claims-tab');
+  const summaryEl = document.getElementById('claims-summary');
+  const listEl    = document.getElementById('claims-list');
+  summaryEl.innerHTML = '';
+  listEl.innerHTML = '<div class="list-empty">Loading claims…</div>';
+  try {
+    let url = '/claims?limit=100&min_confidence=0.4';
+    if (entityId && role === 'speaker') url += `&speaker_id=${entityId}`;
+    if (entityId && role === 'subject')  url += `&subject_id=${entityId}`;
+    const data = await api(url);
+    const items = data.items || [];
+
+    const byType = {};
+    items.forEach(c => { byType[c.claim_type] = (byType[c.claim_type]||0)+1; });
+    summaryEl.innerHTML = `<div style="display:flex;gap:8px;padding:8px 12px;border-bottom:1px solid var(--border);flex-wrap:wrap;font-size:10px;">
+      ${Object.entries(byType).map(([t,n])=>`<span style="color:#67e8f9;">${n} ${t.toUpperCase()}</span>`).join(' · ')}
+      <span style="margin-left:auto;color:var(--dim);">${data.total} TOTAL</span>
+    </div>`;
+
+    if (!items.length) { listEl.innerHTML = '<div class="list-empty">No claims found</div>'; return; }
+
+    const SENT_COLOR = { positive: '#4ade80', negative: '#f87171', neutral: 'var(--dim)' };
+    const TYPE_COLOR = { allegation: '#f87171', denial: '#fb923c', ruling: '#a78bfa', testimony: '#67e8f9', observation: 'var(--fg)' };
+
+    listEl.innerHTML = items.map(c => {
+      const sc = SENT_COLOR[c.sentiment] || 'var(--dim)';
+      const tc = TYPE_COLOR[c.claim_type] || 'var(--dim)';
+      return `<div style="padding:10px 12px;border-bottom:1px solid var(--border);">
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+          <span style="font-size:9px;color:${tc};letter-spacing:.08em;font-weight:700;">${c.claim_type?.toUpperCase()}</span>
+          <span style="font-size:9px;color:${sc};">${c.sentiment}</span>
+        </div>
+        ${c.speaker ? `<div style="font-size:10px;margin-bottom:2px;"><span style="color:var(--dim);">from:</span> <span style="color:var(--lime);cursor:pointer;" onclick="loadClaims('${c.speaker.id}','speaker')">${c.speaker.name}</span></div>` : ''}
+        ${c.subject ? `<div style="font-size:10px;margin-bottom:4px;"><span style="color:var(--dim);">about:</span> <span style="color:#67e8f9;cursor:pointer;" onclick="loadClaims('${c.subject.id}','subject')">${c.subject.name}</span></div>` : ''}
+        <div style="font-size:10px;color:var(--fg);line-height:1.5;margin-bottom:4px;">${c.claim_text?.slice(0,200)}</div>
+        <div style="font-size:9px;color:var(--dim);">${c.document_name} · p.${c.page_number} · ${Math.round(c.confidence*100)}%</div>
+      </div>`;
+    }).join('');
+  } catch(e) {
+    document.getElementById('claims-list').innerHTML = '<div class="list-empty">Claims load failed</div>';
+    console.error(e);
+  }
+}
+
+async function loadPropagation() {
+  switchTab('claims-tab');
+  const listEl = document.getElementById('claims-list');
+  document.getElementById('claims-summary').innerHTML = '';
+  listEl.innerHTML = '<div class="list-empty">Mapping claim propagation…</div>';
+  try {
+    const data = await api('/claims/propagation?min_docs=2');
+    const chains = data.chains || [];
+    if (!chains.length) { listEl.innerHTML = '<div class="list-empty">No propagating claims found — need claims across 2+ documents</div>'; return; }
+
+    document.getElementById('claims-summary').innerHTML = `<div style="padding:8px 12px;border-bottom:1px solid var(--border);font-size:10px;color:var(--dim);">${data.total} PROPAGATION CHAINS</div>`;
+    listEl.innerHTML = chains.map(ch => `
+      <div style="padding:10px 12px;border-bottom:1px solid var(--border);border-left:3px solid ${ch.unchallenged?'#f87171':'#4ade80'};">
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+          <span style="color:#67e8f9;font-size:11px;font-weight:600;">${ch.subject?.name || 'Unknown subject'}</span>
+          <span style="font-size:9px;color:var(--dim);">depth: ${ch.propagation_depth}</span>
+        </div>
+        <div style="font-size:9px;color:var(--dim);margin-bottom:4px;">${ch.claim_type?.toUpperCase()} · ${ch.unchallenged?'<span style="color:#f87171;">UNCHALLENGED</span>':'<span style="color:#4ade80;">CHALLENGED</span>'}</div>
+        <div style="font-size:10px;color:var(--fg);margin-bottom:6px;">${ch.sample_claim?.slice(0,150)}</div>
+        <div style="display:flex;flex-wrap:wrap;gap:4px;">
+          ${ch.documents.map(d=>`<span style="font-size:8px;color:var(--dim);border:1px solid var(--border);padding:1px 4px;">${d.doc_type||'doc'}: ${d.filename?.slice(0,25)}</span>`).join('')}
+        </div>
+      </div>`).join('');
+  } catch(e) {
+    document.getElementById('claims-list').innerHTML = '<div class="list-empty">Propagation analysis failed</div>';
+    console.error(e);
+  }
+}
+
+async function loadContradictions() {
+  switchTab('claims-tab');
+  const listEl = document.getElementById('claims-list');
+  document.getElementById('claims-summary').innerHTML = '';
+  listEl.innerHTML = '<div class="list-empty">Detecting contradictions…</div>';
+  try {
+    const data = await api('/claims/contradictions');
+    const contrs = data.contradictions || [];
+    if (!contrs.length) { listEl.innerHTML = '<div class="list-empty">No contradictions detected</div>'; return; }
+
+    document.getElementById('claims-summary').innerHTML = `<div style="padding:8px 12px;border-bottom:1px solid var(--border);font-size:10px;color:#f87171;">${data.total} CONTRADICTIONS DETECTED</div>`;
+    listEl.innerHTML = contrs.map(c => `
+      <div style="padding:10px 12px;border-bottom:1px solid var(--border);border-left:3px solid #f87171;">
+        <div style="color:#f87171;font-size:11px;font-weight:600;margin-bottom:6px;">⚡ ${c.subject?.name}</div>
+        ${c.pairs.slice(0,3).map(pair=>`
+          <div style="margin-bottom:8px;">
+            <div style="font-size:9px;color:var(--dim);margin-bottom:2px;">${pair.contradiction_type?.replace(/_/g,' ').toUpperCase()}</div>
+            <div style="font-size:9px;padding:4px 6px;background:var(--bg);margin-bottom:2px;border-left:2px solid #fbbf24;">${pair.claim_a.text?.slice(0,120)}</div>
+            <div style="font-size:9px;padding:4px 6px;background:var(--bg);border-left:2px solid #f87171;">${pair.claim_b.text?.slice(0,120)}</div>
+          </div>`).join('')}
+      </div>`).join('');
+  } catch(e) {
+    document.getElementById('claims-list').innerHTML = '<div class="list-empty">Contradiction detection failed</div>';
+    console.error(e);
+  }
+}
+
+
+// ── Intelligence Engine ───────────────────────────────────────────────────────
+
+function openIntelPanel() {
+  document.getElementById('intel-overlay').style.display = 'flex';
+  showIntelTab('status');
+  loadIntelStatus();
+}
+
+function closeIntelPanel() {
+  document.getElementById('intel-overlay').style.display = 'none';
+}
+
+function showIntelTab(name) {
+  document.querySelectorAll('.ipane').forEach(p => p.style.display = 'none');
+  document.querySelectorAll('.itab').forEach(b => b.classList.remove('active'));
+  document.getElementById('ipane-' + name).style.display = 'flex';
+  const btn = document.getElementById('itab-' + name);
+  if (btn) btn.classList.add('active');
+}
+
+async function loadIntelStatus() {
+  const el = document.getElementById('intel-status-results');
+  el.innerHTML = '<div style="color:var(--dim);padding:20px;">Checking intelligence engine status…</div>';
+  try {
+    const d = await api('/intelligence/status');
+    const online = d.semantic_service === 'online';
+    el.innerHTML = `
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:600px;">
+        <div style="border:1px solid var(--border);padding:16px;">
+          <div style="color:${online?'#4ade80':'#f87171'};font-size:18px;font-weight:700;margin-bottom:4px;">${online?'ONLINE':'OFFLINE'}</div>
+          <div style="color:var(--dim);font-size:10px;">SEMANTIC SERVICE</div>
+          <div style="color:var(--fg);font-size:10px;margin-top:6px;">${d.semantic_url}</div>
+          <div style="color:var(--dim);font-size:10px;margin-top:4px;">~${d.index_size_estimate} pages indexed</div>
+        </div>
+        <div style="border:1px solid var(--border);padding:16px;">
+          <div style="color:#22d3ee;font-size:11px;font-weight:600;margin-bottom:8px;">FEATURES</div>
+          ${Object.entries(d.features).map(([k,v]) =>
+            `<div style="display:flex;justify-content:space-between;font-size:10px;margin-bottom:3px;">
+              <span style="color:var(--dim);">${k.replace(/_/g,' ').toUpperCase()}</span>
+              <span style="color:${v?'#4ade80':'#f87171'}">${v?'YES':'NO'}</span>
+            </div>`
+          ).join('')}
+        </div>
+      </div>
+      ${!online ? `<div style="margin-top:16px;padding:12px;border:1px solid #f87171;color:#f87171;font-size:10px;">
+        Semantic service offline. Start it on port 8010 to enable hybrid search, disambiguation, and graph enrichment.
+        <br>Influence mapping and claim correlation work without it.
+      </div>` : `<div style="margin-top:16px;display:flex;gap:8px;">
+        <button onclick="indexCorpus(this)" style="background:none;border:1px solid #22d3ee;color:#22d3ee;font-size:9px;padding:6px 12px;cursor:pointer;">INDEX ENTIRE CORPUS</button>
+      </div>`}
+    `;
+  } catch(e) {
+    el.innerHTML = '<div style="color:#f87171;padding:20px;">Intelligence engine unreachable. Is the API running?</div>';
+  }
+}
+
+async function indexCorpus(btn) {
+  btn.textContent = 'INDEXING…';
+  btn.disabled = true;
+  try {
+    const d = await fetch('/api/v1/intelligence/index-corpus', {method:'POST'}).then(r=>r.json());
+    btn.textContent = `INDEXING ${d.estimated_pages} PAGES…`;
+    setTimeout(() => { btn.textContent = 'INDEX ENTIRE CORPUS'; btn.disabled = false; }, 8000);
+  } catch(e) { btn.textContent = 'FAILED'; setTimeout(()=>{btn.textContent='INDEX ENTIRE CORPUS';btn.disabled=false;},3000); }
+}
+
+async function runHybridSearch() {
+  const q = document.getElementById('intel-search-input').value.trim();
+  if (!q) return;
+  const sw = parseInt(document.getElementById('w-semantic').value) / 10;
+  const kw = parseInt(document.getElementById('w-keyword').value) / 10;
+  const gw = parseInt(document.getElementById('w-graph').value) / 10;
+  const el = document.getElementById('intel-search-results');
+  el.innerHTML = '<div style="color:var(--dim);padding:20px;">Searching…</div>';
+  try {
+    const d = await api(`/intelligence/search?q=${encodeURIComponent(q)}&k=20&semantic_w=${sw}&keyword_w=${kw}&graph_w=${gw}`);
+    if (!d.results.length) { el.innerHTML = '<div style="color:var(--dim);padding:20px;">No results</div>'; return; }
+    const SIG_COLOR = {semantic:'#22d3ee', keyword:'#a78bfa', graph:'#4ade80'};
+    el.innerHTML = `<div style="color:var(--dim);font-size:10px;margin-bottom:8px;">${d.total} results — ${d.weights.semantic.toFixed(1)} semantic / ${d.weights.keyword.toFixed(1)} keyword / ${d.weights.graph.toFixed(1)} graph</div>` +
+      d.results.map(r => `
+        <div style="border:1px solid var(--border);padding:12px;margin-bottom:8px;cursor:pointer;" onclick="focusDocument('${r.document_id}')">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+            <span style="color:#22d3ee;font-size:10px;font-weight:600;">${r.filename}</span>
+            <span style="font-size:10px;color:#4ade80;">score: ${r.score.toFixed(3)}</span>
+          </div>
+          <div style="font-size:9px;color:var(--dim);margin-bottom:6px;">p.${r.page_number} · ${r.doc_type} · ${r.signals.map(s=>`<span style="color:${SIG_COLOR[s]||'#fff'}">${s}</span>`).join(' ')}</div>
+          <div style="font-size:10px;color:var(--fg);line-height:1.5;">${r.text_snippet || ''}</div>
+        </div>`).join('');
+  } catch(e) { el.innerHTML = '<div style="color:#f87171;padding:20px;">Search failed: ' + e.message + '</div>'; }
+}
+
+// Update weight display labels
+['semantic','keyword','graph'].forEach(k => {
+  const el = document.getElementById('w-'+k);
+  if (el) el.addEventListener('input', () => {
+    document.getElementById('wv-'+k).textContent = (parseInt(el.value)/10).toFixed(1);
+  });
+});
+
+async function loadInfluence() {
+  const el = document.getElementById('influence-results');
+  el.innerHTML = '<div style="color:var(--dim);padding:20px;">Computing influence scores…</div>';
+  try {
+    const d = await api('/intelligence/influence?top_n=25');
+    if (!d.actors.length) { el.innerHTML = '<div style="color:var(--dim);padding:20px;">No data</div>'; return; }
+    const maxScore = d.actors[0]?.scores?.composite || 1;
+    el.innerHTML = `<table style="width:100%;border-collapse:collapse;font-size:10px;">
+      <thead><tr style="color:var(--dim);border-bottom:1px solid var(--border);">
+        <th style="text-align:left;padding:6px;">ACTOR</th>
+        <th style="text-align:left;padding:6px;">TYPE</th>
+        <th style="text-align:center;padding:6px;">COMPOSITE</th>
+        <th style="text-align:center;padding:6px;">DEGREE</th>
+        <th style="text-align:center;padding:6px;">SPREAD</th>
+        <th style="text-align:center;padding:6px;">TARGET</th>
+        <th style="text-align:center;padding:6px;">BRIDGE</th>
+        <th style="text-align:center;padding:6px;">DOCS</th>
+      </tr></thead>
+      <tbody>${d.actors.map((a,i) => {
+        const pct = Math.round(a.scores.composite / maxScore * 100);
+        return `<tr style="border-bottom:1px solid var(--border);cursor:pointer;" onclick="closeIntelPanel();setTimeout(()=>loadEntityById('${a.entity.id}'),100)">
+          <td style="padding:6px;color:#22d3ee;">${a.entity.name}</td>
+          <td style="padding:6px;color:var(--dim);">${a.entity.type}</td>
+          <td style="padding:6px;text-align:center;">
+            <div style="background:var(--panel);border-radius:2px;overflow:hidden;height:12px;width:80px;display:inline-block;">
+              <div style="width:${pct}%;height:100%;background:#22d3ee;opacity:.8;"></div>
+            </div>
+            <span style="margin-left:6px;color:#22d3ee;">${(a.scores.composite*100).toFixed(0)}%</span>
+          </td>
+          <td style="padding:6px;text-align:center;color:var(--fg);">${(a.scores.degree*100).toFixed(0)}%</td>
+          <td style="padding:6px;text-align:center;color:var(--fg);">${(a.scores.spread*100).toFixed(0)}%</td>
+          <td style="padding:6px;text-align:center;color:${a.scores.claim_target>0.1?'#f87171':'var(--fg)'};">${(a.scores.claim_target*100).toFixed(0)}%</td>
+          <td style="padding:6px;text-align:center;color:${a.scores.bridge>0.5?'#fbbf24':'var(--fg)'};">${(a.scores.bridge*100).toFixed(0)}%</td>
+          <td style="padding:6px;text-align:center;color:var(--dim);">${a.raw.docs}</td>
+        </tr>`;}).join('')}
+      </tbody></table>`;
+  } catch(e) { el.innerHTML = '<div style="color:#f87171;padding:20px;">Influence computation failed</div>'; }
+}
+
+async function loadClaimCorrelation() {
+  const el = document.getElementById('correlate-results');
+  el.innerHTML = '<div style="color:var(--dim);padding:20px;">Analyzing claim patterns across documents…</div>';
+  try {
+    const d = await api('/intelligence/correlate-claims');
+    const parts = [];
+    if (d.contradictions.length) {
+      parts.push(`<div style="margin-bottom:20px;">
+        <div style="color:#f87171;font-size:11px;font-weight:700;margin-bottom:8px;">⚡ ${d.contradictions.length} CONTRADICTIONS DETECTED</div>
+        ${d.contradictions.map(c => `<div style="border-left:3px solid #f87171;padding:8px 12px;margin-bottom:6px;border:1px solid var(--border);">
+          <div style="color:#f87171;font-weight:600;">${c.subject || 'Unknown subject'}</div>
+          <div style="color:var(--dim);font-size:9px;margin-top:2px;">${c.contradiction_type.replace(/_/g,' ').toUpperCase()} · ${c.doc_count} docs · ${c.claim_count} claims</div>
+        </div>`).join('')}
+      </div>`);
+    }
+    if (d.propagation_chains.length) {
+      parts.push(`<div style="margin-bottom:20px;">
+        <div style="color:#fbbf24;font-size:11px;font-weight:700;margin-bottom:8px;">📡 ${d.propagation_chains.length} PROPAGATING NARRATIVES</div>
+        ${d.propagation_chains.map(c => `<div style="border:1px solid var(--border);padding:10px 12px;margin-bottom:6px;">
+          <div style="color:#fbbf24;font-weight:600;">${c.subject || 'Unknown subject'} · depth ${c.doc_count}</div>
+          <div style="color:var(--dim);font-size:9px;margin-top:2px;">${c.claim_count} claims · ${c.unchallenged?'<span style="color:#f87171;">UNCHALLENGED</span>':'<span style="color:#4ade80;">CHALLENGED</span>'}</div>
+          <div style="color:var(--fg);font-size:10px;margin-top:4px;">${c.representative_text?.slice(0,150)}</div>
+        </div>`).join('')}
+      </div>`);
+    }
+    parts.push(`<div style="color:var(--dim);font-size:9px;">Analyzed ${d.total_claims_analyzed ?? d.total ?? 0} claims · method: ${d.method ?? 'structural'}</div>`);
+    if (!parts.length || (!(d.contradictions?.length) && !(d.propagation_chains?.length))) {
+      el.innerHTML = '<div style="padding:20px;"><div style="color:var(--dim);margin-bottom:8px;">No cross-document patterns detected yet.</div><div style="color:var(--dim);font-size:10px;">Upload multiple documents with related content to detect claim propagation and contradictions.</div><div style="color:var(--dim);font-size:9px;margin-top:8px;">Analyzed ' + (d.total_claims_analyzed ?? 0) + ' claims · method: ' + (d.method ?? 'structural') + '</div></div>';
+    } else {
+      el.innerHTML = parts.join('');
+    }
+  } catch(e) { el.innerHTML = '<div style="color:#f87171;padding:20px;">Correlation failed</div>'; }
+}
+
+async function loadDisambig() {
+  const el = document.getElementById('disambig-results');
+  el.innerHTML = '<div style="color:var(--dim);padding:20px;">Scanning for semantically similar entities…</div>';
+  try {
+    const d = await api('/intelligence/disambiguate');
+    if (!d.candidates.length) {
+      el.innerHTML = '<div style="color:var(--dim);padding:20px;">No disambiguation candidates found. Either entity contexts are too sparse, or all similar entities were already merged.</div>';
+      return;
+    }
+    el.innerHTML = `<div style="color:var(--dim);font-size:10px;margin-bottom:12px;">${d.total} candidates found — these entity pairs have different names but similar contexts</div>` +
+      d.candidates.map(c => `
+        <div style="border:1px solid var(--border);padding:12px;margin-bottom:8px;display:flex;gap:12px;align-items:center;">
+          <div style="flex:1;">
+            <span style="color:#22d3ee;cursor:pointer;" onclick="closeIntelPanel();loadEntityById('${c.entity_a.id}')">${c.entity_a.name}</span>
+            <span style="color:var(--dim);font-size:9px;"> (${c.entity_a.type}, ${c.entity_a.mentions} mentions)</span>
+          </div>
+          <div style="color:#fbbf24;font-size:11px;padding:0 8px;">≈</div>
+          <div style="flex:1;">
+            <span style="color:#22d3ee;cursor:pointer;" onclick="closeIntelPanel();loadEntityById('${c.entity_b.id}')">${c.entity_b.name}</span>
+            <span style="color:var(--dim);font-size:9px;"> (${c.entity_b.type}, ${c.entity_b.mentions} mentions)</span>
+          </div>
+          <div style="color:#4ade80;font-size:11px;font-weight:600;min-width:40px;text-align:right;">${Math.round(c.semantic_score*100)}%</div>
+          <button onclick="mergeEntities('${c.entity_a.id}','${c.entity_b.id}',this)"
+            style="background:none;border:1px solid #4ade80;color:#4ade80;font-size:8px;padding:3px 8px;cursor:pointer;">MERGE</button>
+        </div>`).join('');
+  } catch(e) { el.innerHTML = '<div style="color:#f87171;padding:20px;">Disambiguation failed: ' + e.message + '</div>'; }
+}
+
+async function mergeEntities(aId, bId, btn) {
+  btn.textContent = '…';
+  btn.disabled = true;
+  try {
+    const r = await fetch(`/api/v1/entities/merge/${aId}/into/${bId}`, {method:'POST'});
+    const d = await r.json();
+    btn.textContent = 'MERGED';
+    btn.style.borderColor = '#4ade80';
+    btn.style.color = '#4ade80';
+    setTimeout(() => loadDisambig(), 1000);
+  } catch(e) { btn.textContent = 'FAILED'; btn.disabled = false; }
+}
+
+function focusDocument(docId) {
+  closeIntelPanel();
+  // Switch to document in left panel
+  const docEl = document.querySelector(`[data-doc-id="${docId}"]`);
+  if (docEl) docEl.click();
+}
+
+async function loadEntityById(entityId) {
+  try {
+    const e = await api(`/entities/${entityId}`);
+    if (e) showEntityDetail(e);
+  } catch(e) { console.error(e); }
+}
+
+
+// ── Narrative Intelligence Engine ────────────────────────────────────────────
+
+function openNIEPanel() {
+  document.getElementById('nie-overlay').style.display = 'flex';
+  showNIETab('status');
+  loadNIEStatus();
+}
+function closeNIEPanel() {
+  document.getElementById('nie-overlay').style.display = 'none';
+}
+function showNIETab(name) {
+  document.querySelectorAll('.npane').forEach(p => p.style.display = 'none');
+  document.querySelectorAll('.ntab').forEach(b => b.classList.remove('active'));
+  document.getElementById('npane-' + name).style.display = 'flex';
+  const btn = document.getElementById('ntab-' + name);
+  if (btn) btn.classList.add('active');
+}
+
+async function loadNIEStatus() {
+  const el = document.getElementById('nie-status-content');
+  el.innerHTML = '<div style="color:var(--dim);">Loading…</div>';
+  try {
+    const d = await api('/nie/status');
+    if (d.error) { el.innerHTML = `<div style="color:#f87171;">${d.error}</div>`; return; }
+    el.innerHTML = `
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:700px;margin-bottom:20px;">
+        ${[['TEXT UNITS',d.text_units||0,'#f59e0b'],['EVIDENCE SPANS',d.evidence_spans||0,'#22d3ee'],
+           ['CLAIMS',d.claims||0,'#a78bfa'],['EVENTS',d.events||0,'#4ade80']].map(([l,v,c])=>
+          `<div style="border:1px solid var(--border);padding:14px;">
+            <div style="color:${c};font-size:22px;font-weight:700;">${v.toLocaleString()}</div>
+            <div style="color:var(--dim);font-size:9px;margin-top:3px;">${l}</div>
+          </div>`).join('')}
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:520px;margin-bottom:20px;">
+        ${[['EDGES',d.edges||0,'#fbbf24'],['SCORED ENTITIES',d.scored_entities||0,'#34d399']].map(([l,v,c])=>
+          `<div style="border:1px solid var(--border);padding:14px;">
+            <div style="color:${c};font-size:18px;font-weight:700;">${v.toLocaleString()}</div>
+            <div style="color:var(--dim);font-size:9px;margin-top:3px;">${l}</div>
+          </div>`).join('')}
+        <div style="border:1px solid var(--border);padding:14px;">
+          <div style="color:var(--fg);font-size:11px;font-weight:600;margin-bottom:6px;">EDGE TYPES</div>
+          ${Object.entries(d.edge_types||{}).map(([t,n])=>
+            `<div style="display:flex;justify-content:space-between;font-size:10px;margin-bottom:2px;">
+              <span style="color:var(--dim);">${t}</span><span style="color:#f59e0b;">${n}</span>
+            </div>`).join('') || '<div style="color:var(--dim);font-size:10px;">None yet</div>'}
+        </div>
+      </div>
+      ${(d.claims||0) === 0 ? `<div style="border:1px solid #f59e0b;padding:14px;max-width:400px;color:#f59e0b;font-size:10px;">
+        No narrative claims extracted yet. Go to REBUILD tab and run extraction.
+      </div>` : ''}
+    `;
+  } catch(e) { el.innerHTML = '<div style="color:#f87171;">NIE not reachable</div>'; }
+}
+
+async function triggerNIERebuild(btn) {
+  const sourceTag = document.getElementById('nie-source-tag').value.trim() || null;
+  const maxUnits = parseInt(document.getElementById('nie-max-units').value) || null;
+  const result = document.getElementById('nie-rebuild-result');
+  btn.textContent = 'EXTRACTING…';
+  btn.disabled = true;
+  result.innerHTML = '<div style="color:#f59e0b;">Running extraction — this may take several minutes with Ollama…</div>';
+  try {
+    const d = await fetch('/api/v1/nie/rebuild', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({source_tag: sourceTag, max_units: maxUnits, rebuild_edges: true})
+    }).then(r => r.json());
+    if (d.status === 'ok') {
+      result.innerHTML = `<div style="color:#4ade80;">
+        ✓ Complete: ${d.units} units → ${d.evidence_spans} spans → ${d.claims} claims extracted
+      </div>`;
+    } else if (d.status === 'queued') {
+      result.innerHTML = `<div style="color:#f59e0b;">${d.note}</div>`;
+    } else {
+      result.innerHTML = `<div style="color:#f87171;">Error: ${d.error || JSON.stringify(d)}</div>`;
+    }
+  } catch(e) {
+    result.innerHTML = `<div style="color:#f87171;">Failed: ${e.message}</div>`;
+  }
+  btn.textContent = 'RUN NARRATIVE EXTRACTION';
+  btn.disabled = false;
+}
+
+async function loadNIEEntities() {
+  const el = document.getElementById('nie-entities-content');
+  el.innerHTML = '<div style="color:var(--dim);">Loading…</div>';
+  try {
+    const d = await api('/nie/entities?limit=30');
+    const entities = d.entities || [];
+    if (!entities.length) { el.innerHTML = '<div style="color:var(--dim);">No scored entities. Run REBUILD first.</div>'; return; }
+    const maxScore = entities[0]?.influence_score || 1;
+    el.innerHTML = `<table style="width:100%;border-collapse:collapse;font-size:10px;">
+      <thead><tr style="color:var(--dim);border-bottom:1px solid var(--border);">
+        <th style="text-align:left;padding:6px;">ENTITY</th>
+        <th style="text-align:center;padding:6px;">INFLUENCE</th>
+        <th style="text-align:center;padding:6px;">WITNESS</th>
+        <th style="text-align:center;padding:6px;">CONTRADICTIONS</th>
+        <th style="text-align:center;padding:6px;">CLAIMS</th>
+      </tr></thead>
+      <tbody>${entities.map(e => {
+        const pct = Math.round((e.influence_score||0)/maxScore*100);
+        return `<tr style="border-bottom:1px solid var(--border);cursor:pointer;" onclick="loadNIEDossierFor('${e.entity_name}')">
+          <td style="padding:6px;color:#f59e0b;">${e.entity_name}</td>
+          <td style="padding:6px;text-align:center;">
+            <div style="background:var(--panel);height:10px;width:80px;display:inline-block;">
+              <div style="width:${pct}%;height:100%;background:#f59e0b;"></div>
+            </div>
+            <span style="margin-left:4px;color:#f59e0b;">${(e.influence_score||0).toFixed(3)}</span>
+          </td>
+          <td style="padding:6px;text-align:center;color:#22d3ee;">${(e.witness_score||0).toFixed(2)}</td>
+          <td style="padding:6px;text-align:center;color:${(e.contradiction_score||0)>0?'#f87171':'var(--dim)'};">${(e.contradiction_score||0).toFixed(1)}</td>
+          <td style="padding:6px;text-align:center;color:var(--dim);">${e.claim_count||0}</td>
+        </tr>`;}).join('')}
+      </tbody></table>`;
+  } catch(e) { el.innerHTML = '<div style="color:#f87171;">Failed</div>'; }
+}
+
+function loadNIEDossierFor(name) {
+  document.getElementById('nie-dossier-entity').value = name;
+  showNIETab('dossier');
+  loadNIEDossier();
+}
+
+async function loadNIEDossier() {
+  const name = document.getElementById('nie-dossier-entity').value.trim();
+  if (!name) return;
+  const el = document.getElementById('nie-dossier-content');
+  el.innerHTML = '<div style="color:var(--dim);">Loading dossier…</div>';
+  try {
+    const d = await api(`/nie/dossier/${encodeURIComponent(name)}`);
+    const EDGE_COLOR = {CONTRADICTS:'#f87171',REPEATS:'#fbbf24',DERIVES_FROM:'#a78bfa',SUPPORTS:'#4ade80'};
+    el.innerHTML = `
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:450px;margin-bottom:16px;">
+        ${[['INFLUENCE',(d.influence_score||0).toFixed(4),'#f59e0b'],
+           ['WITNESS',(d.witness_score||0).toFixed(4),'#22d3ee'],
+           ['CONTRADICTIONS',(d.contradiction_score||0).toFixed(1),'#f87171']].map(([l,v,c])=>
+          `<div style="border:1px solid var(--border);padding:10px;text-align:center;">
+            <div style="color:${c};font-size:16px;font-weight:700;">${v}</div>
+            <div style="color:var(--dim);font-size:9px;">${l}</div>
+          </div>`).join('')}
+      </div>
+      ${d.top_claims?.length ? `<div style="margin-bottom:16px;">
+        <div style="color:#f59e0b;font-size:10px;font-weight:700;margin-bottom:8px;">TOP CLAIMS (${d.top_claims.length})</div>
+        ${d.top_claims.slice(0,8).map(c=>`
+          <div style="border:1px solid var(--border);padding:8px 10px;margin-bottom:4px;">
+            <div style="display:flex;gap:8px;margin-bottom:3px;">
+              <span style="color:#a78bfa;font-size:9px;">${c.claim_type||'?'}</span>
+              <span style="color:var(--dim);font-size:9px;">${c.polarity||''}</span>
+              <span style="color:var(--dim);font-size:9px;margin-left:auto;">${c.normalized_date||''}</span>
+            </div>
+            <div style="font-size:10px;color:var(--fg);">${c.summary||c.object||''}</div>
+            <div style="font-size:9px;color:var(--dim);margin-top:2px;">p.${c.page_number}</div>
+          </div>`).join('')}
+      </div>` : ''}
+      ${d.contradictions?.length ? `<div style="margin-bottom:16px;">
+        <div style="color:#f87171;font-size:10px;font-weight:700;margin-bottom:8px;">⚡ CONTRADICTIONS (${d.contradictions.length})</div>
+        ${d.contradictions.slice(0,5).map(c=>`
+          <div style="border-left:3px solid #f87171;padding:8px 10px;margin-bottom:6px;border:1px solid var(--border);">
+            <div style="font-size:9px;color:#f87171;margin-bottom:4px;">${c.rationale||''} · score: ${(c.score||0).toFixed(2)}</div>
+            <div style="font-size:10px;color:var(--fg);margin-bottom:3px;">A: ${c.src_summary?.slice(0,100)||''}</div>
+            <div style="font-size:10px;color:var(--dim);">B: ${c.dst_summary?.slice(0,100)||''}</div>
+          </div>`).join('')}
+      </div>` : ''}
+      ${d.timeline?.length ? `<div style="margin-bottom:16px;">
+        <div style="color:#4ade80;font-size:10px;font-weight:700;margin-bottom:8px;">TIMELINE (${d.timeline.length} events)</div>
+        ${d.timeline.slice(0,10).map(t=>`
+          <div style="display:flex;gap:12px;padding:6px 0;border-bottom:1px solid var(--border);">
+            <div style="color:#4ade80;font-size:10px;min-width:90px;">${t.normalized_date||'?'}</div>
+            <div style="font-size:10px;color:var(--fg);">${t.summary?.slice(0,120)||''}</div>
+          </div>`).join('')}
+      </div>` : ''}
+      ${d.inbound_propagation?.length ? `<div>
+        <div style="color:#22d3ee;font-size:10px;font-weight:700;margin-bottom:8px;">NARRATIVE PROPAGATION</div>
+        ${d.inbound_propagation.slice(0,5).map(e=>`
+          <div style="padding:6px 0;border-bottom:1px solid var(--border);">
+            <span style="color:${EDGE_COLOR[e.edge_type]||'#fff'};font-size:9px;">${e.edge_type}</span>
+            <span style="color:var(--dim);font-size:9px;"> · score: ${(e.score||0).toFixed(2)}</span>
+            <div style="font-size:10px;color:var(--fg);margin-top:2px;">${e.src_summary?.slice(0,120)||''}</div>
+          </div>`).join('')}
+      </div>` : ''}
+    `;
+  } catch(e) { el.innerHTML = '<div style="color:#f87171;">Dossier failed</div>'; }
+}
+
+async function loadNIETimeline() {
+  const entity = document.getElementById('nie-timeline-entity').value.trim() || null;
+  const el = document.getElementById('nie-timeline-content');
+  el.innerHTML = '<div style="color:var(--dim);">Loading timeline…</div>';
+  try {
+    const url = entity ? `/nie/timeline?entity=${encodeURIComponent(entity)}&limit=100` : '/nie/timeline?limit=100';
+    const events = await api(url);
+    if (!events.length) { el.innerHTML = '<div style="color:var(--dim);">No dated events found. Run REBUILD first.</div>'; return; }
+    // Group by year
+    const byYear = {};
+    events.forEach(e => {
+      const yr = (e.normalized_date||'').slice(0,4) || '?';
+      if (!byYear[yr]) byYear[yr] = [];
+      byYear[yr].push(e);
+    });
+    el.innerHTML = Object.entries(byYear).sort().map(([yr, evts]) => `
+      <div style="margin-bottom:16px;">
+        <div style="color:#f59e0b;font-size:13px;font-weight:700;margin-bottom:8px;">${yr}</div>
+        ${evts.map(e=>`
+          <div style="display:flex;gap:12px;padding:7px 0;border-bottom:1px solid var(--border);">
+            <div style="color:var(--dim);font-size:9px;min-width:80px;">${e.normalized_date||'?'}</div>
+            <div>
+              <div style="font-size:10px;color:var(--fg);">${e.summary?.slice(0,150)||''}</div>
+              <div style="font-size:9px;color:var(--dim);margin-top:2px;">${e.subject||''} · ${e.claim_type||''} · p.${e.page_number}</div>
+            </div>
+          </div>`).join('')}
+      </div>`).join('');
+  } catch(e) { el.innerHTML = '<div style="color:#f87171;">Timeline failed</div>'; }
+}
+
+async function loadNIEContradictions() {
+  const el = document.getElementById('nie-contrad-content');
+  el.innerHTML = '<div style="color:var(--dim);">Scanning…</div>';
+  try {
+    const d = await api('/nie/contradictions?min_score=0.6&limit=50');
+    if (!d.length) {
+      el.innerHTML = '<div style="color:var(--dim);">No contradictions detected yet. Needs 2+ documents with conflicting claims about the same subject.</div>';
+      return;
+    }
+    el.innerHTML = `<div style="color:#f87171;font-size:10px;margin-bottom:12px;">${d.length} CONTRADICTIONS FOUND</div>` +
+      d.map(c=>`
+        <div style="border:1px solid var(--border);border-left:3px solid #f87171;padding:12px;margin-bottom:8px;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+            <span style="color:#f87171;font-size:10px;font-weight:600;">${c.src_subject||'?'}</span>
+            <span style="color:var(--dim);font-size:9px;">score: ${(c.score||0).toFixed(2)}</span>
+          </div>
+          <div style="font-size:9px;color:#fbbf24;margin-bottom:6px;">${(c.rationale||'').toUpperCase()}</div>
+          <div style="font-size:10px;color:var(--fg);padding:6px;background:var(--panel);margin-bottom:4px;border-left:2px solid #22d3ee;">
+            Doc ${c.src_doc?.slice(0,8)||'?'} p.${c.src_page}: ${c.src_summary?.slice(0,140)||''}
+          </div>
+          <div style="font-size:10px;color:var(--fg);padding:6px;background:var(--panel);border-left:2px solid #f87171;">
+            Doc ${c.dst_doc?.slice(0,8)||'?'} p.${c.dst_page}: ${c.dst_summary?.slice(0,140)||''}
+          </div>
+        </div>`).join('');
+  } catch(e) { el.innerHTML = '<div style="color:#f87171;">Failed</div>'; }
+}
+
+</script>
+<style>
+  :root {
+    --bg:       #080808;
+    --bg1:      #0e0e0e;
+    --bg2:      #141414;
+    --bg3:      #1c1c1c;
+    --border:   #222;
+    --border2:  #2e2e2e;
+    --lime:     #c8f045;
+    --lime2:    #a0c832;
+    --lime-dim: rgba(200,240,69,0.12);
+    --lime-glow:rgba(200,240,69,0.35);
+    --amber:    #f0a830;
+    --red:      #f04545;
+    --text:     #d4d4d4;
+    --text-dim: #666;
+    --text-mid: #999;
+    --mono:     'IBM Plex Mono', monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    width: 100%; height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 12px;
+    overflow: hidden;
+  }
+
+  /* ── TOPBAR ── */
+  #topbar {
+    height: 40px;
+    background: var(--bg1);
+    border-bottom: 1px solid var(--border2);
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 24px;
+    position: relative;
+    z-index: 100;
+  }
+
+  #logo {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 15px;
+    letter-spacing: 0.3em;
+    color: var(--lime);
+    text-shadow: 0 0 12px var(--lime-glow);
+    white-space: nowrap;
+  }
+
+  #logo span { color: var(--text-dim); }
+
+  .topbar-sep {
+    width: 1px; height: 20px;
+    background: var(--border2);
+  }
+
+  #status-bar {
+    display: flex; gap: 16px; align-items: center;
+    flex: 1;
+  }
+
+  .stat-pill {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 10px; color: var(--text-dim);
+    letter-spacing: 0.05em;
+  }
+
+  .stat-pill .val {
+    color: var(--lime);
+    font-weight: 600;
+  }
+
+  .stat-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--border2);
+  }
+
+  .stat-dot.live { background: var(--lime); box-shadow: 0 0 6px var(--lime); animation: pulse 2s infinite; }
+  .stat-dot.warn { background: var(--amber); }
+  .stat-dot.err  { background: var(--red); }
+
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+  #api-status {
+    margin-left: auto;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    display: flex; align-items: center; gap: 6px;
+  }
+
+  /* ── LAYOUT ── */
+  #layout {
+    display: grid;
+    grid-template-columns: 280px 1fr 300px;
+    height: calc(100vh - 40px);
+  }
+
+  /* ── PANELS ── */
+  .panel {
+    background: var(--bg1);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .panel:last-child { border-right: none; border-left: 1px solid var(--border); }
+
+  .panel-header {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .panel-label {
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    flex: 1;
+  }
+
+  .panel-label .accent { color: var(--lime); }
+
+  .panel-body {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .panel-body::-webkit-scrollbar { width: 3px; }
+  .panel-body::-webkit-scrollbar-track { background: transparent; }
+  .panel-body::-webkit-scrollbar-thumb { background: var(--border2); }
+
+  /* ── UPLOAD ZONE ── */
+  #upload-zone {
+    margin: 12px;
+    border: 1px dashed var(--border2);
+    padding: 16px 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    position: relative;
+  }
+
+  #upload-zone:hover, #upload-zone.drag {
+    border-color: var(--lime);
+    background: var(--lime-dim);
+  }
+
+  #upload-zone input[type=file] {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    opacity: 0; cursor: pointer;
+  }
+
+  .upload-icon {
+    font-size: 20px;
+    margin-bottom: 6px;
+    color: var(--text-dim);
+  }
+
+  .upload-text {
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+  }
+
+  .upload-text .hl { color: var(--lime); }
+
+  #upload-progress {
+    display: none;
+    margin: 0 12px 8px;
+    height: 2px;
+    background: var(--border2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  #upload-progress.active { display: block; }
+
+  #upload-progress::after {
+    content: '';
+    position: absolute;
+    left: -40%;
+    top: 0; bottom: 0;
+    width: 40%;
+    background: var(--lime);
+    animation: slide 0.8s linear infinite;
+  }
+
+  @keyframes slide { to { left: 110%; } }
+
+  /* ── FILTER ROW ── */
+  .filter-row {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+    display: flex; gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .filter-input {
+    flex: 1;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 4px 8px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+
+  .filter-input:focus { border-color: var(--lime); }
+  .filter-input::placeholder { color: var(--text-dim); }
+
+  /* ── DOCUMENT LIST ── */
+  .doc-item {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: background 0.1s;
+    position: relative;
+  }
+
+  .doc-item:hover { background: var(--bg2); }
+  .doc-item.active { background: var(--bg3); border-left: 2px solid var(--lime); }
+
+  .doc-name {
+    font-size: 11px;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 4px;
+  }
+
+  .doc-meta {
+    display: flex; gap: 8px; align-items: center;
+  }
+
+  .doc-tag {
+    font-size: 9px;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+  }
+
+  .status-badge {
+    font-size: 9px;
+    padding: 1px 5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .status-badge.done       { color: var(--lime);  background: var(--lime-dim); }
+  .status-badge.processing { color: var(--amber); background: rgba(240,168,48,0.12); }
+  .status-badge.pending    { color: var(--text-dim); background: var(--bg3); }
+  .status-badge.error      { color: var(--red);   background: rgba(240,69,69,0.12); }
+
+  /* ── GRAPH PANEL ── */
+  #graph-panel {
+    background: var(--bg);
+    position: relative;
+    overflow: hidden;
+  }
+
+  #graph-canvas {
+    width: 100%; height: 100%;
+  }
+
+  #graph-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    padding: 12px 16px;
+    display: flex; align-items: flex-start; gap: 10px;
+    pointer-events: none;
+  }
+
+  #search-bar {
+    display: flex;
+    gap: 0;
+    pointer-events: all;
+    flex: 1;
+    max-width: 420px;
+  }
+
+  #search-input {
+    flex: 1;
+    background: rgba(8,8,8,0.92);
+    border: 1px solid var(--border2);
+    border-right: none;
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 12px;
+    padding: 7px 12px;
+    outline: none;
+    backdrop-filter: blur(8px);
+  }
+
+  #search-input:focus { border-color: var(--lime); }
+  #search-input::placeholder { color: var(--text-dim); }
+
+  #search-btn {
+    background: var(--lime);
+    border: none;
+    color: var(--bg);
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 7px 14px;
+    cursor: pointer;
+    letter-spacing: 0.1em;
+    transition: background 0.15s;
+  }
+
+  #search-btn:hover { background: var(--lime2); }
+
+  #graph-hint {
+    position: absolute;
+    bottom: 16px; left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  #graph-empty {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    pointer-events: none;
+  }
+
+  .empty-glyph {
+    font-size: 40px;
+    opacity: 0.08;
+    font-family: 'Share Tech Mono', monospace;
+  }
+
+  .empty-text {
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  /* ── TOOLTIP ── */
+  #tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: rgba(8,8,8,0.95);
+    border: 1px solid var(--border2);
+    padding: 8px 12px;
+    font-size: 11px;
+    max-width: 220px;
+    display: none;
+    z-index: 50;
+    backdrop-filter: blur(4px);
+  }
+
+  #tooltip .tt-name { color: var(--lime); font-weight: 600; margin-bottom: 3px; }
+  #tooltip .tt-type { color: var(--text-dim); font-size: 10px; letter-spacing: 0.05em; }
+  #tooltip .tt-weight { color: var(--amber); font-size: 10px; margin-top: 4px; }
+
+  /* ── DETAIL PANEL ── */
+  .detail-section {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .detail-section-label {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+  }
+
+  .detail-entity-name {
+    font-size: 14px;
+    color: var(--lime);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+    word-break: break-all;
+    text-shadow: 0 0 10px var(--lime-glow);
+  }
+
+  .detail-entity-type {
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .detail-stat-row {
+    display: flex; gap: 16px; margin-top: 10px;
+  }
+
+  .detail-stat {
+    display: flex; flex-direction: column; gap: 2px;
+  }
+
+  .detail-stat .ds-val {
+    font-size: 18px;
+    color: var(--text);
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  .detail-stat .ds-label {
+    font-size: 9px;
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ── CONNECTION LIST ── */
+  .conn-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: background 0.1s;
+  }
+
+  .conn-item:hover { background: var(--bg2); }
+
+  .conn-bar {
+    width: 3px;
+    background: var(--lime);
+    align-self: stretch;
+    flex-shrink: 0;
+    opacity: 0.4;
+  }
+
+  .conn-name {
+    flex: 1;
+    font-size: 11px;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .conn-type {
+    font-size: 9px;
+    color: var(--text-dim);
+    flex-shrink: 0;
+  }
+
+  .conn-weight {
+    font-size: 11px;
+    color: var(--lime);
+    font-weight: 600;
+    flex-shrink: 0;
+    min-width: 20px;
+    text-align: right;
+  }
+
+  /* ── SEARCH RESULTS ── */
+  .result-item {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: background 0.1s;
+  }
+
+  .result-item:hover { background: var(--bg2); }
+
+  .result-filename {
+    font-size: 10px;
+    color: var(--lime);
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+
+  .result-snippet {
+    font-size: 11px;
+    color: var(--text-dim);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .result-snippet mark {
+    background: none;
+    color: var(--lime);
+    font-weight: 600;
+  }
+
+  .result-meta {
+    display: flex; gap: 8px; margin-top: 5px; align-items: center;
+  }
+
+  .result-page {
+    font-size: 9px;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── EMPTY STATES ── */
+  .list-empty {
+    padding: 24px 14px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    line-height: 1.8;
+  }
+
+  /* ── TABS ── */
+  .tab-row {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+
+  .tab {
+    padding: 8px 14px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: color 0.1s, border-color 0.1s;
+    flex: 1;
+    text-align: center;
+  }
+
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--lime); border-bottom-color: var(--lime); }
+
+  .tab-pane { display: none; flex: 1; flex-direction: column; overflow: hidden; }
+  .tab-pane.active { display: flex; }
+
+  /* ── CONTROLS ── */
+  .ctrl-btn {
+    background: var(--bg2);
+    border: 1px solid var(--border2);
+    color: var(--text-mid);
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 4px 10px;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    transition: border-color 0.15s, color 0.15s;
+  }
+
+  .ctrl-btn:hover { border-color: var(--lime); color: var(--lime); }
+  .ctrl-btn.active { border-color: var(--lime); color: var(--lime); background: var(--lime-dim); }
+
+  /* ── DEPTH SELECTOR ── */
+  #depth-select {
+    background: var(--bg2);
+    border: 1px solid var(--border2);
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 4px 6px;
+    outline: none;
+    pointer-events: all;
+  }
+
+  #depth-select:focus { border-color: var(--lime); }
+
+
+  /* ── WEIGHT SLIDER ── */
+  #weight-slider-wrap {
+    display: flex; align-items: center; gap: 6px;
+    pointer-events: all;
+    background: rgba(8,8,8,0.85);
+    border: 1px solid var(--border2);
+    padding: 4px 10px;
+    backdrop-filter: blur(8px);
+  }
+  #weight-slider-wrap label {
+    font-size: 9px; letter-spacing: 0.1em;
+    color: var(--text-dim); white-space: nowrap;
+  }
+  #weight-slider {
+    -webkit-appearance: none;
+    width: 80px; height: 2px;
+    background: var(--border2);
+    outline: none;
+  }
+  #weight-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px; height: 10px;
+    background: var(--lime);
+    cursor: pointer;
+    border-radius: 0;
+  }
+  #weight-val { font-size: 10px; color: var(--lime); min-width: 12px; }
+
+
+  /* ── REDACTION AUDIT ── */
+  .redact-flag {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    border-left: 3px solid var(--red);
+  }
+  .redact-flag.hidden_text { border-left-color: var(--amber); }
+  .redact-flag.reviewed    { border-left-color: var(--border2); opacity: 0.5; }
+
+  .redact-page-header {
+    padding: 8px 14px 4px;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg2);
+    display: flex; align-items: center; gap: 8px;
+  }
+
+  .redact-context {
+    font-size: 10px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    margin: 4px 0;
+  }
+
+  .redact-context .gap {
+    display: inline-block;
+    background: var(--red);
+    color: var(--bg);
+    padding: 0 6px;
+    font-size: 9px;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin: 0 2px;
+    opacity: 0.85;
+  }
+
+  .redact-context .gap.hidden { background: var(--amber); color: var(--bg); }
+
+  .redact-entities {
+    display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px;
+  }
+
+  .redact-entity-chip {
+    font-size: 9px;
+    padding: 2px 6px;
+    border: 1px solid var(--border2);
+    color: var(--text-mid);
+    cursor: pointer;
+    transition: border-color 0.1s, color 0.1s;
+  }
+  .redact-entity-chip:hover { border-color: var(--lime); color: var(--lime); }
+
+  .redact-summary-bar {
+    padding: 10px 14px;
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border2);
+    display: flex; gap: 16px; align-items: center;
+  }
+
+  .redact-stat { display: flex; flex-direction: column; gap: 2px; }
+  .redact-stat .rv { font-size: 16px; font-weight: 300; color: var(--red); }
+  .redact-stat .rl { font-size: 9px; color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase; }
+  .redact-stat .rv.amber { color: var(--amber); }
+
+
+  /* ── DEDUP ── */
+  .dedup-pair {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    border-left: 3px solid var(--amber);
+  }
+  .dedup-pair.high   { border-left-color: var(--red); }
+  .dedup-pair.medium { border-left-color: var(--amber); }
+  .dedup-pair.low    { border-left-color: var(--border2); }
+  .dedup-names {
+    display: flex; gap: 8px; align-items: center; margin-bottom: 5px; flex-wrap: wrap;
+  }
+  .dedup-name {
+    font-size: 11px; font-weight: 600; color: var(--text); cursor: pointer;
+  }
+  .dedup-name:hover { color: var(--lime); }
+  .dedup-arrow { color: var(--text-dim); font-size: 10px; }
+  .dedup-reason {
+    font-size: 9px; color: var(--text-dim); margin-bottom: 6px; line-height: 1.5;
+  }
+  .dedup-actions { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+  .dedup-btn {
+    font-size: 9px; padding: 3px 8px;
+    border: 1px solid var(--border2);
+    background: none; color: var(--text-mid); cursor: pointer;
+    font-family: var(--font); letter-spacing: 0.05em;
+    transition: all 0.1s;
+  }
+  .dedup-btn:hover { border-color: var(--lime); color: var(--lime); }
+  .dedup-btn.merge  { border-color: var(--red); color: var(--red); }
+  .dedup-btn.merge:hover { background: var(--red); color: var(--bg); }
+  .dedup-conf {
+    font-size: 9px; color: var(--text-dim); margin-left: auto;
+  }
+  .dedup-conf.high   { color: var(--red); }
+  .dedup-conf.medium { color: var(--amber); }
+  .dedup-type-chip {
+    font-size: 8px; padding: 1px 5px; border: 1px solid var(--border2); color: var(--text-dim);
+  }
+  .dedup-mentions { font-size: 9px; color: var(--text-dim); }
+
+  /* ── SCAN LINE EFFECT ── */
+  #graph-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.03) 2px,
+      rgba(0,0,0,0.03) 4px
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  #graph-canvas { position: relative; z-index: 2; }
+  #graph-overlay, #graph-empty, #tooltip, #graph-hint { z-index: 3; }
+
+  .itab {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--dim);
+    font-size: 9px;
+    padding: 4px 10px;
+    cursor: pointer;
+    letter-spacing: .08em;
+    font-family: inherit;
+    transition: all .15s;
+  }
+  .itab.active, .itab:hover {
+    border-color: #22d3ee;
+    color: #22d3ee;
+  }
+  .ipane { flex: 1; }
+
+  .ntab {
+    background: none; border: 1px solid var(--border); color: var(--dim);
+    font-size: 9px; padding: 4px 10px; cursor: pointer;
+    letter-spacing: .08em; font-family: inherit; transition: all .15s;
+  }
+  .ntab.active, .ntab:hover { border-color: #f59e0b; color: #f59e0b; }
+  .npane { flex: 1; }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div id="topbar">
+  <div id="logo">OPEN<span>SIGHT</span></div>
+  <div class="topbar-sep"></div>
+  <div id="status-bar">
+    <div class="stat-pill">
+      <div class="stat-dot" id="dot-api"></div>
+      <span id="stat-api">API</span>
+    </div>
+    <div class="stat-pill">DOCS <span class="val" id="stat-docs">—</span></div>
+    <div class="stat-pill">ENTITIES <span class="val" id="stat-entities">—</span></div>
+    <div class="stat-pill">EDGES <span class="val" id="stat-edges">—</span></div>
+  </div>
+  <button class="ctrl-btn" id="btn-dedup" onclick="loadDuplicates()">DEDUP</button>
+  <button class="ctrl-btn" id="btn-clusters" onclick="discoverClusters()">CLUSTERS</button>
+  <button class="ctrl-btn" id="btn-export" onclick="exportBriefing()">EXPORT</button>
+  <button class="ctrl-btn" id="btn-narrative" onclick="buildNarrative()">NARRATIVE</button>
+  <button class="ctrl-btn" id="btn-redact" onclick="showRedactionAudit()" style="color:var(--red); border-color:var(--red);">REDACTIONS</button>
+  <button class="ctrl-btn" id="btn-timeline" onclick="buildTimeline()">TIMELINE</button>
+  <button class="ctrl-btn" id="btn-leads" onclick="discoverLeads()" style="color:#a78bfa; border-color:#a78bfa;">LEADS</button>
+  <button onclick="openIntelPanel()" style="background:none;border:1px solid #22d3ee;color:#22d3ee;font-size:9px;padding:4px 10px;cursor:pointer;letter-spacing:.1em;font-family:inherit;">INTEL</button>
+  <button onclick="openNIEPanel()" style="background:none;border:1px solid #f59e0b;color:#f59e0b;font-size:9px;padding:4px 10px;cursor:pointer;letter-spacing:.1em;font-family:inherit;">NARRATIVE</button>
+  <div id="api-status">
+    <div class="stat-dot" id="dot-live"></div>
+    <span id="api-url">localhost:8000</span>
+  </div>
+  </div>
+
+<!-- MAIN LAYOUT -->
+<div id="layout">
+
+  <!-- LEFT PANEL: Documents -->
+  <div class="panel" id="left-panel">
+    <div class="panel-header">
+      <div class="panel-label"><span class="accent">◈</span> DOCUMENTS</div>
+      <button class="ctrl-btn" id="refresh-docs">↻</button>
+    </div>
+
+    <div id="upload-zone">
+      <input type="file" id="file-input" multiple accept=".txt,.pdf,.doc,.docx,.csv,.json,.xml">
+      <select id="doc-type-select" onclick="event.stopPropagation()" style="margin-top:6px;width:100%;background:var(--panel);border:1px solid var(--border);color:var(--fg);font-size:9px;padding:3px 6px;letter-spacing:.05em;cursor:pointer;">
+        <option value="other">DOC TYPE: OTHER</option>
+        <option value="witness_statement">WITNESS STATEMENT</option>
+        <option value="psych_report">PSYCH REPORT</option>
+        <option value="court_decision">COURT DECISION</option>
+        <option value="email">EMAIL</option>
+        <option value="legal_filing">LEGAL FILING</option>
+        <option value="expert_report">EXPERT REPORT</option>
+      </select>
+      <input type="text" id="source-tag-input" placeholder="source tag (optional)" onclick="event.stopPropagation()" style="margin-top:4px;width:100%;background:var(--panel);border:1px solid var(--border);color:var(--fg);font-size:9px;padding:3px 6px;box-sizing:border-box;">
+      <div class="upload-icon">⊕</div>
+      <div class="upload-text">
+        Drop files or <span class="hl">click to upload</span><br>
+        txt · pdf · docx · csv · json
+      </div>
+    </div>
+    <div id="upload-progress"></div>
+
+    <div class="filter-row">
+      <input class="filter-input" id="doc-filter" placeholder="filter documents…">
+    </div>
+
+    <div class="panel-body" id="doc-list">
+      <div class="list-empty">No documents ingested yet</div>
+    </div>
+  </div>
+
+  <!-- CENTER PANEL: Graph -->
+  <div id="graph-panel">
+    <svg id="graph-canvas"></svg>
+
+    <div id="graph-overlay">
+      <div id="search-bar">
+        <input id="search-input" placeholder="search corpus…" />
+        <button id="search-btn">EXEC</button>
+      </div>
+      <div id="weight-slider-wrap">
+        <label>WEIGHT ≥</label>
+        <input type="range" id="weight-slider" min="1" max="10" value="1" step="1">
+        <span id="weight-val">1</span>
+      </div>
+      <select id="depth-select" title="Graph depth">
+        <option value="1">DEPTH 1</option>
+        <option value="2" selected>DEPTH 2</option>
+        <option value="3">DEPTH 3</option>
+      </select>
+    </div>
+
+    <div id="graph-empty">
+      <div class="empty-glyph">◈</div>
+      <div class="empty-text">Select an entity to explore</div>
+    </div>
+
+    <div id="tooltip">
+      <div class="tt-name" id="tt-name"></div>
+      <div class="tt-type" id="tt-type"></div>
+      <div class="tt-weight" id="tt-weight"></div>
+    </div>
+
+    <div id="graph-hint">DRAG · SCROLL TO ZOOM · CLICK NODE TO EXPAND</div>
+  </div>
+
+  <!-- RIGHT PANEL: Detail -->
+  <div class="panel" id="right-panel">
+    <div class="panel-header">
+      <div class="panel-label"><span class="accent">◈</span> INTELLIGENCE</div>
+    </div>
+
+    <div class="tab-row">
+      <div class="tab active" data-tab="entity-tab">ENTITY</div>
+      <div class="tab" data-tab="search-tab">SEARCH</div>
+      <div class="tab" data-tab="redact-tab" style="color:var(--red);">REDACT</div>
+      <div class="tab" data-tab="dedup-tab" style="color:var(--amber);">DEDUP</div>
+      <div class="tab" data-tab="leads-tab" style="color:#a78bfa;">LEADS</div>
+      <div class="tab" data-tab="claims-tab" style="color:#67e8f9;">CLAIMS</div>
+    </div>
+
+    <!-- ENTITY TAB -->
+    <div class="tab-pane active" id="entity-tab">
+      <div id="entity-detail-empty" class="detail-section list-empty">
+        Click a document to load entities,<br>or select a node in the graph
+      </div>
+
+      <div id="entity-detail" style="display:none; flex-direction:column; flex:1; overflow:hidden;">
+        <div class="detail-section">
+          <div class="detail-section-label">Selected Entity</div>
+          <div class="detail-entity-name" id="det-name">—</div>
+          <div class="detail-entity-type" id="det-type">—</div>
+          <div class="detail-stat-row">
+            <div class="detail-stat">
+              <div class="ds-val" id="det-mentions">0</div>
+              <div class="ds-label">Mentions</div>
+            </div>
+            <div class="detail-stat">
+              <div class="ds-val" id="det-connections">0</div>
+              <div class="ds-label">Connections</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-header" style="border-top:none;">
+          <div class="panel-label">CONNECTIONS</div>
+        </div>
+        <div class="panel-body" id="conn-list"></div>
+
+        <div class="panel-header">
+          <div class="panel-label">EVIDENCE</div>
+        </div>
+        <div id="evidence-list" style="overflow-y:auto; max-height:180px;"></div>
+
+        <div class="panel-header">
+          <div class="panel-label">CLAIMS</div>
+        </div>
+        <div style="padding:6px 12px;display:flex;gap:6px;border-bottom:1px solid var(--border);">
+          <button id="btn-claims-speaker" onclick="" style="flex:1;background:none;border:1px solid #67e8f9;color:#67e8f9;font-size:8px;padding:3px;cursor:pointer;letter-spacing:.05em;">BY THIS ENTITY</button>
+          <button id="btn-claims-subject" onclick="" style="flex:1;background:none;border:1px solid #67e8f9;color:#67e8f9;font-size:8px;padding:3px;cursor:pointer;letter-spacing:.05em;">ABOUT THIS ENTITY</button>
+        </div>
+
+        <div class="panel-header">
+          <div class="panel-label">EDGE EVIDENCE</div>
+        </div>
+        <div id="edge-evidence-list" style="overflow-y:auto; max-height:160px;">
+          <div class="list-empty">Click a graph edge to inspect</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEDUP TAB -->
+    <div class="tab-pane" id="dedup-tab" style="flex-direction:column; overflow:hidden;">
+      <div id="dedup-summary" style="flex-shrink:0;"></div>
+      <div class="panel-body" id="dedup-list">
+        <div class="list-empty">Click DEDUP to find duplicate entities</div>
+      </div>
+    </div>
+
+    <!-- REDACTION TAB -->
+    <div class="tab-pane" id="redact-tab" style="flex-direction:column; overflow:hidden;">
+      <div id="redact-summary" style="flex-shrink:0;"></div>
+      <div class="panel-body" id="redact-list">
+        <div class="list-empty">Click REDACTIONS to audit the corpus</div>
+      </div>
+    </div>
+
+
+    <!-- LEADS TAB -->
+    <div class="tab-pane" id="leads-tab" style="flex-direction:column; overflow:hidden;">
+      <div id="leads-summary" style="flex-shrink:0;"></div>
+      <div class="panel-body" id="leads-list">
+        <div class="list-empty">Click LEADS to discover investigative leads</div>
+      </div>
+    </div>
+
+    <!-- CLAIMS TAB -->
+    <div class="tab-pane" id="claims-tab" style="flex-direction:column;overflow:hidden;">
+      <div id="claims-summary" style="flex-shrink:0;"></div>
+      <div class="panel-body" id="claims-list">
+        <div class="list-empty">Select an entity to see related claims, or click PROPAGATION</div>
+      </div>
+      <div style="flex-shrink:0;padding:8px 12px;border-top:1px solid var(--border);display:flex;gap:6px;">
+        <button onclick="loadClaims()" style="flex:1;background:none;border:1px solid #67e8f9;color:#67e8f9;font-size:9px;padding:4px;cursor:pointer;letter-spacing:.06em;">ALL CLAIMS</button>
+        <button onclick="loadPropagation()" style="flex:1;background:none;border:1px solid #67e8f9;color:#67e8f9;font-size:9px;padding:4px;cursor:pointer;letter-spacing:.06em;">PROPAGATION</button>
+        <button onclick="loadContradictions()" style="flex:1;background:none;border:1px solid #f87171;color:#f87171;font-size:9px;padding:4px;cursor:pointer;letter-spacing:.06em;">CONTRADICTIONS</button>
+      </div>
+    </div>
+    <!-- SEARCH TAB -->
+    <div class="tab-pane" id="search-tab" style="flex-direction:column; overflow:hidden;">
+      <div class="filter-row">
+        <input class="filter-input" id="search-input-2" placeholder="search documents…">
+        <button class="ctrl-btn" id="search-btn-2">GO</button>
+      </div>
+      <div class="panel-body" id="search-results">
+        <div class="list-empty">Enter a query to search the corpus</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const API = 'http://localhost:8000/api/v1';
+
+// ── State ─────────────────────────────────────────────────────────────────────
+let state = {
+  docs: [],
+  activeDoc: null,
+  activeEntity: null,
+  graphNodes: [],
+  graphEdges: [],
+  simulation: null,
+  selectedEdge: null,
+};
+
+// ── API helpers ───────────────────────────────────────────────────────────────
+async function api(path, opts = {}) {
+  const r = await fetch(API + path, opts);
+  if (!r.ok) throw new Error(`${r.status} ${path}`);
+  return r.json();
+}
+
+async function checkApi() {
+  try {
+    await fetch('http://localhost:8000/health');
+    document.getElementById('dot-api').className = 'stat-dot live';
+    document.getElementById('dot-live').className = 'stat-dot live';
+  } catch {
+    document.getElementById('dot-api').className = 'stat-dot err';
+    document.getElementById('dot-live').className = 'stat-dot err';
+  }
+}
+
+// ── Stats bar ─────────────────────────────────────────────────────────────────
+async function refreshStats() {
+  try {
+    const [docs, entities, rels] = await Promise.all([
+      api('/documents'),
+      api('/entities'),
+      api('/graph/relationships?limit=1'),
+    ]);
+    document.getElementById('stat-docs').textContent     = docs.total ?? docs.items?.length ?? '—';
+    document.getElementById('stat-entities').textContent = entities.total ?? entities.items?.length ?? '—';
+    // get total from a broader call
+    const allRels = await api('/graph/relationships?limit=500');
+    document.getElementById('stat-edges').textContent    = allRels.length ?? '—';
+  } catch { /* silent */ }
+}
+
+// ── Document list ─────────────────────────────────────────────────────────────
+async function loadDocs() {
+  try {
+    const data = await api('/documents?limit=200');
+    state.docs = data.items ?? data;
+    renderDocs();
+    refreshStats();
+  } catch {
+    document.getElementById('doc-list').innerHTML = '<div class="list-empty">Cannot reach API</div>';
+  }
+}
+
+function renderDocs() {
+  const filter = document.getElementById('doc-filter').value.toLowerCase();
+  const filtered = state.docs.filter(d =>
+    (d.original_name || d.filename).toLowerCase().includes(filter)
+  );
+  const el = document.getElementById('doc-list');
+  if (!filtered.length) {
+    el.innerHTML = '<div class="list-empty">No documents found</div>';
+    return;
+  }
+  el.innerHTML = filtered.map(d => `
+    <div class="doc-item ${state.activeDoc?.id === d.id ? 'active' : ''}"
+         data-id="${d.id}" onclick="selectDoc('${d.id}')" style="flex:1;">
+      <div class="doc-name">${d.original_name || d.filename}</div>
+      <div class="doc-meta">
+        <span class="status-badge ${d.status}">${d.status}</span>
+        ${d.source_tag ? `<span class="doc-tag">#${d.source_tag}</span>` : ''}
+        ${d.page_count ? `<span class="doc-tag">${d.page_count}p</span>` : ''}
+      </div>
+    </div>
+  `).join('');
+}
+
+async function selectDoc(id) {
+  state.activeDoc = state.docs.find(d => d.id === id);
+  renderDocs();
+
+  // Load entities for this document
+  try {
+    // Use mentions to get entities actually in this document
+    const mentionData = await api(`/entities?limit=200`);
+    const allEnts = mentionData.items ?? mentionData;
+    // Find entities mentioned in this doc via its mentions
+    const docMentions = await api(`/documents/${id}/pages`);
+    const pageTexts = docMentions.pages ?? docMentions ?? [];
+    // Fall back: get top entity by mention count for this doc via relationships
+    const docEnts = await api(`/graph/relationships?limit=500`);
+    // Get entity IDs that appear in this doc's mentions
+    const entMentions = await Promise.all(
+      allEnts.slice(0, 30).map(e =>
+        api(`/entities/${e.id}/mentions?page_size=5`)
+          .then(m => ({ entity: e, inDoc: (m.mentions||[]).some(x => x.document_id === id) }))
+          .catch(() => ({ entity: e, inDoc: false }))
+      )
+    );
+    const docSpecific = entMentions.filter(x => x.inDoc).map(x => x.entity);
+    const items = docSpecific.length ? docSpecific : allEnts;
+    if (items.length) {
+      showEntityDetail(items[0]);
+      loadEntityNetwork(items[0].id);
+    }
+  } catch {}
+}
+
+// ── Upload ────────────────────────────────────────────────────────────────────
+const fileInput    = document.getElementById('file-input');
+const uploadZone   = document.getElementById('upload-zone');
+const uploadProg   = document.getElementById('upload-progress');
+
+uploadZone.addEventListener('dragover',  e => { e.preventDefault(); uploadZone.classList.add('drag'); });
+uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag'));
+uploadZone.addEventListener('drop', e => {
+  e.preventDefault();
+  uploadZone.classList.remove('drag');
+  uploadFiles(Array.from(e.dataTransfer.files));
+});
+
+fileInput.addEventListener('change', () => uploadFiles(Array.from(fileInput.files)));
+
+async function uploadFiles(files) {
+  if (!files.length) return;
+  uploadProg.classList.add('active');
+  const docType   = document.getElementById('doc-type-select')?.value || 'other';
+  const sourceTag = document.getElementById('source-tag-input')?.value || '';
+
+  for (const file of files) {
+    const fd = new FormData();
+    fd.append('files', file);
+    if (docType)   fd.append('doc_type', docType);
+    if (sourceTag) fd.append('source_tag', sourceTag);
+    try {
+      await fetch(`${API}/documents/upload`, { method: 'POST', body: fd });
+    } catch {}
+  }
+
+  uploadProg.classList.remove('active');
+  fileInput.value = '';
+  await loadDocs();
+  // Poll until all processing
+  pollPending();
+}
+
+async function pollPending() {
+  const pending = state.docs.filter(d => d.status === 'processing' || d.status === 'pending');
+  if (!pending.length) return;
+  setTimeout(async () => { await loadDocs(); pollPending(); }, 1500);
+}
+
+// ── Entity detail ─────────────────────────────────────────────────────────────
+function showEntityDetail(entity) {
+  state.activeEntity = entity;
+  document.getElementById('entity-detail-empty').style.display = 'none';
+  const det = document.getElementById('entity-detail');
+  det.style.display = 'flex';
+
+  document.getElementById('edge-evidence-list').innerHTML = '<div class="list-empty">Click a graph edge to inspect</div>';
+  document.getElementById('det-name').textContent = entity.canonical_name;
+  // Wire claims buttons
+  const btnSp = document.getElementById('btn-claims-speaker');
+  const btnSu = document.getElementById('btn-claims-subject');
+  if (btnSp) btnSp.onclick = () => loadClaims(entity.id, 'speaker');
+  if (btnSu) btnSu.onclick = () => loadClaims(entity.id, 'subject');
+  document.getElementById('det-type').textContent = entity.entity_type?.toUpperCase();
+  document.getElementById('det-mentions').textContent = entity.mention_count ?? '—';
+}
+
+async function loadEntityNetwork(entityId) {
+  const depth = parseInt(document.getElementById('depth-select').value);
+  const minWeight = parseInt(document.getElementById('weight-slider').value);
+  try {
+    const [network, graph, _network2] = await Promise.all([
+      api(`/graph/entities/${entityId}/network`),
+      api(`/graph/entities/${entityId}/graph?depth=${depth}&min_weight=${minWeight}`),
+      api(`/graph/entities/${entityId}/network?min_weight=${minWeight}`),
+    ]);
+
+    // Update connection count
+    document.getElementById('det-connections').textContent = network.total;
+
+    // Render connections list
+    const list = document.getElementById('conn-list');
+    if (!network.connections.length) {
+      list.innerHTML = '<div class="list-empty">No co-occurring entities found</div>';
+    } else {
+      list.innerHTML = network.connections.map(c => `
+        <div class="conn-item" onclick="selectEntityById('${c.entity.id}')">
+          <div class="conn-bar"></div>
+          <div class="conn-name">${c.entity.canonical_name}</div>
+          <div class="conn-type">${c.entity.entity_type?.slice(0,3).toUpperCase()}</div>
+          <div class="conn-weight">${c.weight}</div>
+        </div>
+      `).join('');
+    }
+
+    // Draw graph
+    drawGraph(graph.nodes, graph.edges, entityId);
+
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+async function loadRelationshipEvidence(entityAId, entityBId) {
+  const el = document.getElementById('edge-evidence-list');
+  el.innerHTML = '<div class="list-empty">Loading…</div>';
+  try {
+    // Fetch both entities' mention lists and find shared documents
+    const [dataA, dataB] = await Promise.all([
+      api(`/entities/${entityAId}/mentions?page_size=100`),
+      api(`/entities/${entityBId}/mentions?page_size=100`),
+    ]);
+
+    const docsA = new Map(); // docId -> {filename, pages[]}
+    for (const m of (dataA.mentions || [])) {
+      if (!docsA.has(m.document_id)) docsA.set(m.document_id, { filename: m.filename, pages: [] });
+      docsA.get(m.document_id).pages.push(m.page_number);
+    }
+
+    const shared = [];
+    for (const m of (dataB.mentions || [])) {
+      if (docsA.has(m.document_id)) {
+        const entry = docsA.get(m.document_id);
+        if (!shared.find(s => s.docId === m.document_id)) {
+          shared.push({ docId: m.document_id, filename: entry.filename, pagesA: entry.pages, pagesB: [m.page_number] });
+        } else {
+          shared.find(s => s.docId === m.document_id).pagesB.push(m.page_number);
+        }
+      }
+    }
+
+    if (!shared.length) {
+      el.innerHTML = '<div class="list-empty">No shared documents found</div>';
+      return;
+    }
+
+    const nameA = dataA.canonical_name || entityAId.slice(0,8);
+    const nameB = dataB.canonical_name || entityBId.slice(0,8);
+
+    el.innerHTML = `
+      <div style="padding:8px 14px; font-size:10px; color:var(--text-dim); border-bottom:1px solid var(--border);">
+        <span style="color:var(--lime)">${nameA}</span>
+        <span style="color:var(--text-dim)"> ↔ </span>
+        <span style="color:var(--amber)">${nameB}</span>
+      </div>
+    ` + shared.map(s => `
+      <div class="result-item" onclick="selectDoc('${s.docId}')">
+        <div class="result-filename">${s.filename || s.docId}</div>
+        <div class="result-meta">
+          <span class="result-page">${nameA.slice(0,8)}: p.${[...new Set(s.pagesA)].join(',')}</span>
+          <span class="result-page">${nameB.slice(0,8)}: p.${[...new Set(s.pagesB)].join(',')}</span>
+          <span class="status-badge done">co-occur</span>
+        </div>
+      </div>
+    `).join('');
+  } catch (e) {
+    el.innerHTML = '<div class="list-empty">Failed to load edge evidence</div>';
+    console.error(e);
+  }
+}
+
+async function loadEntityEvidence(entityId) {
+  const el = document.getElementById('evidence-list');
+  el.innerHTML = '<div class="list-empty">Loading…</div>';
+  try {
+    const data = await api(`/entities/${entityId}/mentions?page_size=50`);
+    const mentions = data.mentions || [];
+
+    if (!mentions.length) {
+      el.innerHTML = '<div class="list-empty">No supporting documents</div>';
+      return;
+    }
+
+    // Group by document
+    const byDoc = {};
+    for (const m of mentions) {
+      if (!byDoc[m.document_id]) byDoc[m.document_id] = { filename: m.filename, pages: [] };
+      byDoc[m.document_id].pages.push(m);
+    }
+
+    el.innerHTML = Object.entries(byDoc).map(([docId, d]) => `
+      <div class="result-item" onclick="selectDoc('${docId}')">
+        <div class="result-filename">${d.filename || docId}</div>
+        ${d.pages.slice(0, 3).map(m => `
+          <div class="result-snippet">${m.context ? m.context.slice(0, 120) + (m.context.length > 120 ? '…' : '') : ''}</div>
+          <div class="result-meta">
+            <span class="result-page">p.${m.page_number}</span>
+            <span class="status-badge done">evidence</span>
+          </div>
+        `).join('')}
+      </div>
+    `).join('');
+  } catch (e) {
+    el.innerHTML = '<div class="list-empty">Evidence unavailable</div>';
+  }
+}
+
+async function selectEntityById(id) {
+  try {
+    const entity = await api(`/entities/${id}`);
+    showEntityDetail(entity);
+    loadEntityNetwork(id);
+    loadEntityEvidence(id);
+    switchTab('entity-tab');
+  } catch {}
+}
+
+// ── Graph rendering ───────────────────────────────────────────────────────────
+function drawGraph(nodes, edges, centerId) {
+  const el = document.getElementById('graph-empty');
+  el.style.display = 'none';
+
+  const svg = d3.select('#graph-canvas');
+  svg.selectAll('*').remove();
+
+  const W = svg.node().clientWidth || 800;
+  const H = svg.node().clientHeight || 600;
+
+  const defs = svg.append('defs');
+
+  // Glow filter
+  const filter = defs.append('filter').attr('id', 'glow');
+  filter.append('feGaussianBlur').attr('stdDeviation', '3').attr('result', 'blur');
+  const merge = filter.append('feMerge');
+  merge.append('feMergeNode').attr('in', 'blur');
+  merge.append('feMergeNode').attr('in', 'SourceGraphic');
+
+  const g = svg.append('g');
+
+  // Zoom
+  svg.call(d3.zoom()
+    .scaleExtent([0.2, 4])
+    .on('zoom', e => g.attr('transform', e.transform))
+  );
+
+  // Color by entity type
+  const typeColor = {
+    'Aircraft':     '#c8f045',
+    'Person':       '#45c8f0',
+    'Organization': '#f0a830',
+    'Location':     '#f04580',
+    'Phone':        '#a045f0',
+    'Email':        '#45f0a0',
+    'Date':         '#f06045',
+    'Vehicle':      '#f0e045',
+  };
+  const nodeColor = n => typeColor[n.entity_type] || '#888';
+
+  // Weight → link width
+  const maxW = Math.max(...edges.map(e => e.weight), 1);
+  const linkWidth = w => 0.5 + (w / maxW) * 3;
+
+  // Simulation
+  state.simulation = d3.forceSimulation(nodes)
+    .force('link', d3.forceLink(edges)
+      .id(d => d.id)
+      .distance(d => 80 + 40 / (d.weight || 1))
+      .strength(0.6)
+    )
+    .force('charge', d3.forceManyBody().strength(-200))
+    .force('center', d3.forceCenter(W / 2, H / 2))
+    .force('collision', d3.forceCollide(28));
+
+  // Links
+  const link = g.append('g').selectAll('line')
+    .data(edges).join('line')
+    .attr('stroke', '#4a5568')
+    .attr('stroke-width', d => linkWidth(d.weight))
+    .attr('stroke-opacity', 0.85)
+    .style('cursor', 'pointer')
+    .on('click', (e, d) => {
+      e.stopPropagation();
+      const sourceId = typeof d.source === 'object' ? d.source.id : d.source;
+      const targetId = typeof d.target === 'object' ? d.target.id : d.target;
+      state.selectedEdge = { sourceId, targetId };
+      loadRelationshipEvidence(sourceId, targetId);
+      switchTab('entity-tab');
+    })
+    .on('mouseover', function(e, d) {
+      d3.select(this).attr('stroke', 'var(--lime)').attr('stroke-opacity', 0.9);
+      const tt = document.getElementById('tooltip');
+      document.getElementById('tt-name').textContent = `weight: ${d.weight}`;
+      document.getElementById('tt-type').textContent = `${d.doc_count} document(s)`;
+      document.getElementById('tt-weight').textContent = '';
+      tt.style.display = 'block';
+      tt.style.left = (e.clientX + 12) + 'px';
+      tt.style.top  = (e.clientY - 10) + 'px';
+    })
+    .on('mousemove', e => {
+      const tt = document.getElementById('tooltip');
+      tt.style.left = (e.clientX + 12) + 'px';
+      tt.style.top  = (e.clientY - 10) + 'px';
+    })
+    .on('mouseout', function() {
+      d3.select(this).attr('stroke', '#4a5568').attr('stroke-opacity', 0.85);
+      document.getElementById('tooltip').style.display = 'none';
+    });
+
+  // Node groups
+  const node = g.append('g').selectAll('g')
+    .data(nodes).join('g')
+    .attr('cursor', 'pointer')
+    .call(d3.drag()
+      .on('start', (e, d) => {
+        if (!e.active) state.simulation.alphaTarget(0.3).restart();
+        d.fx = d.x; d.fy = d.y;
+      })
+      .on('drag', (e, d) => { d.fx = e.x; d.fy = e.y; })
+      .on('end', (e, d) => {
+        if (!e.active) state.simulation.alphaTarget(0);
+        d.fx = null; d.fy = null;
+      })
+    )
+    .on('click', (e, d) => {
+      e.stopPropagation();
+      selectEntityById(d.id);
+    })
+    .on('mouseover', (e, d) => {
+      const tt = document.getElementById('tooltip');
+      document.getElementById('tt-name').textContent = d.canonical_name;
+      document.getElementById('tt-type').textContent = d.entity_type;
+      document.getElementById('tt-weight').textContent = `${d.mention_count || 0} mentions`;
+      tt.style.display = 'block';
+      tt.style.left = (e.clientX + 12) + 'px';
+      tt.style.top  = (e.clientY - 10) + 'px';
+    })
+    .on('mousemove', e => {
+      const tt = document.getElementById('tooltip');
+      tt.style.left = (e.clientX + 12) + 'px';
+      tt.style.top  = (e.clientY - 10) + 'px';
+    })
+    .on('mouseout', () => {
+      document.getElementById('tooltip').style.display = 'none';
+    });
+
+  // Ring for center node
+  node.filter(d => d.id === centerId)
+    .append('circle')
+    .attr('r', 20)
+    .attr('fill', 'none')
+    .attr('stroke', d => nodeColor(d))
+    .attr('stroke-width', 1)
+    .attr('stroke-dasharray', '3 3')
+    .attr('opacity', 0.5);
+
+  // Main circle
+  node.append('circle')
+    .attr('r', d => d.id === centerId ? 12 : 7)
+    .attr('fill', d => d.id === centerId ? nodeColor(d) : 'var(--bg)')
+    .attr('stroke', d => nodeColor(d))
+    .attr('stroke-width', d => d.id === centerId ? 0 : 1.5)
+    .attr('filter', d => d.id === centerId ? 'url(#glow)' : null);
+
+  // Labels
+  node.append('text')
+    .attr('dy', d => (d.id === centerId ? -18 : -12))
+    .attr('text-anchor', 'middle')
+    .attr('font-family', 'IBM Plex Mono, monospace')
+    .attr('font-size', d => d.id === centerId ? '11px' : '9px')
+    .attr('fill', d => d.id === centerId ? nodeColor(d) : '#888')
+    .attr('font-weight', d => d.id === centerId ? '600' : '400')
+    .text(d => d.canonical_name.length > 18 ? d.canonical_name.slice(0, 16) + '…' : d.canonical_name);
+
+  state.simulation.on('tick', () => {
+    link
+      .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+      .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+    node.attr('transform', d => `translate(${d.x},${d.y})`);
+  });
+}
+
+// ── Search ────────────────────────────────────────────────────────────────────
+async function doSearch(query) {
+  if (!query.trim()) return;
+
+  switchTab('search-tab');
+
+  try {
+    const data = await api(`/search?q=${encodeURIComponent(query)}&page=1&page_size=20`);
+    const results = data.results ?? [];
+    const el = document.getElementById('search-results');
+
+    if (!results.length) {
+      el.innerHTML = `<div class="list-empty">No results for "${query}"</div>`;
+      return;
+    }
+
+    el.innerHTML = results.map(r => `
+      <div class="result-item" onclick="selectDoc('${r.document_id}')">
+        <div class="result-filename">${r.filename || r.document_id}</div>
+        <div class="result-snippet">${r.snippet || ''}</div>
+        <div class="result-meta">
+          <span class="result-page">p.${r.page_number}</span>
+          <span class="status-badge done">match</span>
+        </div>
+      </div>
+    `).join('');
+  } catch {
+    document.getElementById('search-results').innerHTML = '<div class="list-empty">Search failed</div>';
+  }
+}
+
+document.getElementById('search-btn').addEventListener('click', () => {
+  doSearch(document.getElementById('search-input').value);
+});
+
+document.getElementById('search-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') doSearch(e.target.value);
+});
+
+document.getElementById('search-btn-2').addEventListener('click', () => {
+  doSearch(document.getElementById('search-input-2').value);
+});
+
+document.getElementById('search-input-2').addEventListener('keydown', e => {
+  if (e.key === 'Enter') doSearch(e.target.value);
+});
+
+// ── Tabs ──────────────────────────────────────────────────────────────────────
+function switchTab(tabId) {
+  document.querySelectorAll('.tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.tab === tabId);
+  });
+  document.querySelectorAll('.tab-pane').forEach(p => {
+    p.classList.toggle('active', p.id === tabId);
+  });
+}
+
+document.querySelectorAll('.tab').forEach(t => {
+  t.addEventListener('click', () => switchTab(t.dataset.tab));
+});
+
+
+
+async function deleteDocument(docId, filename, el) {
+  if (!confirm(`Delete "${filename}" and all extracted data?`)) return;
+  try {
+    const r = await fetch(`${API}/documents/${docId}`, {method:'DELETE'});
+    if (r.ok) {
+      el.closest('.doc-item').remove();
+      loadStats();
+      document.getElementById('graph-canvas').innerHTML = '';
+    }
+  } catch(e) { console.error(e); }
+}
+
+async function reingestDocument(docId, filename, el) {
+  if (!confirm(`Re-ingest "${filename}" with current settings (OCR, spaCy)?`)) return;
+  try {
+    const r = await fetch(`${API}/documents/${docId}/reingest`, {method:'POST'});
+    if (r.ok) {
+      el.textContent = '⟳';
+      el.style.color = 'var(--amber)';
+      el.style.cursor = 'default';
+      loadDocs();
+    }
+  } catch(e) { console.error(e); }
+}
+
+// ── Weight slider ─────────────────────────────────────────────────────────────
+document.getElementById('weight-slider').addEventListener('input', function() {
+  document.getElementById('weight-val').textContent = this.value;
+  if (state.activeEntity) loadEntityNetwork(state.activeEntity.id);
+});
+
+// ── Depth change ──────────────────────────────────────────────────────────────
+document.getElementById('depth-select').addEventListener('change', () => {
+  if (state.activeEntity) loadEntityNetwork(state.activeEntity.id);
+});
+
+// ── Filters ───────────────────────────────────────────────────────────────────
+document.getElementById('doc-filter').addEventListener('input', renderDocs);
+document.getElementById('refresh-docs').addEventListener('click', loadDocs);
+
+// ── Load entities list when no active entity ──────────────────────────────────
+async function loadAllEntities() {
+  try {
+    const data = await api('/entities?limit=20');
+    const items = data.items ?? data;
+    if (items.length && !state.activeEntity) {
+      showEntityDetail(items[0]);
+      loadEntityNetwork(items[0].id);
+    }
+  } catch {}
+}
+
+
+
+
+
+// ── Entity deduplication ──────────────────────────────────────────────────────
+let dedupCandidates = [];
+
+async function loadDuplicates(minConf = 0.55) {
+  switchTab('dedup-tab');
+  const list    = document.getElementById('dedup-list');
+  const summary = document.getElementById('dedup-summary');
+  list.innerHTML    = '<div class="list-empty">Scanning for duplicates…</div>';
+  summary.innerHTML = '';
+
+  try {
+    const data = await api(`/entities/duplicates?min_confidence=${minConf}&limit=200`);
+    dedupCandidates = data.candidates || [];
+
+    const high   = dedupCandidates.filter(c => c.confidence >= 0.8).length;
+    const medium = dedupCandidates.filter(c => c.confidence >= 0.6 && c.confidence < 0.8).length;
+    const low    = dedupCandidates.filter(c => c.confidence < 0.6).length;
+
+    summary.innerHTML = `
+      <div style="padding:10px 14px; background:var(--bg2); border-bottom:1px solid var(--border2); display:flex; gap:16px; align-items:center; flex-shrink:0;">
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <span style="font-size:16px; font-weight:300; color:var(--red);">${high}</span>
+          <span style="font-size:9px; color:var(--text-dim); letter-spacing:0.1em;">HIGH</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <span style="font-size:16px; font-weight:300; color:var(--amber);">${medium}</span>
+          <span style="font-size:9px; color:var(--text-dim); letter-spacing:0.1em;">MEDIUM</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <span style="font-size:16px; font-weight:300; color:var(--text-dim);">${low}</span>
+          <span style="font-size:9px; color:var(--text-dim); letter-spacing:0.1em;">LOW</span>
+        </div>
+        <div style="margin-left:auto; display:flex; gap:6px;">
+          <button class="dedup-btn" onclick="loadDuplicates(0.75)" title="Show high confidence only">HIGH ONLY</button>
+          <button class="dedup-btn" onclick="loadDuplicates(0.55)" title="Show all">ALL</button>
+        </div>
+      </div>
+    `;
+
+    if (!dedupCandidates.length) {
+      list.innerHTML = '<div class="list-empty">No duplicates detected at this confidence threshold</div>';
+      return;
+    }
+
+    renderDedupList(dedupCandidates);
+
+  } catch(e) {
+    list.innerHTML = '<div class="list-empty">Dedup scan failed</div>';
+    console.error(e);
+  }
+}
+
+function renderDedupList(candidates) {
+  const list = document.getElementById('dedup-list');
+  list.innerHTML = candidates.map((c, idx) => {
+    const confClass = c.confidence >= 0.8 ? 'high' : c.confidence >= 0.6 ? 'medium' : 'low';
+    const confPct   = Math.round(c.confidence * 100);
+    const mA = c.entity_a.mentions || 0;
+    const mB = c.entity_b.mentions || 0;
+    // Suggest: merge lower-mention into higher-mention
+    const [keepEnt, mergeEnt] = mA >= mB
+      ? [c.entity_a, c.entity_b]
+      : [c.entity_b, c.entity_a];
+
+    return `
+      <div class="dedup-pair ${confClass}" id="dedup-pair-${idx}">
+        <div class="dedup-names">
+          <span class="dedup-name" onclick="selectEntityById('${c.entity_a.id}')">${c.entity_a.name}</span>
+          <span class="dedup-arrow">≈</span>
+          <span class="dedup-name" onclick="selectEntityById('${c.entity_b.id}')">${c.entity_b.name}</span>
+          <span class="dedup-type-chip">${c.entity_type}</span>
+          <span class="dedup-conf ${confClass}">${confPct}%</span>
+        </div>
+        <div class="dedup-reason">${c.reason}</div>
+        <div style="display:flex; gap:12px; margin-bottom:6px;">
+          <span class="dedup-mentions">${c.entity_a.name}: ${mA} mention${mA !== 1 ? 's' : ''}</span>
+          <span class="dedup-mentions">${c.entity_b.name}: ${mB} mention${mB !== 1 ? 's' : ''}</span>
+        </div>
+        ${(c.entity_a.aliases?.length || c.entity_b.aliases?.length) ? `
+          <div style="font-size:9px; color:var(--text-dim); margin-bottom:5px;">
+            ${c.entity_a.aliases?.length ? `<span style="color:var(--lime);">${c.entity_a.name}</span> aliases: ${c.entity_a.aliases.join(', ')}` : ''}
+            ${c.entity_b.aliases?.length ? ` · <span style="color:var(--lime);">${c.entity_b.name}</span> aliases: ${c.entity_b.aliases.join(', ')}` : ''}
+          </div>
+        ` : ''}
+        <div class="dedup-actions">
+          <button class="dedup-btn merge"
+            onclick="confirmMerge('${mergeEnt.id}', '${keepEnt.id}', '${mergeEnt.name.replace(/'/g,"\'")}', '${keepEnt.name.replace(/'/g,"\'")}', ${idx})">
+            MERGE ${mergeEnt.name.length > 20 ? mergeEnt.name.slice(0,20)+'…' : mergeEnt.name} → ${keepEnt.name.length > 20 ? keepEnt.name.slice(0,20)+'…' : keepEnt.name}
+          </button>
+          <button class="dedup-btn"
+            onclick="swapMergeDirection(${idx}, '${c.entity_a.id}', '${c.entity_b.id}', '${c.entity_a.name.replace(/'/g,"\'")}', '${c.entity_b.name.replace(/'/g,"\'")}')">
+            SWAP ⇄
+          </button>
+          <button class="dedup-btn"
+            onclick="dismissDuplicate('${c.entity_a.id}', '${c.entity_b.id}', ${idx})">
+            NOT DUPLICATE
+          </button>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+async function confirmMerge(sourceId, targetId, sourceName, targetName, idx) {
+  const pair = document.getElementById(`dedup-pair-${idx}`);
+  if (!pair) return;
+  // Show confirmation inline
+  const actions = pair.querySelector('.dedup-actions');
+  actions.innerHTML = `
+    <span style="font-size:9px; color:var(--amber);">
+      Merge <b>${sourceName}</b> into <b>${targetName}</b>?
+    </span>
+    <button class="dedup-btn merge" onclick="doMerge('${sourceId}','${targetId}',${idx})">CONFIRM</button>
+    <button class="dedup-btn" onclick="loadDuplicates()">CANCEL</button>
+  `;
+}
+
+async function doMerge(sourceId, targetId, idx) {
+  const pair = document.getElementById(`dedup-pair-${idx}`);
+  try {
+    const result = await fetch(`${API}/entities/merge/${sourceId}/into/${targetId}`, {method:'POST'});
+    const data   = await result.json();
+    if (result.ok) {
+      pair.style.opacity = '0.3';
+      pair.innerHTML = `<div style="padding:8px 0; font-size:10px; color:var(--lime);">
+        ✓ Merged "${data.merged}" into "${data.into}" · ${data.new_mention_count} mentions · aliases: ${(data.aliases||[]).join(', ')||'none'}
+      </div>`;
+      // Refresh stats bar
+      loadStats();
+    } else {
+      pair.querySelector('.dedup-actions').innerHTML =
+        `<span style="color:var(--red); font-size:9px;">${data.detail || 'Merge failed'}</span>`;
+    }
+  } catch(e) {
+    console.error(e);
+  }
+}
+
+function swapMergeDirection(idx, aId, bId, aName, bName) {
+  // Just re-render that pair with directions swapped
+  const pair = document.getElementById(`dedup-pair-${idx}`);
+  const actions = pair.querySelector('.dedup-actions');
+  actions.querySelector('.dedup-btn.merge').textContent =
+    `MERGE ${aName.length > 15 ? aName.slice(0,15)+'…' : aName} → ${bName.length > 15 ? bName.slice(0,15)+'…' : bName}`;
+  actions.querySelector('.dedup-btn.merge').setAttribute('onclick',
+    `confirmMerge('${bId}','${aId}','${bName.replace(/'/g,"\'")}','${aName.replace(/'/g,"\'")}',${idx})`);
+}
+
+async function dismissDuplicate(aId, bId, idx) {
+  try {
+    await fetch(`${API}/entities/dismiss-duplicate`, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({entity_a_id: aId, entity_b_id: bId})
+    });
+    const pair = document.getElementById(`dedup-pair-${idx}`);
+    if (pair) {
+      pair.style.opacity = '0.2';
+      pair.style.borderLeftColor = 'var(--border2)';
+      setTimeout(() => pair.remove(), 600);
+    }
+  } catch(e) { console.error(e); }
+}
+
+// ── Redaction audit ───────────────────────────────────────────────────────────
+async function showRedactionAudit() {
+  switchTab('redact-tab');
+  const list = document.getElementById('redact-list');
+  const summary = document.getElementById('redact-summary');
+  list.innerHTML = '<div class="list-empty">Scanning corpus for redactions…</div>';
+  summary.innerHTML = '';
+
+  try {
+    const data = await api('/redaction/audit');
+
+    summary.innerHTML = `
+      <div class="redact-summary-bar">
+        <div class="redact-stat">
+          <div class="rv">${data.total_documents_with_redactions}</div>
+          <div class="rl">Docs</div>
+        </div>
+        <div class="redact-stat">
+          <div class="rv">${data.total_flags}</div>
+          <div class="rl">Total Flags</div>
+        </div>
+        <div class="redact-stat">
+          <div class="rv">${data.total_black_boxes}</div>
+          <div class="rl">Black Boxes</div>
+        </div>
+        <div class="redact-stat">
+          <div class="rv amber">${data.total_hidden_texts}</div>
+          <div class="rl">Hidden Text</div>
+        </div>
+      </div>
+    `;
+
+    if (!data.documents.length) {
+      list.innerHTML = '<div class="list-empty">No redactions detected — upload PDF documents with USE_REDACTION_DETECTION=true</div>';
+      return;
+    }
+
+    list.innerHTML = data.documents.map(doc => `
+      <div class="result-item" onclick="loadDocumentRedactions('${doc.document_id}')">
+        <div class="result-filename">${doc.original_name || doc.filename}</div>
+        <div style="display:flex; gap:8px; margin-top:5px; flex-wrap:wrap;">
+          ${doc.black_boxes ? `<span class="status-badge error">${doc.black_boxes} BLACK BOXES</span>` : ''}
+          ${doc.hidden_texts ? `<span class="status-badge processing">${doc.hidden_texts} HIDDEN TEXT</span>` : ''}
+          <span class="result-page">${doc.redacted_pages.length} pages affected</span>
+          <span class="result-page">${doc.entities_on_redacted_pages} entities nearby</span>
+        </div>
+      </div>
+    `).join('');
+
+  } catch(e) {
+    list.innerHTML = '<div class="list-empty">Redaction audit failed — check server logs</div>';
+    console.error(e);
+  }
+}
+
+async function loadDocumentRedactions(docId) {
+  const list = document.getElementById('redact-list');
+  list.innerHTML = '<div class="list-empty">Loading redaction report…</div>';
+
+  try {
+    const data = await api(`/redaction/audit/${docId}`);
+
+    if (!data.pages.length) {
+      list.innerHTML = `
+        <div style="padding:10px 14px; font-size:10px; color:var(--text-dim);">
+          <span style="cursor:pointer; color:var(--lime);" onclick="showRedactionAudit()">← Back</span>
+        </div>
+        <div class="list-empty">No redaction flags found for this document</div>
+      `;
+      return;
+    }
+
+    const typeColors = {
+      Aircraft: 'var(--lime)', Person: '#45c8f0', Organization: 'var(--amber)',
+      Location: '#f04580', Phone: '#a045f0', Email: '#45f0a0', Date: '#f06045',
+    };
+
+    list.innerHTML = `
+      <div style="padding:8px 14px; display:flex; align-items:center; gap:10px; border-bottom:1px solid var(--border); flex-shrink:0;">
+        <span style="cursor:pointer; color:var(--lime); font-size:10px;" onclick="showRedactionAudit()">← CORPUS</span>
+        <span style="font-size:10px; color:var(--text-dim);">${data.original_name || data.filename}</span>
+        <span class="status-badge error" style="margin-left:auto;">${data.total_flags} FLAGS</span>
+      </div>
+    ` + data.pages.map(page => `
+      <div class="redact-page-header">
+        <span style="color:var(--red);">▣</span>
+        PAGE ${page.page_number}
+        <span style="margin-left:auto;">${page.flags.length} flag(s)</span>
+      </div>
+
+      ${page.flags.map(flag => `
+        <div class="redact-flag ${flag.flag_type} ${flag.reviewed ? 'reviewed' : ''}">
+          <div style="display:flex; gap:8px; align-items:center; margin-bottom:5px;">
+            <span class="status-badge ${flag.flag_type === 'black_box' ? 'error' : 'processing'}" style="font-size:8px;">
+              ${flag.flag_type === 'black_box' ? '■ BLACK BOX' : '⚠ HIDDEN TEXT'}
+            </span>
+            <span style="font-size:9px; color:var(--text-dim);">conf: ${(flag.confidence * 100).toFixed(0)}%</span>
+            ${flag.reviewed ? '<span style="font-size:9px; color:var(--text-dim);">reviewed</span>' : `
+              <span style="font-size:9px; color:var(--lime); cursor:pointer; margin-left:auto;"
+                onclick="markReviewed('${docId}', '${flag.flag_id}', this)">MARK REVIEWED</span>
+            `}
+          </div>
+
+          ${flag.hidden_text ? `
+            <div style="margin-bottom:5px;">
+              <span style="font-size:9px; color:var(--amber); letter-spacing:0.05em;">RECOVERED:</span>
+              <span style="font-size:10px; color:var(--amber); margin-left:6px;">${flag.hidden_text}</span>
+            </div>
+          ` : ''}
+
+          <div class="redact-context">
+            ${flag.context_before ? `<span>${flag.context_before}</span>` : ''}
+            <span class="gap ${flag.flag_type === 'hidden_text' ? 'hidden' : ''}">
+              ${flag.flag_type === 'black_box' ? '█████████' : '[HIDDEN]'}
+            </span>
+            ${flag.context_after ? `<span>${flag.context_after}</span>` : ''}
+          </div>
+
+          ${flag.bounding_box ? `
+            <div style="font-size:9px; color:var(--text-dim); margin-top:3px;">
+              pos: (${flag.bounding_box.x}, ${flag.bounding_box.y}) · ${flag.bounding_box.w}×${flag.bounding_box.h} pts
+            </div>
+          ` : ''}
+        </div>
+      `).join('')}
+
+      ${page.entities.length ? `
+        <div style="padding:8px 14px; border-bottom:1px solid var(--border);">
+          <div style="font-size:9px; color:var(--text-dim); letter-spacing:0.1em; margin-bottom:5px;">ENTITIES ON THIS PAGE</div>
+          <div class="redact-entities">
+            ${page.entities.map(e => `
+              <span class="redact-entity-chip"
+                style="border-color:${typeColors[e.type] || '#444'}; color:${typeColors[e.type] || '#888'};"
+                onclick="selectEntityById('${e.id}')"
+                title="${e.type}">${e.name}</span>
+            `).join('')}
+          </div>
+        </div>
+      ` : ''}
+
+    `).join('');
+
+  } catch(e) {
+    list.innerHTML = '<div class="list-empty">Failed to load document redactions</div>';
+    console.error(e);
+  }
+}
+
+async function markReviewed(docId, flagId, el) {
+  try {
+    await fetch(`${API}/documents/${docId}/redaction-flags/${flagId}/reviewed`, { method: 'PATCH' });
+    const flagDiv = el.closest('.redact-flag');
+    flagDiv.classList.add('reviewed');
+    el.textContent = 'REVIEWED';
+    el.style.color = 'var(--text-dim)';
+    el.style.cursor = 'default';
+  } catch(e) { console.error(e); }
+}
+
+// ── Export briefing ───────────────────────────────────────────────────────────
+async function exportBriefing() {
+  const btn = document.getElementById('btn-export');
+  btn.textContent = 'WORKING…';
+  try {
+    const [docsData, entitiesData, relsData, clustersData, timelineData] = await Promise.all([
+      api('/documents?limit=200'),
+      api('/entities?limit=500'),
+      api('/graph/relationships?limit=500'),
+      api('/analysis/clusters'),
+      api('/analysis/timeline'),
+    ]);
+
+    const docs     = docsData.items || docsData;
+    const entities = entitiesData.items || entitiesData;
+    const rels     = Array.isArray(relsData) ? relsData : [];
+    const clusters = clustersData.clusters || [];
+    const timeline = timelineData.timeline || [];
+
+    const now = new Date().toISOString().slice(0,19).replace('T',' ');
+
+    let md = `# OPENSIGHT INTELLIGENCE BRIEFING
+`;
+    md += `Generated: ${now}
+
+`;
+    md += `---
+
+`;
+
+    // Stats
+    md += `## CORPUS SUMMARY
+
+`;
+    md += `| Metric | Count |
+|--------|-------|
+`;
+    md += `| Documents | ${docs.length} |
+`;
+    md += `| Entities | ${entities.length} |
+`;
+    md += `| Relationships | ${rels.length} |
+`;
+    md += `| Clusters | ${clusters.length} |
+`;
+    md += `| Timeline Events | ${timeline.length} |
+
+`;
+
+    // Documents
+    md += `## DOCUMENTS
+
+`;
+    for (const d of docs) {
+      md += `- **${d.original_name || d.filename}** — ${d.status}`;
+      if (d.source_tag) md += ` #${d.source_tag}`;
+      if (d.page_count) md += ` (${d.page_count} pages)`;
+      md += `
+`;
+    }
+    md += `
+`;
+
+    // Top entities by type
+    const byType = {};
+    for (const e of entities) {
+      if (!byType[e.entity_type]) byType[e.entity_type] = [];
+      byType[e.entity_type].push(e);
+    }
+    md += `## ENTITIES
+
+`;
+    for (const [type, ents] of Object.entries(byType)) {
+      md += `### ${type}
+
+`;
+      for (const e of ents.slice(0, 20)) {
+        md += `- ${e.canonical_name}`;
+        if (e.mention_count) md += ` *(${e.mention_count} mentions)*`;
+        md += `
+`;
+      }
+      md += `
+`;
+    }
+
+    // Clusters
+    if (clusters.length) {
+      md += `## ENTITY CLUSTERS
+
+`;
+      clusters.forEach((c, i) => {
+        md += `### Cluster ${i+1} (${c.size} entities, ${c.total_mentions} mentions)
+
+`;
+        for (const e of c.entities) {
+          md += `- **${e.name}** [${e.type}] — ${e.mentions} mentions
+`;
+        }
+        md += `
+`;
+      });
+    }
+
+    // Top relationships
+    if (rels.length) {
+      md += `## KEY RELATIONSHIPS
+
+`;
+      const sorted = [...rels].sort((a,b) => b.weight - a.weight).slice(0, 30);
+      for (const r of sorted) {
+        const a = r.entity_a?.canonical_name || '?';
+        const b = r.entity_b?.canonical_name || '?';
+        md += `- **${a}** ↔ **${b}** (weight: ${r.weight}, docs: ${r.doc_count})
+`;
+      }
+      md += `
+`;
+    }
+
+    // Timeline
+    if (timeline.length) {
+      md += `## TIMELINE
+
+`;
+      for (const ev of timeline.slice(0, 50)) {
+        md += `### ${ev.date}
+
+`;
+        const names = ev.entities.map(e => e.name).join(', ');
+        if (names) md += `**Entities:** ${names}
+
+`;
+        const srcs = ev.sources.map(s => `${s.filename} p.${s.page_number}`).join(', ');
+        if (srcs) md += `**Sources:** ${srcs}
+
+`;
+      }
+    }
+
+    // Download
+    const blob = new Blob([md], { type: 'text/markdown' });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    a.href     = url;
+    a.download = `opensight_briefing_${now.replace(/[: ]/g,'_')}.md`;
+    a.click();
+    URL.revokeObjectURL(url);
+
+  } catch(e) {
+    console.error(e);
+  } finally {
+    btn.textContent = 'EXPORT';
+  }
+}
+
+// ── Narrative reconstruction ──────────────────────────────────────────────────
+async function buildNarrative() {
+  switchTab('search-tab');
+  const el = document.getElementById('search-results');
+  el.innerHTML = '<div class="list-empty">Reconstructing narrative…</div>';
+
+  try {
+    const [timelineData, relsData] = await Promise.all([
+      api('/analysis/timeline'),
+      api('/graph/relationships?limit=500'),
+    ]);
+
+    const events  = timelineData.timeline || [];
+    const rels    = Array.isArray(relsData) ? relsData : [];
+
+    if (!events.length) {
+      el.innerHTML = '<div class="list-empty">No dated events found — narrative requires documents containing dates</div>';
+      return;
+    }
+
+    // Build narrative: for each event, find entity relationships active in same docs
+    const narrative = events.map(ev => {
+      const docIds = new Set(ev.sources.map(s => s.document_id));
+      const activeRels = rels.filter(r => {
+        // relationship is "active" in this event if both entities appear in event docs
+        const aInDoc = ev.entities.some(e => e.id === (r.entity_a?.id || r.entity_a_id));
+        const bInDoc = ev.entities.some(e => e.id === (r.entity_b?.id || r.entity_b_id));
+        return aInDoc && bInDoc;
+      });
+      return { ...ev, activeRels };
+    });
+
+    el.innerHTML = `
+      <div style="padding:8px 14px; font-size:10px; color:var(--text-dim); border-bottom:1px solid var(--border); letter-spacing:0.1em;">
+        NARRATIVE · ${narrative.length} EVENTS
+      </div>
+    ` + narrative.map((ev, i) => `
+      <div style="
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--border);
+        border-left: 2px solid ${i % 2 === 0 ? 'var(--lime)' : 'var(--amber)'};
+        position: relative;
+      ">
+        <div style="font-size:11px; color:var(--amber); font-weight:600; margin-bottom:6px; letter-spacing:0.05em;">
+          ◈ ${ev.date}
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:5px; margin-bottom:6px;">
+          ${ev.entities.map(e => `
+            <span style="font-size:10px; color:var(--text); cursor:pointer; border-bottom:1px solid var(--border2);"
+              onclick="selectEntityById('${e.id}')">${e.name}</span>
+          `).join('<span style="color:var(--text-dim); font-size:10px;"> + </span>')}
+        </div>
+        ${ev.activeRels.length ? `
+          <div style="font-size:9px; color:var(--text-dim); margin-bottom:4px; letter-spacing:0.08em;">ACTIVE RELATIONSHIPS</div>
+          ${ev.activeRels.slice(0,3).map(r => `
+            <div style="font-size:10px; color:var(--lime); opacity:0.7;">
+              ${r.entity_a?.canonical_name || '?'} ↔ ${r.entity_b?.canonical_name || '?'}
+            </div>
+          `).join('')}
+        ` : ''}
+        <div style="display:flex; gap:8px; margin-top:6px; flex-wrap:wrap;">
+          ${ev.sources.slice(0,2).map(s => `
+            <span style="font-size:9px; color:var(--text-dim); cursor:pointer;"
+              onclick="selectDoc('${s.document_id}')">${s.filename} p.${s.page_number}</span>
+          `).join('')}
+        </div>
+      </div>
+    `).join('');
+
+  } catch(e) {
+    document.getElementById('search-results').innerHTML = '<div class="list-empty">Narrative build failed</div>';
+    console.error(e);
+  }
+}
+
+// ── Cluster discovery ─────────────────────────────────────────────────────────
+async function discoverClusters() {
+  switchTab('search-tab');
+  const el = document.getElementById('search-results');
+  el.innerHTML = '<div class="list-empty">Analysing entity graph…</div>';
+
+  try {
+    const data = await api('/analysis/clusters');
+    const clusters = data.clusters || [];
+
+    if (!clusters.length) {
+      el.innerHTML = '<div class="list-empty">No clusters found — upload more documents to build relationships</div>';
+      return;
+    }
+
+    const typeColors = {
+      Aircraft: 'var(--lime)', Person: '#45c8f0', Organization: 'var(--amber)',
+      Location: '#f04580', Phone: '#a045f0', Email: '#45f0a0', Date: '#f06045',
+    };
+
+    el.innerHTML = `
+      <div style="padding:8px 14px; font-size:10px; color:var(--text-dim); border-bottom:1px solid var(--border); letter-spacing:0.1em;">
+        ${data.total_clusters} CLUSTERS · ${data.total_entities} ENTITIES
+      </div>
+    ` + clusters.map((c, i) => `
+      <div class="result-item" onclick="focusCluster(${i})">
+        <div class="result-filename">
+          CLUSTER ${String(i+1).padStart(2,'0')}
+          <span style="color:var(--text-dim); font-size:9px; margin-left:8px;">${c.size} entities · ${c.total_mentions} mentions</span>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:4px; margin-top:6px;">
+          ${c.entities.slice(0,8).map(e => `
+            <span style="
+              font-size:9px; padding:2px 6px;
+              border:1px solid ${typeColors[e.type] || '#444'};
+              color:${typeColors[e.type] || '#888'};
+              cursor:pointer;
+            " onclick="event.stopPropagation(); selectEntityById('${e.id}')">${e.name}</span>
+          `).join('')}
+          ${c.entities.length > 8 ? `<span style="font-size:9px; color:var(--text-dim);">+${c.entities.length - 8} more</span>` : ''}
+        </div>
+        <div style="margin-top:5px; display:flex; gap:6px;">
+          ${c.entity_types.map(t => `<span class="status-badge done" style="font-size:8px;">${t}</span>`).join('')}
+        </div>
+      </div>
+    `).join('');
+
+  } catch (e) {
+    document.getElementById('search-results').innerHTML = '<div class="list-empty">Cluster analysis failed</div>';
+    console.error(e);
+  }
+}
+
+function focusCluster(idx) {
+  // TODO: highlight cluster nodes in graph
+}
+
+// ── Timeline ──────────────────────────────────────────────────────────────────
+async function buildTimeline() {
+  switchTab('search-tab');
+  const el = document.getElementById('search-results');
+  el.innerHTML = '<div class="list-empty">Building timeline…</div>';
+
+  try {
+    const data = await api('/analysis/timeline');
+    const events = data.timeline || [];
+
+    if (!events.length) {
+      el.innerHTML = '<div class="list-empty">No date entities found — timeline requires documents with dates</div>';
+      return;
+    }
+
+    el.innerHTML = `
+      <div style="padding:8px 14px; font-size:10px; color:var(--text-dim); border-bottom:1px solid var(--border); letter-spacing:0.1em;">
+        ${data.total_events} EVENTS RECONSTRUCTED
+      </div>
+    ` + events.map(ev => `
+      <div class="result-item">
+        <div class="result-filename" style="color:var(--amber);">◈ ${ev.date}</div>
+        <div style="display:flex; flex-wrap:wrap; gap:4px; margin:5px 0;">
+          ${ev.entities.map(e => `
+            <span style="font-size:10px; color:var(--text); cursor:pointer;"
+              onclick="selectEntityById('${e.id}')">${e.name}</span>
+          `).join('<span style="color:var(--text-dim)"> · </span>')}
+        </div>
+        ${ev.sources.slice(0,2).map(s => `
+          <div class="result-meta">
+            <span class="result-filename" style="font-size:9px; cursor:pointer;"
+              onclick="selectDoc('${s.document_id}')">${s.filename}</span>
+            <span class="result-page">p.${s.page_number}</span>
+          </div>
+        `).join('')}
+      </div>
+    `).join('');
+
+  } catch (e) {
+    document.getElementById('search-results').innerHTML = '<div class="list-empty">Timeline build failed</div>';
+    console.error(e);
+  }
+}
+
+
+// ── Lead Discovery ────────────────────────────────────────────────────────────
+const LEAD_TYPE_META = {
+  gatekeeper:  { label: 'Hidden Gatekeeper', color: '#a78bfa', icon: '◈' },
+  bridge:      { label: 'Cross-Cluster Bridge', color: '#38bdf8', icon: '⬡' },
+  spike:       { label: 'Activity Spike', color: '#fb923c', icon: '▲' },
+  outlier_doc: { label: 'Document Outlier', color: '#4ade80', icon: '⬛' },
+};
+
+async function discoverLeads() {
+  switchTab('leads-tab');
+  const summaryEl = document.getElementById('leads-summary');
+  const listEl    = document.getElementById('leads-list');
+  summaryEl.innerHTML = '';
+  listEl.innerHTML = '<div class="list-empty">Scanning corpus for investigative leads…</div>';
+
+  try {
+    const data = await api('/analysis/leads?top_n=30');
+    const { leads, summary, total } = data;
+
+    // Summary bar
+    summaryEl.innerHTML = `
+      <div style="display:flex; gap:8px; padding:10px 12px; border-bottom:1px solid var(--border); flex-wrap:wrap;">
+        <div style="color:#a78bfa; font-size:10px; letter-spacing:.08em;">
+          <span style="font-size:13px; font-weight:700;">${summary.gatekeeper}</span> GATEKEEPERS
+        </div>
+        <div style="color:#38bdf8; font-size:10px; letter-spacing:.08em;">
+          <span style="font-size:13px; font-weight:700;">${summary.bridge}</span> BRIDGES
+        </div>
+        <div style="color:#fb923c; font-size:10px; letter-spacing:.08em;">
+          <span style="font-size:13px; font-weight:700;">${summary.spike}</span> SPIKES
+        </div>
+        <div style="color:#4ade80; font-size:10px; letter-spacing:.08em;">
+          <span style="font-size:13px; font-weight:700;">${summary.outlier_doc}</span> DOC OUTLIERS
+        </div>
+        <div style="margin-left:auto; color:var(--dim); font-size:10px; align-self:center;">
+          ${total} TOTAL LEADS
+        </div>
+      </div>`;
+
+    if (!leads.length) {
+      listEl.innerHTML = '<div class="list-empty">No significant leads detected</div>';
+      return;
+    }
+
+    listEl.innerHTML = leads.map((lead, i) => {
+      const meta  = LEAD_TYPE_META[lead.type] || { label: lead.type, color: '#888', icon: '●' };
+      const pct   = Math.round(lead.confidence * 100);
+      const stats = Object.entries(lead.stats || {})
+        .map(([k, v]) => `<span style="color:var(--dim); font-size:9px;">${k.replace(/_/g,' ')}: <span style="color:var(--fg);">${v}</span></span>`)
+        .join(' · ');
+      const clickable = lead.entity_id
+        ? `onclick="loadEntityNetwork('${lead.entity_id}'); switchTab('entity-tab');"`
+        : lead.document_id
+          ? `onclick="selectDoc('${lead.document_id}')"`
+          : '';
+
+      return `
+        <div class="dedup-pair" style="border-left:3px solid ${meta.color}; cursor:${clickable ? 'pointer' : 'default'};" ${clickable}>
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:6px;">
+            <div>
+              <span style="font-size:9px; color:${meta.color}; letter-spacing:.1em; font-weight:700;">
+                ${meta.icon} ${meta.label}
+              </span>
+              <div style="font-size:13px; color:var(--hi); font-weight:600; margin-top:2px;">
+                ${lead.entity_name}
+              </div>
+              <div style="font-size:9px; color:var(--dim); text-transform:uppercase; letter-spacing:.05em;">
+                ${lead.entity_type}
+              </div>
+            </div>
+            <div style="text-align:right; flex-shrink:0; margin-left:8px;">
+              <div style="font-size:18px; font-weight:700; color:${meta.color}; font-family:'IBM Plex Mono',monospace;">
+                ${pct}%
+              </div>
+              <div style="font-size:9px; color:var(--dim);">confidence</div>
+            </div>
+          </div>
+          <div style="font-size:10px; color:var(--fg); line-height:1.5; margin-bottom:6px;">
+            ${lead.reason}
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            ${stats}
+          </div>
+        </div>`;
+    }).join('');
+
+  } catch (e) {
+    document.getElementById('leads-list').innerHTML = '<div class="list-empty">Lead scan failed</div>';
+    console.error(e);
+  }
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+checkApi();
+loadDocs();
+refreshStats();
+
+setInterval(checkApi, 5000);
+setInterval(async () => {
+  await loadDocs();
+  refreshStats();
+}, 8000);
+
+// ── Claims / Narrative ────────────────────────────────────────────────────────
+async function loadClaims(entityId = null, role = null) {
+  switchTab('claims-tab');
+  const summaryEl = document.getElementById('claims-summary');
+  const listEl    = document.getElementById('claims-list');
+  summaryEl.innerHTML = '';
+  listEl.innerHTML = '<div class="list-empty">Loading claims…</div>';
+  try {
+    let url = '/claims?limit=100&min_confidence=0.4';
+    if (entityId && role === 'speaker') url += `&speaker_id=${entityId}`;
+    if (entityId && role === 'subject')  url += `&subject_id=${entityId}`;
+    const data = await api(url);
+    const items = data.items || [];
+
+    const byType = {};
+    items.forEach(c => { byType[c.claim_type] = (byType[c.claim_type]||0)+1; });
+    summaryEl.innerHTML = `<div style="display:flex;gap:8px;padding:8px 12px;border-bottom:1px solid var(--border);flex-wrap:wrap;font-size:10px;">
+      ${Object.entries(byType).map(([t,n])=>`<span style="color:#67e8f9;">${n} ${t.toUpperCase()}</span>`).join(' · ')}
+      <span style="margin-left:auto;color:var(--dim);">${data.total} TOTAL</span>
+    </div>`;
+
+    if (!items.length) { listEl.innerHTML = '<div class="list-empty">No claims found</div>'; return; }
+
+    const SENT_COLOR = { positive: '#4ade80', negative: '#f87171', neutral: 'var(--dim)' };
+    const TYPE_COLOR = { allegation: '#f87171', denial: '#fb923c', ruling: '#a78bfa', testimony: '#67e8f9', observation: 'var(--fg)' };
+
+    listEl.innerHTML = items.map(c => {
+      const sc = SENT_COLOR[c.sentiment] || 'var(--dim)';
+      const tc = TYPE_COLOR[c.claim_type] || 'var(--dim)';
+      return `<div style="padding:10px 12px;border-bottom:1px solid var(--border);">
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+          <span style="font-size:9px;color:${tc};letter-spacing:.08em;font-weight:700;">${c.claim_type?.toUpperCase()}</span>
+          <span style="font-size:9px;color:${sc};">${c.sentiment}</span>
+        </div>
+        ${c.speaker ? `<div style="font-size:10px;margin-bottom:2px;"><span style="color:var(--dim);">from:</span> <span style="color:var(--lime);cursor:pointer;" onclick="loadClaims('${c.speaker.id}','speaker')">${c.speaker.name}</span></div>` : ''}
+        ${c.subject ? `<div style="font-size:10px;margin-bottom:4px;"><span style="color:var(--dim);">about:</span> <span style="color:#67e8f9;cursor:pointer;" onclick="loadClaims('${c.subject.id}','subject')">${c.subject.name}</span></div>` : ''}
+        <div style="font-size:10px;color:var(--fg);line-height:1.5;margin-bottom:4px;">${c.claim_text?.slice(0,200)}</div>
+        <div style="font-size:9px;color:var(--dim);">${c.document_name} · p.${c.page_number} · ${Math.round(c.confidence*100)}%</div>
+      </div>`;
+    }).join('');
+  } catch(e) {
+    document.getElementById('claims-list').innerHTML = '<div class="list-empty">Claims load failed</div>';
+    console.error(e);
+  }
+}
+
+async function loadPropagation() {
+  switchTab('claims-tab');
+  const listEl = document.getElementById('claims-list');
+  document.getElementById('claims-summary').innerHTML = '';
+  listEl.innerHTML = '<div class="list-empty">Mapping claim propagation…</div>';
+  try {
+    const data = await api('/claims/propagation?min_docs=2');
+    const chains = data.chains || [];
+    if (!chains.length) { listEl.innerHTML = '<div class="list-empty">No propagating claims found — need claims across 2+ documents</div>'; return; }
+
+    document.getElementById('claims-summary').innerHTML = `<div style="padding:8px 12px;border-bottom:1px solid var(--border);font-size:10px;color:var(--dim);">${data.total} PROPAGATION CHAINS</div>`;
+    listEl.innerHTML = chains.map(ch => `
+      <div style="padding:10px 12px;border-bottom:1px solid var(--border);border-left:3px solid ${ch.unchallenged?'#f87171':'#4ade80'};">
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+          <span style="color:#67e8f9;font-size:11px;font-weight:600;">${ch.subject?.name || 'Unknown subject'}</span>
+          <span style="font-size:9px;color:var(--dim);">depth: ${ch.propagation_depth}</span>
+        </div>
+        <div style="font-size:9px;color:var(--dim);margin-bottom:4px;">${ch.claim_type?.toUpperCase()} · ${ch.unchallenged?'<span style="color:#f87171;">UNCHALLENGED</span>':'<span style="color:#4ade80;">CHALLENGED</span>'}</div>
+        <div style="font-size:10px;color:var(--fg);margin-bottom:6px;">${ch.sample_claim?.slice(0,150)}</div>
+        <div style="display:flex;flex-wrap:wrap;gap:4px;">
+          ${ch.documents.map(d=>`<span style="font-size:8px;color:var(--dim);border:1px solid var(--border);padding:1px 4px;">${d.doc_type||'doc'}: ${d.filename?.slice(0,25)}</span>`).join('')}
+        </div>
+      </div>`).join('');
+  } catch(e) {
+    document.getElementById('claims-list').innerHTML = '<div class="list-empty">Propagation analysis failed</div>';
+    console.error(e);
+  }
+}
+
+async function loadContradictions() {
+  switchTab('claims-tab');
+  const listEl = document.getElementById('claims-list');
+  document.getElementById('claims-summary').innerHTML = '';
+  listEl.innerHTML = '<div class="list-empty">Detecting contradictions…</div>';
+  try {
+    const data = await api('/claims/contradictions');
+    const contrs = data.contradictions || [];
+    if (!contrs.length) { listEl.innerHTML = '<div class="list-empty">No contradictions detected</div>'; return; }
+
+    document.getElementById('claims-summary').innerHTML = `<div style="padding:8px 12px;border-bottom:1px solid var(--border);font-size:10px;color:#f87171;">${data.total} CONTRADICTIONS DETECTED</div>`;
+    listEl.innerHTML = contrs.map(c => `
+      <div style="padding:10px 12px;border-bottom:1px solid var(--border);border-left:3px solid #f87171;">
+        <div style="color:#f87171;font-size:11px;font-weight:600;margin-bottom:6px;">⚡ ${c.subject?.name}</div>
+        ${c.pairs.slice(0,3).map(pair=>`
+          <div style="margin-bottom:8px;">
+            <div style="font-size:9px;color:var(--dim);margin-bottom:2px;">${pair.contradiction_type?.replace(/_/g,' ').toUpperCase()}</div>
+            <div style="font-size:9px;padding:4px 6px;background:var(--bg);margin-bottom:2px;border-left:2px solid #fbbf24;">${pair.claim_a.text?.slice(0,120)}</div>
+            <div style="font-size:9px;padding:4px 6px;background:var(--bg);border-left:2px solid #f87171;">${pair.claim_b.text?.slice(0,120)}</div>
+          </div>`).join('')}
+      </div>`).join('');
+  } catch(e) {
+    document.getElementById('claims-list').innerHTML = '<div class="list-empty">Contradiction detection failed</div>';
+    console.error(e);
+  }
+}
+
+
+// ── Intelligence Engine ───────────────────────────────────────────────────────
+
+function openIntelPanel() {
+  document.getElementById('intel-overlay').style.display = 'flex';
+  showIntelTab('status');
+  loadIntelStatus();
+}
+
+function closeIntelPanel() {
+  document.getElementById('intel-overlay').style.display = 'none';
+}
+
+function showIntelTab(name) {
+  document.querySelectorAll('.ipane').forEach(p => p.style.display = 'none');
+  document.querySelectorAll('.itab').forEach(b => b.classList.remove('active'));
+  document.getElementById('ipane-' + name).style.display = 'flex';
+  const btn = document.getElementById('itab-' + name);
+  if (btn) btn.classList.add('active');
+}
+
+async function loadIntelStatus() {
+  const el = document.getElementById('intel-status-results');
+  el.innerHTML = '<div style="color:var(--dim);padding:20px;">Checking intelligence engine status…</div>';
+  try {
+    const d = await api('/intelligence/status');
+    const online = d.semantic_service === 'online';
+    el.innerHTML = `
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:600px;">
+        <div style="border:1px solid var(--border);padding:16px;">
+          <div style="color:${online?'#4ade80':'#f87171'};font-size:18px;font-weight:700;margin-bottom:4px;">${online?'ONLINE':'OFFLINE'}</div>
+          <div style="color:var(--dim);font-size:10px;">SEMANTIC SERVICE</div>
+          <div style="color:var(--fg);font-size:10px;margin-top:6px;">${d.semantic_url}</div>
+          <div style="color:var(--dim);font-size:10px;margin-top:4px;">~${d.index_size_estimate} pages indexed</div>
+        </div>
+        <div style="border:1px solid var(--border);padding:16px;">
+          <div style="color:#22d3ee;font-size:11px;font-weight:600;margin-bottom:8px;">FEATURES</div>
+          ${Object.entries(d.features).map(([k,v]) =>
+            `<div style="display:flex;justify-content:space-between;font-size:10px;margin-bottom:3px;">
+              <span style="color:var(--dim);">${k.replace(/_/g,' ').toUpperCase()}</span>
+              <span style="color:${v?'#4ade80':'#f87171'}">${v?'YES':'NO'}</span>
+            </div>`
+          ).join('')}
+        </div>
+      </div>
+      ${!online ? `<div style="margin-top:16px;padding:12px;border:1px solid #f87171;color:#f87171;font-size:10px;">
+        Semantic service offline. Start it on port 8010 to enable hybrid search, disambiguation, and graph enrichment.
+        <br>Influence mapping and claim correlation work without it.
+      </div>` : `<div style="margin-top:16px;display:flex;gap:8px;">
+        <button onclick="indexCorpus(this)" style="background:none;border:1px solid #22d3ee;color:#22d3ee;font-size:9px;padding:6px 12px;cursor:pointer;">INDEX ENTIRE CORPUS</button>
+      </div>`}
+    `;
+  } catch(e) {
+    el.innerHTML = '<div style="color:#f87171;padding:20px;">Intelligence engine unreachable. Is the API running?</div>';
+  }
+}
+
+async function indexCorpus(btn) {
+  btn.textContent = 'INDEXING…';
+  btn.disabled = true;
+  try {
+    const d = await fetch('/api/v1/intelligence/index-corpus', {method:'POST'}).then(r=>r.json());
+    btn.textContent = `INDEXING ${d.estimated_pages} PAGES…`;
+    setTimeout(() => { btn.textContent = 'INDEX ENTIRE CORPUS'; btn.disabled = false; }, 8000);
+  } catch(e) { btn.textContent = 'FAILED'; setTimeout(()=>{btn.textContent='INDEX ENTIRE CORPUS';btn.disabled=false;},3000); }
+}
+
+async function runHybridSearch() {
+  const q = document.getElementById('intel-search-input').value.trim();
+  if (!q) return;
+  const sw = parseInt(document.getElementById('w-semantic').value) / 10;
+  const kw = parseInt(document.getElementById('w-keyword').value) / 10;
+  const gw = parseInt(document.getElementById('w-graph').value) / 10;
+  const el = document.getElementById('intel-search-results');
+  el.innerHTML = '<div style="color:var(--dim);padding:20px;">Searching…</div>';
+  try {
+    const d = await api(`/intelligence/search?q=${encodeURIComponent(q)}&k=20&semantic_w=${sw}&keyword_w=${kw}&graph_w=${gw}`);
+    if (!d.results.length) { el.innerHTML = '<div style="color:var(--dim);padding:20px;">No results</div>'; return; }
+    const SIG_COLOR = {semantic:'#22d3ee', keyword:'#a78bfa', graph:'#4ade80'};
+    el.innerHTML = `<div style="color:var(--dim);font-size:10px;margin-bottom:8px;">${d.total} results — ${d.weights.semantic.toFixed(1)} semantic / ${d.weights.keyword.toFixed(1)} keyword / ${d.weights.graph.toFixed(1)} graph</div>` +
+      d.results.map(r => `
+        <div style="border:1px solid var(--border);padding:12px;margin-bottom:8px;cursor:pointer;" onclick="focusDocument('${r.document_id}')">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+            <span style="color:#22d3ee;font-size:10px;font-weight:600;">${r.filename}</span>
+            <span style="font-size:10px;color:#4ade80;">score: ${r.score.toFixed(3)}</span>
+          </div>
+          <div style="font-size:9px;color:var(--dim);margin-bottom:6px;">p.${r.page_number} · ${r.doc_type} · ${r.signals.map(s=>`<span style="color:${SIG_COLOR[s]||'#fff'}">${s}</span>`).join(' ')}</div>
+          <div style="font-size:10px;color:var(--fg);line-height:1.5;">${r.text_snippet || ''}</div>
+        </div>`).join('');
+  } catch(e) { el.innerHTML = '<div style="color:#f87171;padding:20px;">Search failed: ' + e.message + '</div>'; }
+}
+
+// Update weight display labels
+['semantic','keyword','graph'].forEach(k => {
+  const el = document.getElementById('w-'+k);
+  if (el) el.addEventListener('input', () => {
+    document.getElementById('wv-'+k).textContent = (parseInt(el.value)/10).toFixed(1);
+  });
+});
+
+async function loadInfluence() {
+  const el = document.getElementById('influence-results');
+  el.innerHTML = '<div style="color:var(--dim);padding:20px;">Computing influence scores…</div>';
+  try {
+    const d = await api('/intelligence/influence?top_n=25');
+    if (!d.actors.length) { el.innerHTML = '<div style="color:var(--dim);padding:20px;">No data</div>'; return; }
+    const maxScore = d.actors[0]?.scores?.composite || 1;
+    el.innerHTML = `<table style="width:100%;border-collapse:collapse;font-size:10px;">
+      <thead><tr style="color:var(--dim);border-bottom:1px solid var(--border);">
+        <th style="text-align:left;padding:6px;">ACTOR</th>
+        <th style="text-align:left;padding:6px;">TYPE</th>
+        <th style="text-align:center;padding:6px;">COMPOSITE</th>
+        <th style="text-align:center;padding:6px;">DEGREE</th>
+        <th style="text-align:center;padding:6px;">SPREAD</th>
+        <th style="text-align:center;padding:6px;">TARGET</th>
+        <th style="text-align:center;padding:6px;">BRIDGE</th>
+        <th style="text-align:center;padding:6px;">DOCS</th>
+      </tr></thead>
+      <tbody>${d.actors.map((a,i) => {
+        const pct = Math.round(a.scores.composite / maxScore * 100);
+        return `<tr style="border-bottom:1px solid var(--border);cursor:pointer;" onclick="closeIntelPanel();setTimeout(()=>loadEntityById('${a.entity.id}'),100)">
+          <td style="padding:6px;color:#22d3ee;">${a.entity.name}</td>
+          <td style="padding:6px;color:var(--dim);">${a.entity.type}</td>
+          <td style="padding:6px;text-align:center;">
+            <div style="background:var(--panel);border-radius:2px;overflow:hidden;height:12px;width:80px;display:inline-block;">
+              <div style="width:${pct}%;height:100%;background:#22d3ee;opacity:.8;"></div>
+            </div>
+            <span style="margin-left:6px;color:#22d3ee;">${(a.scores.composite*100).toFixed(0)}%</span>
+          </td>
+          <td style="padding:6px;text-align:center;color:var(--fg);">${(a.scores.degree*100).toFixed(0)}%</td>
+          <td style="padding:6px;text-align:center;color:var(--fg);">${(a.scores.spread*100).toFixed(0)}%</td>
+          <td style="padding:6px;text-align:center;color:${a.scores.claim_target>0.1?'#f87171':'var(--fg)'};">${(a.scores.claim_target*100).toFixed(0)}%</td>
+          <td style="padding:6px;text-align:center;color:${a.scores.bridge>0.5?'#fbbf24':'var(--fg)'};">${(a.scores.bridge*100).toFixed(0)}%</td>
+          <td style="padding:6px;text-align:center;color:var(--dim);">${a.raw.docs}</td>
+        </tr>`;}).join('')}
+      </tbody></table>`;
+  } catch(e) { el.innerHTML = '<div style="color:#f87171;padding:20px;">Influence computation failed</div>'; }
+}
+
+async function loadClaimCorrelation() {
+  const el = document.getElementById('correlate-results');
+  el.innerHTML = '<div style="color:var(--dim);padding:20px;">Analyzing claim patterns across documents…</div>';
+  try {
+    const d = await api('/intelligence/correlate-claims');
+    const parts = [];
+    if (d.contradictions.length) {
+      parts.push(`<div style="margin-bottom:20px;">
+        <div style="color:#f87171;font-size:11px;font-weight:700;margin-bottom:8px;">⚡ ${d.contradictions.length} CONTRADICTIONS DETECTED</div>
+        ${d.contradictions.map(c => `<div style="border-left:3px solid #f87171;padding:8px 12px;margin-bottom:6px;border:1px solid var(--border);">
+          <div style="color:#f87171;font-weight:600;">${c.subject || 'Unknown subject'}</div>
+          <div style="color:var(--dim);font-size:9px;margin-top:2px;">${c.contradiction_type.replace(/_/g,' ').toUpperCase()} · ${c.doc_count} docs · ${c.claim_count} claims</div>
+        </div>`).join('')}
+      </div>`);
+    }
+    if (d.propagation_chains.length) {
+      parts.push(`<div style="margin-bottom:20px;">
+        <div style="color:#fbbf24;font-size:11px;font-weight:700;margin-bottom:8px;">📡 ${d.propagation_chains.length} PROPAGATING NARRATIVES</div>
+        ${d.propagation_chains.map(c => `<div style="border:1px solid var(--border);padding:10px 12px;margin-bottom:6px;">
+          <div style="color:#fbbf24;font-weight:600;">${c.subject || 'Unknown subject'} · depth ${c.doc_count}</div>
+          <div style="color:var(--dim);font-size:9px;margin-top:2px;">${c.claim_count} claims · ${c.unchallenged?'<span style="color:#f87171;">UNCHALLENGED</span>':'<span style="color:#4ade80;">CHALLENGED</span>'}</div>
+          <div style="color:var(--fg);font-size:10px;margin-top:4px;">${c.representative_text?.slice(0,150)}</div>
+        </div>`).join('')}
+      </div>`);
+    }
+    parts.push(`<div style="color:var(--dim);font-size:9px;">Analyzed ${d.total_claims_analyzed ?? d.total ?? 0} claims · method: ${d.method ?? 'structural'}</div>`);
+    if (!parts.length || (!(d.contradictions?.length) && !(d.propagation_chains?.length))) {
+      el.innerHTML = '<div style="padding:20px;"><div style="color:var(--dim);margin-bottom:8px;">No cross-document patterns detected yet.</div><div style="color:var(--dim);font-size:10px;">Upload multiple documents with related content to detect claim propagation and contradictions.</div><div style="color:var(--dim);font-size:9px;margin-top:8px;">Analyzed ' + (d.total_claims_analyzed ?? 0) + ' claims · method: ' + (d.method ?? 'structural') + '</div></div>';
+    } else {
+      el.innerHTML = parts.join('');
+    }
+  } catch(e) { el.innerHTML = '<div style="color:#f87171;padding:20px;">Correlation failed</div>'; }
+}
+
+async function loadDisambig() {
+  const el = document.getElementById('disambig-results');
+  el.innerHTML = '<div style="color:var(--dim);padding:20px;">Scanning for semantically similar entities…</div>';
+  try {
+    const d = await api('/intelligence/disambiguate');
+    if (!d.candidates.length) {
+      el.innerHTML = '<div style="color:var(--dim);padding:20px;">No disambiguation candidates found. Either entity contexts are too sparse, or all similar entities were already merged.</div>';
+      return;
+    }
+    el.innerHTML = `<div style="color:var(--dim);font-size:10px;margin-bottom:12px;">${d.total} candidates found — these entity pairs have different names but similar contexts</div>` +
+      d.candidates.map(c => `
+        <div style="border:1px solid var(--border);padding:12px;margin-bottom:8px;display:flex;gap:12px;align-items:center;">
+          <div style="flex:1;">
+            <span style="color:#22d3ee;cursor:pointer;" onclick="closeIntelPanel();loadEntityById('${c.entity_a.id}')">${c.entity_a.name}</span>
+            <span style="color:var(--dim);font-size:9px;"> (${c.entity_a.type}, ${c.entity_a.mentions} mentions)</span>
+          </div>
+          <div style="color:#fbbf24;font-size:11px;padding:0 8px;">≈</div>
+          <div style="flex:1;">
+            <span style="color:#22d3ee;cursor:pointer;" onclick="closeIntelPanel();loadEntityById('${c.entity_b.id}')">${c.entity_b.name}</span>
+            <span style="color:var(--dim);font-size:9px;"> (${c.entity_b.type}, ${c.entity_b.mentions} mentions)</span>
+          </div>
+          <div style="color:#4ade80;font-size:11px;font-weight:600;min-width:40px;text-align:right;">${Math.round(c.semantic_score*100)}%</div>
+          <button onclick="mergeEntities('${c.entity_a.id}','${c.entity_b.id}',this)"
+            style="background:none;border:1px solid #4ade80;color:#4ade80;font-size:8px;padding:3px 8px;cursor:pointer;">MERGE</button>
+        </div>`).join('');
+  } catch(e) { el.innerHTML = '<div style="color:#f87171;padding:20px;">Disambiguation failed: ' + e.message + '</div>'; }
+}
+
+async function mergeEntities(aId, bId, btn) {
+  btn.textContent = '…';
+  btn.disabled = true;
+  try {
+    const r = await fetch(`/api/v1/entities/merge/${aId}/into/${bId}`, {method:'POST'});
+    const d = await r.json();
+    btn.textContent = 'MERGED';
+    btn.style.borderColor = '#4ade80';
+    btn.style.color = '#4ade80';
+    setTimeout(() => loadDisambig(), 1000);
+  } catch(e) { btn.textContent = 'FAILED'; btn.disabled = false; }
+}
+
+function focusDocument(docId) {
+  closeIntelPanel();
+  // Switch to document in left panel
+  const docEl = document.querySelector(`[data-doc-id="${docId}"]`);
+  if (docEl) docEl.click();
+}
+
+async function loadEntityById(entityId) {
+  try {
+    const e = await api(`/entities/${entityId}`);
+    if (e) showEntityDetail(e);
+  } catch(e) { console.error(e); }
+}
+
+
+// ── Narrative Intelligence Engine ────────────────────────────────────────────
+
+function openNIEPanel() {
+  document.getElementById('nie-overlay').style.display = 'flex';
+  showNIETab('status');
+  loadNIEStatus();
+}
+function closeNIEPanel() {
+  document.getElementById('nie-overlay').style.display = 'none';
+}
+function showNIETab(name) {
+  document.querySelectorAll('.npane').forEach(p => p.style.display = 'none');
+  document.querySelectorAll('.ntab').forEach(b => b.classList.remove('active'));
+  document.getElementById('npane-' + name).style.display = 'flex';
+  const btn = document.getElementById('ntab-' + name);
+  if (btn) btn.classList.add('active');
+}
+
+async function loadNIEStatus() {
+  const el = document.getElementById('nie-status-content');
+  el.innerHTML = '<div style="color:var(--dim);">Loading…</div>';
+  try {
+    const d = await api('/nie/status');
+    if (d.error) { el.innerHTML = `<div style="color:#f87171;">${d.error}</div>`; return; }
+    el.innerHTML = `
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:700px;margin-bottom:20px;">
+        ${[['TEXT UNITS',d.text_units||0,'#f59e0b'],['EVIDENCE SPANS',d.evidence_spans||0,'#22d3ee'],
+           ['CLAIMS',d.claims||0,'#a78bfa'],['EVENTS',d.events||0,'#4ade80']].map(([l,v,c])=>
+          `<div style="border:1px solid var(--border);padding:14px;">
+            <div style="color:${c};font-size:22px;font-weight:700;">${v.toLocaleString()}</div>
+            <div style="color:var(--dim);font-size:9px;margin-top:3px;">${l}</div>
+          </div>`).join('')}
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:520px;margin-bottom:20px;">
+        ${[['EDGES',d.edges||0,'#fbbf24'],['SCORED ENTITIES',d.scored_entities||0,'#34d399']].map(([l,v,c])=>
+          `<div style="border:1px solid var(--border);padding:14px;">
+            <div style="color:${c};font-size:18px;font-weight:700;">${v.toLocaleString()}</div>
+            <div style="color:var(--dim);font-size:9px;margin-top:3px;">${l}</div>
+          </div>`).join('')}
+        <div style="border:1px solid var(--border);padding:14px;">
+          <div style="color:var(--fg);font-size:11px;font-weight:600;margin-bottom:6px;">EDGE TYPES</div>
+          ${Object.entries(d.edge_types||{}).map(([t,n])=>
+            `<div style="display:flex;justify-content:space-between;font-size:10px;margin-bottom:2px;">
+              <span style="color:var(--dim);">${t}</span><span style="color:#f59e0b;">${n}</span>
+            </div>`).join('') || '<div style="color:var(--dim);font-size:10px;">None yet</div>'}
+        </div>
+      </div>
+      ${(d.claims||0) === 0 ? `<div style="border:1px solid #f59e0b;padding:14px;max-width:400px;color:#f59e0b;font-size:10px;">
+        No narrative claims extracted yet. Go to REBUILD tab and run extraction.
+      </div>` : ''}
+    `;
+  } catch(e) { el.innerHTML = '<div style="color:#f87171;">NIE not reachable</div>'; }
+}
+
+async function triggerNIERebuild(btn) {
+  const sourceTag = document.getElementById('nie-source-tag').value.trim() || null;
+  const maxUnits = parseInt(document.getElementById('nie-max-units').value) || null;
+  const result = document.getElementById('nie-rebuild-result');
+  btn.textContent = 'EXTRACTING…';
+  btn.disabled = true;
+  result.innerHTML = '<div style="color:#f59e0b;">Running extraction — this may take several minutes with Ollama…</div>';
+  try {
+    const d = await fetch('/api/v1/nie/rebuild', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({source_tag: sourceTag, max_units: maxUnits, rebuild_edges: true})
+    }).then(r => r.json());
+    if (d.status === 'ok') {
+      result.innerHTML = `<div style="color:#4ade80;">
+        ✓ Complete: ${d.units} units → ${d.evidence_spans} spans → ${d.claims} claims extracted
+      </div>`;
+    } else if (d.status === 'queued') {
+      result.innerHTML = `<div style="color:#f59e0b;">${d.note}</div>`;
+    } else {
+      result.innerHTML = `<div style="color:#f87171;">Error: ${d.error || JSON.stringify(d)}</div>`;
+    }
+  } catch(e) {
+    result.innerHTML = `<div style="color:#f87171;">Failed: ${e.message}</div>`;
+  }
+  btn.textContent = 'RUN NARRATIVE EXTRACTION';
+  btn.disabled = false;
+}
+
+async function loadNIEEntities() {
+  const el = document.getElementById('nie-entities-content');
+  el.innerHTML = '<div style="color:var(--dim);">Loading…</div>';
+  try {
+    const d = await api('/nie/entities?limit=30');
+    const entities = d.entities || [];
+    if (!entities.length) { el.innerHTML = '<div style="color:var(--dim);">No scored entities. Run REBUILD first.</div>'; return; }
+    const maxScore = entities[0]?.influence_score || 1;
+    el.innerHTML = `<table style="width:100%;border-collapse:collapse;font-size:10px;">
+      <thead><tr style="color:var(--dim);border-bottom:1px solid var(--border);">
+        <th style="text-align:left;padding:6px;">ENTITY</th>
+        <th style="text-align:center;padding:6px;">INFLUENCE</th>
+        <th style="text-align:center;padding:6px;">WITNESS</th>
+        <th style="text-align:center;padding:6px;">CONTRADICTIONS</th>
+        <th style="text-align:center;padding:6px;">CLAIMS</th>
+      </tr></thead>
+      <tbody>${entities.map(e => {
+        const pct = Math.round((e.influence_score||0)/maxScore*100);
+        return `<tr style="border-bottom:1px solid var(--border);cursor:pointer;" onclick="loadNIEDossierFor('${e.entity_name}')">
+          <td style="padding:6px;color:#f59e0b;">${e.entity_name}</td>
+          <td style="padding:6px;text-align:center;">
+            <div style="background:var(--panel);height:10px;width:80px;display:inline-block;">
+              <div style="width:${pct}%;height:100%;background:#f59e0b;"></div>
+            </div>
+            <span style="margin-left:4px;color:#f59e0b;">${(e.influence_score||0).toFixed(3)}</span>
+          </td>
+          <td style="padding:6px;text-align:center;color:#22d3ee;">${(e.witness_score||0).toFixed(2)}</td>
+          <td style="padding:6px;text-align:center;color:${(e.contradiction_score||0)>0?'#f87171':'var(--dim)'};">${(e.contradiction_score||0).toFixed(1)}</td>
+          <td style="padding:6px;text-align:center;color:var(--dim);">${e.claim_count||0}</td>
+        </tr>`;}).join('')}
+      </tbody></table>`;
+  } catch(e) { el.innerHTML = '<div style="color:#f87171;">Failed</div>'; }
+}
+
+function loadNIEDossierFor(name) {
+  document.getElementById('nie-dossier-entity').value = name;
+  showNIETab('dossier');
+  loadNIEDossier();
+}
+
+async function loadNIEDossier() {
+  const name = document.getElementById('nie-dossier-entity').value.trim();
+  if (!name) return;
+  const el = document.getElementById('nie-dossier-content');
+  el.innerHTML = '<div style="color:var(--dim);">Loading dossier…</div>';
+  try {
+    const d = await api(`/nie/dossier/${encodeURIComponent(name)}`);
+    const EDGE_COLOR = {CONTRADICTS:'#f87171',REPEATS:'#fbbf24',DERIVES_FROM:'#a78bfa',SUPPORTS:'#4ade80'};
+    el.innerHTML = `
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:450px;margin-bottom:16px;">
+        ${[['INFLUENCE',(d.influence_score||0).toFixed(4),'#f59e0b'],
+           ['WITNESS',(d.witness_score||0).toFixed(4),'#22d3ee'],
+           ['CONTRADICTIONS',(d.contradiction_score||0).toFixed(1),'#f87171']].map(([l,v,c])=>
+          `<div style="border:1px solid var(--border);padding:10px;text-align:center;">
+            <div style="color:${c};font-size:16px;font-weight:700;">${v}</div>
+            <div style="color:var(--dim);font-size:9px;">${l}</div>
+          </div>`).join('')}
+      </div>
+      ${d.top_claims?.length ? `<div style="margin-bottom:16px;">
+        <div style="color:#f59e0b;font-size:10px;font-weight:700;margin-bottom:8px;">TOP CLAIMS (${d.top_claims.length})</div>
+        ${d.top_claims.slice(0,8).map(c=>`
+          <div style="border:1px solid var(--border);padding:8px 10px;margin-bottom:4px;">
+            <div style="display:flex;gap:8px;margin-bottom:3px;">
+              <span style="color:#a78bfa;font-size:9px;">${c.claim_type||'?'}</span>
+              <span style="color:var(--dim);font-size:9px;">${c.polarity||''}</span>
+              <span style="color:var(--dim);font-size:9px;margin-left:auto;">${c.normalized_date||''}</span>
+            </div>
+            <div style="font-size:10px;color:var(--fg);">${c.summary||c.object||''}</div>
+            <div style="font-size:9px;color:var(--dim);margin-top:2px;">p.${c.page_number}</div>
+          </div>`).join('')}
+      </div>` : ''}
+      ${d.contradictions?.length ? `<div style="margin-bottom:16px;">
+        <div style="color:#f87171;font-size:10px;font-weight:700;margin-bottom:8px;">⚡ CONTRADICTIONS (${d.contradictions.length})</div>
+        ${d.contradictions.slice(0,5).map(c=>`
+          <div style="border-left:3px solid #f87171;padding:8px 10px;margin-bottom:6px;border:1px solid var(--border);">
+            <div style="font-size:9px;color:#f87171;margin-bottom:4px;">${c.rationale||''} · score: ${(c.score||0).toFixed(2)}</div>
+            <div style="font-size:10px;color:var(--fg);margin-bottom:3px;">A: ${c.src_summary?.slice(0,100)||''}</div>
+            <div style="font-size:10px;color:var(--dim);">B: ${c.dst_summary?.slice(0,100)||''}</div>
+          </div>`).join('')}
+      </div>` : ''}
+      ${d.timeline?.length ? `<div style="margin-bottom:16px;">
+        <div style="color:#4ade80;font-size:10px;font-weight:700;margin-bottom:8px;">TIMELINE (${d.timeline.length} events)</div>
+        ${d.timeline.slice(0,10).map(t=>`
+          <div style="display:flex;gap:12px;padding:6px 0;border-bottom:1px solid var(--border);">
+            <div style="color:#4ade80;font-size:10px;min-width:90px;">${t.normalized_date||'?'}</div>
+            <div style="font-size:10px;color:var(--fg);">${t.summary?.slice(0,120)||''}</div>
+          </div>`).join('')}
+      </div>` : ''}
+      ${d.inbound_propagation?.length ? `<div>
+        <div style="color:#22d3ee;font-size:10px;font-weight:700;margin-bottom:8px;">NARRATIVE PROPAGATION</div>
+        ${d.inbound_propagation.slice(0,5).map(e=>`
+          <div style="padding:6px 0;border-bottom:1px solid var(--border);">
+            <span style="color:${EDGE_COLOR[e.edge_type]||'#fff'};font-size:9px;">${e.edge_type}</span>
+            <span style="color:var(--dim);font-size:9px;"> · score: ${(e.score||0).toFixed(2)}</span>
+            <div style="font-size:10px;color:var(--fg);margin-top:2px;">${e.src_summary?.slice(0,120)||''}</div>
+          </div>`).join('')}
+      </div>` : ''}
+    `;
+  } catch(e) { el.innerHTML = '<div style="color:#f87171;">Dossier failed</div>'; }
+}
+
+async function loadNIETimeline() {
+  const entity = document.getElementById('nie-timeline-entity').value.trim() || null;
+  const el = document.getElementById('nie-timeline-content');
+  el.innerHTML = '<div style="color:var(--dim);">Loading timeline…</div>';
+  try {
+    const url = entity ? `/nie/timeline?entity=${encodeURIComponent(entity)}&limit=100` : '/nie/timeline?limit=100';
+    const events = await api(url);
+    if (!events.length) { el.innerHTML = '<div style="color:var(--dim);">No dated events found. Run REBUILD first.</div>'; return; }
+    // Group by year
+    const byYear = {};
+    events.forEach(e => {
+      const yr = (e.normalized_date||'').slice(0,4) || '?';
+      if (!byYear[yr]) byYear[yr] = [];
+      byYear[yr].push(e);
+    });
+    el.innerHTML = Object.entries(byYear).sort().map(([yr, evts]) => `
+      <div style="margin-bottom:16px;">
+        <div style="color:#f59e0b;font-size:13px;font-weight:700;margin-bottom:8px;">${yr}</div>
+        ${evts.map(e=>`
+          <div style="display:flex;gap:12px;padding:7px 0;border-bottom:1px solid var(--border);">
+            <div style="color:var(--dim);font-size:9px;min-width:80px;">${e.normalized_date||'?'}</div>
+            <div>
+              <div style="font-size:10px;color:var(--fg);">${e.summary?.slice(0,150)||''}</div>
+              <div style="font-size:9px;color:var(--dim);margin-top:2px;">${e.subject||''} · ${e.claim_type||''} · p.${e.page_number}</div>
+            </div>
+          </div>`).join('')}
+      </div>`).join('');
+  } catch(e) { el.innerHTML = '<div style="color:#f87171;">Timeline failed</div>'; }
+}
+
+async function loadNIEContradictions() {
+  const el = document.getElementById('nie-contrad-content');
+  el.innerHTML = '<div style="color:var(--dim);">Scanning…</div>';
+  try {
+    const d = await api('/nie/contradictions?min_score=0.6&limit=50');
+    if (!d.length) {
+      el.innerHTML = '<div style="color:var(--dim);">No contradictions detected yet. Needs 2+ documents with conflicting claims about the same subject.</div>';
+      return;
+    }
+    el.innerHTML = `<div style="color:#f87171;font-size:10px;margin-bottom:12px;">${d.length} CONTRADICTIONS FOUND</div>` +
+      d.map(c=>`
+        <div style="border:1px solid var(--border);border-left:3px solid #f87171;padding:12px;margin-bottom:8px;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+            <span style="color:#f87171;font-size:10px;font-weight:600;">${c.src_subject||'?'}</span>
+            <span style="color:var(--dim);font-size:9px;">score: ${(c.score||0).toFixed(2)}</span>
+          </div>
+          <div style="font-size:9px;color:#fbbf24;margin-bottom:6px;">${(c.rationale||'').toUpperCase()}</div>
+          <div style="font-size:10px;color:var(--fg);padding:6px;background:var(--panel);margin-bottom:4px;border-left:2px solid #22d3ee;">
+            Doc ${c.src_doc?.slice(0,8)||'?'} p.${c.src_page}: ${c.src_summary?.slice(0,140)||''}
+          </div>
+          <div style="font-size:10px;color:var(--fg);padding:6px;background:var(--panel);border-left:2px solid #f87171;">
+            Doc ${c.dst_doc?.slice(0,8)||'?'} p.${c.dst_page}: ${c.dst_summary?.slice(0,140)||''}
+          </div>
+        </div>`).join('');
+  } catch(e) { el.innerHTML = '<div style="color:#f87171;">Failed</div>'; }
+}
+
+</script>
+
+<!-- INTEL OVERLAY PANEL -->
+<div id="intel-overlay" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:var(--bg);z-index:999;flex-direction:column;overflow:hidden;">
+  <div style="display:flex;align-items:center;padding:12px 20px;border-bottom:1px solid var(--border);flex-shrink:0;gap:12px;">
+    <span style="color:#22d3ee;font-size:13px;font-weight:700;letter-spacing:.15em;">INTELLIGENCE ENGINE</span>
+    <div style="display:flex;gap:6px;margin-left:12px;">
+      <button onclick="showIntelTab('search')"    id="itab-search"    class="itab active">HYBRID SEARCH</button>
+      <button onclick="showIntelTab('influence')" id="itab-influence" class="itab">INFLUENCE MAP</button>
+      <button onclick="showIntelTab('correlate')" id="itab-correlate" class="itab">CLAIM CORRELATION</button>
+      <button onclick="showIntelTab('disambig')"  id="itab-disambig"  class="itab">DISAMBIGUATION</button>
+      <button onclick="showIntelTab('status')"    id="itab-status"    class="itab">STATUS</button>
+    </div>
+    <button onclick="closeIntelPanel()" style="margin-left:auto;background:none;border:1px solid var(--border);color:var(--dim);font-size:9px;padding:4px 8px;cursor:pointer;">CLOSE ✕</button>
+  </div>
+
+  <!-- HYBRID SEARCH -->
+  <div id="ipane-search" class="ipane" style="display:flex;flex-direction:column;padding:16px 20px;gap:12px;overflow:auto;">
+    <div style="display:flex;gap:8px;align-items:center;">
+      <input id="intel-search-input" type="text" placeholder="Search by concept, not just keyword…"
+        style="flex:1;background:var(--panel);border:1px solid #22d3ee;color:var(--fg);font-size:12px;padding:8px 12px;"
+        onkeydown="if(event.key==='Enter')runHybridSearch()">
+      <button onclick="runHybridSearch()" style="background:#22d3ee;border:none;color:#000;font-size:10px;padding:8px 14px;cursor:pointer;font-weight:700;letter-spacing:.08em;">SEARCH</button>
+    </div>
+    <div style="display:flex;gap:16px;font-size:9px;color:var(--dim);">
+      <label>SEMANTIC <input type="range" id="w-semantic" min="0" max="10" value="6" style="width:60px"> <span id="wv-semantic">0.6</span></label>
+      <label>KEYWORD  <input type="range" id="w-keyword"  min="0" max="10" value="3" style="width:60px"> <span id="wv-keyword">0.3</span></label>
+      <label>GRAPH    <input type="range" id="w-graph"    min="0" max="10" value="1" style="width:60px"> <span id="wv-graph">0.1</span></label>
+    </div>
+    <div id="intel-search-results" style="flex:1;overflow:auto;"></div>
+  </div>
+
+  <!-- INFLUENCE MAP -->
+  <div id="ipane-influence" class="ipane" style="display:none;flex-direction:column;padding:16px 20px;overflow:auto;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+      <span style="color:#22d3ee;font-size:11px;letter-spacing:.1em;">ACTOR INFLUENCE SCORES</span>
+      <button onclick="loadInfluence()" style="background:none;border:1px solid #22d3ee;color:#22d3ee;font-size:9px;padding:4px 10px;cursor:pointer;">COMPUTE</button>
+    </div>
+    <div id="influence-results" style="overflow:auto;"></div>
+  </div>
+
+  <!-- CLAIM CORRELATION -->
+  <div id="ipane-correlate" class="ipane" style="display:none;flex-direction:column;padding:16px 20px;overflow:auto;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+      <span style="color:#22d3ee;font-size:11px;letter-spacing:.1em;">CROSS-DOCUMENT CLAIM ANALYSIS</span>
+      <button onclick="loadClaimCorrelation()" style="background:none;border:1px solid #22d3ee;color:#22d3ee;font-size:9px;padding:4px 10px;cursor:pointer;">ANALYZE</button>
+    </div>
+    <div id="correlate-results" style="overflow:auto;"></div>
+  </div>
+
+  <!-- DISAMBIGUATION -->
+  <div id="ipane-disambig" class="ipane" style="display:none;flex-direction:column;padding:16px 20px;overflow:auto;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+      <span style="color:#22d3ee;font-size:11px;letter-spacing:.1em;">SEMANTIC ENTITY DISAMBIGUATION</span>
+      <button onclick="loadDisambig()" style="background:none;border:1px solid #22d3ee;color:#22d3ee;font-size:9px;padding:4px 10px;cursor:pointer;">SCAN</button>
+    </div>
+    <div id="disambig-results" style="overflow:auto;"></div>
+  </div>
+
+  <!-- STATUS -->
+  <div id="ipane-status" class="ipane" style="display:none;flex-direction:column;padding:16px 20px;overflow:auto;">
+    <div id="intel-status-results" style="overflow:auto;"></div>
+  </div>
+</div>
+
+<!-- NIE OVERLAY PANEL -->
+<div id="nie-overlay" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:var(--bg);z-index:1000;flex-direction:column;overflow:hidden;">
+  <div style="display:flex;align-items:center;padding:12px 20px;border-bottom:1px solid var(--border);flex-shrink:0;gap:8px;flex-wrap:wrap;">
+    <span style="color:#f59e0b;font-size:13px;font-weight:700;letter-spacing:.15em;">NARRATIVE INTELLIGENCE ENGINE</span>
+    <div style="display:flex;gap:6px;margin-left:8px;flex-wrap:wrap;">
+      <button onclick="showNIETab('status')"   id="ntab-status"   class="ntab active">STATUS</button>
+      <button onclick="showNIETab('rebuild')"  id="ntab-rebuild"  class="ntab">REBUILD</button>
+      <button onclick="showNIETab('entities')" id="ntab-entities" class="ntab">INFLUENCE</button>
+      <button onclick="showNIETab('timeline')" id="ntab-timeline" class="ntab">TIMELINE</button>
+      <button onclick="showNIETab('contrad')"  id="ntab-contrad"  class="ntab">CONTRADICTIONS</button>
+      <button onclick="showNIETab('dossier')"  id="ntab-dossier"  class="ntab">DOSSIER</button>
+    </div>
+    <button onclick="closeNIEPanel()" style="margin-left:auto;background:none;border:1px solid var(--border);color:var(--dim);font-size:9px;padding:4px 8px;cursor:pointer;">CLOSE ✕</button>
+  </div>
+
+  <!-- STATUS -->
+  <div id="npane-status" class="npane" style="display:flex;flex-direction:column;padding:20px;overflow:auto;">
+    <div id="nie-status-content"></div>
+  </div>
+
+  <!-- REBUILD -->
+  <div id="npane-rebuild" class="npane" style="display:none;flex-direction:column;padding:20px;gap:12px;">
+    <div style="max-width:500px;">
+      <div style="color:#f59e0b;font-size:11px;font-weight:700;margin-bottom:12px;">REBUILD NARRATIVE GRAPH</div>
+      <div style="margin-bottom:8px;">
+        <label style="font-size:10px;color:var(--dim);display:block;margin-bottom:4px;">SOURCE TAG (leave blank for all)</label>
+        <input id="nie-source-tag" type="text" placeholder="e.g. epstein-fbi"
+          style="width:100%;background:var(--panel);border:1px solid var(--border);color:var(--fg);font-size:11px;padding:6px 10px;box-sizing:border-box;">
+      </div>
+      <div style="margin-bottom:8px;">
+        <label style="font-size:10px;color:var(--dim);display:block;margin-bottom:4px;">MAX UNITS (blank = all)</label>
+        <input id="nie-max-units" type="number" placeholder="500"
+          style="width:100%;background:var(--panel);border:1px solid var(--border);color:var(--fg);font-size:11px;padding:6px 10px;box-sizing:border-box;">
+      </div>
+      <button onclick="triggerNIERebuild(this)" style="background:#f59e0b;border:none;color:#000;font-size:10px;padding:8px 20px;cursor:pointer;font-weight:700;letter-spacing:.08em;">RUN NARRATIVE EXTRACTION</button>
+      <div id="nie-rebuild-result" style="margin-top:12px;font-size:10px;color:var(--dim);"></div>
+    </div>
+  </div>
+
+  <!-- INFLUENCE -->
+  <div id="npane-entities" class="npane" style="display:none;flex-direction:column;padding:20px;overflow:auto;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+      <span style="color:#f59e0b;font-size:11px;font-weight:700;">NARRATIVE INFLUENCE SCORES</span>
+      <button onclick="loadNIEEntities()" style="background:none;border:1px solid #f59e0b;color:#f59e0b;font-size:9px;padding:4px 10px;cursor:pointer;">LOAD</button>
+    </div>
+    <div id="nie-entities-content" style="overflow:auto;"></div>
+  </div>
+
+  <!-- TIMELINE -->
+  <div id="npane-timeline" class="npane" style="display:none;flex-direction:column;padding:20px;overflow:auto;">
+    <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px;">
+      <input id="nie-timeline-entity" type="text" placeholder="Filter by entity (blank = all)"
+        style="flex:1;background:var(--panel);border:1px solid var(--border);color:var(--fg);font-size:11px;padding:6px 10px;">
+      <button onclick="loadNIETimeline()" style="background:none;border:1px solid #f59e0b;color:#f59e0b;font-size:9px;padding:6px 12px;cursor:pointer;">LOAD</button>
+    </div>
+    <div id="nie-timeline-content" style="overflow:auto;"></div>
+  </div>
+
+  <!-- CONTRADICTIONS -->
+  <div id="npane-contrad" class="npane" style="display:none;flex-direction:column;padding:20px;overflow:auto;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+      <span style="color:#f87171;font-size:11px;font-weight:700;">CLAIM CONTRADICTIONS</span>
+      <button onclick="loadNIEContradictions()" style="background:none;border:1px solid #f87171;color:#f87171;font-size:9px;padding:4px 10px;cursor:pointer;">SCAN</button>
+    </div>
+    <div id="nie-contrad-content" style="overflow:auto;"></div>
+  </div>
+
+  <!-- DOSSIER -->
+  <div id="npane-dossier" class="npane" style="display:none;flex-direction:column;padding:20px;overflow:auto;">
+    <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px;">
+      <input id="nie-dossier-entity" type="text" placeholder="Entity name for dossier…"
+        style="flex:1;background:var(--panel);border:1px solid var(--border);color:var(--fg);font-size:11px;padding:6px 10px;"
+        onkeydown="if(event.key==='Enter')loadNIEDossier()">
+      <button onclick="loadNIEDossier()" style="background:#f59e0b;border:none;color:#000;font-size:9px;padding:6px 14px;cursor:pointer;font-weight:700;">DOSSIER</button>
+    </div>
+    <div id="nie-dossier-content" style="overflow:auto;"></div>
+  </div>
+</div>
+</body>
+</html>

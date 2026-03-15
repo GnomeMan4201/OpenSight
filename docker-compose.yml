@@ -1,0 +1,48 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./uploads:/app/uploads
+      - ./opensight.db:/app/opensight.db
+    environment:
+      DATABASE_URL: "sqlite:///./opensight.db"
+      UPLOAD_DIR: "./uploads"
+      # Restrict CORS to known frontend origins. Wildcard + credentials is invalid.
+      CORS_ORIGINS: "http://localhost:3000,http://localhost:5173"
+      DEBUG: "false"
+    restart: unless-stopped
+    # Healthcheck uses Python stdlib — no curl needed in image.
+    healthcheck:
+      test:
+        - "CMD"
+        - "python"
+        - "-c"
+        - >
+          import urllib.request, sys;
+          r = urllib.request.urlopen('http://localhost:8000/health', timeout=4);
+          sys.exit(0 if r.status == 200 else 1)
+      interval: 15s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+
+  # ── Optional: PostgreSQL ────────────────────────────────────────────────────
+  # postgres:
+  #   image: postgres:16-alpine
+  #   environment:
+  #     POSTGRES_DB: opensight
+  #     POSTGRES_USER: opensight
+  #     POSTGRES_PASSWORD: opensight
+  #   volumes:
+  #     - pg_data:/var/lib/postgresql/data
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "pg_isready -U opensight"]
+  #     interval: 5s
+  #     retries: 10
+
+# volumes:
+#   pg_data:

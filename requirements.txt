@@ -1,0 +1,56 @@
+# ── Core API ──────────────────────────────────────────────────────────────────
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+sqlalchemy==2.0.35
+pydantic-settings==2.5.2
+python-multipart==0.0.12
+python-dotenv==1.0.1
+aiofiles==24.1.0
+
+# ── PDF text extraction ───────────────────────────────────────────────────────
+# pdfplumber: primary extractor — pure Python, no system packages required.
+# pypdf: fallback if pdfplumber fails.
+pdfplumber==0.11.4
+pypdf==4.3.1
+
+# ── NER: spaCy (optional but recommended) ────────────────────────────────────
+# When installed, spaCy is used automatically as the primary NER engine.
+# Regex extraction runs as fallback when spaCy is absent.
+#
+# Install:
+#   pip install spacy
+#   python -m spacy download en_core_web_sm
+#
+# spacy==3.8.2
+
+# ── OCR for scanned documents (optional) ─────────────────────────────────────
+# Required when USE_OCR=true in .env.
+# System package also needed: apt install tesseract-ocr (or brew install tesseract)
+#
+# Install:
+#   pip install pymupdf pytesseract Pillow
+#   apt install tesseract-ocr
+#
+# pymupdf==1.24.9
+# pytesseract==0.3.13
+# Pillow==10.4.0
+
+# ── Redaction detection (optional) ───────────────────────────────────────────
+# PyMuPDF enables black-box detection and hidden-text recovery.
+# Ships as a prebuilt wheel — no system packages required.
+# USE_REDACTION_DETECTION=true by default; disabled gracefully if absent.
+#
+# Install:
+#   pip install pymupdf
+#
+# pymupdf==1.24.9
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+# Install:
+#   pip install pytest httpx
+#
+# pytest==8.3.3
+# httpx==0.27.0
+
+pytest==8.3.3
+httpx==0.27.2
