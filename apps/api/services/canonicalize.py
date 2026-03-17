@@ -171,46 +171,43 @@ def is_noise_entity(name: str, entity_type: str) -> bool:
 def _merge_into(keep_id: str, kill_id: str, db: Session) -> None:
     """
     Merge kill_id entity into keep_id.
-    Aggregates duplicate edges, redirects mentions, deletes kill.
-    Idempotent — safe to call if kill_id is already gone.
+    Relationships are NOT rewritten — deleted instead.
+    Stage 6.5 rebuilds from mentions on next ingest.
+    Avoids StaleDataError from in-place ORM mutation with typed rows.
     """
     if keep_id == kill_id:
         return
 
-    kill_rels = db.query(EntityRelationship).filter(
-        (EntityRelationship.entity_a_id == kill_id) |
-        (EntityRelationship.entity_b_id == kill_id)
-    ).all()
+    db.expire_all()
 
-    for r in kill_rels:
-        new_a = keep_id if r.entity_a_id == kill_id else r.entity_a_id
-        new_b = keep_id if r.entity_b_id == kill_id else r.entity_b_id
-        if new_a == new_b:
-            db.delete(r)
-            continue
-        existing = db.query(EntityRelationship).filter(
-            ((EntityRelationship.entity_a_id == new_a) &
-             (EntityRelationship.entity_b_id == new_b)) |
-            ((EntityRelationship.entity_a_id == new_b) &
-             (EntityRelationship.entity_b_id == new_a))
-        ).first()
-        if existing:
-            existing.weight    += r.weight
-            existing.doc_count += r.doc_count
-            db.delete(r)
-        else:
-            r.entity_a_id = new_a
-            r.entity_b_id = new_b
+    keep = db.query(Entity).filter_by(id=keep_id).first()
+    kill = db.query(Entity).filter_by(id=kill_id).first()
+    if not keep or not kill:
+        log.debug("[canon] _merge_into: entity missing keep=%s kill=%s", keep_id[:8], kill_id[:8])
+        return
+
+    keep_aliases = list(keep.aliases or [])
+    for name in [kill.canonical_name, *(kill.aliases or [])]:
+        if name and name != keep.canonical_name and name not in keep_aliases:
+            keep_aliases.append(name)
+    keep.aliases = keep_aliases
+    keep.confidence = max(keep.confidence or 0.0, kill.confidence or 0.0)
+    db.flush()
 
     db.query(Mention).filter_by(entity_id=kill_id).update(
-        {"entity_id": keep_id}, synchronize_session=False
-    )
+        {"entity_id": keep_id}, synchronize_session=False)
+
+    db.query(EntityRelationship).filter(
+        (EntityRelationship.entity_a_id == kill_id) |
+        (EntityRelationship.entity_b_id == kill_id)
+    ).delete(synchronize_session=False)
+
+    db.query(Entity).filter_by(id=kill_id).delete(synchronize_session=False)
 
     new_count = db.query(Mention).filter_by(entity_id=keep_id).count()
     db.query(Entity).filter_by(id=keep_id).update(
-        {"mention_count": new_count}, synchronize_session=False
-    )
-    db.query(Entity).filter_by(id=kill_id).delete()
+        {"mention_count": new_count}, synchronize_session=False)
+
     db.flush()
 
 
@@ -241,48 +238,57 @@ def _pass0_noise(db: Session) -> int:
 def _pass1_cross_type(db: Session) -> int:
     """Merge entities with the same canonical_name but different types."""
     rows = db.query(Entity).all()
-    by_name: dict[str, list[Entity]] = defaultdict(list)
+    by_name: dict[str, list[tuple]] = defaultdict(list)
     for e in rows:
-        by_name[e.canonical_name].append(e)
+        by_name[e.canonical_name].append((e.id, e.entity_type, e.confidence or 0, e.mention_count or 0))
 
-    merged = 0
+    merge_pairs: list[tuple[str, str]] = []
     for name, entries in by_name.items():
         if len(entries) <= 1:
             continue
-        winner = max(entries, key=lambda e: (
-            e.confidence or 0,
-            _TYPE_RANK.get(e.entity_type, 0),
-            e.mention_count or 0,
-        ))
-        for loser in entries:
-            if loser.id != winner.id:
-                _merge_into(winner.id, loser.id, db)
-                merged += 1
-                log.debug("[canon] cross-type merge: [%s]+[%s] %s → keep %s",
-                          winner.entity_type, loser.entity_type, name, winner.entity_type)
+        winner = max(entries, key=lambda t: (t[2], _TYPE_RANK.get(t[1], 0), t[3]))
+        for entry in entries:
+            if entry[0] != winner[0]:
+                merge_pairs.append((winner[0], entry[0]))
+
+    merged = 0
+    for keep_id, kill_id in merge_pairs:
+        if not db.query(Entity.id).filter_by(id=keep_id).first():
+            continue
+        if not db.query(Entity.id).filter_by(id=kill_id).first():
+            continue
+        _merge_into(keep_id, kill_id, db)
+        merged += 1
+        log.debug("[canon] cross-type merge: %s → %s", kill_id[:8], keep_id[:8])
     return merged
 
 
 def _pass2_judge_prefix(db: Session) -> int:
-    """Merge 'Judge X' into 'X' (or rename if no bare form exists)."""
-    rows = db.query(Entity).all()
-    all_names = {e.canonical_name: e for e in rows}
-    resolved = 0
+    """Merge Judge X into X (or rename if no bare form exists)."""
+    name_to_id: dict[str, str] = {
+        e.canonical_name: e.id
+        for e in db.query(Entity).all()
+    }
 
-    for e in list(rows):
-        if not e.canonical_name.startswith("Judge "):
+    resolved = 0
+    for name, eid in list(name_to_id.items()):
+        if not name.startswith("Judge "):
             continue
-        bare = e.canonical_name[len("Judge "):]
-        if bare in all_names:
-            bare_e = all_names[bare]
-            _merge_into(bare_e.id, e.id, db)
-            log.debug("[canon] judge-prefix merge: '%s' → '%s'", e.canonical_name, bare)
+        bare = name[len("Judge "):]
+        if not db.query(Entity.id).filter_by(id=eid).first():
+            continue
+        if bare in name_to_id:
+            bare_id = name_to_id[bare]
+            if not db.query(Entity.id).filter_by(id=bare_id).first():
+                continue
+            _merge_into(bare_id, eid, db)
+            log.debug("[canon] judge-prefix merge: '%s' → '%s'", name, bare)
         else:
-            # No bare form — just rename
-            e.canonical_name = bare
+            db.query(Entity).filter_by(id=eid).update(
+                {"canonical_name": bare}, synchronize_session=False)
             db.flush()
-            all_names[bare] = e
-            log.debug("[canon] judge-prefix rename: '%s' → '%s'", f"Judge {bare}", bare)
+            name_to_id[bare] = eid
+            log.debug("[canon] judge-prefix rename: '%s' → '%s'", name, bare)
         resolved += 1
     return resolved
 
