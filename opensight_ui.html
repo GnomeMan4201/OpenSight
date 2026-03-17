@@ -1253,6 +1253,15 @@
         <div id="edge-evidence-list" style="overflow-y:auto; max-height:160px;">
           <div class="list-empty">Click a graph edge to inspect</div>
         </div>
+
+        <div id="det-dossier" style="display:none; margin-top:12px; border-top:1px solid var(--line); padding-top:12px;">
+          <div class="panel-header">
+            <div class="panel-label">DOSSIER</div>
+          </div>
+          <div id="det-dossier-loading" class="list-empty" style="display:none;">Loading dossier...</div>
+          <div id="det-dossier-error" class="list-empty" style="display:none; color:#ff8a8a;"></div>
+          <div id="det-dossier-content"></div>
+        </div>
       </div>
     </div>
 
@@ -1533,9 +1542,14 @@ async function pollPending() {
 function showEntityDetail(entity) {
   const dossierPanel = document.getElementById('det-dossier');
   const dossierLoading = document.getElementById('det-dossier-loading');
+  const dossierError = document.getElementById('det-dossier-error');
   const dossierContent = document.getElementById('det-dossier-content');
   if (dossierPanel) dossierPanel.style.display = 'none';
   if (dossierLoading) dossierLoading.style.display = 'none';
+  if (dossierError) {
+    dossierError.style.display = 'none';
+    dossierError.textContent = '';
+  }
   if (dossierContent) dossierContent.innerHTML = '';
 
   state.activeEntity = entity;
