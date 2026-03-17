@@ -772,6 +772,16 @@ def _run_pipeline(document_id: str, db: Session) -> None:
     canon_summary = run_canonicalization(db, commit=True)
     log.info("[%s] Stage 6.6/7 — canon: %s", document_id, canon_summary)
 
+    # ── Stage 6.7: Relationship rebuild ───────────────────────────────────────
+    # After canonicalization, rebuild co-occurrence relationships from current
+    # mention table. Canonicalization merges entities by deleting kill_id rows
+    # and their relationships. Stage 6.5 typed extraction ran on pre-canon IDs.
+    # Stage 6.7 ensures the graph always reflects the current canonical entity set.
+    log.info("[%s] Stage 6.7/7 — rebuilding relationships post-canon", document_id)
+    _rebuild_relationships_from_mentions(db, document_id)
+    db.commit()
+    log.info("[%s] Stage 6.7/7 — relationship rebuild complete", document_id)
+
     # ── Stage 7: Done ─────────────────────────────────────────────────────────
     doc.status     = "done"
     doc.updated_at = datetime.utcnow()
