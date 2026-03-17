@@ -26,4 +26,30 @@ for ID in $DOC_IDS; do
 done
 
 echo ""
+echo "Rebuilding co-occurrence relationships..."
+python3 - << 'PYEOF'
+import sqlite3, uuid
+from collections import defaultdict
+conn = sqlite3.connect("opensight.db")
+conn.execute("DELETE FROM entity_relationships")
+doc_mentions = defaultdict(list)
+for eid, did in conn.execute("SELECT entity_id, document_id FROM mentions").fetchall():
+    doc_mentions[did].append(eid)
+pairs = defaultdict(lambda: [0, 0])
+for did, eids in doc_mentions.items():
+    unique = list(set(eids))
+    for i in range(len(unique)):
+        for j in range(i+1, len(unique)):
+            k = (min(unique[i], unique[j]), max(unique[i], unique[j]))
+            pairs[k][0] += 1; pairs[k][1] += 1
+n = 0
+for (a, b), (w, dc) in pairs.items():
+    try:
+        conn.execute("INSERT INTO entity_relationships (id,entity_a_id,entity_b_id,weight,doc_count,created_at,updated_at) VALUES (?,?,?,?,?,datetime('now'),datetime('now'))", (str(uuid.uuid4()), a, b, w, dc))
+        n += 1
+    except: pass
+conn.commit()
+print(f"✓ {conn.execute('SELECT COUNT(*) FROM entities').fetchone()[0]} entities, {n} relationships rebuilt")
+conn.close()
+PYEOF
 echo "Done. Run scripts/entity_audit.sh to see updated entities."

@@ -384,10 +384,6 @@ def _upsert_entity(
     confidence: float,
 ) -> Entity:
     """Get or create an Entity row; merge aliases. Does not commit."""
-    # ── Noise gate: reject junk before it enters the DB ─────────────────────
-    if is_noise_entity(canonical_name, entity_type):
-        return None  # caller must handle None
-
     existing = (
         db.query(Entity)
         .filter_by(entity_type=entity_type, canonical_name=canonical_name)
@@ -586,7 +582,7 @@ def _run_pipeline(document_id: str, db: Session) -> None:
                         confidence=ex.confidence,
                     )
                     if entity is None:
-                        continue  # noise gate rejected this entity
+                        continue
                     db.add(Mention(
                         entity_id=entity.id,
                         document_id=document_id,
