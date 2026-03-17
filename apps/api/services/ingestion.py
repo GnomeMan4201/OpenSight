@@ -30,6 +30,7 @@ from sqlalchemy.orm import Session
 
 from apps.api.config import settings
 from apps.api.services.canonicalize import run_canonicalization, is_noise_entity
+from apps.api.services.relationship_extraction import extract_relationships
 from apps.api.models import Document, DocumentPage, Entity, EntityRelationship, Mention, RedactionFlag
 from apps.api.services.entity_extraction import extract_entities
 from apps.api.services.claim_extraction import extract_claims, ClaimCandidate
@@ -408,6 +409,64 @@ def _upsert_entity(
     return entity
 
 
+def _upsert_typed_relationships(db: Session, document_id: str, full_text: str) -> int:
+    mention_rows = (
+        db.query(Mention, Entity)
+        .join(Entity, Mention.entity_id == Entity.id)
+        .filter(Mention.document_id == document_id)
+        .all()
+    )
+    entity_name_to_id = {e.canonical_name: e.id for _, e in mention_rows}
+
+    log.info("[%s] typed-rel entity names: %s", document_id, sorted(entity_name_to_id.keys())[:20])
+
+    if not entity_name_to_id:
+        return 0
+
+    candidates = extract_relationships(
+        text=full_text,
+        entity_name_to_id=entity_name_to_id,
+        document_id=document_id,
+    )
+
+    log.info("[%s] typed-rel candidates: %d", document_id, len(candidates))
+    for c in candidates[:10]:
+        log.info(
+            "[%s] typed-rel candidate: %s -> %s | %s | conf=%.2f | span=%r",
+            document_id, c.source_id, c.target_id, c.relationship_type, c.confidence, c.sentence_span
+        )
+
+    # Dedupe by unordered pair, keep highest-confidence candidate
+    pair_best = {}
+    for c in candidates:
+        id_a = min(c.source_id, c.target_id)
+        id_b = max(c.source_id, c.target_id)
+        key = (id_a, id_b)
+        prev = pair_best.get(key)
+        if prev is None or c.confidence > prev.confidence:
+            pair_best[key] = c
+
+    # Delete existing rows for these exact pairs, then insert fresh rows.
+    # This avoids stale ORM update errors during reingest.
+    for (id_a, id_b), c in pair_best.items():
+        db.query(EntityRelationship).filter_by(
+            entity_a_id=id_a,
+            entity_b_id=id_b,
+        ).delete(synchronize_session=False)
+
+        db.add(EntityRelationship(
+            entity_a_id=id_a,
+            entity_b_id=id_b,
+            weight=1,
+            doc_count=1,
+            relationship_type=c.relationship_type,
+            confidence=c.confidence,
+            sentence_span=c.sentence_span,
+        ))
+
+    return len(pair_best)
+
+
 def _upsert_relationships(db: Session, document_id: str) -> int:
     """
     Build or update entity co-occurrence relationships for a document.
@@ -702,8 +761,10 @@ def _run_pipeline(document_id: str, db: Session) -> None:
         db.commit()
 
     # ── Stage 6.5: Entity relationship graph ──────────────────────────────────
-    log.info("[%s] Stage 6.5/7 — building entity co-occurrence graph", document_id)
-    _upsert_relationships(db, document_id)
+    log.info("[%s] Stage 6.5/7 — building typed entity relationship graph", document_id)
+    full_text = " ".join(page_texts.get(pn, "") for pn in sorted(page_texts.keys()))
+    typed_count = _upsert_typed_relationships(db, document_id, full_text)
+    log.info("[%s] Stage 6.5/7 — typed relationships upserted: %d", document_id, typed_count)
     db.commit()
 
     # ── Stage 6.6: Canonicalization ───────────────────────────────────────────
