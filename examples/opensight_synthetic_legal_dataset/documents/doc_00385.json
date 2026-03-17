@@ -1,0 +1,74 @@
+{
+  "id": "doc_00385",
+  "title": "United States v. Metro Ad Exchange \u2014 Hearing Held",
+  "date": "2014-07-19",
+  "source": "Opinion Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "United States v. Metro Ad Exchange",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Robert Kline conducted a hearing involving arguments by Federal Trade Commission and Metro Ad Exchange on self-preferencing.",
+  "entities": [
+    "Court Hearing",
+    "Court of Appeals",
+    "Economic Expert",
+    "Expert Witness",
+    "Federal Trade Commission",
+    "Investor Group",
+    "Judge Robert Kline",
+    "Market Analysis",
+    "Metro Ad Exchange",
+    "Oral Argument",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. District Court for the District of Columbia",
+    "United States v. Metro Ad Exchange",
+    "self-preferencing"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Robert Kline",
+      "type": "held_hearing_for",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "appeared_in",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "Metro Ad Exchange",
+      "type": "appeared_in",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Robert Kline",
+      "type": "assigned_to",
+      "target": "United States v. Metro Ad Exchange"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "hearing",
+    "self_preferencing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 1,
+    "timeline_bucket": 2014
+  }
+}

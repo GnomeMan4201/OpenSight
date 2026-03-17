@@ -1,0 +1,71 @@
+{
+  "id": "doc_02061",
+  "title": "Federal Trade Commission v. Titan Search \u2014 Appellate Opinion",
+  "date": "2013-08-12",
+  "source": "Docket Entry Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. Titan Search",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "appellate_opinion",
+  "summary": "The reviewing court issued an opinion clarifying standards related to ad exchange bidding practices.",
+  "entities": [
+    "Appellate Panel",
+    "Court of Appeals",
+    "Economic Expert",
+    "Federal Trade Commission",
+    "Federal Trade Commission v. Titan Search",
+    "Judge Patrick Sloan",
+    "Market Analysis",
+    "Metro Ad Exchange",
+    "Precedent",
+    "State Coalition",
+    "U.S. District Court for the District of Columbia",
+    "ad exchange bidding practices"
+  ],
+  "relationships": [
+    {
+      "source": "Court of Appeals",
+      "type": "issued_opinion_in",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "cites",
+      "target": "Precedent"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Federal Trade Commission v. Titan Search"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "appellate_opinion",
+    "ad_exchange_bidding_practices",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 4,
+    "timeline_bucket": 2013
+  }
+}

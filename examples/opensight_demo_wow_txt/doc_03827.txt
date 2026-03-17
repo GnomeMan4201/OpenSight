@@ -1,0 +1,34 @@
+Federal Trade Commission v. BrightCart Platform — Regulatory Notice
+
+Case Name: Federal Trade Commission v. BrightCart Platform
+Date: 2019-10-07
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: regulatory_notice
+
+Summary:
+Department of Justice Antitrust Division issued a notice connected to allegations involving self-preferencing.
+
+Entities:
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Expert Witness
+- Federal Trade Commission v. BrightCart Platform
+- Investor Group
+- Judge Naomi Ellis
+- Market Analysis
+- Omnidata Retail
+- Regulatory Notice
+- State Coalition
+- U.S. District Court for the Southern District of New York
+- self-preferencing
+
+Relationships:
+- Department of Justice Antitrust Division --issued_notice_involving--> State Coalition
+- Department of Justice Antitrust Division --referenced--> Federal Trade Commission v. BrightCart Platform
+- Federal Trade Commission v. BrightCart Platform --filed_in--> U.S. District Court for the Southern District of New York
+- Federal Trade Commission v. BrightCart Platform --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> Federal Trade Commission v. BrightCart Platform
+- Court of Appeals --reviewing--> Federal Trade Commission v. BrightCart Platform
+- Department of Justice Antitrust Division --involved_in--> Federal Trade Commission v. BrightCart Platform

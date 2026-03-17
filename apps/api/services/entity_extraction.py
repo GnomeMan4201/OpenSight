@@ -111,6 +111,28 @@ def _is_noise_entity(name: str, entity_type: str) -> bool:
     if stripped in _NOISE_WORDS or stripped.rstrip("s") in _NOISE_WORDS:
         return True
     
+    # Synthetic relationship / graph text should never become entities
+    if "--" in stripped or "-->" in stripped or "<--" in stripped:
+        return True
+
+    # Broken trailing fragments
+    if stripped.endswith("-") or stripped.endswith(":"):
+        return True
+
+    # Label-like junk
+    if re.search(r'\b(Date|Relationships?)$', stripped):
+        return True
+
+    if re.search(
+        r'\b('
+        r'Complaint Filed Case|Appeal Filed Case|Appellate Opinion Case|'
+        r'Discovery Order Case|Hearing Held Case|Jury Verdict Case|'
+        r'Witness Testimony Case|Regulatory Notice Case'
+        r')\b',
+        stripped,
+    ):
+        return True
+
     # Matches noise patterns
     for pattern in _NOISE_PATTERNS:
         if pattern.search(stripped):
@@ -161,6 +183,16 @@ def _load_spacy(model_name: str):
         )
         return None
 
+
+
+
+def _strip_relation_markup(text: str) -> str:
+    cleaned_lines = []
+    for line in text.splitlines():
+        if "--" in line and ">" in line:
+            continue
+        cleaned_lines.append(line)
+    return "\n".join(cleaned_lines)
 
 def extract_spacy(
     text: str,
@@ -403,6 +435,7 @@ def extract_entities(
     without spaCy, and uses spaCy automatically when it is installed.
     """
     if not text.strip():
+    text = _strip_relation_markup(text)
         return []
 
     # Skip pages that are pure OCR garbage (FOIA redactions, numeric tables)

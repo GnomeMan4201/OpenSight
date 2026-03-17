@@ -1,0 +1,75 @@
+{
+  "id": "doc_00779",
+  "title": "United States v. Pine Harbor Capital \u2014 Regulatory Notice",
+  "date": "2013-11-29",
+  "source": "Case Activity Update",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Pine Harbor Capital",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "regulatory_notice",
+  "summary": "Securities and Exchange Commission issued a notice connected to allegations involving financial reporting fraud.",
+  "entities": [
+    "Court of Appeals",
+    "Investor Group",
+    "Judge Edward Navarro",
+    "Regulatory Notice",
+    "Rivergate Holdings",
+    "Securities and Exchange Commission",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Pine Harbor Capital",
+    "financial reporting fraud"
+  ],
+  "relationships": [
+    {
+      "source": "Securities and Exchange Commission",
+      "type": "issued_notice_involving",
+      "target": "Rivergate Holdings"
+    },
+    {
+      "source": "Securities and Exchange Commission",
+      "type": "referenced",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Edward Navarro",
+      "type": "assigned_to",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "Securities and Exchange Commission",
+      "type": "involved_in",
+      "target": "United States v. Pine Harbor Capital"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "regulatory_notice",
+    "financial_reporting_fraud",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 5,
+    "timeline_bucket": 2013
+  }
+}

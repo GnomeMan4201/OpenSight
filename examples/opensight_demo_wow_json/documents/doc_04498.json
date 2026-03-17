@@ -1,0 +1,78 @@
+{
+  "id": "doc_04498",
+  "title": "Northstar Logic v. Quantum Handsets \u2014 Summary Judgment Motion",
+  "date": "2018-02-10",
+  "source": "Hearing Note",
+  "cluster": "Patent Litigation",
+  "case_name": "Northstar Logic v. Quantum Handsets",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "summary_judgment",
+  "summary": "A summary judgment motion was filed seeking judgment on issues involving battery optimization patents.",
+  "entities": [
+    "Court of Appeals",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Martin Cole",
+    "Northstar Logic v. Quantum Handsets",
+    "Orion Devices",
+    "Precedent",
+    "Quantum Handsets",
+    "Regulatory Notice",
+    "Summary Judgment",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "battery optimization patents"
+  ],
+  "relationships": [
+    {
+      "source": "Quantum Handsets",
+      "type": "moved_for_summary_judgment_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "considering",
+      "target": "Summary Judgment"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Northstar Logic v. Quantum Handsets"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "summary_judgment",
+    "battery_optimization_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 1,
+    "timeline_bucket": 2018
+  }
+}

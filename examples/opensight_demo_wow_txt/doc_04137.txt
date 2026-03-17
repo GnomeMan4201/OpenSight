@@ -1,0 +1,34 @@
+United States v. Metro Ad Exchange — Expert Report Submitted
+
+Case Name: United States v. Metro Ad Exchange
+Date: 2016-04-30
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: expert_report
+
+Summary:
+The parties exchanged expert materials concerning damages, causation, and ad exchange bidding practices.
+
+Entities:
+- Court of Appeals
+- Damages Model
+- Department of Justice Antitrust Division
+- Economic Expert
+- Expert Witness
+- Judge Patrick Sloan
+- Market Analysis
+- Metro Ad Exchange
+- State Coalition
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States v. Metro Ad Exchange
+- ad exchange bidding practices
+
+Relationships:
+- Expert Witness --submitted_report_in--> United States v. Metro Ad Exchange
+- United States v. Metro Ad Exchange --includes_issue--> ad exchange bidding practices
+- United States v. Metro Ad Exchange --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Metro Ad Exchange --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Patrick Sloan --assigned_to--> United States v. Metro Ad Exchange
+- Court of Appeals --reviewing--> United States v. Metro Ad Exchange
+- Department of Justice Antitrust Division --involved_in--> United States v. Metro Ad Exchange

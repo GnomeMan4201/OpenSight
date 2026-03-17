@@ -1,0 +1,78 @@
+{
+  "id": "doc_03708",
+  "title": "Federal Trade Commission v. BrightCart Platform \u2014 Appeal Filed",
+  "date": "2016-12-07",
+  "source": "Docket Entry Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. BrightCart Platform",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "appeal_filed",
+  "summary": "BrightCart Platform appealed the court's decision on issues related to ad exchange bidding practices.",
+  "entities": [
+    "BrightCart Platform",
+    "Court of Appeals",
+    "Department of Justice Antitrust Division",
+    "Economic Expert",
+    "Expert Witness",
+    "Federal Trade Commission v. BrightCart Platform",
+    "Investor Group",
+    "Judge Robert Kline",
+    "Market Analysis",
+    "Metro Ad Exchange",
+    "Notice of Appeal",
+    "Regulatory Notice",
+    "U.S. District Court for the District of Columbia",
+    "ad exchange bidding practices"
+  ],
+  "relationships": [
+    {
+      "source": "BrightCart Platform",
+      "type": "appealed",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Robert Kline",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "references_topic",
+      "target": "ad exchange bidding practices"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "appeal_filed",
+    "ad_exchange_bidding_practices",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 3,
+    "timeline_bucket": 2016
+  }
+}

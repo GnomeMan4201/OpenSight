@@ -1,0 +1,67 @@
+{
+  "id": "doc_00183",
+  "title": "Apex Mobile v. Orion Devices \u2014 Discovery Order",
+  "date": "2020-01-15",
+  "source": "Court Filing Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "Apex Mobile v. Orion Devices",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "discovery_order",
+  "summary": "The court ordered limited discovery focused on communications and materials tied to user interface gestures.",
+  "entities": [
+    "Apex Mobile v. Orion Devices",
+    "Court of Appeals",
+    "Document Production",
+    "Financial Records",
+    "Internal Emails",
+    "Judge Lucy Harrow",
+    "Nimbus Systems",
+    "Precedent",
+    "Quantum Handsets",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "user interface gestures"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "issued_order_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "U.S. District Court for the Northern District of California",
+      "type": "ordered_discovery_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "assigned_to",
+      "target": "Apex Mobile v. Orion Devices"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "discovery_order",
+    "user_interface_gestures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 2,
+    "timeline_bucket": 2020
+  }
+}

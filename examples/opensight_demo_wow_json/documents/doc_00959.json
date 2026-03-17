@@ -1,0 +1,73 @@
+{
+  "id": "doc_00959",
+  "title": "Signal Grid v. Vector Stack \u2014 High Court Review",
+  "date": "2014-02-09",
+  "source": "Court Filing Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "Signal Grid v. Vector Stack",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "supreme_court_review",
+  "summary": "The high court agreed to review questions involving fair use in developer tools.",
+  "entities": [
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Expert Witness",
+    "Horizon Systems",
+    "Investor Group",
+    "Judge Samuel Hart",
+    "Open Runtime Labs",
+    "Petition for Review",
+    "Regulatory Notice",
+    "Signal Grid v. Vector Stack",
+    "Supreme Court",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Northern District of California",
+    "fair use in developer tools"
+  ],
+  "relationships": [
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "raises_issue",
+      "target": "fair use in developer tools"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Samuel Hart",
+      "type": "assigned_to",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "references_topic",
+      "target": "fair use in developer tools"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "supreme_court_review",
+    "fair_use_in_developer_tools",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 5,
+    "timeline_bucket": 2014
+  }
+}

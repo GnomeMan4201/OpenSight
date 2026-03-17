@@ -1,0 +1,33 @@
+United States v. Meridian BioLabs — Appellate Opinion
+
+Case Name: United States v. Meridian BioLabs
+Date: 2019-07-26
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: appellate_opinion
+
+Summary:
+An appellate opinion addressed legal questions arising from internal controls failures.
+
+Entities:
+- Appellate Panel
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Tessa Monroe
+- Precedent
+- Regulatory Notice
+- Rivergate Holdings
+- Supreme Court
+- U.S. Department of Justice
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Meridian BioLabs
+- internal controls failures
+
+Relationships:
+- Court of Appeals --issued_opinion_in--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --cites--> Precedent
+- United States v. Meridian BioLabs --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Meridian BioLabs --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Tessa Monroe --assigned_to--> United States v. Meridian BioLabs

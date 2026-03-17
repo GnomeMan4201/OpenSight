@@ -1,0 +1,30 @@
+CodeForge v. Open Runtime Labs — Motion to Dismiss
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2023-01-20
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: motion_to_dismiss
+
+Summary:
+Defense counsel for Horizon Systems moved to dismiss portions of the complaint involving source code licensing.
+
+Entities:
+- CodeForge v. Open Runtime Labs
+- Court of Appeals
+- Developer Ecosystem
+- Horizon Systems
+- Judge Lena Brooks
+- Open Runtime Labs
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- source code licensing
+
+Relationships:
+- Horizon Systems --filed_motion--> CodeForge v. Open Runtime Labs
+- Judge Lena Brooks --reviewing_motion_in--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Western District of Washington
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Lena Brooks --assigned_to--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --references_topic--> source code licensing

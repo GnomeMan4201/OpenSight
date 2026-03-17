@@ -1,0 +1,76 @@
+{
+  "id": "doc_02418",
+  "title": "United States v. Rivergate Holdings \u2014 Witness Testimony",
+  "date": "2019-07-28",
+  "source": "Docket Entry Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Rivergate Holdings",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "witness_testimony",
+  "summary": "Witness testimony described internal events and decisions related to investor disclosures.",
+  "entities": [
+    "Chief Financial Officer",
+    "Court of Appeals",
+    "Investor Group",
+    "Judge Edward Navarro",
+    "Securities and Exchange Commission",
+    "Supreme Court",
+    "Trial Testimony",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Rivergate Holdings",
+    "Witness",
+    "investor disclosures"
+  ],
+  "relationships": [
+    {
+      "source": "Witness",
+      "type": "testified_in",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "Judge Edward Navarro",
+      "type": "heard_testimony_in",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Edward Navarro",
+      "type": "assigned_to",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "references_topic",
+      "target": "investor disclosures"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Rivergate Holdings"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "witness_testimony",
+    "investor_disclosures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 3,
+    "timeline_bucket": 2019
+  }
+}

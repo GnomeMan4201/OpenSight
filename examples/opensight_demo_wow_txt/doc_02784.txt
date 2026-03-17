@@ -1,0 +1,31 @@
+Northstar Logic v. Quantum Handsets — Summary Judgment Motion
+
+Case Name: Northstar Logic v. Quantum Handsets
+Date: 2016-07-29
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: summary_judgment
+
+Summary:
+Northstar Logic moved for summary judgment on a record centered on user interface gestures.
+
+Entities:
+- BluePeak Tech
+- Court of Appeals
+- Judge Martin Cole
+- Northstar Logic
+- Northstar Logic v. Quantum Handsets
+- Precedent
+- Summary Judgment
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- user interface gestures
+
+Relationships:
+- Northstar Logic --moved_for_summary_judgment_in--> Northstar Logic v. Quantum Handsets
+- Judge Martin Cole --considering--> Summary Judgment
+- Northstar Logic v. Quantum Handsets --filed_in--> U.S. District Court for the District of Delaware
+- Northstar Logic v. Quantum Handsets --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> Northstar Logic v. Quantum Handsets
+- U.S. Patent and Trademark Office --involved_in--> Northstar Logic v. Quantum Handsets

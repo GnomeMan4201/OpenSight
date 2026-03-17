@@ -1,0 +1,75 @@
+{
+  "id": "doc_01419",
+  "title": "United States v. Rivergate Holdings \u2014 Regulatory Notice",
+  "date": "2018-07-01",
+  "source": "Docket Entry Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Rivergate Holdings",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "regulatory_notice",
+  "summary": "Federal Trade Commission issued a notice connected to allegations involving investor disclosures.",
+  "entities": [
+    "Court of Appeals",
+    "Federal Trade Commission",
+    "Investor Group",
+    "Judge Tessa Monroe",
+    "Pine Harbor Capital",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Rivergate Holdings",
+    "investor disclosures"
+  ],
+  "relationships": [
+    {
+      "source": "Federal Trade Commission",
+      "type": "issued_notice_involving",
+      "target": "Pine Harbor Capital"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "referenced",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "assigned_to",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "references_topic",
+      "target": "investor disclosures"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Rivergate Holdings"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "regulatory_notice",
+    "investor_disclosures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 5,
+    "timeline_bucket": 2018
+  }
+}

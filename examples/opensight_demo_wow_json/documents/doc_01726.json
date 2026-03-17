@@ -1,0 +1,70 @@
+{
+  "id": "doc_01726",
+  "title": "Apex Mobile v. Orion Devices \u2014 Discovery Order",
+  "date": "2016-12-01",
+  "source": "Hearing Note",
+  "cluster": "Patent Litigation",
+  "case_name": "Apex Mobile v. Orion Devices",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "discovery_order",
+  "summary": "Judge Lucy Harrow issued a discovery order requiring production of records related to camera image processing patents.",
+  "entities": [
+    "Apex Mobile v. Orion Devices",
+    "Court of Appeals",
+    "Document Production",
+    "Expert Witness",
+    "Financial Records",
+    "Helix Circuits",
+    "Internal Emails",
+    "Investor Group",
+    "Judge Lucy Harrow",
+    "Precedent",
+    "Quantum Handsets",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "camera image processing patents"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "issued_order_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "U.S. District Court for the Northern District of California",
+      "type": "ordered_discovery_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "assigned_to",
+      "target": "Apex Mobile v. Orion Devices"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "discovery_order",
+    "camera_image_processing_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 4,
+    "timeline_bucket": 2016
+  }
+}

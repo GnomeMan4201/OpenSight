@@ -1,0 +1,72 @@
+{
+  "id": "doc_04938",
+  "title": "United States v. Rivergate Holdings \u2014 Sentencing Hearing",
+  "date": "2017-01-29",
+  "source": "Case Activity Update",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Rivergate Holdings",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "sentencing",
+  "summary": "Judge Tessa Monroe conducted sentencing proceedings following findings related to wire fraud allegations.",
+  "entities": [
+    "Court of Appeals",
+    "Executive B",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Tessa Monroe",
+    "Regulatory Notice",
+    "Securities and Exchange Commission",
+    "Sentencing Memorandum",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Rivergate Holdings",
+    "wire fraud allegations"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "sentenced",
+      "target": "Executive B"
+    },
+    {
+      "source": "Securities and Exchange Commission",
+      "type": "prosecuted",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "assigned_to",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "references_topic",
+      "target": "wire fraud allegations"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "sentencing",
+    "wire_fraud_allegations",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 3,
+    "timeline_bucket": 2017
+  }
+}

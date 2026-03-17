@@ -1,0 +1,34 @@
+United States v. Rivergate Holdings — Expert Report Submitted
+
+Case Name: United States v. Rivergate Holdings
+Date: 2017-10-30
+Court: U.S. District Court for the Northern District of California
+Cluster: Corporate Fraud Trial
+Event Type: expert_report
+
+Summary:
+The parties exchanged expert materials concerning damages, causation, and wire fraud allegations.
+
+Entities:
+- Court of Appeals
+- Damages Model
+- Executive A
+- Expert Witness
+- Investor Group
+- Judge Daniel Pike
+- Regulatory Notice
+- Supreme Court
+- U.S. Department of Justice
+- U.S. District Court for the Northern District of California
+- United States
+- United States v. Rivergate Holdings
+- wire fraud allegations
+
+Relationships:
+- Expert Witness --submitted_report_in--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --includes_issue--> wire fraud allegations
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Northern District of California
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Daniel Pike --assigned_to--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --references_topic--> wire fraud allegations
+- Supreme Court --reviewing--> United States v. Rivergate Holdings

@@ -1,0 +1,30 @@
+Signal Grid v. Vector Stack — Complaint Filed
+
+Case Name: Signal Grid v. Vector Stack
+Date: 2016-02-14
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: complaint_filed
+
+Summary:
+Open Runtime Labs filed a complaint against Vector Stack in U.S. District Court for the Northern District of California, alleging copyrightability of interfaces.
+
+Entities:
+- Court of Appeals
+- Developer Ecosystem
+- Judge Samuel Hart
+- Open Runtime Labs
+- Signal Grid v. Vector Stack
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- Vector Stack
+- copyrightability of interfaces
+
+Relationships:
+- Open Runtime Labs --filed_complaint_against--> Vector Stack
+- U.S. District Court for the Northern District of California --docketed--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --filed_in--> U.S. District Court for the Northern District of California
+- Signal Grid v. Vector Stack --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> Signal Grid v. Vector Stack
+- Supreme Court --reviewing--> Signal Grid v. Vector Stack

@@ -1,0 +1,65 @@
+{
+  "id": "doc_01575",
+  "title": "Federal Trade Commission v. Titan Search \u2014 Complaint Filed",
+  "date": "2015-07-09",
+  "source": "Court Filing Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. Titan Search",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "A civil complaint was entered in U.S. District Court for the District of Columbia naming State Coalition as defendant and alleging self-preferencing.",
+  "entities": [
+    "Court of Appeals",
+    "Department of Justice Antitrust Division",
+    "Economic Expert",
+    "Federal Trade Commission v. Titan Search",
+    "Judge Naomi Ellis",
+    "Market Analysis",
+    "Metro Ad Exchange",
+    "State Coalition",
+    "Supreme Court",
+    "U.S. District Court for the District of Columbia",
+    "self-preferencing"
+  ],
+  "relationships": [
+    {
+      "source": "Metro Ad Exchange",
+      "type": "filed_complaint_against",
+      "target": "State Coalition"
+    },
+    {
+      "source": "U.S. District Court for the District of Columbia",
+      "type": "docketed",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Naomi Ellis",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. Titan Search"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "complaint_filed",
+    "self_preferencing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 4,
+    "timeline_bucket": 2015
+  }
+}

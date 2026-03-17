@@ -1,0 +1,64 @@
+{
+  "id": "doc_04602",
+  "title": "Federal Trade Commission v. BrightCart Platform \u2014 Complaint Filed",
+  "date": "2010-11-21",
+  "source": "Docket Entry Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. BrightCart Platform",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "United States filed a complaint against Federal Trade Commission in U.S. District Court for the Southern District of New York, alleging market foreclosure.",
+  "entities": [
+    "Court of Appeals",
+    "Economic Expert",
+    "Federal Trade Commission",
+    "Federal Trade Commission v. BrightCart Platform",
+    "Judge Patrick Sloan",
+    "Market Analysis",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "market foreclosure"
+  ],
+  "relationships": [
+    {
+      "source": "United States",
+      "type": "filed_complaint_against",
+      "target": "Federal Trade Commission"
+    },
+    {
+      "source": "U.S. District Court for the Southern District of New York",
+      "type": "docketed",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "complaint_filed",
+    "market_foreclosure",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 1,
+    "timeline_bucket": 2010
+  }
+}

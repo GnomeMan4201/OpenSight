@@ -1,0 +1,74 @@
+{
+  "id": "doc_01638",
+  "title": "Federal Trade Commission v. Titan Search \u2014 Appeal Filed",
+  "date": "2017-04-15",
+  "source": "Docket Entry Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. Titan Search",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "appeal_filed",
+  "summary": "A notice of appeal was filed challenging rulings concerning market foreclosure.",
+  "entities": [
+    "Court of Appeals",
+    "Department of Justice Antitrust Division",
+    "Economic Expert",
+    "Expert Witness",
+    "Federal Trade Commission v. Titan Search",
+    "Investor Group",
+    "Judge Patrick Sloan",
+    "Market Analysis",
+    "Metro Ad Exchange",
+    "Notice of Appeal",
+    "Omnidata Retail",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "market foreclosure"
+  ],
+  "relationships": [
+    {
+      "source": "Omnidata Retail",
+      "type": "appealed",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Federal Trade Commission v. Titan Search"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "appeal_filed",
+    "market_foreclosure",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 5,
+    "timeline_bucket": 2017
+  }
+}

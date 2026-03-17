@@ -1,0 +1,79 @@
+{
+  "id": "doc_01480",
+  "title": "BluePeak Tech v. Helix Circuits \u2014 Motion to Dismiss",
+  "date": "2013-04-11",
+  "source": "Case Activity Update",
+  "cluster": "Patent Litigation",
+  "case_name": "BluePeak Tech v. Helix Circuits",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "motion_to_dismiss",
+  "summary": "Quantum Handsets filed a motion to dismiss, arguing the complaint failed to establish wireless chipset design.",
+  "entities": [
+    "BluePeak Tech v. Helix Circuits",
+    "Court of Appeals",
+    "Helix Circuits",
+    "Judge Lucy Harrow",
+    "Precedent",
+    "Quantum Handsets",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "wireless chipset design"
+  ],
+  "relationships": [
+    {
+      "source": "Quantum Handsets",
+      "type": "filed_motion",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "reviewing_motion_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "assigned_to",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "references_topic",
+      "target": "wireless chipset design"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "BluePeak Tech v. Helix Circuits"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "motion_to_dismiss",
+    "wireless_chipset_design",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 4,
+    "timeline_bucket": 2013
+  }
+}

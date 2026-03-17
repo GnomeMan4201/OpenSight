@@ -1,0 +1,32 @@
+Atlas Software v. Nova Cloud — Summary Judgment Motion
+
+Case Name: Atlas Software v. Nova Cloud
+Date: 2012-08-11
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: summary_judgment
+
+Summary:
+A summary judgment motion was filed seeking judgment on issues involving source code licensing.
+
+Entities:
+- Atlas Software v. Nova Cloud
+- CodeForge
+- Court of Appeals
+- Developer Ecosystem
+- Judge Samuel Hart
+- Open Runtime Labs
+- Summary Judgment
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- source code licensing
+
+Relationships:
+- CodeForge --moved_for_summary_judgment_in--> Atlas Software v. Nova Cloud
+- Judge Samuel Hart --considering--> Summary Judgment
+- Atlas Software v. Nova Cloud --filed_in--> U.S. District Court for the Western District of Washington
+- Atlas Software v. Nova Cloud --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> Atlas Software v. Nova Cloud
+- Supreme Court --reviewing--> Atlas Software v. Nova Cloud
+- U.S. Copyright Office --involved_in--> Atlas Software v. Nova Cloud

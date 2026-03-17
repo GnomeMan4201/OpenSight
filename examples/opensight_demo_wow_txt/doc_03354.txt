@@ -1,0 +1,35 @@
+Signal Grid v. Vector Stack — Hearing Held
+
+Case Name: Signal Grid v. Vector Stack
+Date: 2022-09-19
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: hearing
+
+Summary:
+Judge William Avery conducted a hearing involving arguments by Atlas Software and Signal Grid on fair use in developer tools.
+
+Entities:
+- Atlas Software
+- Court Hearing
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Investor Group
+- Judge William Avery
+- Oral Argument
+- Regulatory Notice
+- Signal Grid
+- Signal Grid v. Vector Stack
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- fair use in developer tools
+
+Relationships:
+- Judge William Avery --held_hearing_for--> Signal Grid v. Vector Stack
+- Atlas Software --appeared_in--> Signal Grid v. Vector Stack
+- Signal Grid --appeared_in--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --filed_in--> U.S. District Court for the Northern District of California
+- Signal Grid v. Vector Stack --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge William Avery --assigned_to--> Signal Grid v. Vector Stack

@@ -1,0 +1,34 @@
+Apex Mobile v. Orion Devices — High Court Review
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2021-05-21
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: supreme_court_review
+
+Summary:
+Certiorari was granted on issues concerning smartphone interface patents in Apex Mobile v. Orion Devices.
+
+Entities:
+- Apex Mobile v. Orion Devices
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Lucy Harrow
+- Nimbus Systems
+- Petition for Review
+- Precedent
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- Vertex Labs
+- smartphone interface patents
+
+Relationships:
+- Supreme Court --reviewing--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --raises_issue--> smartphone interface patents
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the Northern District of California
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Lucy Harrow --assigned_to--> Apex Mobile v. Orion Devices
+- Court of Appeals --reviewing--> Apex Mobile v. Orion Devices

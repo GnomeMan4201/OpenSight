@@ -1,0 +1,35 @@
+Apex Mobile v. Orion Devices — Jury Verdict
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2018-11-11
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: jury_verdict
+
+Summary:
+A jury returned a verdict after reviewing evidence related to battery optimization patents.
+
+Entities:
+- Apex Mobile v. Orion Devices
+- Court of Appeals
+- Expert Witness
+- Helix Circuits
+- Investor Group
+- Judge Lucy Harrow
+- Jury
+- Precedent
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- Verdict Form
+- Vertex Labs
+- battery optimization patents
+
+Relationships:
+- Jury --returned_verdict_in--> Apex Mobile v. Orion Devices
+- Judge Lucy Harrow --entered_verdict_in--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the Northern District of California
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Lucy Harrow --assigned_to--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --references_topic--> battery optimization patents

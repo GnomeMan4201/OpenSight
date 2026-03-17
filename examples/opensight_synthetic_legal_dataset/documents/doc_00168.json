@@ -1,0 +1,75 @@
+{
+  "id": "doc_00168",
+  "title": "Apex Mobile v. Orion Devices \u2014 Appeal Filed",
+  "date": "2019-07-27",
+  "source": "Opinion Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "Apex Mobile v. Orion Devices",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "appeal_filed",
+  "summary": "Helix Circuits appealed the court's decision on issues related to wireless chipset design.",
+  "entities": [
+    "Apex Mobile v. Orion Devices",
+    "Court of Appeals",
+    "Helix Circuits",
+    "Judge Martin Cole",
+    "Northstar Logic",
+    "Notice of Appeal",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "wireless chipset design"
+  ],
+  "relationships": [
+    {
+      "source": "Helix Circuits",
+      "type": "appealed",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "references_topic",
+      "target": "wireless chipset design"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "Apex Mobile v. Orion Devices"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "appeal_filed",
+    "wireless_chipset_design",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 3,
+    "timeline_bucket": 2019
+  }
+}

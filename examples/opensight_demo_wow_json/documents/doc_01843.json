@@ -1,0 +1,71 @@
+{
+  "id": "doc_01843",
+  "title": "BluePeak Tech v. Helix Circuits \u2014 Hearing Held",
+  "date": "2010-08-06",
+  "source": "Docket Entry Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "BluePeak Tech v. Helix Circuits",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "The court held a hearing in BluePeak Tech v. Helix Circuits to address disputed issues concerning battery optimization patents.",
+  "entities": [
+    "BluePeak Tech",
+    "BluePeak Tech v. Helix Circuits",
+    "Court Hearing",
+    "Court of Appeals",
+    "Judge Elena Ward",
+    "Oral Argument",
+    "Orion Devices",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "battery optimization patents"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Elena Ward",
+      "type": "held_hearing_for",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Orion Devices",
+      "type": "appeared_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech",
+      "type": "appeared_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Elena Ward",
+      "type": "assigned_to",
+      "target": "BluePeak Tech v. Helix Circuits"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "hearing",
+    "battery_optimization_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 1,
+    "timeline_bucket": 2010
+  }
+}

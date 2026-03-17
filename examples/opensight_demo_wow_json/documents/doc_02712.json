@@ -1,0 +1,86 @@
+{
+  "id": "doc_02712",
+  "title": "BluePeak Tech v. Helix Circuits \u2014 Hearing Held",
+  "date": "2022-05-26",
+  "source": "Court Filing Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "BluePeak Tech v. Helix Circuits",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Lucy Harrow conducted a hearing involving arguments by Vertex Labs and Helix Circuits on battery optimization patents.",
+  "entities": [
+    "BluePeak Tech v. Helix Circuits",
+    "Court Hearing",
+    "Court of Appeals",
+    "Helix Circuits",
+    "Judge Lucy Harrow",
+    "Oral Argument",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "Vertex Labs",
+    "battery optimization patents"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "held_hearing_for",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Vertex Labs",
+      "type": "appeared_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Helix Circuits",
+      "type": "appeared_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "assigned_to",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "references_topic",
+      "target": "battery optimization patents"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "hearing",
+    "battery_optimization_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 3,
+    "timeline_bucket": 2022
+  }
+}

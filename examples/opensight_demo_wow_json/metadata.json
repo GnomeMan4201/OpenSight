@@ -1,0 +1,47 @@
+{
+  "dataset_name": "OpenSight Synthetic Legal Dataset",
+  "description": "Synthetic legal/court-style documents generated for graph, entity, and timeline testing in OpenSight.",
+  "synthetic": true,
+  "document_count": 5000,
+  "case_count": 16,
+  "unique_entity_count": 112,
+  "date_range": {
+    "start": "2010-01-02",
+    "end": "2024-12-31"
+  },
+  "clusters": {
+    "Patent Litigation": 1268,
+    "Corporate Fraud Trial": 1301,
+    "Antitrust and Market Conduct": 1176,
+    "Copyright and Platform Dispute": 1255
+  },
+  "event_types": {
+    "jury_verdict": 301,
+    "hearing": 589,
+    "complaint_filed": 588,
+    "appellate_opinion": 563,
+    "expert_report": 365,
+    "regulatory_notice": 283,
+    "summary_judgment": 441,
+    "discovery_order": 420,
+    "appeal_filed": 572,
+    "witness_testimony": 140,
+    "sentencing": 133,
+    "supreme_court_review": 297,
+    "motion_to_dismiss": 308
+  },
+  "schema_version": "1.0",
+  "required_fields": [
+    "id",
+    "title",
+    "date",
+    "source",
+    "cluster",
+    "case_name",
+    "court",
+    "event_type",
+    "summary",
+    "entities",
+    "relationships"
+  ]
+}

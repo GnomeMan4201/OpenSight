@@ -1,0 +1,34 @@
+Atlas Software v. Nova Cloud — Summary Judgment Motion
+
+Case Name: Atlas Software v. Nova Cloud
+Date: 2016-10-01
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: summary_judgment
+
+Summary:
+A summary judgment motion was filed seeking judgment on issues involving source code licensing.
+
+Entities:
+- Atlas Software v. Nova Cloud
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Investor Group
+- Judge William Avery
+- Regulatory Notice
+- Summary Judgment
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- Vector Stack
+- source code licensing
+
+Relationships:
+- Vector Stack --moved_for_summary_judgment_in--> Atlas Software v. Nova Cloud
+- Judge William Avery --considering--> Summary Judgment
+- Atlas Software v. Nova Cloud --filed_in--> U.S. District Court for the Northern District of California
+- Atlas Software v. Nova Cloud --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge William Avery --assigned_to--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --references_topic--> source code licensing

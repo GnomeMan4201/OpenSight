@@ -1,0 +1,32 @@
+Nimbus Systems v. Vertex Labs — Appellate Opinion
+
+Case Name: Nimbus Systems v. Vertex Labs
+Date: 2014-05-05
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: appellate_opinion
+
+Summary:
+The reviewing court issued an opinion clarifying standards related to smartphone interface patents.
+
+Entities:
+- Appellate Panel
+- Court of Appeals
+- Helix Circuits
+- Judge Lucy Harrow
+- Nimbus Systems v. Vertex Labs
+- Precedent
+- Quantum Handsets
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- smartphone interface patents
+
+Relationships:
+- Court of Appeals --issued_opinion_in--> Nimbus Systems v. Vertex Labs
+- Nimbus Systems v. Vertex Labs --cites--> Precedent
+- Nimbus Systems v. Vertex Labs --filed_in--> U.S. District Court for the District of Delaware
+- Nimbus Systems v. Vertex Labs --belongs_to_cluster--> Patent Litigation
+- Judge Lucy Harrow --assigned_to--> Nimbus Systems v. Vertex Labs
+- Nimbus Systems v. Vertex Labs --references_topic--> smartphone interface patents
+- U.S. Patent and Trademark Office --involved_in--> Nimbus Systems v. Vertex Labs

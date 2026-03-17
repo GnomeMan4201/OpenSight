@@ -1,0 +1,70 @@
+{
+  "id": "doc_00149",
+  "title": "United States v. Meridian BioLabs \u2014 Appeal Filed",
+  "date": "2022-04-03",
+  "source": "Opinion Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Meridian BioLabs",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "appeal_filed",
+  "summary": "A notice of appeal was filed challenging rulings concerning internal controls failures.",
+  "entities": [
+    "Chief Financial Officer",
+    "Court of Appeals",
+    "Investor Group",
+    "Judge Edward Navarro",
+    "Notice of Appeal",
+    "Securities and Exchange Commission",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "United States",
+    "United States v. Meridian BioLabs",
+    "internal controls failures"
+  ],
+  "relationships": [
+    {
+      "source": "Chief Financial Officer",
+      "type": "appealed",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Edward Navarro",
+      "type": "assigned_to",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Meridian BioLabs"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "appeal_filed",
+    "internal_controls_failures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 2,
+    "timeline_bucket": 2022
+  }
+}

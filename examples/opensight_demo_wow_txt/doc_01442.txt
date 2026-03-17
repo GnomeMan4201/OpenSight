@@ -1,0 +1,35 @@
+CodeForge v. Open Runtime Labs — Appellate Opinion
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2023-05-29
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: appellate_opinion
+
+Summary:
+An appellate opinion addressed legal questions arising from fair use in developer tools.
+
+Entities:
+- Appellate Panel
+- CodeForge v. Open Runtime Labs
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Investor Group
+- Judge William Avery
+- Nova Cloud
+- Precedent
+- Regulatory Notice
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- fair use in developer tools
+
+Relationships:
+- Court of Appeals --issued_opinion_in--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --cites--> Precedent
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Northern District of California
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge William Avery --assigned_to--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --references_topic--> fair use in developer tools

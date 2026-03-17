@@ -1,0 +1,72 @@
+{
+  "id": "doc_01898",
+  "title": "BluePeak Tech v. Helix Circuits \u2014 Motion to Dismiss",
+  "date": "2013-12-22",
+  "source": "Hearing Note",
+  "cluster": "Patent Litigation",
+  "case_name": "BluePeak Tech v. Helix Circuits",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "motion_to_dismiss",
+  "summary": "Defense counsel for Orion Devices moved to dismiss portions of the complaint involving smartphone interface patents.",
+  "entities": [
+    "BluePeak Tech v. Helix Circuits",
+    "Court of Appeals",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Martin Cole",
+    "Northstar Logic",
+    "Orion Devices",
+    "Precedent",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "smartphone interface patents"
+  ],
+  "relationships": [
+    {
+      "source": "Orion Devices",
+      "type": "filed_motion",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "reviewing_motion_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "BluePeak Tech v. Helix Circuits"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "motion_to_dismiss",
+    "smartphone_interface_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 1,
+    "timeline_bucket": 2013
+  }
+}

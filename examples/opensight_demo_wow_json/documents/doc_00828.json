@@ -1,0 +1,72 @@
+{
+  "id": "doc_00828",
+  "title": "United States v. Metro Ad Exchange \u2014 Regulatory Notice",
+  "date": "2013-07-20",
+  "source": "Hearing Note",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "United States v. Metro Ad Exchange",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "regulatory_notice",
+  "summary": "Federal Trade Commission issued a notice connected to allegations involving platform monopoly allegations.",
+  "entities": [
+    "Court of Appeals",
+    "Economic Expert",
+    "Expert Witness",
+    "Federal Trade Commission",
+    "Investor Group",
+    "Judge Naomi Ellis",
+    "Market Analysis",
+    "Metro Ad Exchange",
+    "Regulatory Notice",
+    "State Coalition",
+    "U.S. District Court for the District of Columbia",
+    "United States v. Metro Ad Exchange",
+    "platform monopoly allegations"
+  ],
+  "relationships": [
+    {
+      "source": "Federal Trade Commission",
+      "type": "issued_notice_involving",
+      "target": "Metro Ad Exchange"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "referenced",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Naomi Ellis",
+      "type": "assigned_to",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "references_topic",
+      "target": "platform monopoly allegations"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "regulatory_notice",
+    "platform_monopoly_allegations",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 4,
+    "timeline_bucket": 2013
+  }
+}

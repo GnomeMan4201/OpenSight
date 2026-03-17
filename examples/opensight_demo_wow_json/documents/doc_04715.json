@@ -1,0 +1,77 @@
+{
+  "id": "doc_04715",
+  "title": "BluePeak Tech v. Helix Circuits \u2014 Complaint Filed",
+  "date": "2013-06-11",
+  "source": "Hearing Note",
+  "cluster": "Patent Litigation",
+  "case_name": "BluePeak Tech v. Helix Circuits",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "A civil complaint was entered in U.S. District Court for the Northern District of California naming BluePeak Tech as defendant and alleging wireless chipset design.",
+  "entities": [
+    "BluePeak Tech",
+    "BluePeak Tech v. Helix Circuits",
+    "Court of Appeals",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Lucy Harrow",
+    "Northstar Logic",
+    "Precedent",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "wireless chipset design"
+  ],
+  "relationships": [
+    {
+      "source": "Northstar Logic",
+      "type": "filed_complaint_against",
+      "target": "BluePeak Tech"
+    },
+    {
+      "source": "U.S. District Court for the Northern District of California",
+      "type": "docketed",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "assigned_to",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "complaint_filed",
+    "wireless_chipset_design",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 2,
+    "timeline_bucket": 2013
+  }
+}

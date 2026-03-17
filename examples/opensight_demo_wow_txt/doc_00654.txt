@@ -1,0 +1,29 @@
+SyntaxWorks v. Horizon Systems — Motion to Dismiss
+
+Case Name: SyntaxWorks v. Horizon Systems
+Date: 2020-03-15
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: motion_to_dismiss
+
+Summary:
+Defense counsel for Horizon Systems moved to dismiss portions of the complaint involving source code licensing.
+
+Entities:
+- Court of Appeals
+- Developer Ecosystem
+- Horizon Systems
+- Judge Samuel Hart
+- Open Runtime Labs
+- Supreme Court
+- SyntaxWorks v. Horizon Systems
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- source code licensing
+
+Relationships:
+- Horizon Systems --filed_motion--> SyntaxWorks v. Horizon Systems
+- Judge Samuel Hart --reviewing_motion_in--> SyntaxWorks v. Horizon Systems
+- SyntaxWorks v. Horizon Systems --filed_in--> U.S. District Court for the Northern District of California
+- SyntaxWorks v. Horizon Systems --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> SyntaxWorks v. Horizon Systems

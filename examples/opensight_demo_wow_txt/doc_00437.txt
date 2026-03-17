@@ -1,0 +1,29 @@
+Signal Grid v. Vector Stack — Complaint Filed
+
+Case Name: Signal Grid v. Vector Stack
+Date: 2016-12-24
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: complaint_filed
+
+Summary:
+A civil complaint was entered in U.S. District Court for the Northern District of California naming CodeForge as defendant and alleging software interoperability.
+
+Entities:
+- CodeForge
+- Court of Appeals
+- Developer Ecosystem
+- Horizon Systems
+- Judge Samuel Hart
+- Signal Grid v. Vector Stack
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- software interoperability
+
+Relationships:
+- Horizon Systems --filed_complaint_against--> CodeForge
+- U.S. District Court for the Northern District of California --docketed--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --filed_in--> U.S. District Court for the Northern District of California
+- Signal Grid v. Vector Stack --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> Signal Grid v. Vector Stack

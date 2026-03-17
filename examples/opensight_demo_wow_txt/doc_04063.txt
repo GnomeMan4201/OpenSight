@@ -1,0 +1,31 @@
+United States v. Meridian BioLabs — Appeal Filed
+
+Case Name: United States v. Meridian BioLabs
+Date: 2016-09-13
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: appeal_filed
+
+Summary:
+Rivergate Holdings appealed the court's decision on issues related to investor disclosures.
+
+Entities:
+- Court of Appeals
+- Investor Group
+- Judge Daniel Pike
+- Notice of Appeal
+- Rivergate Holdings
+- Supreme Court
+- U.S. Department of Justice
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Meridian BioLabs
+- investor disclosures
+
+Relationships:
+- Rivergate Holdings --appealed--> United States v. Meridian BioLabs
+- Court of Appeals --reviewing--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Meridian BioLabs --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Daniel Pike --assigned_to--> United States v. Meridian BioLabs
+- Court of Appeals --reviewing--> United States v. Meridian BioLabs

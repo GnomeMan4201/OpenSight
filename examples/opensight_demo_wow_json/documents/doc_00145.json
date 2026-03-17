@@ -1,0 +1,75 @@
+{
+  "id": "doc_00145",
+  "title": "Nimbus Systems v. Vertex Labs \u2014 Appellate Opinion",
+  "date": "2012-04-03",
+  "source": "Court Filing Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "Nimbus Systems v. Vertex Labs",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "appellate_opinion",
+  "summary": "The reviewing court issued an opinion clarifying standards related to smartphone interface patents.",
+  "entities": [
+    "Apex Mobile",
+    "Appellate Panel",
+    "Court of Appeals",
+    "Judge Lucy Harrow",
+    "Nimbus Systems",
+    "Nimbus Systems v. Vertex Labs",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "smartphone interface patents"
+  ],
+  "relationships": [
+    {
+      "source": "Court of Appeals",
+      "type": "issued_opinion_in",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Nimbus Systems v. Vertex Labs",
+      "type": "cites",
+      "target": "Precedent"
+    },
+    {
+      "source": "Nimbus Systems v. Vertex Labs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "Nimbus Systems v. Vertex Labs",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "assigned_to",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Nimbus Systems v. Vertex Labs"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "appellate_opinion",
+    "smartphone_interface_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 4,
+    "timeline_bucket": 2012
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id": "doc_01005",
+  "title": "United States v. Sterling Diagnostics \u2014 Hearing Held",
+  "date": "2011-03-24",
+  "source": "Hearing Note",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Sterling Diagnostics",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "The court held a hearing in United States v. Sterling Diagnostics to address disputed issues concerning investor disclosures.",
+  "entities": [
+    "Court Hearing",
+    "Court of Appeals",
+    "Investor Group",
+    "Judge Tessa Monroe",
+    "Oral Argument",
+    "Rivergate Holdings",
+    "Supreme Court",
+    "U.S. Department of Justice",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Sterling Diagnostics",
+    "investor disclosures"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "held_hearing_for",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "United States",
+      "type": "appeared_in",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "Rivergate Holdings",
+      "type": "appeared_in",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "assigned_to",
+      "target": "United States v. Sterling Diagnostics"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "hearing",
+    "investor_disclosures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 4,
+    "timeline_bucket": 2011
+  }
+}

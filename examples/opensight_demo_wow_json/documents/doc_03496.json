@@ -1,0 +1,71 @@
+{
+  "id": "doc_03496",
+  "title": "Federal Trade Commission v. BrightCart Platform \u2014 Appeal Filed",
+  "date": "2024-07-14",
+  "source": "Opinion Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. BrightCart Platform",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "appeal_filed",
+  "summary": "Titan Search appealed the court's decision on issues related to exclusive dealing.",
+  "entities": [
+    "Court of Appeals",
+    "Economic Expert",
+    "Federal Trade Commission",
+    "Federal Trade Commission v. BrightCart Platform",
+    "Judge Patrick Sloan",
+    "Market Analysis",
+    "Notice of Appeal",
+    "Omnidata Retail",
+    "Supreme Court",
+    "Titan Search",
+    "U.S. District Court for the District of Columbia",
+    "exclusive dealing"
+  ],
+  "relationships": [
+    {
+      "source": "Titan Search",
+      "type": "appealed",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "references_topic",
+      "target": "exclusive dealing"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "appeal_filed",
+    "exclusive_dealing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 3,
+    "timeline_bucket": 2024
+  }
+}

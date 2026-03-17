@@ -1,13 +1,12 @@
 """
-apps/api/routes/documents.py
-
-Document upload, listing, status polling, page retrieval, and redaction flags.
+Document upload, listing, status polling, page retrieval, deletion, and re-ingest.
 """
 
 import hashlib
 import logging
 import mimetypes
 import os
+import time
 import uuid
 from pathlib import Path
 from typing import Optional
@@ -16,15 +15,26 @@ from fastapi import (
     APIRouter, BackgroundTasks, Depends, File,
     Form, HTTPException, Query, UploadFile,
 )
+from sqlalchemy import func, text
 from sqlalchemy.orm import Session
-from sqlalchemy import func
 
 from apps.api.config import settings
 from apps.api.database import get_db
-from apps.api.models import Document, DocumentPage, Mention, Entity, RedactionFlag
+from apps.api.models import (
+    Document,
+    DocumentPage,
+    Mention,
+    Entity,
+    RedactionFlag,
+    EntityRelationship,
+)
 from apps.api.schemas import (
-    DocumentListOut, DocumentOut, DocumentUploadResponse,
-    PageOut, PageEntitySpan, RedactionFlagOut,
+    DocumentListOut,
+    DocumentOut,
+    DocumentUploadResponse,
+    PageOut,
+    PageEntitySpan,
+    RedactionFlagOut,
 )
 from apps.api.services.storage import storage
 
@@ -38,8 +48,6 @@ SUPPORTED_EXTENSIONS: frozenset[str] = frozenset({
 })
 
 
-# ── Upload ─────────────────────────────────────────────────────────────────────
-
 @router.post("/upload", response_model=list[DocumentUploadResponse], status_code=202)
 def upload_documents(
     background_tasks: BackgroundTasks,
@@ -47,13 +55,6 @@ def upload_documents(
     source_tag: str = Form(""),
     db: Session = Depends(get_db),
 ):
-    """
-    Upload one or more documents for ingestion.
-
-    Returns 202 Accepted. Poll /documents/{id}/status for completion.
-    Returns 415 for unsupported file extensions.
-    Returns 413 if any file exceeds MAX_UPLOAD_SIZE_MB.
-    """
     if not files:
         raise HTTPException(400, "No files provided")
 
@@ -70,10 +71,18 @@ def upload_documents(
                 },
             )
 
-    return [
-        _process_upload(upload, _safe_filename(upload.filename or "upload.bin"), source_tag, background_tasks, db)
-        for upload in files
-    ]
+    out: list[DocumentUploadResponse] = []
+    for upload in files:
+        out.append(
+            _process_upload(
+                upload,
+                _safe_filename(upload.filename or "upload.bin"),
+                source_tag,
+                background_tasks,
+                db,
+            )
+        )
+    return out
 
 
 def _process_upload(
@@ -100,20 +109,34 @@ def _process_upload(
     storage_path = storage.finalize_temp(tmp_path, filename, source_tag)
 
     doc_id = str(uuid.uuid4())
-    doc = Document(
-        id=doc_id,
-        filename=filename,
-        original_name=upload.filename or filename,
-        sha256_hash=sha256,
-        mime_type=mime,
-        file_size_bytes=size,
-        source_tag=source_tag,
-        status="pending",
-        storage_path=storage_path,
-    )
-    db.add(doc)
-    db.commit()
-    db.refresh(doc)
+
+    last_exc = None
+    for attempt in range(5):
+        try:
+            doc = Document(
+                id=doc_id,
+                filename=filename,
+                original_name=upload.filename or filename,
+                sha256_hash=sha256,
+                mime_type=mime,
+                file_size_bytes=size,
+                source_tag=source_tag,
+                status="pending",
+                storage_path=storage_path,
+            )
+            db.add(doc)
+            db.commit()
+            last_exc = None
+            break
+        except Exception as exc:
+            db.rollback()
+            last_exc = exc
+            if "database is locked" not in str(exc).lower():
+                raise
+            time.sleep(0.75 * (attempt + 1))
+
+    if last_exc is not None:
+        raise HTTPException(503, "Database busy during upload. Retry in a moment.")
 
     background_tasks.add_task(_run_ingestion_bg, doc_id, settings.database_url)
     return DocumentUploadResponse(
@@ -126,7 +149,7 @@ def _process_upload(
 
 def _stream_to_temp(file_obj, max_bytes: int, filename: str):
     hasher = hashlib.sha256()
-    size   = 0
+    size = 0
     tmp_path, tmp_fh = storage.stream_to_temp()
 
     try:
@@ -140,8 +163,11 @@ def _stream_to_temp(file_obj, max_bytes: int, filename: str):
                 storage.discard_temp(tmp_path)
                 raise HTTPException(
                     413,
-                    detail={"error": "file_too_large", "filename": filename,
-                            "limit_mb": settings.max_upload_size_mb},
+                    detail={
+                        "error": "file_too_large",
+                        "filename": filename,
+                        "limit_mb": settings.max_upload_size_mb,
+                    },
                 )
             tmp_fh.write(chunk)
             hasher.update(chunk)
@@ -166,7 +192,12 @@ def _safe_filename(name: str) -> str:
     return os.path.basename(name.replace("\x00", "").strip())
 
 
-# ── List & retrieve ────────────────────────────────────────────────────────────
+def _get_or_404(db: Session, document_id: str) -> Document:
+    doc = db.query(Document).filter_by(id=document_id).first()
+    if not doc:
+        raise HTTPException(404, "Document not found")
+    return doc
+
 
 @router.get("", response_model=DocumentListOut)
 def list_documents(
@@ -182,7 +213,12 @@ def list_documents(
     if status:
         q = q.filter(Document.status == status)
     total = q.count()
-    items = q.order_by(Document.created_at.desc()).offset((page - 1) * page_size).limit(page_size).all()
+    items = (
+        q.order_by(Document.created_at.desc())
+        .offset((page - 1) * page_size)
+        .limit(page_size)
+        .all()
+    )
     return DocumentListOut(total=total, items=items)
 
 
@@ -195,16 +231,14 @@ def get_document(document_id: str, db: Session = Depends(get_db)):
 def get_document_status(document_id: str, db: Session = Depends(get_db)):
     doc = _get_or_404(db, document_id)
     return {
-        "document_id":    doc.id,
-        "status":         doc.status,
-        "page_count":     doc.page_count,
+        "document_id": doc.id,
+        "status": doc.status,
+        "page_count": doc.page_count,
         "has_redactions": doc.has_redactions,
-        "error_message":  doc.error_message,
-        "updated_at":     doc.updated_at,
+        "error_message": doc.error_message,
+        "updated_at": doc.updated_at,
     }
 
-
-# ── Pages ──────────────────────────────────────────────────────────────────────
 
 @router.get("/{document_id}/pages", response_model=list[PageOut])
 def list_pages(document_id: str, db: Session = Depends(get_db)):
@@ -258,166 +292,104 @@ def _enrich_page(db: Session, page: DocumentPage) -> PageOut:
     )
 
 
-# ── Redaction flags ────────────────────────────────────────────────────────────
-
-@router.get("/{document_id}/redaction-flags", response_model=list[RedactionFlagOut])
-def get_redaction_flags(document_id: str, db: Session = Depends(get_db)):
+@router.get("/{document_id}/redactions", response_model=list[RedactionFlagOut])
+def list_redaction_flags(document_id: str, db: Session = Depends(get_db)):
     _get_or_404(db, document_id)
     return (
         db.query(RedactionFlag)
         .filter_by(document_id=document_id)
-        .order_by(RedactionFlag.page_number, RedactionFlag.confidence.desc())
+        .order_by(RedactionFlag.page_number, RedactionFlag.id)
         .all()
     )
 
 
-@router.patch("/{document_id}/redaction-flags/{flag_id}/reviewed")
-def mark_flag_reviewed(document_id: str, flag_id: str, db: Session = Depends(get_db)):
-    flag = db.query(RedactionFlag).filter_by(id=flag_id, document_id=document_id).first()
-    if not flag:
-        raise HTTPException(404, "Flag not found")
-    flag.reviewed = True
+def _wipe_document_derivatives(db: Session, document_id: str) -> None:
+    mention_entity_ids = [
+        row[0]
+        for row in db.query(Mention.entity_id).filter(Mention.document_id == document_id).distinct().all()
+        if row[0]
+    ]
+
+    db.execute(text("DELETE FROM mentions WHERE document_id = :id"), {"id": document_id})
+    db.execute(text("DELETE FROM document_pages WHERE document_id = :id"), {"id": document_id})
+    db.execute(text("DELETE FROM redaction_flags WHERE document_id = :id"), {"id": document_id})
+
+    try:
+        db.execute(text("DELETE FROM claims WHERE document_id = :id"), {"id": document_id})
+    except Exception:
+        pass
+
+    try:
+        db.execute(text("DELETE FROM semantic_chunks WHERE document_id = :id"), {"id": document_id})
+    except Exception:
+        pass
+
+    if settings.database_url.startswith("sqlite"):
+        try:
+            db.execute(text("DELETE FROM fts_pages WHERE document_id = :id"), {"id": document_id})
+        except Exception:
+            pass
+
+    if mention_entity_ids:
+        for entity_id in mention_entity_ids:
+            count = db.query(func.count(Mention.id)).filter(Mention.entity_id == entity_id).scalar() or 0
+            db.query(Entity).filter(Entity.id == entity_id).update({"mention_count": count})
+
+        rels = db.query(EntityRelationship).filter(
+            EntityRelationship.entity_a_id.in_(mention_entity_ids) |
+            EntityRelationship.entity_b_id.in_(mention_entity_ids)
+        ).all()
+        for rel in rels:
+            if (rel.weight or 0) <= 0 or (rel.doc_count or 0) <= 0:
+                db.delete(rel)
+
+        db.query(Entity).filter(
+            Entity.id.in_(mention_entity_ids),
+            Entity.mention_count == 0,
+        ).delete(synchronize_session=False)
+
     db.commit()
-    return {"ok": True}
 
-
-def _get_or_404(db: Session, document_id: str) -> Document:
-    doc = db.query(Document).filter_by(id=document_id).first()
-    if not doc:
-        raise HTTPException(404, f"Document {document_id} not found")
-    return doc
-
-
-# ── Delete document ───────────────────────────────────────────────────────────
 
 @router.delete("/{document_id}")
 def delete_document(document_id: str, db: Session = Depends(get_db)):
-    """
-    Delete a document and cascade:
-    - DocumentPage rows
-    - EntityMention rows (and decrement entity mention_counts)
-    - RedactionFlag rows
-    - EntityRelationship rows where doc_count drops to 0
-    - Orphaned entities (mention_count == 0 after deletion)
-    """
-    from apps.api.models import Entity, Mention, EntityRelationship, RedactionFlag
-    from apps.api.config import settings
+    doc = _get_or_404(db, document_id)
 
-    doc = db.query(Document).filter_by(id=document_id).first()
-    if not doc:
-        raise HTTPException(status_code=404, detail="Document not found")
+    _wipe_document_derivatives(db, document_id)
 
-    # 1. Find all mentions in this document
-    mentions = db.query(Mention).filter_by(document_id=document_id).all()
-    affected_entity_ids = {m.entity_id for m in mentions}
-
-    # 2. Delete mentions
-    db.query(Mention).filter_by(document_id=document_id).delete()
-
-    # 3. Recount mention counts for affected entities
-    for entity_id in affected_entity_ids:
-        count = db.query(func.count(Mention.id)).filter_by(entity_id=entity_id).scalar() or 0
-        db.query(Entity).filter_by(id=entity_id).update({"mention_count": count})
-
-    # 4. Delete relationships where both doc_count would drop to 0
-    #    (approximate: decrement doc_count, delete if <= 0)
-    rels = db.query(EntityRelationship).filter(
-        EntityRelationship.entity_a_id.in_(affected_entity_ids) |
-        EntityRelationship.entity_b_id.in_(affected_entity_ids)
-    ).all()
-    for rel in rels:
-        rel.doc_count = max(0, (rel.doc_count or 1) - 1)
-        rel.weight    = max(0, (rel.weight or 1) - 1)
-        if rel.weight <= 0:
-            db.delete(rel)
-
-    # 5. Delete orphaned entities (no mentions left)
-    db.query(Entity).filter(
-        Entity.id.in_(affected_entity_ids),
-        Entity.mention_count == 0,
-    ).delete(synchronize_session=False)
-
-    # 6. Delete redaction flags
-    db.query(RedactionFlag).filter_by(document_id=document_id).delete()
-    try:
-        from apps.api.models import Claim
-        db.query(Claim).filter_by(document_id=document_id).delete()
-    except Exception:
-        pass
-
-    # 7. Delete pages
-    db.query(DocumentPage).filter_by(document_id=document_id).delete()
-
-    # 8. Delete the file from disk
     try:
         storage.delete_file(doc.filename)
     except Exception:
-        pass  # File already gone is fine
+        pass
 
-    # 9. Delete document record
     db.delete(doc)
     db.commit()
-
     return {"deleted": document_id, "filename": doc.filename}
 
 
-# ── Re-ingest document ────────────────────────────────────────────────────────
-
 @router.post("/{document_id}/reingest")
 def reingest_document(document_id: str, db: Session = Depends(get_db)):
-    """
-    Wipe all extracted data for a document and rerun the ingestion pipeline
-    with current settings (useful after enabling OCR or spaCy).
-    """
-    import threading
-    from apps.api.models import Entity, Mention, EntityRelationship, RedactionFlag
     from apps.api.services.ingestion import run_ingestion
-    from apps.api.config import settings
+    import threading
 
-    doc = db.query(Document).filter_by(id=document_id).first()
-    if not doc:
-        raise HTTPException(status_code=404, detail="Document not found")
+    doc = _get_or_404(db, document_id)
 
     if doc.status == "processing":
-        raise HTTPException(status_code=409, detail="Document is currently processing")
+        raise HTTPException(409, "Document is currently processing")
 
-    # Wipe extracted data (keep the file + document record)
-    mentions = db.query(Mention).filter_by(document_id=document_id).all()
-    affected_entity_ids = {m.entity_id for m in mentions}
+    _wipe_document_derivatives(db, document_id)
 
-    db.query(Mention).filter_by(document_id=document_id).delete()
-    db.query(RedactionFlag).filter_by(document_id=document_id).delete()
-    try:
-        from apps.api.models import Claim
-        db.query(Claim).filter_by(document_id=document_id).delete()
-    except Exception:
-        pass
-    db.query(DocumentPage).filter_by(document_id=document_id).delete()
-
-    # Recount entities
-    for entity_id in affected_entity_ids:
-        count = db.query(func.count(Mention.id)).filter_by(entity_id=entity_id).scalar() or 0
-        db.query(Entity).filter_by(id=entity_id).update({"mention_count": count})
-
-    # Delete orphaned entities
-    db.query(Entity).filter(
-        Entity.id.in_(affected_entity_ids),
-        Entity.mention_count == 0,
-    ).delete(synchronize_session=False)
-
-    # Reset document state
-    doc.status        = "queued"
-    doc.page_count    = None
+    doc.status = "pending"
+    doc.page_count = 0
     doc.has_redactions = False
     doc.error_message = None
     db.commit()
 
-    # Rerun pipeline
-    thread = threading.Thread(
+    t = threading.Thread(
         target=run_ingestion,
         args=(document_id, settings.database_url),
         daemon=True,
     )
-    thread.start()
+    t.start()
 
     return {"reingesting": document_id, "filename": doc.filename}

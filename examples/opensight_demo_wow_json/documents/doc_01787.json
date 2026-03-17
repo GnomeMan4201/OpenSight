@@ -1,0 +1,69 @@
+{
+  "id": "doc_01787",
+  "title": "State Coalition v. Omnidata Retail \u2014 Regulatory Notice",
+  "date": "2016-04-03",
+  "source": "Hearing Note",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "State Coalition v. Omnidata Retail",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "regulatory_notice",
+  "summary": "A regulatory notice was issued concerning reporting and disclosure obligations tied to ad exchange bidding practices.",
+  "entities": [
+    "Court of Appeals",
+    "Economic Expert",
+    "Federal Trade Commission",
+    "Judge Naomi Ellis",
+    "Market Analysis",
+    "Regulatory Notice",
+    "State Coalition",
+    "State Coalition v. Omnidata Retail",
+    "U.S. District Court for the District of Columbia",
+    "ad exchange bidding practices"
+  ],
+  "relationships": [
+    {
+      "source": "Federal Trade Commission",
+      "type": "issued_notice_involving",
+      "target": "State Coalition"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "referenced",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Naomi Ellis",
+      "type": "assigned_to",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "involved_in",
+      "target": "State Coalition v. Omnidata Retail"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "regulatory_notice",
+    "ad_exchange_bidding_practices",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 1,
+    "timeline_bucket": 2016
+  }
+}

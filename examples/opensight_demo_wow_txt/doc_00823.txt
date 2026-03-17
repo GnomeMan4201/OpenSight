@@ -1,0 +1,34 @@
+United States v. Rivergate Holdings — Sentencing Hearing
+
+Case Name: United States v. Rivergate Holdings
+Date: 2014-07-21
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: sentencing
+
+Summary:
+Judge Tessa Monroe conducted sentencing proceedings following findings related to wire fraud allegations.
+
+Entities:
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Tessa Monroe
+- Regulatory Notice
+- Rivergate Holdings
+- Securities and Exchange Commission
+- Sentencing Memorandum
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Rivergate Holdings
+- wire fraud allegations
+
+Relationships:
+- Judge Tessa Monroe --sentenced--> Rivergate Holdings
+- Securities and Exchange Commission --prosecuted--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Tessa Monroe --assigned_to--> United States v. Rivergate Holdings
+- Court of Appeals --reviewing--> United States v. Rivergate Holdings
+- Securities and Exchange Commission --involved_in--> United States v. Rivergate Holdings

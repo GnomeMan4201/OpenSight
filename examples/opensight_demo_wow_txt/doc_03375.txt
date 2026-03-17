@@ -1,0 +1,29 @@
+Apex Mobile v. Orion Devices — Motion to Dismiss
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2016-12-17
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: motion_to_dismiss
+
+Summary:
+Nimbus Systems filed a motion to dismiss, arguing the complaint failed to establish wireless chipset design.
+
+Entities:
+- Apex Mobile v. Orion Devices
+- Court of Appeals
+- Judge Lucy Harrow
+- Nimbus Systems
+- Precedent
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- Vertex Labs
+- wireless chipset design
+
+Relationships:
+- Nimbus Systems --filed_motion--> Apex Mobile v. Orion Devices
+- Judge Lucy Harrow --reviewing_motion_in--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the Northern District of California
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Lucy Harrow --assigned_to--> Apex Mobile v. Orion Devices

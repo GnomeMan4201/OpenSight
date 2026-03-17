@@ -1,0 +1,69 @@
+{
+  "id": "doc_01415",
+  "title": "CodeForge v. Open Runtime Labs \u2014 Motion to Dismiss",
+  "date": "2015-07-26",
+  "source": "Hearing Note",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "CodeForge v. Open Runtime Labs",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "motion_to_dismiss",
+  "summary": "Defense counsel for Nova Cloud moved to dismiss portions of the complaint involving copyrightability of interfaces.",
+  "entities": [
+    "CodeForge v. Open Runtime Labs",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Judge Samuel Hart",
+    "Nova Cloud",
+    "Open Runtime Labs",
+    "Supreme Court",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Northern District of California",
+    "copyrightability of interfaces"
+  ],
+  "relationships": [
+    {
+      "source": "Nova Cloud",
+      "type": "filed_motion",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "Judge Samuel Hart",
+      "type": "reviewing_motion_in",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Samuel Hart",
+      "type": "assigned_to",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "U.S. Copyright Office",
+      "type": "involved_in",
+      "target": "CodeForge v. Open Runtime Labs"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "motion_to_dismiss",
+    "copyrightability_of_interfaces",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 5,
+    "timeline_bucket": 2015
+  }
+}

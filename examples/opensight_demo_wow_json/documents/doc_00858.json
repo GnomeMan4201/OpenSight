@@ -1,0 +1,70 @@
+{
+  "id": "doc_00858",
+  "title": "CodeForge v. Open Runtime Labs \u2014 Appeal Filed",
+  "date": "2024-06-08",
+  "source": "Opinion Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "CodeForge v. Open Runtime Labs",
+  "court": "U.S. District Court for the Western District of Washington",
+  "court_type": "district",
+  "event_type": "appeal_filed",
+  "summary": "A notice of appeal was filed challenging rulings concerning copyrightability of interfaces.",
+  "entities": [
+    "CodeForge v. Open Runtime Labs",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Horizon Systems",
+    "Judge Lena Brooks",
+    "Notice of Appeal",
+    "Supreme Court",
+    "SyntaxWorks",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Western District of Washington",
+    "copyrightability of interfaces"
+  ],
+  "relationships": [
+    {
+      "source": "Horizon Systems",
+      "type": "appealed",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Western District of Washington"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Lena Brooks",
+      "type": "assigned_to",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "CodeForge v. Open Runtime Labs"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "appeal_filed",
+    "copyrightability_of_interfaces",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 4,
+    "timeline_bucket": 2024
+  }
+}

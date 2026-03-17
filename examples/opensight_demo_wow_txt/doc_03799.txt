@@ -1,0 +1,31 @@
+Federal Trade Commission v. BrightCart Platform — Summary Judgment Motion
+
+Case Name: Federal Trade Commission v. BrightCart Platform
+Date: 2019-11-23
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: summary_judgment
+
+Summary:
+A summary judgment motion was filed seeking judgment on issues involving ad exchange bidding practices.
+
+Entities:
+- BrightCart Platform
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Federal Trade Commission v. BrightCart Platform
+- Judge Robert Kline
+- Market Analysis
+- Metro Ad Exchange
+- Summary Judgment
+- U.S. District Court for the District of Columbia
+- ad exchange bidding practices
+
+Relationships:
+- Metro Ad Exchange --moved_for_summary_judgment_in--> Federal Trade Commission v. BrightCart Platform
+- Judge Robert Kline --considering--> Summary Judgment
+- Federal Trade Commission v. BrightCart Platform --filed_in--> U.S. District Court for the District of Columbia
+- Federal Trade Commission v. BrightCart Platform --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Robert Kline --assigned_to--> Federal Trade Commission v. BrightCart Platform
+- Court of Appeals --reviewing--> Federal Trade Commission v. BrightCart Platform

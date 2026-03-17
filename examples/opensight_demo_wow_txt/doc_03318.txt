@@ -1,0 +1,32 @@
+United States v. Pine Harbor Capital — Appeal Filed
+
+Case Name: United States v. Pine Harbor Capital
+Date: 2022-10-12
+Court: U.S. District Court for the Northern District of California
+Cluster: Corporate Fraud Trial
+Event Type: appeal_filed
+
+Summary:
+Meridian BioLabs appealed the court's decision on issues related to clinical test misrepresentation.
+
+Entities:
+- Court of Appeals
+- Investor Group
+- Judge Edward Navarro
+- Meridian BioLabs
+- Notice of Appeal
+- Securities and Exchange Commission
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- United States
+- United States v. Pine Harbor Capital
+- clinical test misrepresentation
+
+Relationships:
+- Meridian BioLabs --appealed--> United States v. Pine Harbor Capital
+- Court of Appeals --reviewing--> United States v. Pine Harbor Capital
+- United States v. Pine Harbor Capital --filed_in--> U.S. District Court for the Northern District of California
+- United States v. Pine Harbor Capital --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Edward Navarro --assigned_to--> United States v. Pine Harbor Capital
+- United States v. Pine Harbor Capital --references_topic--> clinical test misrepresentation
+- Securities and Exchange Commission --involved_in--> United States v. Pine Harbor Capital

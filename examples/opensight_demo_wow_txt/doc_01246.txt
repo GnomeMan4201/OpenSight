@@ -1,0 +1,34 @@
+Apex Mobile v. Orion Devices — Jury Verdict
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2019-06-24
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: jury_verdict
+
+Summary:
+A jury returned a verdict after reviewing evidence related to user interface gestures.
+
+Entities:
+- Apex Mobile v. Orion Devices
+- BluePeak Tech
+- Court of Appeals
+- Judge Elena Ward
+- Jury
+- Precedent
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- Verdict Form
+- Vertex Labs
+- user interface gestures
+
+Relationships:
+- Jury --returned_verdict_in--> Apex Mobile v. Orion Devices
+- Judge Elena Ward --entered_verdict_in--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the District of Delaware
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Elena Ward --assigned_to--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --references_topic--> user interface gestures
+- Supreme Court --reviewing--> Apex Mobile v. Orion Devices
+- Court of Appeals --reviewing--> Apex Mobile v. Orion Devices

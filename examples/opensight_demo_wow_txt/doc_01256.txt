@@ -1,0 +1,30 @@
+Apex Mobile v. Orion Devices — Complaint Filed
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2013-07-06
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: complaint_filed
+
+Summary:
+A civil complaint was entered in U.S. District Court for the Northern District of California naming Apex Mobile as defendant and alleging battery optimization patents.
+
+Entities:
+- Apex Mobile
+- Apex Mobile v. Orion Devices
+- Court of Appeals
+- Judge Elena Ward
+- Nimbus Systems
+- Precedent
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- battery optimization patents
+
+Relationships:
+- Nimbus Systems --filed_complaint_against--> Apex Mobile
+- U.S. District Court for the Northern District of California --docketed--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the Northern District of California
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Elena Ward --assigned_to--> Apex Mobile v. Orion Devices
+- U.S. Patent and Trademark Office --involved_in--> Apex Mobile v. Orion Devices

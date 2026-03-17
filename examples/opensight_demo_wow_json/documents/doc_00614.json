@@ -1,0 +1,72 @@
+{
+  "id": "doc_00614",
+  "title": "SyntaxWorks v. Horizon Systems \u2014 Complaint Filed",
+  "date": "2017-09-05",
+  "source": "Court Filing Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "SyntaxWorks v. Horizon Systems",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "A civil complaint was entered in U.S. District Court for the Northern District of California naming CodeForge as defendant and alleging source code licensing.",
+  "entities": [
+    "CodeForge",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Samuel Hart",
+    "Regulatory Notice",
+    "Supreme Court",
+    "SyntaxWorks",
+    "SyntaxWorks v. Horizon Systems",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Northern District of California",
+    "source code licensing"
+  ],
+  "relationships": [
+    {
+      "source": "SyntaxWorks",
+      "type": "filed_complaint_against",
+      "target": "CodeForge"
+    },
+    {
+      "source": "U.S. District Court for the Northern District of California",
+      "type": "docketed",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Samuel Hart",
+      "type": "assigned_to",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "references_topic",
+      "target": "source code licensing"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "complaint_filed",
+    "source_code_licensing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 4,
+    "timeline_bucket": 2017
+  }
+}

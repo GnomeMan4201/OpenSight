@@ -1,0 +1,32 @@
+United States v. Rivergate Holdings — Regulatory Notice
+
+Case Name: United States v. Rivergate Holdings
+Date: 2012-06-12
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: regulatory_notice
+
+Summary:
+Federal Trade Commission issued a notice connected to allegations involving clinical test misrepresentation.
+
+Entities:
+- Chief Financial Officer
+- Court of Appeals
+- Expert Witness
+- Federal Trade Commission
+- Investor Group
+- Judge Edward Navarro
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Rivergate Holdings
+- clinical test misrepresentation
+
+Relationships:
+- Federal Trade Commission --issued_notice_involving--> Chief Financial Officer
+- Federal Trade Commission --referenced--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Edward Navarro --assigned_to--> United States v. Rivergate Holdings
+- Supreme Court --reviewing--> United States v. Rivergate Holdings

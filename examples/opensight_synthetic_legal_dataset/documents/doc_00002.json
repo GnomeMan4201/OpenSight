@@ -1,0 +1,67 @@
+{
+  "id": "doc_00002",
+  "title": "United States v. Metro Ad Exchange \u2014 Appellate Opinion",
+  "date": "2021-04-26",
+  "source": "Docket Entry Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "United States v. Metro Ad Exchange",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "appellate_opinion",
+  "summary": "The reviewing court issued an opinion clarifying standards related to platform monopoly allegations.",
+  "entities": [
+    "Appellate Panel",
+    "BrightCart Platform",
+    "Court of Appeals",
+    "Economic Expert",
+    "Federal Trade Commission",
+    "Judge Naomi Ellis",
+    "Market Analysis",
+    "Precedent",
+    "State Coalition",
+    "Supreme Court",
+    "U.S. District Court for the District of Columbia",
+    "United States v. Metro Ad Exchange",
+    "platform monopoly allegations"
+  ],
+  "relationships": [
+    {
+      "source": "Court of Appeals",
+      "type": "issued_opinion_in",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "cites",
+      "target": "Precedent"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Naomi Ellis",
+      "type": "assigned_to",
+      "target": "United States v. Metro Ad Exchange"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "appellate_opinion",
+    "platform_monopoly_allegations",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 2,
+    "timeline_bucket": 2021
+  }
+}

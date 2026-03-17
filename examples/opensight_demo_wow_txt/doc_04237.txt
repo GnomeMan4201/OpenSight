@@ -1,0 +1,34 @@
+United States v. Metro Ad Exchange — Appeal Filed
+
+Case Name: United States v. Metro Ad Exchange
+Date: 2010-12-21
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: appeal_filed
+
+Summary:
+Metro Ad Exchange appealed the court's decision on issues related to ad exchange bidding practices.
+
+Entities:
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Expert Witness
+- Investor Group
+- Judge Robert Kline
+- Market Analysis
+- Metro Ad Exchange
+- Notice of Appeal
+- Regulatory Notice
+- State Coalition
+- U.S. District Court for the District of Columbia
+- United States v. Metro Ad Exchange
+- ad exchange bidding practices
+
+Relationships:
+- Metro Ad Exchange --appealed--> United States v. Metro Ad Exchange
+- Court of Appeals --reviewing--> United States v. Metro Ad Exchange
+- United States v. Metro Ad Exchange --filed_in--> U.S. District Court for the District of Columbia
+- United States v. Metro Ad Exchange --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Robert Kline --assigned_to--> United States v. Metro Ad Exchange
+- United States v. Metro Ad Exchange --references_topic--> ad exchange bidding practices

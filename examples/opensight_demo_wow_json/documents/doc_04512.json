@@ -1,0 +1,75 @@
+{
+  "id": "doc_04512",
+  "title": "Apex Mobile v. Orion Devices \u2014 Appellate Opinion",
+  "date": "2016-06-10",
+  "source": "Docket Entry Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "Apex Mobile v. Orion Devices",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "appellate_opinion",
+  "summary": "An appellate opinion addressed legal questions arising from camera image processing patents.",
+  "entities": [
+    "Apex Mobile v. Orion Devices",
+    "Appellate Panel",
+    "Court of Appeals",
+    "Judge Martin Cole",
+    "Orion Devices",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "Vertex Labs",
+    "camera image processing patents"
+  ],
+  "relationships": [
+    {
+      "source": "Court of Appeals",
+      "type": "issued_opinion_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "cites",
+      "target": "Precedent"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Apex Mobile v. Orion Devices"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "appellate_opinion",
+    "camera_image_processing_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 4,
+    "timeline_bucket": 2016
+  }
+}

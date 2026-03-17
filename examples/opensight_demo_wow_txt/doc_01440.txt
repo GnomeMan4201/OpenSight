@@ -1,0 +1,33 @@
+Atlas Software v. Nova Cloud — Motion to Dismiss
+
+Case Name: Atlas Software v. Nova Cloud
+Date: 2014-11-24
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: motion_to_dismiss
+
+Summary:
+Defense counsel for CodeForge moved to dismiss portions of the complaint involving API reuse.
+
+Entities:
+- API reuse
+- Atlas Software v. Nova Cloud
+- CodeForge
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Investor Group
+- Judge William Avery
+- Open Runtime Labs
+- Regulatory Notice
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+
+Relationships:
+- CodeForge --filed_motion--> Atlas Software v. Nova Cloud
+- Judge William Avery --reviewing_motion_in--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --filed_in--> U.S. District Court for the Northern District of California
+- Atlas Software v. Nova Cloud --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge William Avery --assigned_to--> Atlas Software v. Nova Cloud
+- U.S. Copyright Office --involved_in--> Atlas Software v. Nova Cloud

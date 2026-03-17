@@ -1,0 +1,70 @@
+{
+  "id": "doc_04098",
+  "title": "BluePeak Tech v. Helix Circuits \u2014 High Court Review",
+  "date": "2018-07-29",
+  "source": "Case Activity Update",
+  "cluster": "Patent Litigation",
+  "case_name": "BluePeak Tech v. Helix Circuits",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "supreme_court_review",
+  "summary": "The high court agreed to review questions involving camera image processing patents.",
+  "entities": [
+    "BluePeak Tech v. Helix Circuits",
+    "Court of Appeals",
+    "Judge Martin Cole",
+    "Orion Devices",
+    "Petition for Review",
+    "Precedent",
+    "Quantum Handsets",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "camera image processing patents"
+  ],
+  "relationships": [
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "raises_issue",
+      "target": "camera image processing patents"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "references_topic",
+      "target": "camera image processing patents"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "supreme_court_review",
+    "camera_image_processing_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 4,
+    "timeline_bucket": 2018
+  }
+}

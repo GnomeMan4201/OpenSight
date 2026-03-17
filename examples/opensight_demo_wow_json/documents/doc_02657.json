@@ -1,0 +1,73 @@
+{
+  "id": "doc_02657",
+  "title": "CodeForge v. Open Runtime Labs \u2014 High Court Review",
+  "date": "2021-01-26",
+  "source": "Court Filing Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "CodeForge v. Open Runtime Labs",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "supreme_court_review",
+  "summary": "Certiorari was granted on issues concerning API reuse in CodeForge v. Open Runtime Labs.",
+  "entities": [
+    "API reuse",
+    "CodeForge v. Open Runtime Labs",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Lena Brooks",
+    "Nova Cloud",
+    "Petition for Review",
+    "Regulatory Notice",
+    "Supreme Court",
+    "SyntaxWorks",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Northern District of California"
+  ],
+  "relationships": [
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "raises_issue",
+      "target": "API reuse"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Lena Brooks",
+      "type": "assigned_to",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "references_topic",
+      "target": "API reuse"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "supreme_court_review",
+    "api_reuse",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 2,
+    "timeline_bucket": 2021
+  }
+}

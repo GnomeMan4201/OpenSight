@@ -1,0 +1,34 @@
+BluePeak Tech v. Helix Circuits — Expert Report Submitted
+
+Case Name: BluePeak Tech v. Helix Circuits
+Date: 2014-09-15
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: expert_report
+
+Summary:
+An expert report was submitted addressing technical issues related to camera image processing patents.
+
+Entities:
+- Apex Mobile
+- BluePeak Tech v. Helix Circuits
+- Court of Appeals
+- Damages Model
+- Expert Witness
+- Judge Elena Ward
+- Precedent
+- Quantum Handsets
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- camera image processing patents
+
+Relationships:
+- Expert Witness --submitted_report_in--> BluePeak Tech v. Helix Circuits
+- BluePeak Tech v. Helix Circuits --includes_issue--> camera image processing patents
+- BluePeak Tech v. Helix Circuits --filed_in--> U.S. District Court for the Northern District of California
+- BluePeak Tech v. Helix Circuits --belongs_to_cluster--> Patent Litigation
+- Judge Elena Ward --assigned_to--> BluePeak Tech v. Helix Circuits
+- BluePeak Tech v. Helix Circuits --references_topic--> camera image processing patents
+- Supreme Court --reviewing--> BluePeak Tech v. Helix Circuits
+- U.S. Patent and Trademark Office --involved_in--> BluePeak Tech v. Helix Circuits

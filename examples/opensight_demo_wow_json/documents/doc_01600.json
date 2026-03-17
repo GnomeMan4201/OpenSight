@@ -1,0 +1,66 @@
+{
+  "id": "doc_01600",
+  "title": "Apex Mobile v. Orion Devices \u2014 Expert Report Submitted",
+  "date": "2024-09-29",
+  "source": "Docket Entry Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "Apex Mobile v. Orion Devices",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "expert_report",
+  "summary": "An expert report was submitted addressing technical issues related to wireless chipset design.",
+  "entities": [
+    "Apex Mobile v. Orion Devices",
+    "Court of Appeals",
+    "Damages Model",
+    "Expert Witness",
+    "Helix Circuits",
+    "Judge Lucy Harrow",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "Vertex Labs",
+    "wireless chipset design"
+  ],
+  "relationships": [
+    {
+      "source": "Expert Witness",
+      "type": "submitted_report_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "includes_issue",
+      "target": "wireless chipset design"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "assigned_to",
+      "target": "Apex Mobile v. Orion Devices"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "expert_report",
+    "wireless_chipset_design",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 2,
+    "timeline_bucket": 2024
+  }
+}

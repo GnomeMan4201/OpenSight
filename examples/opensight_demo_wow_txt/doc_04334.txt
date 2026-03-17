@@ -1,0 +1,35 @@
+Apex Mobile v. Orion Devices — Appellate Opinion
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2019-10-16
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: appellate_opinion
+
+Summary:
+The reviewing court issued an opinion clarifying standards related to user interface gestures.
+
+Entities:
+- Apex Mobile v. Orion Devices
+- Appellate Panel
+- BluePeak Tech
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Elena Ward
+- Precedent
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- Vertex Labs
+- user interface gestures
+
+Relationships:
+- Court of Appeals --issued_opinion_in--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --cites--> Precedent
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the District of Delaware
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Elena Ward --assigned_to--> Apex Mobile v. Orion Devices
+- Court of Appeals --reviewing--> Apex Mobile v. Orion Devices
+- U.S. Patent and Trademark Office --involved_in--> Apex Mobile v. Orion Devices

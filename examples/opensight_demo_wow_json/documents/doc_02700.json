@@ -1,0 +1,80 @@
+{
+  "id": "doc_02700",
+  "title": "United States v. Sterling Diagnostics \u2014 Appeal Filed",
+  "date": "2013-10-07",
+  "source": "Hearing Note",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Sterling Diagnostics",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "appeal_filed",
+  "summary": "Rivergate Holdings appealed the court's decision on issues related to clinical test misrepresentation.",
+  "entities": [
+    "Court of Appeals",
+    "Federal Trade Commission",
+    "Investor Group",
+    "Judge Daniel Pike",
+    "Notice of Appeal",
+    "Rivergate Holdings",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Sterling Diagnostics",
+    "clinical test misrepresentation"
+  ],
+  "relationships": [
+    {
+      "source": "Rivergate Holdings",
+      "type": "appealed",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Daniel Pike",
+      "type": "assigned_to",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "references_topic",
+      "target": "clinical test misrepresentation"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "involved_in",
+      "target": "United States v. Sterling Diagnostics"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "appeal_filed",
+    "clinical_test_misrepresentation",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 1,
+    "timeline_bucket": 2013
+  }
+}

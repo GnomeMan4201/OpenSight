@@ -1,0 +1,74 @@
+{
+  "id": "doc_01312",
+  "title": "United States v. Meridian BioLabs \u2014 Complaint Filed",
+  "date": "2014-07-10",
+  "source": "Docket Entry Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Meridian BioLabs",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "United States filed a complaint against Executive A in U.S. District Court for the Southern District of New York, alleging clinical test misrepresentation.",
+  "entities": [
+    "Court of Appeals",
+    "Executive A",
+    "Investor Group",
+    "Judge Tessa Monroe",
+    "Supreme Court",
+    "U.S. Department of Justice",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Meridian BioLabs",
+    "clinical test misrepresentation"
+  ],
+  "relationships": [
+    {
+      "source": "United States",
+      "type": "filed_complaint_against",
+      "target": "Executive A"
+    },
+    {
+      "source": "U.S. District Court for the Southern District of New York",
+      "type": "docketed",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "assigned_to",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "U.S. Department of Justice",
+      "type": "involved_in",
+      "target": "United States v. Meridian BioLabs"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "complaint_filed",
+    "clinical_test_misrepresentation",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 5,
+    "timeline_bucket": 2014
+  }
+}

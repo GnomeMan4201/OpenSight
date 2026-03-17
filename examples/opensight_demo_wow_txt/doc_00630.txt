@@ -1,0 +1,34 @@
+Atlas Software v. Nova Cloud — Appeal Filed
+
+Case Name: Atlas Software v. Nova Cloud
+Date: 2015-04-06
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: appeal_filed
+
+Summary:
+SyntaxWorks appealed the court's decision on issues related to fair use in developer tools.
+
+Entities:
+- Atlas Software v. Nova Cloud
+- Court of Appeals
+- Developer Ecosystem
+- Judge Samuel Hart
+- Notice of Appeal
+- Open Runtime Labs
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- fair use in developer tools
+
+Relationships:
+- SyntaxWorks --appealed--> Atlas Software v. Nova Cloud
+- Court of Appeals --reviewing--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --filed_in--> U.S. District Court for the Northern District of California
+- Atlas Software v. Nova Cloud --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --references_topic--> fair use in developer tools
+- Supreme Court --reviewing--> Atlas Software v. Nova Cloud
+- Court of Appeals --reviewing--> Atlas Software v. Nova Cloud
+- U.S. Copyright Office --involved_in--> Atlas Software v. Nova Cloud

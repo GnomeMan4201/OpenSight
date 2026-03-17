@@ -1,0 +1,86 @@
+{
+  "id": "doc_00693",
+  "title": "BluePeak Tech v. Helix Circuits \u2014 Hearing Held",
+  "date": "2014-10-15",
+  "source": "Hearing Note",
+  "cluster": "Patent Litigation",
+  "case_name": "BluePeak Tech v. Helix Circuits",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Martin Cole conducted a hearing involving arguments by Apex Mobile and Orion Devices on smartphone interface patents.",
+  "entities": [
+    "Apex Mobile",
+    "BluePeak Tech v. Helix Circuits",
+    "Court Hearing",
+    "Court of Appeals",
+    "Judge Martin Cole",
+    "Oral Argument",
+    "Orion Devices",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "smartphone interface patents"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Martin Cole",
+      "type": "held_hearing_for",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Apex Mobile",
+      "type": "appeared_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Orion Devices",
+      "type": "appeared_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "references_topic",
+      "target": "smartphone interface patents"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "hearing",
+    "smartphone_interface_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 1,
+    "timeline_bucket": 2014
+  }
+}

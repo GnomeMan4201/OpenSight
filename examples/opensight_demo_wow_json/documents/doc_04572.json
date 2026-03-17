@@ -1,0 +1,66 @@
+{
+  "id": "doc_04572",
+  "title": "United States v. Sterling Diagnostics \u2014 Appellate Opinion",
+  "date": "2014-01-04",
+  "source": "Opinion Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Sterling Diagnostics",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "appellate_opinion",
+  "summary": "An appellate opinion addressed legal questions arising from financial reporting fraud.",
+  "entities": [
+    "Appellate Panel",
+    "Court of Appeals",
+    "Investor Group",
+    "Judge Tessa Monroe",
+    "Meridian BioLabs",
+    "Precedent",
+    "Supreme Court",
+    "U.S. Department of Justice",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Sterling Diagnostics",
+    "financial reporting fraud"
+  ],
+  "relationships": [
+    {
+      "source": "Court of Appeals",
+      "type": "issued_opinion_in",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "cites",
+      "target": "Precedent"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "assigned_to",
+      "target": "United States v. Sterling Diagnostics"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "appellate_opinion",
+    "financial_reporting_fraud",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 3,
+    "timeline_bucket": 2014
+  }
+}

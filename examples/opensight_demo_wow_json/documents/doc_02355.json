@@ -1,0 +1,72 @@
+{
+  "id": "doc_02355",
+  "title": "State Coalition v. Omnidata Retail \u2014 Complaint Filed",
+  "date": "2010-06-10",
+  "source": "Hearing Note",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "State Coalition v. Omnidata Retail",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "A civil complaint was entered in U.S. District Court for the District of Columbia naming United States as defendant and alleging market foreclosure.",
+  "entities": [
+    "BrightCart Platform",
+    "Court of Appeals",
+    "Department of Justice Antitrust Division",
+    "Economic Expert",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Patrick Sloan",
+    "Market Analysis",
+    "Regulatory Notice",
+    "State Coalition v. Omnidata Retail",
+    "U.S. District Court for the District of Columbia",
+    "United States",
+    "market foreclosure"
+  ],
+  "relationships": [
+    {
+      "source": "BrightCart Platform",
+      "type": "filed_complaint_against",
+      "target": "United States"
+    },
+    {
+      "source": "U.S. District Court for the District of Columbia",
+      "type": "docketed",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "assigned_to",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "State Coalition v. Omnidata Retail"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "complaint_filed",
+    "market_foreclosure",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 3,
+    "timeline_bucket": 2010
+  }
+}

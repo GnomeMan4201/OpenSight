@@ -1,0 +1,78 @@
+{
+  "id": "doc_01132",
+  "title": "State Coalition v. Omnidata Retail \u2014 Discovery Order",
+  "date": "2014-02-01",
+  "source": "Docket Entry Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "State Coalition v. Omnidata Retail",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "discovery_order",
+  "summary": "Judge Patrick Sloan issued a discovery order requiring production of records related to self-preferencing.",
+  "entities": [
+    "BrightCart Platform",
+    "Court of Appeals",
+    "Department of Justice Antitrust Division",
+    "Document Production",
+    "Economic Expert",
+    "Financial Records",
+    "Internal Emails",
+    "Judge Patrick Sloan",
+    "Market Analysis",
+    "State Coalition v. Omnidata Retail",
+    "Supreme Court",
+    "U.S. District Court for the District of Columbia",
+    "United States",
+    "self-preferencing"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "issued_order_in",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "U.S. District Court for the District of Columbia",
+      "type": "ordered_discovery_in",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "assigned_to",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "references_topic",
+      "target": "self-preferencing"
+    },
+    {
+      "source": "Department of Justice Antitrust Division",
+      "type": "involved_in",
+      "target": "State Coalition v. Omnidata Retail"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "discovery_order",
+    "self_preferencing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 3,
+    "timeline_bucket": 2014
+  }
+}

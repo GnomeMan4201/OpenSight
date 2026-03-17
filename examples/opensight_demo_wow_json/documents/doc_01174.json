@@ -1,0 +1,70 @@
+{
+  "id": "doc_01174",
+  "title": "United States v. Pine Harbor Capital \u2014 Sentencing Hearing",
+  "date": "2018-10-19",
+  "source": "Court Filing Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Pine Harbor Capital",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "sentencing",
+  "summary": "The court imposed sentence after considering evidence tied to financial reporting fraud.",
+  "entities": [
+    "Court of Appeals",
+    "Investor Group",
+    "Judge Edward Navarro",
+    "Securities and Exchange Commission",
+    "Sentencing Memorandum",
+    "Sterling Diagnostics",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Pine Harbor Capital",
+    "financial reporting fraud"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Edward Navarro",
+      "type": "sentenced",
+      "target": "Sterling Diagnostics"
+    },
+    {
+      "source": "Securities and Exchange Commission",
+      "type": "prosecuted",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Edward Navarro",
+      "type": "assigned_to",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "Securities and Exchange Commission",
+      "type": "involved_in",
+      "target": "United States v. Pine Harbor Capital"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "sentencing",
+    "financial_reporting_fraud",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 4,
+    "timeline_bucket": 2018
+  }
+}

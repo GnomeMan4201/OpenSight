@@ -1,0 +1,31 @@
+United States v. Rivergate Holdings — Sentencing Hearing
+
+Case Name: United States v. Rivergate Holdings
+Date: 2013-11-08
+Court: U.S. District Court for the Northern District of California
+Cluster: Corporate Fraud Trial
+Event Type: sentencing
+
+Summary:
+The court imposed sentence after considering evidence tied to wire fraud allegations.
+
+Entities:
+- Court of Appeals
+- Investor Group
+- Judge Daniel Pike
+- Sentencing Memorandum
+- Sterling Diagnostics
+- Supreme Court
+- U.S. Department of Justice
+- U.S. District Court for the Northern District of California
+- United States
+- United States v. Rivergate Holdings
+- wire fraud allegations
+
+Relationships:
+- Judge Daniel Pike --sentenced--> Sterling Diagnostics
+- U.S. Department of Justice --prosecuted--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Northern District of California
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Daniel Pike --assigned_to--> United States v. Rivergate Holdings
+- U.S. Department of Justice --involved_in--> United States v. Rivergate Holdings

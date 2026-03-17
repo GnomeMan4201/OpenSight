@@ -1,0 +1,75 @@
+{
+  "id": "doc_00222",
+  "title": "BluePeak Tech v. Helix Circuits \u2014 Summary Judgment Motion",
+  "date": "2018-02-20",
+  "source": "Hearing Note",
+  "cluster": "Patent Litigation",
+  "case_name": "BluePeak Tech v. Helix Circuits",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "summary_judgment",
+  "summary": "A summary judgment motion was filed seeking judgment on issues involving battery optimization patents.",
+  "entities": [
+    "BluePeak Tech v. Helix Circuits",
+    "Court of Appeals",
+    "Helix Circuits",
+    "Judge Lucy Harrow",
+    "Precedent",
+    "Summary Judgment",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "Vertex Labs",
+    "battery optimization patents"
+  ],
+  "relationships": [
+    {
+      "source": "Vertex Labs",
+      "type": "moved_for_summary_judgment_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "considering",
+      "target": "Summary Judgment"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "assigned_to",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "summary_judgment",
+    "battery_optimization_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 4,
+    "timeline_bucket": 2018
+  }
+}

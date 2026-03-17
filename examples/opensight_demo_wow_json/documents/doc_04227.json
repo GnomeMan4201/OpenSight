@@ -1,0 +1,76 @@
+{
+  "id": "doc_04227",
+  "title": "Signal Grid v. Vector Stack \u2014 Hearing Held",
+  "date": "2015-07-04",
+  "source": "Opinion Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "Signal Grid v. Vector Stack",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Lena Brooks conducted a hearing involving arguments by Open Runtime Labs and Vector Stack on copyrightability of interfaces.",
+  "entities": [
+    "Court Hearing",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Judge Lena Brooks",
+    "Open Runtime Labs",
+    "Oral Argument",
+    "Signal Grid v. Vector Stack",
+    "Supreme Court",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Northern District of California",
+    "Vector Stack",
+    "copyrightability of interfaces"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Lena Brooks",
+      "type": "held_hearing_for",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Open Runtime Labs",
+      "type": "appeared_in",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Vector Stack",
+      "type": "appeared_in",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Lena Brooks",
+      "type": "assigned_to",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Signal Grid v. Vector Stack"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "hearing",
+    "copyrightability_of_interfaces",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 4,
+    "timeline_bucket": 2015
+  }
+}

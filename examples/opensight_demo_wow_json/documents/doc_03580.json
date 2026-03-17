@@ -1,0 +1,82 @@
+{
+  "id": "doc_03580",
+  "title": "BluePeak Tech v. Helix Circuits \u2014 Motion to Dismiss",
+  "date": "2018-07-29",
+  "source": "Docket Entry Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "BluePeak Tech v. Helix Circuits",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "motion_to_dismiss",
+  "summary": "Apex Mobile filed a motion to dismiss, arguing the complaint failed to establish camera image processing patents.",
+  "entities": [
+    "Apex Mobile",
+    "BluePeak Tech v. Helix Circuits",
+    "Court of Appeals",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Martin Cole",
+    "Orion Devices",
+    "Precedent",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "camera image processing patents"
+  ],
+  "relationships": [
+    {
+      "source": "Apex Mobile",
+      "type": "filed_motion",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "reviewing_motion_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "motion_to_dismiss",
+    "camera_image_processing_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 5,
+    "timeline_bucket": 2018
+  }
+}

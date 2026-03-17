@@ -1,0 +1,77 @@
+{
+  "id": "doc_04494",
+  "title": "United States v. Rivergate Holdings \u2014 Appeal Filed",
+  "date": "2015-09-14",
+  "source": "Court Filing Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Rivergate Holdings",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "appeal_filed",
+  "summary": "A notice of appeal was filed challenging rulings concerning investor disclosures.",
+  "entities": [
+    "Court of Appeals",
+    "Expert Witness",
+    "Federal Trade Commission",
+    "Investor Group",
+    "Judge Edward Navarro",
+    "Notice of Appeal",
+    "Pine Harbor Capital",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Rivergate Holdings",
+    "investor disclosures"
+  ],
+  "relationships": [
+    {
+      "source": "Pine Harbor Capital",
+      "type": "appealed",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Edward Navarro",
+      "type": "assigned_to",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "involved_in",
+      "target": "United States v. Rivergate Holdings"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "appeal_filed",
+    "investor_disclosures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 3,
+    "timeline_bucket": 2015
+  }
+}

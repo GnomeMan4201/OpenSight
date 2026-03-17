@@ -1,0 +1,33 @@
+United States v. Metro Ad Exchange — Complaint Filed
+
+Case Name: United States v. Metro Ad Exchange
+Date: 2010-03-11
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: complaint_filed
+
+Summary:
+A civil complaint was entered in U.S. District Court for the District of Columbia naming Metro Ad Exchange as defendant and alleging ad exchange bidding practices.
+
+Entities:
+- Court of Appeals
+- Economic Expert
+- Expert Witness
+- Federal Trade Commission
+- Investor Group
+- Judge Naomi Ellis
+- Market Analysis
+- Metro Ad Exchange
+- Regulatory Notice
+- State Coalition
+- U.S. District Court for the District of Columbia
+- United States v. Metro Ad Exchange
+- ad exchange bidding practices
+
+Relationships:
+- State Coalition --filed_complaint_against--> Metro Ad Exchange
+- U.S. District Court for the District of Columbia --docketed--> United States v. Metro Ad Exchange
+- United States v. Metro Ad Exchange --filed_in--> U.S. District Court for the District of Columbia
+- United States v. Metro Ad Exchange --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> United States v. Metro Ad Exchange
+- Federal Trade Commission --involved_in--> United States v. Metro Ad Exchange

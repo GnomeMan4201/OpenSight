@@ -1,0 +1,71 @@
+{
+  "id": "doc_03912",
+  "title": "United States v. Rivergate Holdings \u2014 Regulatory Notice",
+  "date": "2020-04-30",
+  "source": "Docket Entry Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Rivergate Holdings",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "regulatory_notice",
+  "summary": "A regulatory notice was issued concerning reporting and disclosure obligations tied to internal controls failures.",
+  "entities": [
+    "Court of Appeals",
+    "Expert Witness",
+    "Federal Trade Commission",
+    "Investor Group",
+    "Judge Tessa Monroe",
+    "Pine Harbor Capital",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Rivergate Holdings",
+    "internal controls failures"
+  ],
+  "relationships": [
+    {
+      "source": "Federal Trade Commission",
+      "type": "issued_notice_involving",
+      "target": "Pine Harbor Capital"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "referenced",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "assigned_to",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "involved_in",
+      "target": "United States v. Rivergate Holdings"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "regulatory_notice",
+    "internal_controls_failures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 5,
+    "timeline_bucket": 2020
+  }
+}

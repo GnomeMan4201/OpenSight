@@ -1,0 +1,33 @@
+State Coalition v. Omnidata Retail — Hearing Held
+
+Case Name: State Coalition v. Omnidata Retail
+Date: 2014-01-22
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: hearing
+
+Summary:
+Judge Naomi Ellis conducted a hearing involving arguments by BrightCart Platform and United States on ad exchange bidding practices.
+
+Entities:
+- BrightCart Platform
+- Court Hearing
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Judge Naomi Ellis
+- Market Analysis
+- Oral Argument
+- State Coalition v. Omnidata Retail
+- Supreme Court
+- U.S. District Court for the District of Columbia
+- United States
+- ad exchange bidding practices
+
+Relationships:
+- Judge Naomi Ellis --held_hearing_for--> State Coalition v. Omnidata Retail
+- BrightCart Platform --appeared_in--> State Coalition v. Omnidata Retail
+- United States --appeared_in--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --filed_in--> U.S. District Court for the District of Columbia
+- State Coalition v. Omnidata Retail --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> State Coalition v. Omnidata Retail

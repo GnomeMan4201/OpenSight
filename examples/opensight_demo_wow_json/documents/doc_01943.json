@@ -1,0 +1,73 @@
+{
+  "id": "doc_01943",
+  "title": "Federal Trade Commission v. Titan Search \u2014 Complaint Filed",
+  "date": "2018-07-05",
+  "source": "Opinion Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. Titan Search",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "Metro Ad Exchange filed a complaint against BrightCart Platform in U.S. District Court for the District of Columbia, alleging self-preferencing.",
+  "entities": [
+    "BrightCart Platform",
+    "Court of Appeals",
+    "Department of Justice Antitrust Division",
+    "Economic Expert",
+    "Expert Witness",
+    "Federal Trade Commission v. Titan Search",
+    "Investor Group",
+    "Judge Patrick Sloan",
+    "Market Analysis",
+    "Metro Ad Exchange",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. District Court for the District of Columbia",
+    "self-preferencing"
+  ],
+  "relationships": [
+    {
+      "source": "Metro Ad Exchange",
+      "type": "filed_complaint_against",
+      "target": "BrightCart Platform"
+    },
+    {
+      "source": "U.S. District Court for the District of Columbia",
+      "type": "docketed",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Federal Trade Commission v. Titan Search"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "complaint_filed",
+    "self_preferencing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 4,
+    "timeline_bucket": 2018
+  }
+}

@@ -1,0 +1,34 @@
+United States v. Rivergate Holdings — Jury Verdict
+
+Case Name: United States v. Rivergate Holdings
+Date: 2013-09-11
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: jury_verdict
+
+Summary:
+The jury found on multiple claims after deliberation on allegations involving wire fraud allegations.
+
+Entities:
+- Court of Appeals
+- Executive A
+- Investor Group
+- Judge Edward Navarro
+- Jury
+- Securities and Exchange Commission
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Rivergate Holdings
+- Verdict Form
+- wire fraud allegations
+
+Relationships:
+- Jury --returned_verdict_in--> United States v. Rivergate Holdings
+- Judge Edward Navarro --entered_verdict_in--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Edward Navarro --assigned_to--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --references_topic--> wire fraud allegations
+- Supreme Court --reviewing--> United States v. Rivergate Holdings
+- Securities and Exchange Commission --involved_in--> United States v. Rivergate Holdings

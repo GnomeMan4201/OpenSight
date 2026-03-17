@@ -1,0 +1,32 @@
+United States v. Rivergate Holdings — Complaint Filed
+
+Case Name: United States v. Rivergate Holdings
+Date: 2010-01-18
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: complaint_filed
+
+Summary:
+A civil complaint was entered in U.S. District Court for the Southern District of New York naming Rivergate Holdings as defendant and alleging internal controls failures.
+
+Entities:
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Edward Navarro
+- Regulatory Notice
+- Rivergate Holdings
+- Securities and Exchange Commission
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Rivergate Holdings
+- internal controls failures
+
+Relationships:
+- United States --filed_complaint_against--> Rivergate Holdings
+- U.S. District Court for the Southern District of New York --docketed--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Edward Navarro --assigned_to--> United States v. Rivergate Holdings
+- Court of Appeals --reviewing--> United States v. Rivergate Holdings

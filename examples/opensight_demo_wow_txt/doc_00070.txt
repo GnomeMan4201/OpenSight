@@ -1,0 +1,32 @@
+Federal Trade Commission v. Titan Search — Regulatory Notice
+
+Case Name: Federal Trade Commission v. Titan Search
+Date: 2014-10-12
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: regulatory_notice
+
+Summary:
+A regulatory notice was issued concerning reporting and disclosure obligations tied to self-preferencing.
+
+Entities:
+- BrightCart Platform
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Federal Trade Commission
+- Federal Trade Commission v. Titan Search
+- Judge Naomi Ellis
+- Market Analysis
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- self-preferencing
+
+Relationships:
+- Department of Justice Antitrust Division --issued_notice_involving--> Federal Trade Commission
+- Department of Justice Antitrust Division --referenced--> Federal Trade Commission v. Titan Search
+- Federal Trade Commission v. Titan Search --filed_in--> U.S. District Court for the Southern District of New York
+- Federal Trade Commission v. Titan Search --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> Federal Trade Commission v. Titan Search
+- Supreme Court --reviewing--> Federal Trade Commission v. Titan Search

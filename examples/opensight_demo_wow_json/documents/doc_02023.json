@@ -1,0 +1,75 @@
+{
+  "id": "doc_02023",
+  "title": "United States v. Sterling Diagnostics \u2014 Regulatory Notice",
+  "date": "2014-04-06",
+  "source": "Case Activity Update",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Sterling Diagnostics",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "regulatory_notice",
+  "summary": "U.S. Department of Justice issued a notice connected to allegations involving investor disclosures.",
+  "entities": [
+    "Court of Appeals",
+    "Investor Group",
+    "Judge Tessa Monroe",
+    "Meridian BioLabs",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. Department of Justice",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Sterling Diagnostics",
+    "investor disclosures"
+  ],
+  "relationships": [
+    {
+      "source": "U.S. Department of Justice",
+      "type": "issued_notice_involving",
+      "target": "Meridian BioLabs"
+    },
+    {
+      "source": "U.S. Department of Justice",
+      "type": "referenced",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "assigned_to",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "references_topic",
+      "target": "investor disclosures"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "United States v. Sterling Diagnostics"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "regulatory_notice",
+    "investor_disclosures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 3,
+    "timeline_bucket": 2014
+  }
+}

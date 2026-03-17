@@ -1,0 +1,83 @@
+{
+  "id": "doc_00327",
+  "title": "United States v. Sterling Diagnostics \u2014 Witness Testimony",
+  "date": "2014-01-17",
+  "source": "Court Filing Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Sterling Diagnostics",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "witness_testimony",
+  "summary": "A witness testified regarding communications, intent, and actions involving investor disclosures.",
+  "entities": [
+    "Court of Appeals",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Tessa Monroe",
+    "Meridian BioLabs",
+    "Regulatory Notice",
+    "Supreme Court",
+    "Trial Testimony",
+    "U.S. Department of Justice",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Sterling Diagnostics",
+    "Witness",
+    "investor disclosures"
+  ],
+  "relationships": [
+    {
+      "source": "Witness",
+      "type": "testified_in",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "heard_testimony_in",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "assigned_to",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "references_topic",
+      "target": "investor disclosures"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "U.S. Department of Justice",
+      "type": "involved_in",
+      "target": "United States v. Sterling Diagnostics"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "witness_testimony",
+    "investor_disclosures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 4,
+    "timeline_bucket": 2014
+  }
+}

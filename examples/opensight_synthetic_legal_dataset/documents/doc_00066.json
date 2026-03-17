@@ -1,0 +1,76 @@
+{
+  "id": "doc_00066",
+  "title": "SyntaxWorks v. Horizon Systems \u2014 Hearing Held",
+  "date": "2021-08-20",
+  "source": "Docket Entry Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "SyntaxWorks v. Horizon Systems",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "The court held a hearing in SyntaxWorks v. Horizon Systems to address disputed issues concerning copyrightability of interfaces.",
+  "entities": [
+    "Atlas Software",
+    "Court Hearing",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Judge Lena Brooks",
+    "Oral Argument",
+    "Signal Grid",
+    "Supreme Court",
+    "SyntaxWorks v. Horizon Systems",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Northern District of California",
+    "copyrightability of interfaces"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Lena Brooks",
+      "type": "held_hearing_for",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "Signal Grid",
+      "type": "appeared_in",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "Atlas Software",
+      "type": "appeared_in",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Lena Brooks",
+      "type": "assigned_to",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "U.S. Copyright Office",
+      "type": "involved_in",
+      "target": "SyntaxWorks v. Horizon Systems"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "hearing",
+    "copyrightability_of_interfaces",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 1,
+    "timeline_bucket": 2021
+  }
+}

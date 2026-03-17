@@ -1,0 +1,31 @@
+Nimbus Systems v. Vertex Labs — Jury Verdict
+
+Case Name: Nimbus Systems v. Vertex Labs
+Date: 2019-07-05
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: jury_verdict
+
+Summary:
+The jury found on multiple claims after deliberation on allegations involving battery optimization patents.
+
+Entities:
+- Apex Mobile
+- BluePeak Tech
+- Court of Appeals
+- Judge Martin Cole
+- Jury
+- Nimbus Systems v. Vertex Labs
+- Precedent
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- Verdict Form
+- battery optimization patents
+
+Relationships:
+- Jury --returned_verdict_in--> Nimbus Systems v. Vertex Labs
+- Judge Martin Cole --entered_verdict_in--> Nimbus Systems v. Vertex Labs
+- Nimbus Systems v. Vertex Labs --filed_in--> U.S. District Court for the Northern District of California
+- Nimbus Systems v. Vertex Labs --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> Nimbus Systems v. Vertex Labs

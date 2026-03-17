@@ -1,0 +1,75 @@
+{
+  "id": "doc_03901",
+  "title": "State Coalition v. Omnidata Retail \u2014 Appellate Opinion",
+  "date": "2020-11-22",
+  "source": "Opinion Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "State Coalition v. Omnidata Retail",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "appellate_opinion",
+  "summary": "An appellate opinion addressed legal questions arising from market foreclosure.",
+  "entities": [
+    "Appellate Panel",
+    "Court of Appeals",
+    "Economic Expert",
+    "Federal Trade Commission",
+    "Judge Naomi Ellis",
+    "Market Analysis",
+    "Omnidata Retail",
+    "Precedent",
+    "State Coalition v. Omnidata Retail",
+    "U.S. District Court for the Southern District of New York",
+    "market foreclosure"
+  ],
+  "relationships": [
+    {
+      "source": "Court of Appeals",
+      "type": "issued_opinion_in",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "cites",
+      "target": "Precedent"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Naomi Ellis",
+      "type": "assigned_to",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "involved_in",
+      "target": "State Coalition v. Omnidata Retail"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "appellate_opinion",
+    "market_foreclosure",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 3,
+    "timeline_bucket": 2020
+  }
+}

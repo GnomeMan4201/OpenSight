@@ -1,0 +1,69 @@
+{
+  "id": "doc_02751",
+  "title": "Signal Grid v. Vector Stack \u2014 Complaint Filed",
+  "date": "2014-06-04",
+  "source": "Court Filing Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "Signal Grid v. Vector Stack",
+  "court": "U.S. District Court for the Western District of Washington",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "A civil complaint was entered in U.S. District Court for the Western District of Washington naming Vector Stack as defendant and alleging fair use in developer tools.",
+  "entities": [
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Horizon Systems",
+    "Judge William Avery",
+    "Signal Grid v. Vector Stack",
+    "Supreme Court",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Western District of Washington",
+    "Vector Stack",
+    "fair use in developer tools"
+  ],
+  "relationships": [
+    {
+      "source": "Horizon Systems",
+      "type": "filed_complaint_against",
+      "target": "Vector Stack"
+    },
+    {
+      "source": "U.S. District Court for the Western District of Washington",
+      "type": "docketed",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Western District of Washington"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge William Avery",
+      "type": "assigned_to",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "references_topic",
+      "target": "fair use in developer tools"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "complaint_filed",
+    "fair_use_in_developer_tools",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 4,
+    "timeline_bucket": 2014
+  }
+}

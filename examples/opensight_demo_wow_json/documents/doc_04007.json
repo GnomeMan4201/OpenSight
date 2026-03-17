@@ -1,0 +1,74 @@
+{
+  "id": "doc_04007",
+  "title": "Apex Mobile v. Orion Devices \u2014 Jury Verdict",
+  "date": "2013-06-21",
+  "source": "Hearing Note",
+  "cluster": "Patent Litigation",
+  "case_name": "Apex Mobile v. Orion Devices",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "jury_verdict",
+  "summary": "A jury returned a verdict after reviewing evidence related to battery optimization patents.",
+  "entities": [
+    "Apex Mobile v. Orion Devices",
+    "Court of Appeals",
+    "Expert Witness",
+    "Helix Circuits",
+    "Investor Group",
+    "Judge Martin Cole",
+    "Jury",
+    "Northstar Logic",
+    "Precedent",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "Verdict Form",
+    "battery optimization patents"
+  ],
+  "relationships": [
+    {
+      "source": "Jury",
+      "type": "returned_verdict_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "entered_verdict_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "Apex Mobile v. Orion Devices"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "jury_verdict",
+    "battery_optimization_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 3,
+    "timeline_bucket": 2013
+  }
+}

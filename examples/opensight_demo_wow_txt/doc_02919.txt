@@ -1,0 +1,30 @@
+BluePeak Tech v. Helix Circuits — Motion to Dismiss
+
+Case Name: BluePeak Tech v. Helix Circuits
+Date: 2017-12-10
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: motion_to_dismiss
+
+Summary:
+Orion Devices filed a motion to dismiss, arguing the complaint failed to establish wireless chipset design.
+
+Entities:
+- Apex Mobile
+- BluePeak Tech v. Helix Circuits
+- Court of Appeals
+- Judge Martin Cole
+- Orion Devices
+- Precedent
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- wireless chipset design
+
+Relationships:
+- Orion Devices --filed_motion--> BluePeak Tech v. Helix Circuits
+- Judge Martin Cole --reviewing_motion_in--> BluePeak Tech v. Helix Circuits
+- BluePeak Tech v. Helix Circuits --filed_in--> U.S. District Court for the Northern District of California
+- BluePeak Tech v. Helix Circuits --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> BluePeak Tech v. Helix Circuits
+- BluePeak Tech v. Helix Circuits --references_topic--> wireless chipset design

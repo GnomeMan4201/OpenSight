@@ -1,0 +1,36 @@
+United States v. Meridian BioLabs — Discovery Order
+
+Case Name: United States v. Meridian BioLabs
+Date: 2016-11-17
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: discovery_order
+
+Summary:
+The court ordered limited discovery focused on communications and materials tied to investor disclosures.
+
+Entities:
+- Court of Appeals
+- Document Production
+- Expert Witness
+- Financial Records
+- Internal Emails
+- Investor Group
+- Judge Daniel Pike
+- Regulatory Notice
+- Sterling Diagnostics
+- Supreme Court
+- U.S. Department of Justice
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Meridian BioLabs
+- investor disclosures
+
+Relationships:
+- Judge Daniel Pike --issued_order_in--> United States v. Meridian BioLabs
+- U.S. District Court for the Southern District of New York --ordered_discovery_in--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Meridian BioLabs --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Daniel Pike --assigned_to--> United States v. Meridian BioLabs
+- Supreme Court --reviewing--> United States v. Meridian BioLabs
+- Court of Appeals --reviewing--> United States v. Meridian BioLabs

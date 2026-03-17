@@ -1,0 +1,29 @@
+Atlas Software v. Nova Cloud — Complaint Filed
+
+Case Name: Atlas Software v. Nova Cloud
+Date: 2012-09-12
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: complaint_filed
+
+Summary:
+CodeForge filed a complaint against Open Runtime Labs in U.S. District Court for the Western District of Washington, alleging source code licensing.
+
+Entities:
+- Atlas Software v. Nova Cloud
+- CodeForge
+- Court of Appeals
+- Developer Ecosystem
+- Judge Samuel Hart
+- Open Runtime Labs
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- source code licensing
+
+Relationships:
+- CodeForge --filed_complaint_against--> Open Runtime Labs
+- U.S. District Court for the Western District of Washington --docketed--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --filed_in--> U.S. District Court for the Western District of Washington
+- Atlas Software v. Nova Cloud --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> Atlas Software v. Nova Cloud

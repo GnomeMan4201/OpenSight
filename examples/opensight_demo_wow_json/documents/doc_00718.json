@@ -1,0 +1,77 @@
+{
+  "id": "doc_00718",
+  "title": "Federal Trade Commission v. Titan Search \u2014 Regulatory Notice",
+  "date": "2018-12-18",
+  "source": "Opinion Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. Titan Search",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "regulatory_notice",
+  "summary": "A regulatory notice was issued concerning reporting and disclosure obligations tied to platform monopoly allegations.",
+  "entities": [
+    "Court of Appeals",
+    "Economic Expert",
+    "Expert Witness",
+    "Federal Trade Commission",
+    "Federal Trade Commission v. Titan Search",
+    "Investor Group",
+    "Judge Robert Kline",
+    "Market Analysis",
+    "Metro Ad Exchange",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "platform monopoly allegations"
+  ],
+  "relationships": [
+    {
+      "source": "Federal Trade Commission",
+      "type": "issued_notice_involving",
+      "target": "Federal Trade Commission"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "referenced",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Robert Kline",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "involved_in",
+      "target": "Federal Trade Commission v. Titan Search"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "regulatory_notice",
+    "platform_monopoly_allegations",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 5,
+    "timeline_bucket": 2018
+  }
+}

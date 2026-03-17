@@ -1,0 +1,32 @@
+Apex Mobile v. Orion Devices — Complaint Filed
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2020-11-12
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: complaint_filed
+
+Summary:
+Nimbus Systems filed a complaint against Quantum Handsets in U.S. District Court for the Northern District of California, alleging battery optimization patents.
+
+Entities:
+- Apex Mobile v. Orion Devices
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Lucy Harrow
+- Nimbus Systems
+- Precedent
+- Quantum Handsets
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- battery optimization patents
+
+Relationships:
+- Nimbus Systems --filed_complaint_against--> Quantum Handsets
+- U.S. District Court for the Northern District of California --docketed--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the Northern District of California
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Lucy Harrow --assigned_to--> Apex Mobile v. Orion Devices

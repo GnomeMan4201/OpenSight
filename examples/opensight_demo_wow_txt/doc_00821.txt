@@ -1,0 +1,32 @@
+United States v. Sterling Diagnostics — Appeal Filed
+
+Case Name: United States v. Sterling Diagnostics
+Date: 2023-06-27
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: appeal_filed
+
+Summary:
+Chief Financial Officer appealed the court's decision on issues related to investor disclosures.
+
+Entities:
+- Chief Financial Officer
+- Court of Appeals
+- Federal Trade Commission
+- Investor Group
+- Judge Daniel Pike
+- Notice of Appeal
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Sterling Diagnostics
+- investor disclosures
+
+Relationships:
+- Chief Financial Officer --appealed--> United States v. Sterling Diagnostics
+- Court of Appeals --reviewing--> United States v. Sterling Diagnostics
+- United States v. Sterling Diagnostics --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Sterling Diagnostics --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Daniel Pike --assigned_to--> United States v. Sterling Diagnostics
+- United States v. Sterling Diagnostics --references_topic--> investor disclosures
+- Court of Appeals --reviewing--> United States v. Sterling Diagnostics

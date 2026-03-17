@@ -1,0 +1,66 @@
+{
+  "id": "doc_00042",
+  "title": "Nimbus Systems v. Vertex Labs \u2014 Jury Verdict",
+  "date": "2019-07-05",
+  "source": "Case Activity Update",
+  "cluster": "Patent Litigation",
+  "case_name": "Nimbus Systems v. Vertex Labs",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "jury_verdict",
+  "summary": "The jury found on multiple claims after deliberation on allegations involving battery optimization patents.",
+  "entities": [
+    "Apex Mobile",
+    "BluePeak Tech",
+    "Court of Appeals",
+    "Judge Martin Cole",
+    "Jury",
+    "Nimbus Systems v. Vertex Labs",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "Verdict Form",
+    "battery optimization patents"
+  ],
+  "relationships": [
+    {
+      "source": "Jury",
+      "type": "returned_verdict_in",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "entered_verdict_in",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Nimbus Systems v. Vertex Labs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Nimbus Systems v. Vertex Labs",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "Nimbus Systems v. Vertex Labs"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "jury_verdict",
+    "battery_optimization_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 4,
+    "timeline_bucket": 2019
+  }
+}

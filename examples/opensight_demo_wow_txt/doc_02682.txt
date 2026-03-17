@@ -1,0 +1,29 @@
+BluePeak Tech v. Helix Circuits — Complaint Filed
+
+Case Name: BluePeak Tech v. Helix Circuits
+Date: 2013-03-02
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: complaint_filed
+
+Summary:
+BluePeak Tech filed a complaint against Quantum Handsets in U.S. District Court for the District of Delaware, alleging battery optimization patents.
+
+Entities:
+- BluePeak Tech
+- BluePeak Tech v. Helix Circuits
+- Court of Appeals
+- Judge Martin Cole
+- Precedent
+- Quantum Handsets
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- battery optimization patents
+
+Relationships:
+- BluePeak Tech --filed_complaint_against--> Quantum Handsets
+- U.S. District Court for the District of Delaware --docketed--> BluePeak Tech v. Helix Circuits
+- BluePeak Tech v. Helix Circuits --filed_in--> U.S. District Court for the District of Delaware
+- BluePeak Tech v. Helix Circuits --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> BluePeak Tech v. Helix Circuits

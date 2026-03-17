@@ -1,0 +1,64 @@
+{
+  "id": "doc_00056",
+  "title": "SyntaxWorks v. Horizon Systems \u2014 Complaint Filed",
+  "date": "2015-08-13",
+  "source": "Court Filing Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "SyntaxWorks v. Horizon Systems",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "Signal Grid filed a complaint against Vector Stack in U.S. District Court for the Northern District of California, alleging copyrightability of interfaces.",
+  "entities": [
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Judge William Avery",
+    "Signal Grid",
+    "Supreme Court",
+    "SyntaxWorks v. Horizon Systems",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Northern District of California",
+    "Vector Stack",
+    "copyrightability of interfaces"
+  ],
+  "relationships": [
+    {
+      "source": "Signal Grid",
+      "type": "filed_complaint_against",
+      "target": "Vector Stack"
+    },
+    {
+      "source": "U.S. District Court for the Northern District of California",
+      "type": "docketed",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge William Avery",
+      "type": "assigned_to",
+      "target": "SyntaxWorks v. Horizon Systems"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "complaint_filed",
+    "copyrightability_of_interfaces",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 1,
+    "timeline_bucket": 2015
+  }
+}

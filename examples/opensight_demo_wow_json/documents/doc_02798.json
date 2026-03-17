@@ -1,0 +1,75 @@
+{
+  "id": "doc_02798",
+  "title": "Apex Mobile v. Orion Devices \u2014 Appellate Opinion",
+  "date": "2017-10-31",
+  "source": "Opinion Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "Apex Mobile v. Orion Devices",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "appellate_opinion",
+  "summary": "An appellate opinion addressed legal questions arising from user interface gestures.",
+  "entities": [
+    "Apex Mobile v. Orion Devices",
+    "Appellate Panel",
+    "Court of Appeals",
+    "Helix Circuits",
+    "Judge Lucy Harrow",
+    "Precedent",
+    "Quantum Handsets",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "user interface gestures"
+  ],
+  "relationships": [
+    {
+      "source": "Court of Appeals",
+      "type": "issued_opinion_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "cites",
+      "target": "Precedent"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "assigned_to",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "references_topic",
+      "target": "user interface gestures"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Apex Mobile v. Orion Devices"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "appellate_opinion",
+    "user_interface_gestures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 1,
+    "timeline_bucket": 2017
+  }
+}

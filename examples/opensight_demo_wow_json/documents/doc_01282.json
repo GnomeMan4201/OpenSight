@@ -1,0 +1,71 @@
+{
+  "id": "doc_01282",
+  "title": "United States v. Rivergate Holdings \u2014 Expert Report Submitted",
+  "date": "2018-04-09",
+  "source": "Docket Entry Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Rivergate Holdings",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "expert_report",
+  "summary": "The parties exchanged expert materials concerning damages, causation, and investor disclosures.",
+  "entities": [
+    "Court of Appeals",
+    "Damages Model",
+    "Expert Witness",
+    "Federal Trade Commission",
+    "Investor Group",
+    "Judge Daniel Pike",
+    "Rivergate Holdings",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Rivergate Holdings",
+    "investor disclosures"
+  ],
+  "relationships": [
+    {
+      "source": "Expert Witness",
+      "type": "submitted_report_in",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "includes_issue",
+      "target": "investor disclosures"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Daniel Pike",
+      "type": "assigned_to",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "involved_in",
+      "target": "United States v. Rivergate Holdings"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "expert_report",
+    "investor_disclosures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 5,
+    "timeline_bucket": 2018
+  }
+}

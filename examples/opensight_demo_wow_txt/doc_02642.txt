@@ -1,0 +1,33 @@
+United States v. Rivergate Holdings — Discovery Order
+
+Case Name: United States v. Rivergate Holdings
+Date: 2012-04-17
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: discovery_order
+
+Summary:
+The court ordered limited discovery focused on communications and materials tied to wire fraud allegations.
+
+Entities:
+- Chief Financial Officer
+- Court of Appeals
+- Document Production
+- Federal Trade Commission
+- Financial Records
+- Internal Emails
+- Investor Group
+- Judge Edward Navarro
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Rivergate Holdings
+- wire fraud allegations
+
+Relationships:
+- Judge Edward Navarro --issued_order_in--> United States v. Rivergate Holdings
+- U.S. District Court for the Southern District of New York --ordered_discovery_in--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Edward Navarro --assigned_to--> United States v. Rivergate Holdings
+- Court of Appeals --reviewing--> United States v. Rivergate Holdings

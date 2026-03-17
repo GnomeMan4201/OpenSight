@@ -1,0 +1,69 @@
+{
+  "id": "doc_01384",
+  "title": "Signal Grid v. Vector Stack \u2014 Complaint Filed",
+  "date": "2024-01-02",
+  "source": "Court Filing Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "Signal Grid v. Vector Stack",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "A civil complaint was entered in U.S. District Court for the Northern District of California naming Horizon Systems as defendant and alleging source code licensing.",
+  "entities": [
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Horizon Systems",
+    "Judge Samuel Hart",
+    "Signal Grid",
+    "Signal Grid v. Vector Stack",
+    "Supreme Court",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Northern District of California",
+    "source code licensing"
+  ],
+  "relationships": [
+    {
+      "source": "Signal Grid",
+      "type": "filed_complaint_against",
+      "target": "Horizon Systems"
+    },
+    {
+      "source": "U.S. District Court for the Northern District of California",
+      "type": "docketed",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Samuel Hart",
+      "type": "assigned_to",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "references_topic",
+      "target": "source code licensing"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "complaint_filed",
+    "source_code_licensing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 4,
+    "timeline_bucket": 2024
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "doc_00757",
+  "title": "Northstar Logic v. Quantum Handsets \u2014 Hearing Held",
+  "date": "2015-04-19",
+  "source": "Docket Entry Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "Northstar Logic v. Quantum Handsets",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "The court held a hearing in Northstar Logic v. Quantum Handsets to address disputed issues concerning wireless chipset design.",
+  "entities": [
+    "Court Hearing",
+    "Court of Appeals",
+    "Judge Martin Cole",
+    "Northstar Logic v. Quantum Handsets",
+    "Oral Argument",
+    "Orion Devices",
+    "Precedent",
+    "Quantum Handsets",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "wireless chipset design"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Martin Cole",
+      "type": "held_hearing_for",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Quantum Handsets",
+      "type": "appeared_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Orion Devices",
+      "type": "appeared_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "references_topic",
+      "target": "wireless chipset design"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "hearing",
+    "wireless_chipset_design",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 2,
+    "timeline_bucket": 2015
+  }
+}

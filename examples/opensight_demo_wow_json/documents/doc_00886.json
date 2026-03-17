@@ -1,0 +1,80 @@
+{
+  "id": "doc_00886",
+  "title": "Signal Grid v. Vector Stack \u2014 High Court Review",
+  "date": "2024-03-01",
+  "source": "Case Activity Update",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "Signal Grid v. Vector Stack",
+  "court": "U.S. District Court for the Western District of Washington",
+  "court_type": "district",
+  "event_type": "supreme_court_review",
+  "summary": "Certiorari was granted on issues concerning copyrightability of interfaces in Signal Grid v. Vector Stack.",
+  "entities": [
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Judge Lena Brooks",
+    "Nova Cloud",
+    "Petition for Review",
+    "Signal Grid v. Vector Stack",
+    "Supreme Court",
+    "SyntaxWorks",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Western District of Washington",
+    "copyrightability of interfaces"
+  ],
+  "relationships": [
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "raises_issue",
+      "target": "copyrightability of interfaces"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Western District of Washington"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Lena Brooks",
+      "type": "assigned_to",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "references_topic",
+      "target": "copyrightability of interfaces"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "U.S. Copyright Office",
+      "type": "involved_in",
+      "target": "Signal Grid v. Vector Stack"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "supreme_court_review",
+    "copyrightability_of_interfaces",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 5,
+    "timeline_bucket": 2024
+  }
+}

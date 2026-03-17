@@ -1,0 +1,81 @@
+{
+  "id": "doc_00955",
+  "title": "Federal Trade Commission v. BrightCart Platform \u2014 Hearing Held",
+  "date": "2015-03-23",
+  "source": "Docket Entry Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. BrightCart Platform",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Patrick Sloan conducted a hearing involving arguments by State Coalition and Titan Search on ad exchange bidding practices.",
+  "entities": [
+    "Court Hearing",
+    "Court of Appeals",
+    "Economic Expert",
+    "Federal Trade Commission",
+    "Federal Trade Commission v. BrightCart Platform",
+    "Judge Patrick Sloan",
+    "Market Analysis",
+    "Oral Argument",
+    "State Coalition",
+    "Titan Search",
+    "U.S. District Court for the Southern District of New York",
+    "ad exchange bidding practices"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "held_hearing_for",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "State Coalition",
+      "type": "appeared_in",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Titan Search",
+      "type": "appeared_in",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "references_topic",
+      "target": "ad exchange bidding practices"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "involved_in",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "hearing",
+    "ad_exchange_bidding_practices",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 2,
+    "timeline_bucket": 2015
+  }
+}

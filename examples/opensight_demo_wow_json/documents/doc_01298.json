@@ -1,0 +1,74 @@
+{
+  "id": "doc_01298",
+  "title": "BluePeak Tech v. Helix Circuits \u2014 Complaint Filed",
+  "date": "2018-03-21",
+  "source": "Hearing Note",
+  "cluster": "Patent Litigation",
+  "case_name": "BluePeak Tech v. Helix Circuits",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "Orion Devices filed a complaint against Apex Mobile in U.S. District Court for the District of Delaware, alleging user interface gestures.",
+  "entities": [
+    "Apex Mobile",
+    "BluePeak Tech v. Helix Circuits",
+    "Court of Appeals",
+    "Judge Martin Cole",
+    "Orion Devices",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "user interface gestures"
+  ],
+  "relationships": [
+    {
+      "source": "Orion Devices",
+      "type": "filed_complaint_against",
+      "target": "Apex Mobile"
+    },
+    {
+      "source": "U.S. District Court for the District of Delaware",
+      "type": "docketed",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "references_topic",
+      "target": "user interface gestures"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "complaint_filed",
+    "user_interface_gestures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 1,
+    "timeline_bucket": 2018
+  }
+}

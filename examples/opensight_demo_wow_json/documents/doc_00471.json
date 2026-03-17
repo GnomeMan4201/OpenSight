@@ -1,0 +1,72 @@
+{
+  "id": "doc_00471",
+  "title": "United States v. Metro Ad Exchange \u2014 Complaint Filed",
+  "date": "2013-12-31",
+  "source": "Docket Entry Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "United States v. Metro Ad Exchange",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "State Coalition filed a complaint against Metro Ad Exchange in U.S. District Court for the District of Columbia, alleging exclusive dealing.",
+  "entities": [
+    "Court of Appeals",
+    "Department of Justice Antitrust Division",
+    "Economic Expert",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Robert Kline",
+    "Market Analysis",
+    "Metro Ad Exchange",
+    "Regulatory Notice",
+    "State Coalition",
+    "U.S. District Court for the District of Columbia",
+    "United States v. Metro Ad Exchange",
+    "exclusive dealing"
+  ],
+  "relationships": [
+    {
+      "source": "State Coalition",
+      "type": "filed_complaint_against",
+      "target": "Metro Ad Exchange"
+    },
+    {
+      "source": "U.S. District Court for the District of Columbia",
+      "type": "docketed",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Robert Kline",
+      "type": "assigned_to",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Metro Ad Exchange"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "complaint_filed",
+    "exclusive_dealing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 4,
+    "timeline_bucket": 2013
+  }
+}

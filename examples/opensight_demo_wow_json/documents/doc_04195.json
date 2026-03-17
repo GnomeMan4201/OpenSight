@@ -1,0 +1,74 @@
+{
+  "id": "doc_04195",
+  "title": "United States v. Pine Harbor Capital \u2014 Complaint Filed",
+  "date": "2023-06-23",
+  "source": "Docket Entry Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Pine Harbor Capital",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "A civil complaint was entered in U.S. District Court for the Northern District of California naming Executive B as defendant and alleging investor disclosures.",
+  "entities": [
+    "Court of Appeals",
+    "Executive B",
+    "Investor Group",
+    "Judge Edward Navarro",
+    "Securities and Exchange Commission",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "United States",
+    "United States v. Pine Harbor Capital",
+    "investor disclosures"
+  ],
+  "relationships": [
+    {
+      "source": "United States",
+      "type": "filed_complaint_against",
+      "target": "Executive B"
+    },
+    {
+      "source": "U.S. District Court for the Northern District of California",
+      "type": "docketed",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Edward Navarro",
+      "type": "assigned_to",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "references_topic",
+      "target": "investor disclosures"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Pine Harbor Capital"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "complaint_filed",
+    "investor_disclosures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 1,
+    "timeline_bucket": 2023
+  }
+}

@@ -1,0 +1,34 @@
+Atlas Software v. Nova Cloud — Hearing Held
+
+Case Name: Atlas Software v. Nova Cloud
+Date: 2016-04-12
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: hearing
+
+Summary:
+Judge William Avery conducted a hearing involving arguments by CodeForge and SyntaxWorks on copyrightability of interfaces.
+
+Entities:
+- Atlas Software v. Nova Cloud
+- CodeForge
+- Court Hearing
+- Court of Appeals
+- Developer Ecosystem
+- Judge William Avery
+- Oral Argument
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- copyrightability of interfaces
+
+Relationships:
+- Judge William Avery --held_hearing_for--> Atlas Software v. Nova Cloud
+- CodeForge --appeared_in--> Atlas Software v. Nova Cloud
+- SyntaxWorks --appeared_in--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --filed_in--> U.S. District Court for the Northern District of California
+- Atlas Software v. Nova Cloud --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge William Avery --assigned_to--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --references_topic--> copyrightability of interfaces
+- Court of Appeals --reviewing--> Atlas Software v. Nova Cloud

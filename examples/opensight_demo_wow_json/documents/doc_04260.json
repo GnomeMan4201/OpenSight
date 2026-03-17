@@ -1,0 +1,75 @@
+{
+  "id": "doc_04260",
+  "title": "BluePeak Tech v. Helix Circuits \u2014 Summary Judgment Motion",
+  "date": "2017-07-05",
+  "source": "Case Activity Update",
+  "cluster": "Patent Litigation",
+  "case_name": "BluePeak Tech v. Helix Circuits",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "summary_judgment",
+  "summary": "Orion Devices moved for summary judgment on a record centered on battery optimization patents.",
+  "entities": [
+    "Apex Mobile",
+    "BluePeak Tech v. Helix Circuits",
+    "Court of Appeals",
+    "Judge Martin Cole",
+    "Orion Devices",
+    "Precedent",
+    "Summary Judgment",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "battery optimization patents"
+  ],
+  "relationships": [
+    {
+      "source": "Orion Devices",
+      "type": "moved_for_summary_judgment_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "considering",
+      "target": "Summary Judgment"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "references_topic",
+      "target": "battery optimization patents"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "summary_judgment",
+    "battery_optimization_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 4,
+    "timeline_bucket": 2017
+  }
+}

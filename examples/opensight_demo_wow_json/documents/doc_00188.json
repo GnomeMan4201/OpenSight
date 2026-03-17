@@ -1,0 +1,74 @@
+{
+  "id": "doc_00188",
+  "title": "BluePeak Tech v. Helix Circuits \u2014 Jury Verdict",
+  "date": "2011-12-01",
+  "source": "Court Filing Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "BluePeak Tech v. Helix Circuits",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "jury_verdict",
+  "summary": "The jury found on multiple claims after deliberation on allegations involving battery optimization patents.",
+  "entities": [
+    "BluePeak Tech",
+    "BluePeak Tech v. Helix Circuits",
+    "Court of Appeals",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Elena Ward",
+    "Jury",
+    "Orion Devices",
+    "Precedent",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "Verdict Form",
+    "battery optimization patents"
+  ],
+  "relationships": [
+    {
+      "source": "Jury",
+      "type": "returned_verdict_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Judge Elena Ward",
+      "type": "entered_verdict_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Elena Ward",
+      "type": "assigned_to",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "references_topic",
+      "target": "battery optimization patents"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "jury_verdict",
+    "battery_optimization_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 4,
+    "timeline_bucket": 2011
+  }
+}

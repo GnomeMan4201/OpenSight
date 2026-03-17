@@ -1,0 +1,70 @@
+{
+  "id": "doc_02382",
+  "title": "CodeForge v. Open Runtime Labs \u2014 High Court Review",
+  "date": "2016-01-28",
+  "source": "Court Filing Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "CodeForge v. Open Runtime Labs",
+  "court": "U.S. District Court for the Western District of Washington",
+  "court_type": "district",
+  "event_type": "supreme_court_review",
+  "summary": "Certiorari was granted on issues concerning fair use in developer tools in CodeForge v. Open Runtime Labs.",
+  "entities": [
+    "CodeForge v. Open Runtime Labs",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Judge Samuel Hart",
+    "Open Runtime Labs",
+    "Petition for Review",
+    "Supreme Court",
+    "SyntaxWorks",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Western District of Washington",
+    "fair use in developer tools"
+  ],
+  "relationships": [
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "raises_issue",
+      "target": "fair use in developer tools"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Western District of Washington"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Samuel Hart",
+      "type": "assigned_to",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "CodeForge v. Open Runtime Labs"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "supreme_court_review",
+    "fair_use_in_developer_tools",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 4,
+    "timeline_bucket": 2016
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": "doc_04325",
+  "title": "Signal Grid v. Vector Stack \u2014 Motion to Dismiss",
+  "date": "2018-09-20",
+  "source": "Docket Entry Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "Signal Grid v. Vector Stack",
+  "court": "U.S. District Court for the Western District of Washington",
+  "court_type": "district",
+  "event_type": "motion_to_dismiss",
+  "summary": "Defense counsel for SyntaxWorks moved to dismiss portions of the complaint involving copyrightability of interfaces.",
+  "entities": [
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Judge Samuel Hart",
+    "Nova Cloud",
+    "Signal Grid v. Vector Stack",
+    "Supreme Court",
+    "SyntaxWorks",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Western District of Washington",
+    "copyrightability of interfaces"
+  ],
+  "relationships": [
+    {
+      "source": "SyntaxWorks",
+      "type": "filed_motion",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Judge Samuel Hart",
+      "type": "reviewing_motion_in",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Western District of Washington"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Samuel Hart",
+      "type": "assigned_to",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "references_topic",
+      "target": "copyrightability of interfaces"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "Signal Grid v. Vector Stack"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "motion_to_dismiss",
+    "copyrightability_of_interfaces",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 3,
+    "timeline_bucket": 2018
+  }
+}

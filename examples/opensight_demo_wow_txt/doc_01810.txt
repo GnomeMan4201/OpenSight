@@ -1,0 +1,36 @@
+State Coalition v. Omnidata Retail — Discovery Order
+
+Case Name: State Coalition v. Omnidata Retail
+Date: 2020-11-22
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: discovery_order
+
+Summary:
+Judge Naomi Ellis issued a discovery order requiring production of records related to market foreclosure.
+
+Entities:
+- Court of Appeals
+- Document Production
+- Economic Expert
+- Expert Witness
+- Federal Trade Commission
+- Financial Records
+- Internal Emails
+- Investor Group
+- Judge Naomi Ellis
+- Market Analysis
+- Omnidata Retail
+- Regulatory Notice
+- State Coalition v. Omnidata Retail
+- U.S. District Court for the Southern District of New York
+- market foreclosure
+
+Relationships:
+- Judge Naomi Ellis --issued_order_in--> State Coalition v. Omnidata Retail
+- U.S. District Court for the Southern District of New York --ordered_discovery_in--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --filed_in--> U.S. District Court for the Southern District of New York
+- State Coalition v. Omnidata Retail --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --references_topic--> market foreclosure
+- Federal Trade Commission --involved_in--> State Coalition v. Omnidata Retail

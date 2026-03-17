@@ -1,0 +1,33 @@
+Federal Trade Commission v. Titan Search — Appeal Filed
+
+Case Name: Federal Trade Commission v. Titan Search
+Date: 2021-12-06
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: appeal_filed
+
+Summary:
+Metro Ad Exchange appealed the court's decision on issues related to self-preferencing.
+
+Entities:
+- BrightCart Platform
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Federal Trade Commission v. Titan Search
+- Judge Naomi Ellis
+- Market Analysis
+- Metro Ad Exchange
+- Notice of Appeal
+- Supreme Court
+- U.S. District Court for the District of Columbia
+- self-preferencing
+
+Relationships:
+- Metro Ad Exchange --appealed--> Federal Trade Commission v. Titan Search
+- Court of Appeals --reviewing--> Federal Trade Commission v. Titan Search
+- Federal Trade Commission v. Titan Search --filed_in--> U.S. District Court for the District of Columbia
+- Federal Trade Commission v. Titan Search --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> Federal Trade Commission v. Titan Search
+- Supreme Court --reviewing--> Federal Trade Commission v. Titan Search
+- Department of Justice Antitrust Division --involved_in--> Federal Trade Commission v. Titan Search

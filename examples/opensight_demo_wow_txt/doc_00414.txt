@@ -1,0 +1,31 @@
+BluePeak Tech v. Helix Circuits — Complaint Filed
+
+Case Name: BluePeak Tech v. Helix Circuits
+Date: 2016-11-26
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: complaint_filed
+
+Summary:
+A civil complaint was entered in U.S. District Court for the Northern District of California naming Quantum Handsets as defendant and alleging wireless chipset design.
+
+Entities:
+- BluePeak Tech v. Helix Circuits
+- Court of Appeals
+- Judge Martin Cole
+- Orion Devices
+- Precedent
+- Quantum Handsets
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- wireless chipset design
+
+Relationships:
+- Orion Devices --filed_complaint_against--> Quantum Handsets
+- U.S. District Court for the Northern District of California --docketed--> BluePeak Tech v. Helix Circuits
+- BluePeak Tech v. Helix Circuits --filed_in--> U.S. District Court for the Northern District of California
+- BluePeak Tech v. Helix Circuits --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> BluePeak Tech v. Helix Circuits
+- BluePeak Tech v. Helix Circuits --references_topic--> wireless chipset design
+- Supreme Court --reviewing--> BluePeak Tech v. Helix Circuits

@@ -1,0 +1,33 @@
+Northstar Logic v. Quantum Handsets — Discovery Order
+
+Case Name: Northstar Logic v. Quantum Handsets
+Date: 2017-12-04
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: discovery_order
+
+Summary:
+Judge Elena Ward issued a discovery order requiring production of records related to battery optimization patents.
+
+Entities:
+- Apex Mobile
+- Court of Appeals
+- Document Production
+- Financial Records
+- Internal Emails
+- Judge Elena Ward
+- Northstar Logic
+- Northstar Logic v. Quantum Handsets
+- Precedent
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- battery optimization patents
+
+Relationships:
+- Judge Elena Ward --issued_order_in--> Northstar Logic v. Quantum Handsets
+- U.S. District Court for the District of Delaware --ordered_discovery_in--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --filed_in--> U.S. District Court for the District of Delaware
+- Northstar Logic v. Quantum Handsets --belongs_to_cluster--> Patent Litigation
+- Judge Elena Ward --assigned_to--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --references_topic--> battery optimization patents

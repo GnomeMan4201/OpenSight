@@ -1,0 +1,36 @@
+State Coalition v. Omnidata Retail — Hearing Held
+
+Case Name: State Coalition v. Omnidata Retail
+Date: 2016-10-01
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: hearing
+
+Summary:
+Judge Naomi Ellis conducted a hearing involving arguments by Federal Trade Commission and State Coalition on exclusive dealing.
+
+Entities:
+- Court Hearing
+- Court of Appeals
+- Economic Expert
+- Federal Trade Commission
+- Judge Naomi Ellis
+- Market Analysis
+- Oral Argument
+- State Coalition
+- State Coalition v. Omnidata Retail
+- Supreme Court
+- U.S. District Court for the District of Columbia
+- exclusive dealing
+
+Relationships:
+- Judge Naomi Ellis --held_hearing_for--> State Coalition v. Omnidata Retail
+- Federal Trade Commission --appeared_in--> State Coalition v. Omnidata Retail
+- State Coalition --appeared_in--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --filed_in--> U.S. District Court for the District of Columbia
+- State Coalition v. Omnidata Retail --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --references_topic--> exclusive dealing
+- Supreme Court --reviewing--> State Coalition v. Omnidata Retail
+- Court of Appeals --reviewing--> State Coalition v. Omnidata Retail
+- Federal Trade Commission --involved_in--> State Coalition v. Omnidata Retail

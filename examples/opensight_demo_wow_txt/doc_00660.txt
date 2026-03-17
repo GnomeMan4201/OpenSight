@@ -1,0 +1,30 @@
+Signal Grid v. Vector Stack — Summary Judgment Motion
+
+Case Name: Signal Grid v. Vector Stack
+Date: 2019-06-16
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: summary_judgment
+
+Summary:
+Nova Cloud moved for summary judgment on a record centered on fair use in developer tools.
+
+Entities:
+- CodeForge
+- Court of Appeals
+- Developer Ecosystem
+- Judge Samuel Hart
+- Nova Cloud
+- Signal Grid v. Vector Stack
+- Summary Judgment
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- fair use in developer tools
+
+Relationships:
+- Nova Cloud --moved_for_summary_judgment_in--> Signal Grid v. Vector Stack
+- Judge Samuel Hart --considering--> Summary Judgment
+- Signal Grid v. Vector Stack --filed_in--> U.S. District Court for the Western District of Washington
+- Signal Grid v. Vector Stack --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> Signal Grid v. Vector Stack

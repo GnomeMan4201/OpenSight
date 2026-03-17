@@ -1,0 +1,80 @@
+{
+  "id": "doc_00054",
+  "title": "Federal Trade Commission v. Titan Search \u2014 Complaint Filed",
+  "date": "2014-06-07",
+  "source": "Case Activity Update",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. Titan Search",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "BrightCart Platform filed a complaint against Federal Trade Commission in U.S. District Court for the Southern District of New York, alleging ad exchange bidding practices.",
+  "entities": [
+    "BrightCart Platform",
+    "Court of Appeals",
+    "Department of Justice Antitrust Division",
+    "Economic Expert",
+    "Federal Trade Commission",
+    "Federal Trade Commission v. Titan Search",
+    "Judge Naomi Ellis",
+    "Market Analysis",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "ad exchange bidding practices"
+  ],
+  "relationships": [
+    {
+      "source": "BrightCart Platform",
+      "type": "filed_complaint_against",
+      "target": "Federal Trade Commission"
+    },
+    {
+      "source": "U.S. District Court for the Southern District of New York",
+      "type": "docketed",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Naomi Ellis",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "references_topic",
+      "target": "ad exchange bidding practices"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Department of Justice Antitrust Division",
+      "type": "involved_in",
+      "target": "Federal Trade Commission v. Titan Search"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "complaint_filed",
+    "ad_exchange_bidding_practices",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 1,
+    "timeline_bucket": 2014
+  }
+}

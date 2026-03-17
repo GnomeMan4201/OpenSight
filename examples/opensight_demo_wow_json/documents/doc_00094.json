@@ -1,0 +1,81 @@
+{
+  "id": "doc_00094",
+  "title": "Northstar Logic v. Quantum Handsets \u2014 Expert Report Submitted",
+  "date": "2016-09-15",
+  "source": "Case Activity Update",
+  "cluster": "Patent Litigation",
+  "case_name": "Northstar Logic v. Quantum Handsets",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "expert_report",
+  "summary": "An expert report was submitted addressing technical issues related to user interface gestures.",
+  "entities": [
+    "BluePeak Tech",
+    "Court of Appeals",
+    "Damages Model",
+    "Expert Witness",
+    "Judge Martin Cole",
+    "Northstar Logic",
+    "Northstar Logic v. Quantum Handsets",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "user interface gestures"
+  ],
+  "relationships": [
+    {
+      "source": "Expert Witness",
+      "type": "submitted_report_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "includes_issue",
+      "target": "user interface gestures"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "references_topic",
+      "target": "user interface gestures"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "expert_report",
+    "user_interface_gestures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 2,
+    "timeline_bucket": 2016
+  }
+}

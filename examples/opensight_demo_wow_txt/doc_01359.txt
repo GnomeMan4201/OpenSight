@@ -1,0 +1,32 @@
+Apex Mobile v. Orion Devices — Appellate Opinion
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2021-08-01
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: appellate_opinion
+
+Summary:
+An appellate opinion addressed legal questions arising from battery optimization patents.
+
+Entities:
+- Apex Mobile v. Orion Devices
+- Appellate Panel
+- Court of Appeals
+- Judge Martin Cole
+- Nimbus Systems
+- Precedent
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- Vertex Labs
+- battery optimization patents
+
+Relationships:
+- Court of Appeals --issued_opinion_in--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --cites--> Precedent
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the Northern District of California
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> Apex Mobile v. Orion Devices
+- Supreme Court --reviewing--> Apex Mobile v. Orion Devices
+- Court of Appeals --reviewing--> Apex Mobile v. Orion Devices

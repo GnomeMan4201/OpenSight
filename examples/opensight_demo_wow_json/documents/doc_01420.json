@@ -1,0 +1,75 @@
+{
+  "id": "doc_01420",
+  "title": "United States v. Meridian BioLabs \u2014 Regulatory Notice",
+  "date": "2019-12-09",
+  "source": "Court Filing Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Meridian BioLabs",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "regulatory_notice",
+  "summary": "U.S. Department of Justice issued a notice connected to allegations involving investor disclosures.",
+  "entities": [
+    "Court of Appeals",
+    "Executive B",
+    "Investor Group",
+    "Judge Daniel Pike",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. Department of Justice",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Meridian BioLabs",
+    "investor disclosures"
+  ],
+  "relationships": [
+    {
+      "source": "U.S. Department of Justice",
+      "type": "issued_notice_involving",
+      "target": "Executive B"
+    },
+    {
+      "source": "U.S. Department of Justice",
+      "type": "referenced",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Daniel Pike",
+      "type": "assigned_to",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "U.S. Department of Justice",
+      "type": "involved_in",
+      "target": "United States v. Meridian BioLabs"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "regulatory_notice",
+    "investor_disclosures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 1,
+    "timeline_bucket": 2019
+  }
+}

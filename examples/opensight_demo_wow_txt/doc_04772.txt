@@ -1,0 +1,33 @@
+CodeForge v. Open Runtime Labs — Summary Judgment Motion
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2018-05-26
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: summary_judgment
+
+Summary:
+SyntaxWorks moved for summary judgment on a record centered on API reuse.
+
+Entities:
+- API reuse
+- CodeForge v. Open Runtime Labs
+- Court of Appeals
+- Developer Ecosystem
+- Judge Samuel Hart
+- Open Runtime Labs
+- Summary Judgment
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+
+Relationships:
+- SyntaxWorks --moved_for_summary_judgment_in--> CodeForge v. Open Runtime Labs
+- Judge Samuel Hart --considering--> Summary Judgment
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Western District of Washington
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> CodeForge v. Open Runtime Labs
+- Supreme Court --reviewing--> CodeForge v. Open Runtime Labs
+- Court of Appeals --reviewing--> CodeForge v. Open Runtime Labs
+- U.S. Copyright Office --involved_in--> CodeForge v. Open Runtime Labs

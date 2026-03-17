@@ -1,0 +1,70 @@
+{
+  "id": "doc_00894",
+  "title": "BluePeak Tech v. Helix Circuits \u2014 Appeal Filed",
+  "date": "2013-05-06",
+  "source": "Docket Entry Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "BluePeak Tech v. Helix Circuits",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "appeal_filed",
+  "summary": "Helix Circuits appealed the court's decision on issues related to user interface gestures.",
+  "entities": [
+    "BluePeak Tech",
+    "BluePeak Tech v. Helix Circuits",
+    "Court of Appeals",
+    "Helix Circuits",
+    "Judge Martin Cole",
+    "Notice of Appeal",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "user interface gestures"
+  ],
+  "relationships": [
+    {
+      "source": "Helix Circuits",
+      "type": "appealed",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "references_topic",
+      "target": "user interface gestures"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "appeal_filed",
+    "user_interface_gestures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 2,
+    "timeline_bucket": 2013
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "id": "doc_04655",
+  "title": "Federal Trade Commission v. BrightCart Platform \u2014 Discovery Order",
+  "date": "2021-01-20",
+  "source": "Opinion Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. BrightCart Platform",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "discovery_order",
+  "summary": "The court ordered limited discovery focused on communications and materials tied to exclusive dealing.",
+  "entities": [
+    "Court of Appeals",
+    "Document Production",
+    "Economic Expert",
+    "Federal Trade Commission",
+    "Federal Trade Commission v. BrightCart Platform",
+    "Financial Records",
+    "Internal Emails",
+    "Judge Robert Kline",
+    "Market Analysis",
+    "Titan Search",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "exclusive dealing"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Robert Kline",
+      "type": "issued_order_in",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "U.S. District Court for the Southern District of New York",
+      "type": "ordered_discovery_in",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Robert Kline",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "references_topic",
+      "target": "exclusive dealing"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "involved_in",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "discovery_order",
+    "exclusive_dealing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 1,
+    "timeline_bucket": 2021
+  }
+}

@@ -1,0 +1,34 @@
+BluePeak Tech v. Helix Circuits — Discovery Order
+
+Case Name: BluePeak Tech v. Helix Circuits
+Date: 2013-11-20
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: discovery_order
+
+Summary:
+Judge Elena Ward issued a discovery order requiring production of records related to battery optimization patents.
+
+Entities:
+- BluePeak Tech
+- BluePeak Tech v. Helix Circuits
+- Court of Appeals
+- Document Production
+- Financial Records
+- Internal Emails
+- Judge Elena Ward
+- Orion Devices
+- Precedent
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- battery optimization patents
+
+Relationships:
+- Judge Elena Ward --issued_order_in--> BluePeak Tech v. Helix Circuits
+- U.S. District Court for the District of Delaware --ordered_discovery_in--> BluePeak Tech v. Helix Circuits
+- BluePeak Tech v. Helix Circuits --filed_in--> U.S. District Court for the District of Delaware
+- BluePeak Tech v. Helix Circuits --belongs_to_cluster--> Patent Litigation
+- Judge Elena Ward --assigned_to--> BluePeak Tech v. Helix Circuits
+- BluePeak Tech v. Helix Circuits --references_topic--> battery optimization patents
+- Court of Appeals --reviewing--> BluePeak Tech v. Helix Circuits

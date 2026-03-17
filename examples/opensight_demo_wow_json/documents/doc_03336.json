@@ -1,0 +1,72 @@
+{
+  "id": "doc_03336",
+  "title": "United States v. Rivergate Holdings \u2014 Sentencing Hearing",
+  "date": "2018-08-21",
+  "source": "Hearing Note",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Rivergate Holdings",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "sentencing",
+  "summary": "The court imposed sentence after considering evidence tied to financial reporting fraud.",
+  "entities": [
+    "Court of Appeals",
+    "Expert Witness",
+    "Federal Trade Commission",
+    "Investor Group",
+    "Judge Edward Navarro",
+    "Pine Harbor Capital",
+    "Regulatory Notice",
+    "Sentencing Memorandum",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Rivergate Holdings",
+    "financial reporting fraud"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Edward Navarro",
+      "type": "sentenced",
+      "target": "Pine Harbor Capital"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "prosecuted",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Edward Navarro",
+      "type": "assigned_to",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "references_topic",
+      "target": "financial reporting fraud"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "sentencing",
+    "financial_reporting_fraud",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 1,
+    "timeline_bucket": 2018
+  }
+}

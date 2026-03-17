@@ -1,0 +1,74 @@
+{
+  "id": "doc_00905",
+  "title": "Federal Trade Commission v. Titan Search \u2014 Hearing Held",
+  "date": "2017-04-18",
+  "source": "Hearing Note",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. Titan Search",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Patrick Sloan conducted a hearing involving arguments by Metro Ad Exchange and Omnidata Retail on self-preferencing.",
+  "entities": [
+    "Court Hearing",
+    "Court of Appeals",
+    "Department of Justice Antitrust Division",
+    "Economic Expert",
+    "Expert Witness",
+    "Federal Trade Commission v. Titan Search",
+    "Investor Group",
+    "Judge Patrick Sloan",
+    "Market Analysis",
+    "Metro Ad Exchange",
+    "Omnidata Retail",
+    "Oral Argument",
+    "Regulatory Notice",
+    "U.S. District Court for the Southern District of New York",
+    "self-preferencing"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "held_hearing_for",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Metro Ad Exchange",
+      "type": "appeared_in",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Omnidata Retail",
+      "type": "appeared_in",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. Titan Search"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "hearing",
+    "self_preferencing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 3,
+    "timeline_bucket": 2017
+  }
+}

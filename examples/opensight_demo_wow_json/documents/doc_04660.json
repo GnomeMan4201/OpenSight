@@ -1,0 +1,78 @@
+{
+  "id": "doc_04660",
+  "title": "Federal Trade Commission v. Titan Search \u2014 Summary Judgment Motion",
+  "date": "2016-04-22",
+  "source": "Docket Entry Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. Titan Search",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "summary_judgment",
+  "summary": "A summary judgment motion was filed seeking judgment on issues involving exclusive dealing.",
+  "entities": [
+    "Court of Appeals",
+    "Economic Expert",
+    "Expert Witness",
+    "Federal Trade Commission",
+    "Federal Trade Commission v. Titan Search",
+    "Investor Group",
+    "Judge Naomi Ellis",
+    "Market Analysis",
+    "Omnidata Retail",
+    "Regulatory Notice",
+    "Summary Judgment",
+    "Titan Search",
+    "U.S. District Court for the Southern District of New York",
+    "exclusive dealing"
+  ],
+  "relationships": [
+    {
+      "source": "Omnidata Retail",
+      "type": "moved_for_summary_judgment_in",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Judge Naomi Ellis",
+      "type": "considering",
+      "target": "Summary Judgment"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Naomi Ellis",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "references_topic",
+      "target": "exclusive dealing"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "involved_in",
+      "target": "Federal Trade Commission v. Titan Search"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "summary_judgment",
+    "exclusive_dealing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 4,
+    "timeline_bucket": 2016
+  }
+}

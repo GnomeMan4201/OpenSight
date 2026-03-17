@@ -1,0 +1,32 @@
+SyntaxWorks v. Horizon Systems — Appeal Filed
+
+Case Name: SyntaxWorks v. Horizon Systems
+Date: 2016-03-04
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: appeal_filed
+
+Summary:
+Nova Cloud appealed the court's decision on issues related to fair use in developer tools.
+
+Entities:
+- CodeForge
+- Court of Appeals
+- Developer Ecosystem
+- Judge Samuel Hart
+- Notice of Appeal
+- Nova Cloud
+- Supreme Court
+- SyntaxWorks v. Horizon Systems
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- fair use in developer tools
+
+Relationships:
+- Nova Cloud --appealed--> SyntaxWorks v. Horizon Systems
+- Court of Appeals --reviewing--> SyntaxWorks v. Horizon Systems
+- SyntaxWorks v. Horizon Systems --filed_in--> U.S. District Court for the Western District of Washington
+- SyntaxWorks v. Horizon Systems --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> SyntaxWorks v. Horizon Systems
+- Court of Appeals --reviewing--> SyntaxWorks v. Horizon Systems
+- U.S. Copyright Office --involved_in--> SyntaxWorks v. Horizon Systems

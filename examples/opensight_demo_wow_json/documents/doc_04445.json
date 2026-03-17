@@ -1,0 +1,76 @@
+{
+  "id": "doc_04445",
+  "title": "Apex Mobile v. Orion Devices \u2014 Jury Verdict",
+  "date": "2020-07-06",
+  "source": "Case Activity Update",
+  "cluster": "Patent Litigation",
+  "case_name": "Apex Mobile v. Orion Devices",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "jury_verdict",
+  "summary": "The jury found on multiple claims after deliberation on allegations involving wireless chipset design.",
+  "entities": [
+    "Apex Mobile v. Orion Devices",
+    "Court of Appeals",
+    "Judge Lucy Harrow",
+    "Jury",
+    "Nimbus Systems",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "Verdict Form",
+    "Vertex Labs",
+    "wireless chipset design"
+  ],
+  "relationships": [
+    {
+      "source": "Jury",
+      "type": "returned_verdict_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "entered_verdict_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "assigned_to",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "references_topic",
+      "target": "wireless chipset design"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "Apex Mobile v. Orion Devices"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "jury_verdict",
+    "wireless_chipset_design",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 3,
+    "timeline_bucket": 2020
+  }
+}

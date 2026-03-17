@@ -1,0 +1,34 @@
+United States v. Metro Ad Exchange — Discovery Order
+
+Case Name: United States v. Metro Ad Exchange
+Date: 2013-08-31
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: discovery_order
+
+Summary:
+The court ordered limited discovery focused on communications and materials tied to self-preferencing.
+
+Entities:
+- BrightCart Platform
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Document Production
+- Economic Expert
+- Financial Records
+- Internal Emails
+- Judge Naomi Ellis
+- Market Analysis
+- State Coalition
+- U.S. District Court for the Southern District of New York
+- United States v. Metro Ad Exchange
+- self-preferencing
+
+Relationships:
+- Judge Naomi Ellis --issued_order_in--> United States v. Metro Ad Exchange
+- U.S. District Court for the Southern District of New York --ordered_discovery_in--> United States v. Metro Ad Exchange
+- United States v. Metro Ad Exchange --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Metro Ad Exchange --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> United States v. Metro Ad Exchange
+- United States v. Metro Ad Exchange --references_topic--> self-preferencing
+- Department of Justice Antitrust Division --involved_in--> United States v. Metro Ad Exchange

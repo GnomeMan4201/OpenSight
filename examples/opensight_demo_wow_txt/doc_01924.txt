@@ -1,0 +1,29 @@
+Atlas Software v. Nova Cloud — Complaint Filed
+
+Case Name: Atlas Software v. Nova Cloud
+Date: 2011-11-20
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: complaint_filed
+
+Summary:
+CodeForge filed a complaint against Nova Cloud in U.S. District Court for the Western District of Washington, alleging source code licensing.
+
+Entities:
+- Atlas Software v. Nova Cloud
+- CodeForge
+- Court of Appeals
+- Developer Ecosystem
+- Judge Lena Brooks
+- Nova Cloud
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- source code licensing
+
+Relationships:
+- CodeForge --filed_complaint_against--> Nova Cloud
+- U.S. District Court for the Western District of Washington --docketed--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --filed_in--> U.S. District Court for the Western District of Washington
+- Atlas Software v. Nova Cloud --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Lena Brooks --assigned_to--> Atlas Software v. Nova Cloud

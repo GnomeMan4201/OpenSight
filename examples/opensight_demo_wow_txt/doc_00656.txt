@@ -1,0 +1,34 @@
+United States v. Meridian BioLabs — Appeal Filed
+
+Case Name: United States v. Meridian BioLabs
+Date: 2018-09-25
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: appeal_filed
+
+Summary:
+Chief Financial Officer appealed the court's decision on issues related to internal controls failures.
+
+Entities:
+- Chief Financial Officer
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Daniel Pike
+- Notice of Appeal
+- Regulatory Notice
+- Supreme Court
+- U.S. Department of Justice
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Meridian BioLabs
+- internal controls failures
+
+Relationships:
+- Chief Financial Officer --appealed--> United States v. Meridian BioLabs
+- Court of Appeals --reviewing--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Meridian BioLabs --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Daniel Pike --assigned_to--> United States v. Meridian BioLabs
+- Court of Appeals --reviewing--> United States v. Meridian BioLabs
+- U.S. Department of Justice --involved_in--> United States v. Meridian BioLabs

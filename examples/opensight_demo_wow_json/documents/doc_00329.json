@@ -1,0 +1,75 @@
+{
+  "id": "doc_00329",
+  "title": "Apex Mobile v. Orion Devices \u2014 Appellate Opinion",
+  "date": "2016-12-08",
+  "source": "Court Filing Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "Apex Mobile v. Orion Devices",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "appellate_opinion",
+  "summary": "The reviewing court issued an opinion clarifying standards related to wireless chipset design.",
+  "entities": [
+    "Apex Mobile v. Orion Devices",
+    "Appellate Panel",
+    "Court of Appeals",
+    "Judge Martin Cole",
+    "Nimbus Systems",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "Vertex Labs",
+    "wireless chipset design"
+  ],
+  "relationships": [
+    {
+      "source": "Court of Appeals",
+      "type": "issued_opinion_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "cites",
+      "target": "Precedent"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "Apex Mobile v. Orion Devices"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "appellate_opinion",
+    "wireless_chipset_design",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 3,
+    "timeline_bucket": 2016
+  }
+}

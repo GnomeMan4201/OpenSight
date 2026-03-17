@@ -1,0 +1,34 @@
+United States v. Metro Ad Exchange — Appeal Filed
+
+Case Name: United States v. Metro Ad Exchange
+Date: 2012-02-21
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: appeal_filed
+
+Summary:
+A notice of appeal was filed challenging rulings concerning self-preferencing.
+
+Entities:
+- BrightCart Platform
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Expert Witness
+- Investor Group
+- Judge Naomi Ellis
+- Market Analysis
+- Notice of Appeal
+- Regulatory Notice
+- State Coalition
+- U.S. District Court for the Southern District of New York
+- United States v. Metro Ad Exchange
+- self-preferencing
+
+Relationships:
+- State Coalition --appealed--> United States v. Metro Ad Exchange
+- Court of Appeals --reviewing--> United States v. Metro Ad Exchange
+- United States v. Metro Ad Exchange --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Metro Ad Exchange --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> United States v. Metro Ad Exchange
+- Department of Justice Antitrust Division --involved_in--> United States v. Metro Ad Exchange

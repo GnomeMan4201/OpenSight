@@ -1,0 +1,37 @@
+United States v. Rivergate Holdings — Discovery Order
+
+Case Name: United States v. Rivergate Holdings
+Date: 2018-09-05
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: discovery_order
+
+Summary:
+The court ordered limited discovery focused on communications and materials tied to investor disclosures.
+
+Entities:
+- Court of Appeals
+- Document Production
+- Expert Witness
+- Financial Records
+- Internal Emails
+- Investor Group
+- Judge Tessa Monroe
+- Meridian BioLabs
+- Regulatory Notice
+- Supreme Court
+- U.S. Department of Justice
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Rivergate Holdings
+- investor disclosures
+
+Relationships:
+- Judge Tessa Monroe --issued_order_in--> United States v. Rivergate Holdings
+- U.S. District Court for the Southern District of New York --ordered_discovery_in--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Tessa Monroe --assigned_to--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --references_topic--> investor disclosures
+- Court of Appeals --reviewing--> United States v. Rivergate Holdings
+- U.S. Department of Justice --involved_in--> United States v. Rivergate Holdings

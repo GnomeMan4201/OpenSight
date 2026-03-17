@@ -1,0 +1,68 @@
+{
+  "id": "doc_03778",
+  "title": "SyntaxWorks v. Horizon Systems \u2014 Summary Judgment Motion",
+  "date": "2016-11-08",
+  "source": "Hearing Note",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "SyntaxWorks v. Horizon Systems",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "summary_judgment",
+  "summary": "SyntaxWorks moved for summary judgment on a record centered on software interoperability.",
+  "entities": [
+    "CodeForge",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Samuel Hart",
+    "Regulatory Notice",
+    "Summary Judgment",
+    "Supreme Court",
+    "SyntaxWorks",
+    "SyntaxWorks v. Horizon Systems",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Northern District of California",
+    "software interoperability"
+  ],
+  "relationships": [
+    {
+      "source": "SyntaxWorks",
+      "type": "moved_for_summary_judgment_in",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "Judge Samuel Hart",
+      "type": "considering",
+      "target": "Summary Judgment"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Samuel Hart",
+      "type": "assigned_to",
+      "target": "SyntaxWorks v. Horizon Systems"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "summary_judgment",
+    "software_interoperability",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 1,
+    "timeline_bucket": 2016
+  }
+}

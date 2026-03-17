@@ -1,0 +1,31 @@
+Federal Trade Commission v. BrightCart Platform — Expert Report Submitted
+
+Case Name: Federal Trade Commission v. BrightCart Platform
+Date: 2022-11-11
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: expert_report
+
+Summary:
+The parties exchanged expert materials concerning damages, causation, and exclusive dealing.
+
+Entities:
+- Court of Appeals
+- Damages Model
+- Department of Justice Antitrust Division
+- Economic Expert
+- Expert Witness
+- Federal Trade Commission v. BrightCart Platform
+- Judge Patrick Sloan
+- Market Analysis
+- Omnidata Retail
+- Titan Search
+- U.S. District Court for the District of Columbia
+- exclusive dealing
+
+Relationships:
+- Expert Witness --submitted_report_in--> Federal Trade Commission v. BrightCart Platform
+- Federal Trade Commission v. BrightCart Platform --includes_issue--> exclusive dealing
+- Federal Trade Commission v. BrightCart Platform --filed_in--> U.S. District Court for the District of Columbia
+- Federal Trade Commission v. BrightCart Platform --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Patrick Sloan --assigned_to--> Federal Trade Commission v. BrightCart Platform

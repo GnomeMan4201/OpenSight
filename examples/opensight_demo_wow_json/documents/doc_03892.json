@@ -1,0 +1,70 @@
+{
+  "id": "doc_03892",
+  "title": "Apex Mobile v. Orion Devices \u2014 High Court Review",
+  "date": "2024-12-24",
+  "source": "Hearing Note",
+  "cluster": "Patent Litigation",
+  "case_name": "Apex Mobile v. Orion Devices",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "supreme_court_review",
+  "summary": "Certiorari was granted on issues concerning battery optimization patents in Apex Mobile v. Orion Devices.",
+  "entities": [
+    "Apex Mobile v. Orion Devices",
+    "Court of Appeals",
+    "Helix Circuits",
+    "Judge Lucy Harrow",
+    "Petition for Review",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "Vertex Labs",
+    "battery optimization patents"
+  ],
+  "relationships": [
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "raises_issue",
+      "target": "battery optimization patents"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "assigned_to",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "references_topic",
+      "target": "battery optimization patents"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "supreme_court_review",
+    "battery_optimization_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 2,
+    "timeline_bucket": 2024
+  }
+}

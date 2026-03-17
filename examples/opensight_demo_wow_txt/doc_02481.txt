@@ -1,0 +1,30 @@
+Northstar Logic v. Quantum Handsets — High Court Review
+
+Case Name: Northstar Logic v. Quantum Handsets
+Date: 2016-03-14
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: supreme_court_review
+
+Summary:
+Certiorari was granted on issues concerning wireless chipset design in Northstar Logic v. Quantum Handsets.
+
+Entities:
+- Apex Mobile
+- Court of Appeals
+- Judge Lucy Harrow
+- Northstar Logic
+- Northstar Logic v. Quantum Handsets
+- Petition for Review
+- Precedent
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- wireless chipset design
+
+Relationships:
+- Supreme Court --reviewing--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --raises_issue--> wireless chipset design
+- Northstar Logic v. Quantum Handsets --filed_in--> U.S. District Court for the District of Delaware
+- Northstar Logic v. Quantum Handsets --belongs_to_cluster--> Patent Litigation
+- Judge Lucy Harrow --assigned_to--> Northstar Logic v. Quantum Handsets

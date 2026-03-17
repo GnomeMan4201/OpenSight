@@ -1,0 +1,71 @@
+{
+  "id": "doc_01870",
+  "title": "CodeForge v. Open Runtime Labs \u2014 Appellate Opinion",
+  "date": "2023-05-05",
+  "source": "Court Filing Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "CodeForge v. Open Runtime Labs",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "appellate_opinion",
+  "summary": "The reviewing court issued an opinion clarifying standards related to API reuse.",
+  "entities": [
+    "API reuse",
+    "Appellate Panel",
+    "CodeForge v. Open Runtime Labs",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Judge William Avery",
+    "Nova Cloud",
+    "Precedent",
+    "Supreme Court",
+    "SyntaxWorks",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Northern District of California"
+  ],
+  "relationships": [
+    {
+      "source": "Court of Appeals",
+      "type": "issued_opinion_in",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "cites",
+      "target": "Precedent"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge William Avery",
+      "type": "assigned_to",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "CodeForge v. Open Runtime Labs"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "appellate_opinion",
+    "api_reuse",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 5,
+    "timeline_bucket": 2023
+  }
+}

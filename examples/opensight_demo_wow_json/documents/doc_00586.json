@@ -1,0 +1,80 @@
+{
+  "id": "doc_00586",
+  "title": "BluePeak Tech v. Helix Circuits \u2014 Appeal Filed",
+  "date": "2023-08-25",
+  "source": "Opinion Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "BluePeak Tech v. Helix Circuits",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "appeal_filed",
+  "summary": "A notice of appeal was filed challenging rulings concerning battery optimization patents.",
+  "entities": [
+    "BluePeak Tech v. Helix Circuits",
+    "Court of Appeals",
+    "Helix Circuits",
+    "Judge Lucy Harrow",
+    "Notice of Appeal",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "Vertex Labs",
+    "battery optimization patents"
+  ],
+  "relationships": [
+    {
+      "source": "Helix Circuits",
+      "type": "appealed",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "assigned_to",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "references_topic",
+      "target": "battery optimization patents"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "BluePeak Tech v. Helix Circuits"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "appeal_filed",
+    "battery_optimization_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 3,
+    "timeline_bucket": 2023
+  }
+}

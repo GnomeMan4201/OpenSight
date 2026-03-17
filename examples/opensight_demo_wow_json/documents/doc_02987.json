@@ -1,0 +1,65 @@
+{
+  "id": "doc_02987",
+  "title": "Signal Grid v. Vector Stack \u2014 Appeal Filed",
+  "date": "2021-12-03",
+  "source": "Case Activity Update",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "Signal Grid v. Vector Stack",
+  "court": "U.S. District Court for the Western District of Washington",
+  "court_type": "district",
+  "event_type": "appeal_filed",
+  "summary": "Atlas Software appealed the court's decision on issues related to API reuse.",
+  "entities": [
+    "API reuse",
+    "Atlas Software",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Horizon Systems",
+    "Judge Lena Brooks",
+    "Notice of Appeal",
+    "Signal Grid v. Vector Stack",
+    "Supreme Court",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Western District of Washington"
+  ],
+  "relationships": [
+    {
+      "source": "Atlas Software",
+      "type": "appealed",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Western District of Washington"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Lena Brooks",
+      "type": "assigned_to",
+      "target": "Signal Grid v. Vector Stack"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "appeal_filed",
+    "api_reuse",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 2,
+    "timeline_bucket": 2021
+  }
+}

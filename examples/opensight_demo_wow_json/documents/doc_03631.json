@@ -1,0 +1,65 @@
+{
+  "id": "doc_03631",
+  "title": "Signal Grid v. Vector Stack \u2014 High Court Review",
+  "date": "2012-10-09",
+  "source": "Court Filing Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "Signal Grid v. Vector Stack",
+  "court": "U.S. District Court for the Western District of Washington",
+  "court_type": "district",
+  "event_type": "supreme_court_review",
+  "summary": "Certiorari was granted on issues concerning software interoperability in Signal Grid v. Vector Stack.",
+  "entities": [
+    "CodeForge",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Judge William Avery",
+    "Petition for Review",
+    "Signal Grid",
+    "Signal Grid v. Vector Stack",
+    "Supreme Court",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Western District of Washington",
+    "software interoperability"
+  ],
+  "relationships": [
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "raises_issue",
+      "target": "software interoperability"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Western District of Washington"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge William Avery",
+      "type": "assigned_to",
+      "target": "Signal Grid v. Vector Stack"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "supreme_court_review",
+    "software_interoperability",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 1,
+    "timeline_bucket": 2012
+  }
+}

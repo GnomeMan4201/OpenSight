@@ -1,0 +1,81 @@
+{
+  "id": "doc_02536",
+  "title": "United States v. Meridian BioLabs \u2014 Hearing Held",
+  "date": "2020-09-24",
+  "source": "Hearing Note",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Meridian BioLabs",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Daniel Pike conducted a hearing involving arguments by United States and Meridian BioLabs on investor disclosures.",
+  "entities": [
+    "Court Hearing",
+    "Court of Appeals",
+    "Investor Group",
+    "Judge Daniel Pike",
+    "Meridian BioLabs",
+    "Oral Argument",
+    "Supreme Court",
+    "U.S. Department of Justice",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Meridian BioLabs",
+    "investor disclosures"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Daniel Pike",
+      "type": "held_hearing_for",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "United States",
+      "type": "appeared_in",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "Meridian BioLabs",
+      "type": "appeared_in",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Daniel Pike",
+      "type": "assigned_to",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "U.S. Department of Justice",
+      "type": "involved_in",
+      "target": "United States v. Meridian BioLabs"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "hearing",
+    "investor_disclosures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 5,
+    "timeline_bucket": 2020
+  }
+}

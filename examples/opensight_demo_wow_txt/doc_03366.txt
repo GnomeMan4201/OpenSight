@@ -1,0 +1,34 @@
+United States v. Meridian BioLabs — Witness Testimony
+
+Case Name: United States v. Meridian BioLabs
+Date: 2018-07-11
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: witness_testimony
+
+Summary:
+Witness testimony described internal events and decisions related to internal controls failures.
+
+Entities:
+- Court of Appeals
+- Federal Trade Commission
+- Investor Group
+- Judge Daniel Pike
+- Pine Harbor Capital
+- Supreme Court
+- Trial Testimony
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Meridian BioLabs
+- Witness
+- internal controls failures
+
+Relationships:
+- Witness --testified_in--> United States v. Meridian BioLabs
+- Judge Daniel Pike --heard_testimony_in--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Meridian BioLabs --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Daniel Pike --assigned_to--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --references_topic--> internal controls failures
+- Supreme Court --reviewing--> United States v. Meridian BioLabs
+- Federal Trade Commission --involved_in--> United States v. Meridian BioLabs

@@ -1,0 +1,74 @@
+{
+  "id": "doc_02823",
+  "title": "CodeForge v. Open Runtime Labs \u2014 Appellate Opinion",
+  "date": "2024-02-26",
+  "source": "Hearing Note",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "CodeForge v. Open Runtime Labs",
+  "court": "U.S. District Court for the Western District of Washington",
+  "court_type": "district",
+  "event_type": "appellate_opinion",
+  "summary": "An appellate opinion addressed legal questions arising from fair use in developer tools.",
+  "entities": [
+    "Appellate Panel",
+    "CodeForge v. Open Runtime Labs",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Expert Witness",
+    "Horizon Systems",
+    "Investor Group",
+    "Judge William Avery",
+    "Precedent",
+    "Regulatory Notice",
+    "Supreme Court",
+    "SyntaxWorks",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Western District of Washington",
+    "fair use in developer tools"
+  ],
+  "relationships": [
+    {
+      "source": "Court of Appeals",
+      "type": "issued_opinion_in",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "cites",
+      "target": "Precedent"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Western District of Washington"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge William Avery",
+      "type": "assigned_to",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "references_topic",
+      "target": "fair use in developer tools"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "appellate_opinion",
+    "fair_use_in_developer_tools",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 3,
+    "timeline_bucket": 2024
+  }
+}

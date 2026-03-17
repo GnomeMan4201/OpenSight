@@ -1,0 +1,33 @@
+United States v. Rivergate Holdings — Complaint Filed
+
+Case Name: United States v. Rivergate Holdings
+Date: 2018-05-07
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: complaint_filed
+
+Summary:
+United States filed a complaint against Sterling Diagnostics in U.S. District Court for the Southern District of New York, alleging wire fraud allegations.
+
+Entities:
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Tessa Monroe
+- Regulatory Notice
+- Sterling Diagnostics
+- Supreme Court
+- U.S. Department of Justice
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Rivergate Holdings
+- wire fraud allegations
+
+Relationships:
+- United States --filed_complaint_against--> Sterling Diagnostics
+- U.S. District Court for the Southern District of New York --docketed--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Tessa Monroe --assigned_to--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --references_topic--> wire fraud allegations
+- Court of Appeals --reviewing--> United States v. Rivergate Holdings

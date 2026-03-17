@@ -1,0 +1,30 @@
+Signal Grid v. Vector Stack — Complaint Filed
+
+Case Name: Signal Grid v. Vector Stack
+Date: 2023-09-21
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: complaint_filed
+
+Summary:
+Atlas Software filed a complaint against Signal Grid in U.S. District Court for the Northern District of California, alleging fair use in developer tools.
+
+Entities:
+- Atlas Software
+- Court of Appeals
+- Developer Ecosystem
+- Judge William Avery
+- Signal Grid
+- Signal Grid v. Vector Stack
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- fair use in developer tools
+
+Relationships:
+- Atlas Software --filed_complaint_against--> Signal Grid
+- U.S. District Court for the Northern District of California --docketed--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --filed_in--> U.S. District Court for the Northern District of California
+- Signal Grid v. Vector Stack --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge William Avery --assigned_to--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --references_topic--> fair use in developer tools

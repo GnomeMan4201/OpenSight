@@ -1,0 +1,34 @@
+Signal Grid v. Vector Stack — Complaint Filed
+
+Case Name: Signal Grid v. Vector Stack
+Date: 2014-10-31
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: complaint_filed
+
+Summary:
+A civil complaint was entered in U.S. District Court for the Northern District of California naming Horizon Systems as defendant and alleging copyrightability of interfaces.
+
+Entities:
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Horizon Systems
+- Investor Group
+- Judge Samuel Hart
+- Open Runtime Labs
+- Regulatory Notice
+- Signal Grid v. Vector Stack
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- copyrightability of interfaces
+
+Relationships:
+- Open Runtime Labs --filed_complaint_against--> Horizon Systems
+- U.S. District Court for the Northern District of California --docketed--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --filed_in--> U.S. District Court for the Northern District of California
+- Signal Grid v. Vector Stack --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --references_topic--> copyrightability of interfaces
+- Supreme Court --reviewing--> Signal Grid v. Vector Stack

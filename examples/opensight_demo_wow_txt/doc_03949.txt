@@ -1,0 +1,31 @@
+United States v. Metro Ad Exchange — Regulatory Notice
+
+Case Name: United States v. Metro Ad Exchange
+Date: 2011-02-22
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: regulatory_notice
+
+Summary:
+A regulatory notice was issued concerning reporting and disclosure obligations tied to ad exchange bidding practices.
+
+Entities:
+- BrightCart Platform
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Judge Naomi Ellis
+- Market Analysis
+- Regulatory Notice
+- State Coalition
+- U.S. District Court for the Southern District of New York
+- United States v. Metro Ad Exchange
+- ad exchange bidding practices
+
+Relationships:
+- Department of Justice Antitrust Division --issued_notice_involving--> State Coalition
+- Department of Justice Antitrust Division --referenced--> United States v. Metro Ad Exchange
+- United States v. Metro Ad Exchange --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Metro Ad Exchange --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> United States v. Metro Ad Exchange
+- Department of Justice Antitrust Division --involved_in--> United States v. Metro Ad Exchange

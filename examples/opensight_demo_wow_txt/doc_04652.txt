@@ -1,0 +1,32 @@
+Federal Trade Commission v. BrightCart Platform — Hearing Held
+
+Case Name: Federal Trade Commission v. BrightCart Platform
+Date: 2014-06-28
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: hearing
+
+Summary:
+Judge Patrick Sloan conducted a hearing involving arguments by United States and Federal Trade Commission on market foreclosure.
+
+Entities:
+- Court Hearing
+- Court of Appeals
+- Economic Expert
+- Federal Trade Commission
+- Federal Trade Commission v. BrightCart Platform
+- Judge Patrick Sloan
+- Market Analysis
+- Oral Argument
+- U.S. District Court for the Southern District of New York
+- United States
+- market foreclosure
+
+Relationships:
+- Judge Patrick Sloan --held_hearing_for--> Federal Trade Commission v. BrightCart Platform
+- United States --appeared_in--> Federal Trade Commission v. BrightCart Platform
+- Federal Trade Commission --appeared_in--> Federal Trade Commission v. BrightCart Platform
+- Federal Trade Commission v. BrightCart Platform --filed_in--> U.S. District Court for the Southern District of New York
+- Federal Trade Commission v. BrightCart Platform --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Patrick Sloan --assigned_to--> Federal Trade Commission v. BrightCart Platform
+- Federal Trade Commission --involved_in--> Federal Trade Commission v. BrightCart Platform

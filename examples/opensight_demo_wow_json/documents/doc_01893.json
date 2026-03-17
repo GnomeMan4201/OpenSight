@@ -1,0 +1,75 @@
+{
+  "id": "doc_01893",
+  "title": "BluePeak Tech v. Helix Circuits \u2014 Summary Judgment Motion",
+  "date": "2018-04-21",
+  "source": "Case Activity Update",
+  "cluster": "Patent Litigation",
+  "case_name": "BluePeak Tech v. Helix Circuits",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "summary_judgment",
+  "summary": "A summary judgment motion was filed seeking judgment on issues involving wireless chipset design.",
+  "entities": [
+    "BluePeak Tech v. Helix Circuits",
+    "Court of Appeals",
+    "Helix Circuits",
+    "Judge Lucy Harrow",
+    "Precedent",
+    "Summary Judgment",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "Vertex Labs",
+    "wireless chipset design"
+  ],
+  "relationships": [
+    {
+      "source": "Vertex Labs",
+      "type": "moved_for_summary_judgment_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "considering",
+      "target": "Summary Judgment"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "assigned_to",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "references_topic",
+      "target": "wireless chipset design"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "BluePeak Tech v. Helix Circuits"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "summary_judgment",
+    "wireless_chipset_design",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 3,
+    "timeline_bucket": 2018
+  }
+}

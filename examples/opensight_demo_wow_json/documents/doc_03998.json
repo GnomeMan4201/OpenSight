@@ -1,0 +1,78 @@
+{
+  "id": "doc_03998",
+  "title": "United States v. Pine Harbor Capital \u2014 Hearing Held",
+  "date": "2015-05-04",
+  "source": "Docket Entry Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Pine Harbor Capital",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "The court held a hearing in United States v. Pine Harbor Capital to address disputed issues concerning investor disclosures.",
+  "entities": [
+    "Court Hearing",
+    "Court of Appeals",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Edward Navarro",
+    "Oral Argument",
+    "Pine Harbor Capital",
+    "Regulatory Notice",
+    "Securities and Exchange Commission",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Pine Harbor Capital",
+    "investor disclosures"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Edward Navarro",
+      "type": "held_hearing_for",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "United States",
+      "type": "appeared_in",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "Pine Harbor Capital",
+      "type": "appeared_in",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Edward Navarro",
+      "type": "assigned_to",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "Securities and Exchange Commission",
+      "type": "involved_in",
+      "target": "United States v. Pine Harbor Capital"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "hearing",
+    "investor_disclosures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 1,
+    "timeline_bucket": 2015
+  }
+}

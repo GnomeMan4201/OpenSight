@@ -1,0 +1,68 @@
+{
+  "id": "doc_02210",
+  "title": "Federal Trade Commission v. BrightCart Platform \u2014 Complaint Filed",
+  "date": "2021-07-01",
+  "source": "Opinion Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. BrightCart Platform",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "A civil complaint was entered in U.S. District Court for the District of Columbia naming Federal Trade Commission as defendant and alleging market foreclosure.",
+  "entities": [
+    "Court of Appeals",
+    "Economic Expert",
+    "Federal Trade Commission",
+    "Federal Trade Commission v. BrightCart Platform",
+    "Judge Naomi Ellis",
+    "Market Analysis",
+    "Titan Search",
+    "U.S. District Court for the District of Columbia",
+    "market foreclosure"
+  ],
+  "relationships": [
+    {
+      "source": "Titan Search",
+      "type": "filed_complaint_against",
+      "target": "Federal Trade Commission"
+    },
+    {
+      "source": "U.S. District Court for the District of Columbia",
+      "type": "docketed",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Naomi Ellis",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "involved_in",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "complaint_filed",
+    "market_foreclosure",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 4,
+    "timeline_bucket": 2021
+  }
+}

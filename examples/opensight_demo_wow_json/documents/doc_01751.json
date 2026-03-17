@@ -1,0 +1,76 @@
+{
+  "id": "doc_01751",
+  "title": "United States v. Sterling Diagnostics \u2014 Expert Report Submitted",
+  "date": "2014-10-25",
+  "source": "Case Activity Update",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Sterling Diagnostics",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "expert_report",
+  "summary": "The parties exchanged expert materials concerning damages, causation, and financial reporting fraud.",
+  "entities": [
+    "Court of Appeals",
+    "Damages Model",
+    "Expert Witness",
+    "Federal Trade Commission",
+    "Investor Group",
+    "Judge Tessa Monroe",
+    "Meridian BioLabs",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Sterling Diagnostics",
+    "financial reporting fraud"
+  ],
+  "relationships": [
+    {
+      "source": "Expert Witness",
+      "type": "submitted_report_in",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "includes_issue",
+      "target": "financial reporting fraud"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "assigned_to",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "references_topic",
+      "target": "financial reporting fraud"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Sterling Diagnostics"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "expert_report",
+    "financial_reporting_fraud",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 2,
+    "timeline_bucket": 2014
+  }
+}

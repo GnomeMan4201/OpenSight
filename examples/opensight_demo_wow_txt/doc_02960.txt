@@ -1,0 +1,34 @@
+United States v. Pine Harbor Capital — Discovery Order
+
+Case Name: United States v. Pine Harbor Capital
+Date: 2010-02-19
+Court: U.S. District Court for the Northern District of California
+Cluster: Corporate Fraud Trial
+Event Type: discovery_order
+
+Summary:
+The court ordered limited discovery focused on communications and materials tied to internal controls failures.
+
+Entities:
+- Court of Appeals
+- Document Production
+- Executive A
+- Federal Trade Commission
+- Financial Records
+- Internal Emails
+- Investor Group
+- Judge Edward Navarro
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- United States
+- United States v. Pine Harbor Capital
+- internal controls failures
+
+Relationships:
+- Judge Edward Navarro --issued_order_in--> United States v. Pine Harbor Capital
+- U.S. District Court for the Northern District of California --ordered_discovery_in--> United States v. Pine Harbor Capital
+- United States v. Pine Harbor Capital --filed_in--> U.S. District Court for the Northern District of California
+- United States v. Pine Harbor Capital --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Edward Navarro --assigned_to--> United States v. Pine Harbor Capital
+- United States v. Pine Harbor Capital --references_topic--> internal controls failures
+- Court of Appeals --reviewing--> United States v. Pine Harbor Capital

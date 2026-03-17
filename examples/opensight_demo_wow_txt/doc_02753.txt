@@ -1,0 +1,33 @@
+United States v. Rivergate Holdings — Appellate Opinion
+
+Case Name: United States v. Rivergate Holdings
+Date: 2015-09-10
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: appellate_opinion
+
+Summary:
+The reviewing court issued an opinion clarifying standards related to clinical test misrepresentation.
+
+Entities:
+- Appellate Panel
+- Court of Appeals
+- Investor Group
+- Judge Tessa Monroe
+- Precedent
+- Rivergate Holdings
+- Supreme Court
+- U.S. Department of Justice
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Rivergate Holdings
+- clinical test misrepresentation
+
+Relationships:
+- Court of Appeals --issued_opinion_in--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --cites--> Precedent
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Tessa Monroe --assigned_to--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --references_topic--> clinical test misrepresentation
+- Court of Appeals --reviewing--> United States v. Rivergate Holdings

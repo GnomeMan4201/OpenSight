@@ -1,0 +1,32 @@
+United States v. Rivergate Holdings — Jury Verdict
+
+Case Name: United States v. Rivergate Holdings
+Date: 2018-07-13
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: jury_verdict
+
+Summary:
+The jury found on multiple claims after deliberation on allegations involving investor disclosures.
+
+Entities:
+- Court of Appeals
+- Federal Trade Commission
+- Investor Group
+- Judge Tessa Monroe
+- Jury
+- Pine Harbor Capital
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Rivergate Holdings
+- Verdict Form
+- investor disclosures
+
+Relationships:
+- Jury --returned_verdict_in--> United States v. Rivergate Holdings
+- Judge Tessa Monroe --entered_verdict_in--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Tessa Monroe --assigned_to--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --references_topic--> investor disclosures

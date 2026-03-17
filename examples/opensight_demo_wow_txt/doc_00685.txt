@@ -1,0 +1,33 @@
+United States v. Rivergate Holdings — Sentencing Hearing
+
+Case Name: United States v. Rivergate Holdings
+Date: 2013-06-27
+Court: U.S. District Court for the Northern District of California
+Cluster: Corporate Fraud Trial
+Event Type: sentencing
+
+Summary:
+The court imposed sentence after considering evidence tied to wire fraud allegations.
+
+Entities:
+- Chief Financial Officer
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Tessa Monroe
+- Regulatory Notice
+- Sentencing Memorandum
+- Supreme Court
+- U.S. Department of Justice
+- U.S. District Court for the Northern District of California
+- United States
+- United States v. Rivergate Holdings
+- wire fraud allegations
+
+Relationships:
+- Judge Tessa Monroe --sentenced--> Chief Financial Officer
+- U.S. Department of Justice --prosecuted--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Northern District of California
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Tessa Monroe --assigned_to--> United States v. Rivergate Holdings
+- Supreme Court --reviewing--> United States v. Rivergate Holdings

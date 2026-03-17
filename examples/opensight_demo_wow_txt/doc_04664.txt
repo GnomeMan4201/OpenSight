@@ -1,0 +1,32 @@
+CodeForge v. Open Runtime Labs — High Court Review
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2017-06-21
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: supreme_court_review
+
+Summary:
+The high court agreed to review questions involving API reuse.
+
+Entities:
+- API reuse
+- CodeForge v. Open Runtime Labs
+- Court of Appeals
+- Developer Ecosystem
+- Judge Samuel Hart
+- Open Runtime Labs
+- Petition for Review
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+
+Relationships:
+- Supreme Court --reviewing--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --raises_issue--> API reuse
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Western District of Washington
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --references_topic--> API reuse
+- U.S. Copyright Office --involved_in--> CodeForge v. Open Runtime Labs

@@ -1,0 +1,32 @@
+Atlas Software v. Nova Cloud — Hearing Held
+
+Case Name: Atlas Software v. Nova Cloud
+Date: 2020-12-02
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: hearing
+
+Summary:
+The court held a hearing in Atlas Software v. Nova Cloud to address disputed issues concerning software interoperability.
+
+Entities:
+- Atlas Software v. Nova Cloud
+- CodeForge
+- Court Hearing
+- Court of Appeals
+- Developer Ecosystem
+- Judge Lena Brooks
+- Oral Argument
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- Vector Stack
+- software interoperability
+
+Relationships:
+- Judge Lena Brooks --held_hearing_for--> Atlas Software v. Nova Cloud
+- Vector Stack --appeared_in--> Atlas Software v. Nova Cloud
+- CodeForge --appeared_in--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --filed_in--> U.S. District Court for the Northern District of California
+- Atlas Software v. Nova Cloud --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Lena Brooks --assigned_to--> Atlas Software v. Nova Cloud

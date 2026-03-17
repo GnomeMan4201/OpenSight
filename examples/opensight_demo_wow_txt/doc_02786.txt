@@ -1,0 +1,30 @@
+Atlas Software v. Nova Cloud — Complaint Filed
+
+Case Name: Atlas Software v. Nova Cloud
+Date: 2021-06-23
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: complaint_filed
+
+Summary:
+CodeForge filed a complaint against SyntaxWorks in U.S. District Court for the Northern District of California, alleging software interoperability.
+
+Entities:
+- Atlas Software v. Nova Cloud
+- CodeForge
+- Court of Appeals
+- Developer Ecosystem
+- Judge William Avery
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- software interoperability
+
+Relationships:
+- CodeForge --filed_complaint_against--> SyntaxWorks
+- U.S. District Court for the Northern District of California --docketed--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --filed_in--> U.S. District Court for the Northern District of California
+- Atlas Software v. Nova Cloud --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge William Avery --assigned_to--> Atlas Software v. Nova Cloud
+- Supreme Court --reviewing--> Atlas Software v. Nova Cloud

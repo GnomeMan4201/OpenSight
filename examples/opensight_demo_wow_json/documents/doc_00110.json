@@ -1,0 +1,81 @@
+{
+  "id": "doc_00110",
+  "title": "CodeForge v. Open Runtime Labs \u2014 Hearing Held",
+  "date": "2014-09-09",
+  "source": "Opinion Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "CodeForge v. Open Runtime Labs",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "The court held a hearing in CodeForge v. Open Runtime Labs to address disputed issues concerning copyrightability of interfaces.",
+  "entities": [
+    "CodeForge v. Open Runtime Labs",
+    "Court Hearing",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Judge Lena Brooks",
+    "Open Runtime Labs",
+    "Oral Argument",
+    "Supreme Court",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Northern District of California",
+    "Vector Stack",
+    "copyrightability of interfaces"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Lena Brooks",
+      "type": "held_hearing_for",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "Vector Stack",
+      "type": "appeared_in",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "Open Runtime Labs",
+      "type": "appeared_in",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Lena Brooks",
+      "type": "assigned_to",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "references_topic",
+      "target": "copyrightability of interfaces"
+    },
+    {
+      "source": "U.S. Copyright Office",
+      "type": "involved_in",
+      "target": "CodeForge v. Open Runtime Labs"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "hearing",
+    "copyrightability_of_interfaces",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 4,
+    "timeline_bucket": 2014
+  }
+}

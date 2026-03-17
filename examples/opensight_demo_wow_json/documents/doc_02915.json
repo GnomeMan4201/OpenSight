@@ -1,0 +1,72 @@
+{
+  "id": "doc_02915",
+  "title": "State Coalition v. Omnidata Retail \u2014 Hearing Held",
+  "date": "2014-01-22",
+  "source": "Court Filing Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "State Coalition v. Omnidata Retail",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Naomi Ellis conducted a hearing involving arguments by BrightCart Platform and United States on ad exchange bidding practices.",
+  "entities": [
+    "BrightCart Platform",
+    "Court Hearing",
+    "Court of Appeals",
+    "Department of Justice Antitrust Division",
+    "Economic Expert",
+    "Judge Naomi Ellis",
+    "Market Analysis",
+    "Oral Argument",
+    "State Coalition v. Omnidata Retail",
+    "Supreme Court",
+    "U.S. District Court for the District of Columbia",
+    "United States",
+    "ad exchange bidding practices"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Naomi Ellis",
+      "type": "held_hearing_for",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "BrightCart Platform",
+      "type": "appeared_in",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "United States",
+      "type": "appeared_in",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Naomi Ellis",
+      "type": "assigned_to",
+      "target": "State Coalition v. Omnidata Retail"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "hearing",
+    "ad_exchange_bidding_practices",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 1,
+    "timeline_bucket": 2014
+  }
+}

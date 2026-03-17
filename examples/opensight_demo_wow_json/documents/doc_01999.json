@@ -1,0 +1,71 @@
+{
+  "id": "doc_01999",
+  "title": "United States v. Rivergate Holdings \u2014 Jury Verdict",
+  "date": "2018-10-15",
+  "source": "Hearing Note",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Rivergate Holdings",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "jury_verdict",
+  "summary": "A jury returned a verdict after reviewing evidence related to wire fraud allegations.",
+  "entities": [
+    "Court of Appeals",
+    "Executive B",
+    "Investor Group",
+    "Judge Tessa Monroe",
+    "Jury",
+    "Securities and Exchange Commission",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Rivergate Holdings",
+    "Verdict Form",
+    "wire fraud allegations"
+  ],
+  "relationships": [
+    {
+      "source": "Jury",
+      "type": "returned_verdict_in",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "entered_verdict_in",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "assigned_to",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "Securities and Exchange Commission",
+      "type": "involved_in",
+      "target": "United States v. Rivergate Holdings"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "jury_verdict",
+    "wire_fraud_allegations",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 1,
+    "timeline_bucket": 2018
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "doc_00223",
+  "title": "Federal Trade Commission v. Titan Search \u2014 Hearing Held",
+  "date": "2010-05-04",
+  "source": "Court Filing Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. Titan Search",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "The court held a hearing in Federal Trade Commission v. Titan Search to address disputed issues concerning ad exchange bidding practices.",
+  "entities": [
+    "BrightCart Platform",
+    "Court Hearing",
+    "Court of Appeals",
+    "Economic Expert",
+    "Federal Trade Commission",
+    "Federal Trade Commission v. Titan Search",
+    "Judge Robert Kline",
+    "Market Analysis",
+    "Oral Argument",
+    "State Coalition",
+    "Supreme Court",
+    "U.S. District Court for the District of Columbia",
+    "ad exchange bidding practices"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Robert Kline",
+      "type": "held_hearing_for",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "State Coalition",
+      "type": "appeared_in",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "BrightCart Platform",
+      "type": "appeared_in",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Robert Kline",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Federal Trade Commission v. Titan Search"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "hearing",
+    "ad_exchange_bidding_practices",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 4,
+    "timeline_bucket": 2010
+  }
+}

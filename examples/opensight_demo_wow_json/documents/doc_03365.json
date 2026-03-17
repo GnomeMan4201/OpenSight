@@ -1,0 +1,75 @@
+{
+  "id": "doc_03365",
+  "title": "United States v. Pine Harbor Capital \u2014 Appeal Filed",
+  "date": "2011-02-18",
+  "source": "Court Filing Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Pine Harbor Capital",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "appeal_filed",
+  "summary": "Executive B appealed the court's decision on issues related to wire fraud allegations.",
+  "entities": [
+    "Court of Appeals",
+    "Executive B",
+    "Investor Group",
+    "Judge Daniel Pike",
+    "Notice of Appeal",
+    "Supreme Court",
+    "U.S. Department of Justice",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Pine Harbor Capital",
+    "wire fraud allegations"
+  ],
+  "relationships": [
+    {
+      "source": "Executive B",
+      "type": "appealed",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Daniel Pike",
+      "type": "assigned_to",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "U.S. Department of Justice",
+      "type": "involved_in",
+      "target": "United States v. Pine Harbor Capital"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "appeal_filed",
+    "wire_fraud_allegations",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 4,
+    "timeline_bucket": 2011
+  }
+}

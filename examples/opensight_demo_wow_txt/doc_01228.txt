@@ -1,0 +1,33 @@
+Apex Mobile v. Orion Devices — Summary Judgment Motion
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2018-08-19
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: summary_judgment
+
+Summary:
+Nimbus Systems moved for summary judgment on a record centered on battery optimization patents.
+
+Entities:
+- Apex Mobile v. Orion Devices
+- Court of Appeals
+- Judge Lucy Harrow
+- Nimbus Systems
+- Precedent
+- Quantum Handsets
+- Summary Judgment
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- battery optimization patents
+
+Relationships:
+- Nimbus Systems --moved_for_summary_judgment_in--> Apex Mobile v. Orion Devices
+- Judge Lucy Harrow --considering--> Summary Judgment
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the Northern District of California
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Lucy Harrow --assigned_to--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --references_topic--> battery optimization patents
+- Court of Appeals --reviewing--> Apex Mobile v. Orion Devices
+- U.S. Patent and Trademark Office --involved_in--> Apex Mobile v. Orion Devices

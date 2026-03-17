@@ -1,0 +1,70 @@
+{
+  "id": "doc_03013",
+  "title": "United States v. Meridian BioLabs \u2014 Regulatory Notice",
+  "date": "2019-09-09",
+  "source": "Hearing Note",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Meridian BioLabs",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "regulatory_notice",
+  "summary": "U.S. Department of Justice issued a notice connected to allegations involving clinical test misrepresentation.",
+  "entities": [
+    "Court of Appeals",
+    "Investor Group",
+    "Judge Edward Navarro",
+    "Regulatory Notice",
+    "Rivergate Holdings",
+    "Supreme Court",
+    "U.S. Department of Justice",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Meridian BioLabs",
+    "clinical test misrepresentation"
+  ],
+  "relationships": [
+    {
+      "source": "U.S. Department of Justice",
+      "type": "issued_notice_involving",
+      "target": "Rivergate Holdings"
+    },
+    {
+      "source": "U.S. Department of Justice",
+      "type": "referenced",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Edward Navarro",
+      "type": "assigned_to",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "references_topic",
+      "target": "clinical test misrepresentation"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "regulatory_notice",
+    "clinical_test_misrepresentation",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 4,
+    "timeline_bucket": 2019
+  }
+}

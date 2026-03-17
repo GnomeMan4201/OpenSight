@@ -1,0 +1,34 @@
+United States v. Meridian BioLabs — Discovery Order
+
+Case Name: United States v. Meridian BioLabs
+Date: 2017-05-10
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: discovery_order
+
+Summary:
+Judge Edward Navarro issued a discovery order requiring production of records related to wire fraud allegations.
+
+Entities:
+- Court of Appeals
+- Document Production
+- Executive B
+- Financial Records
+- Internal Emails
+- Investor Group
+- Judge Edward Navarro
+- Supreme Court
+- U.S. Department of Justice
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Meridian BioLabs
+- wire fraud allegations
+
+Relationships:
+- Judge Edward Navarro --issued_order_in--> United States v. Meridian BioLabs
+- U.S. District Court for the Southern District of New York --ordered_discovery_in--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Meridian BioLabs --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Edward Navarro --assigned_to--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --references_topic--> wire fraud allegations
+- Court of Appeals --reviewing--> United States v. Meridian BioLabs

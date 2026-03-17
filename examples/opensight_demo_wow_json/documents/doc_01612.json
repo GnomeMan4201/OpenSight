@@ -1,0 +1,73 @@
+{
+  "id": "doc_01612",
+  "title": "United States v. Meridian BioLabs \u2014 Witness Testimony",
+  "date": "2017-01-29",
+  "source": "Docket Entry Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Meridian BioLabs",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "witness_testimony",
+  "summary": "A witness testified regarding communications, intent, and actions involving clinical test misrepresentation.",
+  "entities": [
+    "Court of Appeals",
+    "Executive A",
+    "Expert Witness",
+    "Federal Trade Commission",
+    "Investor Group",
+    "Judge Daniel Pike",
+    "Regulatory Notice",
+    "Supreme Court",
+    "Trial Testimony",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Meridian BioLabs",
+    "Witness",
+    "clinical test misrepresentation"
+  ],
+  "relationships": [
+    {
+      "source": "Witness",
+      "type": "testified_in",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "Judge Daniel Pike",
+      "type": "heard_testimony_in",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Daniel Pike",
+      "type": "assigned_to",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "references_topic",
+      "target": "clinical test misrepresentation"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "witness_testimony",
+    "clinical_test_misrepresentation",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 3,
+    "timeline_bucket": 2017
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": "doc_04200",
+  "title": "United States v. Pine Harbor Capital \u2014 Complaint Filed",
+  "date": "2014-03-24",
+  "source": "Case Activity Update",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Pine Harbor Capital",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "United States filed a complaint against Pine Harbor Capital in U.S. District Court for the Southern District of New York, alleging financial reporting fraud.",
+  "entities": [
+    "Court of Appeals",
+    "Investor Group",
+    "Judge Edward Navarro",
+    "Pine Harbor Capital",
+    "Securities and Exchange Commission",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Pine Harbor Capital",
+    "financial reporting fraud"
+  ],
+  "relationships": [
+    {
+      "source": "United States",
+      "type": "filed_complaint_against",
+      "target": "Pine Harbor Capital"
+    },
+    {
+      "source": "U.S. District Court for the Southern District of New York",
+      "type": "docketed",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Edward Navarro",
+      "type": "assigned_to",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "references_topic",
+      "target": "financial reporting fraud"
+    },
+    {
+      "source": "Securities and Exchange Commission",
+      "type": "involved_in",
+      "target": "United States v. Pine Harbor Capital"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "complaint_filed",
+    "financial_reporting_fraud",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 4,
+    "timeline_bucket": 2014
+  }
+}

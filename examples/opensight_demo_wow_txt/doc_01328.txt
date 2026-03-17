@@ -1,0 +1,30 @@
+State Coalition v. Omnidata Retail — Expert Report Submitted
+
+Case Name: State Coalition v. Omnidata Retail
+Date: 2017-01-28
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: expert_report
+
+Summary:
+The parties exchanged expert materials concerning damages, causation, and ad exchange bidding practices.
+
+Entities:
+- Court of Appeals
+- Damages Model
+- Economic Expert
+- Expert Witness
+- Federal Trade Commission
+- Judge Patrick Sloan
+- Market Analysis
+- State Coalition
+- State Coalition v. Omnidata Retail
+- U.S. District Court for the District of Columbia
+- ad exchange bidding practices
+
+Relationships:
+- Expert Witness --submitted_report_in--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --includes_issue--> ad exchange bidding practices
+- State Coalition v. Omnidata Retail --filed_in--> U.S. District Court for the District of Columbia
+- State Coalition v. Omnidata Retail --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Patrick Sloan --assigned_to--> State Coalition v. Omnidata Retail

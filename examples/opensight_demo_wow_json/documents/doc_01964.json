@@ -1,0 +1,69 @@
+{
+  "id": "doc_01964",
+  "title": "SyntaxWorks v. Horizon Systems \u2014 Complaint Filed",
+  "date": "2013-11-29",
+  "source": "Case Activity Update",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "SyntaxWorks v. Horizon Systems",
+  "court": "U.S. District Court for the Western District of Washington",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "A civil complaint was entered in U.S. District Court for the Western District of Washington naming Vector Stack as defendant and alleging software interoperability.",
+  "entities": [
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Judge Samuel Hart",
+    "Nova Cloud",
+    "Supreme Court",
+    "SyntaxWorks v. Horizon Systems",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Western District of Washington",
+    "Vector Stack",
+    "software interoperability"
+  ],
+  "relationships": [
+    {
+      "source": "Nova Cloud",
+      "type": "filed_complaint_against",
+      "target": "Vector Stack"
+    },
+    {
+      "source": "U.S. District Court for the Western District of Washington",
+      "type": "docketed",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Western District of Washington"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Samuel Hart",
+      "type": "assigned_to",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "references_topic",
+      "target": "software interoperability"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "complaint_filed",
+    "software_interoperability",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 3,
+    "timeline_bucket": 2013
+  }
+}

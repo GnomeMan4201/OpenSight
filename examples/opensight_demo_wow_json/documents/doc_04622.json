@@ -1,0 +1,84 @@
+{
+  "id": "doc_04622",
+  "title": "Nimbus Systems v. Vertex Labs \u2014 Complaint Filed",
+  "date": "2020-05-25",
+  "source": "Docket Entry Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "Nimbus Systems v. Vertex Labs",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "Apex Mobile filed a complaint against BluePeak Tech in U.S. District Court for the Northern District of California, alleging smartphone interface patents.",
+  "entities": [
+    "Apex Mobile",
+    "BluePeak Tech",
+    "Court of Appeals",
+    "Judge Martin Cole",
+    "Nimbus Systems v. Vertex Labs",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "smartphone interface patents"
+  ],
+  "relationships": [
+    {
+      "source": "Apex Mobile",
+      "type": "filed_complaint_against",
+      "target": "BluePeak Tech"
+    },
+    {
+      "source": "U.S. District Court for the Northern District of California",
+      "type": "docketed",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Nimbus Systems v. Vertex Labs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Nimbus Systems v. Vertex Labs",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Nimbus Systems v. Vertex Labs",
+      "type": "references_topic",
+      "target": "smartphone interface patents"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "Nimbus Systems v. Vertex Labs"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "complaint_filed",
+    "smartphone_interface_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 4,
+    "timeline_bucket": 2020
+  }
+}

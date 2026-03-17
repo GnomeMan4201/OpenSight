@@ -1,0 +1,34 @@
+CodeForge v. Open Runtime Labs — Appellate Opinion
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2018-07-26
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: appellate_opinion
+
+Summary:
+An appellate opinion addressed legal questions arising from software interoperability.
+
+Entities:
+- Appellate Panel
+- CodeForge
+- CodeForge v. Open Runtime Labs
+- Court of Appeals
+- Developer Ecosystem
+- Judge Lena Brooks
+- Precedent
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- software interoperability
+
+Relationships:
+- Court of Appeals --issued_opinion_in--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --cites--> Precedent
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Northern District of California
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Lena Brooks --assigned_to--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --references_topic--> software interoperability
+- Court of Appeals --reviewing--> CodeForge v. Open Runtime Labs
+- U.S. Copyright Office --involved_in--> CodeForge v. Open Runtime Labs

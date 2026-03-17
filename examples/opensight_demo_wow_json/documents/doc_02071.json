@@ -1,0 +1,76 @@
+{
+  "id": "doc_02071",
+  "title": "Federal Trade Commission v. BrightCart Platform \u2014 Summary Judgment Motion",
+  "date": "2021-11-14",
+  "source": "Court Filing Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. BrightCart Platform",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "summary_judgment",
+  "summary": "A summary judgment motion was filed seeking judgment on issues involving platform monopoly allegations.",
+  "entities": [
+    "Court of Appeals",
+    "Economic Expert",
+    "Federal Trade Commission",
+    "Federal Trade Commission v. BrightCart Platform",
+    "Judge Robert Kline",
+    "Market Analysis",
+    "Summary Judgment",
+    "Supreme Court",
+    "Titan Search",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "platform monopoly allegations"
+  ],
+  "relationships": [
+    {
+      "source": "United States",
+      "type": "moved_for_summary_judgment_in",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Judge Robert Kline",
+      "type": "considering",
+      "target": "Summary Judgment"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Robert Kline",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "summary_judgment",
+    "platform_monopoly_allegations",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 3,
+    "timeline_bucket": 2021
+  }
+}

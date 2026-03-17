@@ -1,0 +1,81 @@
+{
+  "id": "doc_04315",
+  "title": "Northstar Logic v. Quantum Handsets \u2014 Hearing Held",
+  "date": "2016-08-25",
+  "source": "Court Filing Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "Northstar Logic v. Quantum Handsets",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Martin Cole conducted a hearing involving arguments by Quantum Handsets and Orion Devices on camera image processing patents.",
+  "entities": [
+    "Court Hearing",
+    "Court of Appeals",
+    "Judge Martin Cole",
+    "Northstar Logic v. Quantum Handsets",
+    "Oral Argument",
+    "Orion Devices",
+    "Precedent",
+    "Quantum Handsets",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "camera image processing patents"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Martin Cole",
+      "type": "held_hearing_for",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Quantum Handsets",
+      "type": "appeared_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Orion Devices",
+      "type": "appeared_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "hearing",
+    "camera_image_processing_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 1,
+    "timeline_bucket": 2016
+  }
+}

@@ -1,0 +1,33 @@
+State Coalition v. Omnidata Retail — Discovery Order
+
+Case Name: State Coalition v. Omnidata Retail
+Date: 2014-01-23
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: discovery_order
+
+Summary:
+Judge Robert Kline issued a discovery order requiring production of records related to ad exchange bidding practices.
+
+Entities:
+- Court of Appeals
+- Document Production
+- Economic Expert
+- Federal Trade Commission
+- Financial Records
+- Internal Emails
+- Judge Robert Kline
+- Market Analysis
+- Metro Ad Exchange
+- State Coalition v. Omnidata Retail
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- ad exchange bidding practices
+
+Relationships:
+- Judge Robert Kline --issued_order_in--> State Coalition v. Omnidata Retail
+- U.S. District Court for the Southern District of New York --ordered_discovery_in--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --filed_in--> U.S. District Court for the Southern District of New York
+- State Coalition v. Omnidata Retail --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Robert Kline --assigned_to--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --references_topic--> ad exchange bidding practices

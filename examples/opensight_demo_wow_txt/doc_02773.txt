@@ -1,0 +1,34 @@
+Apex Mobile v. Orion Devices — Hearing Held
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2019-07-26
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: hearing
+
+Summary:
+The court held a hearing in Apex Mobile v. Orion Devices to address disputed issues concerning user interface gestures.
+
+Entities:
+- Apex Mobile v. Orion Devices
+- Court Hearing
+- Court of Appeals
+- Judge Martin Cole
+- Nimbus Systems
+- Oral Argument
+- Precedent
+- Quantum Handsets
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- user interface gestures
+
+Relationships:
+- Judge Martin Cole --held_hearing_for--> Apex Mobile v. Orion Devices
+- Nimbus Systems --appeared_in--> Apex Mobile v. Orion Devices
+- Quantum Handsets --appeared_in--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the Northern District of California
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --references_topic--> user interface gestures
+- Court of Appeals --reviewing--> Apex Mobile v. Orion Devices

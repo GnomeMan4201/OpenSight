@@ -1,0 +1,34 @@
+SyntaxWorks v. Horizon Systems — Motion to Dismiss
+
+Case Name: SyntaxWorks v. Horizon Systems
+Date: 2016-06-20
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: motion_to_dismiss
+
+Summary:
+Defense counsel for Nova Cloud moved to dismiss portions of the complaint involving fair use in developer tools.
+
+Entities:
+- CodeForge
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Investor Group
+- Judge Lena Brooks
+- Nova Cloud
+- Regulatory Notice
+- Supreme Court
+- SyntaxWorks v. Horizon Systems
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- fair use in developer tools
+
+Relationships:
+- Nova Cloud --filed_motion--> SyntaxWorks v. Horizon Systems
+- Judge Lena Brooks --reviewing_motion_in--> SyntaxWorks v. Horizon Systems
+- SyntaxWorks v. Horizon Systems --filed_in--> U.S. District Court for the Western District of Washington
+- SyntaxWorks v. Horizon Systems --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Lena Brooks --assigned_to--> SyntaxWorks v. Horizon Systems
+- Supreme Court --reviewing--> SyntaxWorks v. Horizon Systems
+- Court of Appeals --reviewing--> SyntaxWorks v. Horizon Systems

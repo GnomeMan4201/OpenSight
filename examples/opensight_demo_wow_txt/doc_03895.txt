@@ -1,0 +1,32 @@
+State Coalition v. Omnidata Retail — Appeal Filed
+
+Case Name: State Coalition v. Omnidata Retail
+Date: 2022-02-08
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: appeal_filed
+
+Summary:
+A notice of appeal was filed challenging rulings concerning ad exchange bidding practices.
+
+Entities:
+- Court of Appeals
+- Economic Expert
+- Federal Trade Commission
+- Judge Robert Kline
+- Market Analysis
+- Notice of Appeal
+- Omnidata Retail
+- State Coalition v. Omnidata Retail
+- U.S. District Court for the Southern District of New York
+- ad exchange bidding practices
+
+Relationships:
+- Federal Trade Commission --appealed--> State Coalition v. Omnidata Retail
+- Court of Appeals --reviewing--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --filed_in--> U.S. District Court for the Southern District of New York
+- State Coalition v. Omnidata Retail --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Robert Kline --assigned_to--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --references_topic--> ad exchange bidding practices
+- Court of Appeals --reviewing--> State Coalition v. Omnidata Retail
+- Federal Trade Commission --involved_in--> State Coalition v. Omnidata Retail

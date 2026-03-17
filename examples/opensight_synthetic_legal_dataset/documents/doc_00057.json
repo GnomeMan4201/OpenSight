@@ -1,0 +1,74 @@
+{
+  "id": "doc_00057",
+  "title": "BluePeak Tech v. Helix Circuits \u2014 Complaint Filed",
+  "date": "2012-05-27",
+  "source": "Court Filing Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "BluePeak Tech v. Helix Circuits",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "Apex Mobile filed a complaint against Northstar Logic in U.S. District Court for the Northern District of California, alleging smartphone interface patents.",
+  "entities": [
+    "Apex Mobile",
+    "BluePeak Tech v. Helix Circuits",
+    "Court of Appeals",
+    "Judge Elena Ward",
+    "Northstar Logic",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "smartphone interface patents"
+  ],
+  "relationships": [
+    {
+      "source": "Apex Mobile",
+      "type": "filed_complaint_against",
+      "target": "Northstar Logic"
+    },
+    {
+      "source": "U.S. District Court for the Northern District of California",
+      "type": "docketed",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Elena Ward",
+      "type": "assigned_to",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "references_topic",
+      "target": "smartphone interface patents"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "complaint_filed",
+    "smartphone_interface_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 5,
+    "timeline_bucket": 2012
+  }
+}

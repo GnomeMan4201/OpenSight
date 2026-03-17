@@ -1,0 +1,31 @@
+Federal Trade Commission v. BrightCart Platform — Complaint Filed
+
+Case Name: Federal Trade Commission v. BrightCart Platform
+Date: 2017-12-07
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: complaint_filed
+
+Summary:
+A civil complaint was entered in U.S. District Court for the Southern District of New York naming Metro Ad Exchange as defendant and alleging exclusive dealing.
+
+Entities:
+- BrightCart Platform
+- Court of Appeals
+- Economic Expert
+- Federal Trade Commission
+- Federal Trade Commission v. BrightCart Platform
+- Judge Naomi Ellis
+- Market Analysis
+- Metro Ad Exchange
+- U.S. District Court for the Southern District of New York
+- exclusive dealing
+
+Relationships:
+- BrightCart Platform --filed_complaint_against--> Metro Ad Exchange
+- U.S. District Court for the Southern District of New York --docketed--> Federal Trade Commission v. BrightCart Platform
+- Federal Trade Commission v. BrightCart Platform --filed_in--> U.S. District Court for the Southern District of New York
+- Federal Trade Commission v. BrightCart Platform --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> Federal Trade Commission v. BrightCart Platform
+- Federal Trade Commission v. BrightCart Platform --references_topic--> exclusive dealing
+- Federal Trade Commission --involved_in--> Federal Trade Commission v. BrightCart Platform

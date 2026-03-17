@@ -1,0 +1,76 @@
+{
+  "id": "doc_04326",
+  "title": "United States v. Meridian BioLabs \u2014 Expert Report Submitted",
+  "date": "2013-10-30",
+  "source": "Case Activity Update",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Meridian BioLabs",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "expert_report",
+  "summary": "The parties exchanged expert materials concerning damages, causation, and investor disclosures.",
+  "entities": [
+    "Court of Appeals",
+    "Damages Model",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Tessa Monroe",
+    "Meridian BioLabs",
+    "Supreme Court",
+    "U.S. Department of Justice",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Meridian BioLabs",
+    "investor disclosures"
+  ],
+  "relationships": [
+    {
+      "source": "Expert Witness",
+      "type": "submitted_report_in",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "includes_issue",
+      "target": "investor disclosures"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "assigned_to",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "U.S. Department of Justice",
+      "type": "involved_in",
+      "target": "United States v. Meridian BioLabs"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "expert_report",
+    "investor_disclosures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 4,
+    "timeline_bucket": 2013
+  }
+}

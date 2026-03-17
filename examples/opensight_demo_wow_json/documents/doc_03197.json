@@ -1,0 +1,74 @@
+{
+  "id": "doc_03197",
+  "title": "Apex Mobile v. Orion Devices \u2014 Jury Verdict",
+  "date": "2013-06-21",
+  "source": "Case Activity Update",
+  "cluster": "Patent Litigation",
+  "case_name": "Apex Mobile v. Orion Devices",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "jury_verdict",
+  "summary": "A jury returned a verdict after reviewing evidence related to camera image processing patents.",
+  "entities": [
+    "Apex Mobile v. Orion Devices",
+    "Court of Appeals",
+    "Expert Witness",
+    "Helix Circuits",
+    "Investor Group",
+    "Judge Martin Cole",
+    "Jury",
+    "Northstar Logic",
+    "Precedent",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "Verdict Form",
+    "camera image processing patents"
+  ],
+  "relationships": [
+    {
+      "source": "Jury",
+      "type": "returned_verdict_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "entered_verdict_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "Apex Mobile v. Orion Devices"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "jury_verdict",
+    "camera_image_processing_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 4,
+    "timeline_bucket": 2013
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "doc_01788",
+  "title": "Apex Mobile v. Orion Devices \u2014 Complaint Filed",
+  "date": "2017-01-14",
+  "source": "Case Activity Update",
+  "cluster": "Patent Litigation",
+  "case_name": "Apex Mobile v. Orion Devices",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "A civil complaint was entered in U.S. District Court for the Northern District of California naming Quantum Handsets as defendant and alleging camera image processing patents.",
+  "entities": [
+    "Apex Mobile v. Orion Devices",
+    "Court of Appeals",
+    "Expert Witness",
+    "Helix Circuits",
+    "Investor Group",
+    "Judge Lucy Harrow",
+    "Precedent",
+    "Quantum Handsets",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "camera image processing patents"
+  ],
+  "relationships": [
+    {
+      "source": "Helix Circuits",
+      "type": "filed_complaint_against",
+      "target": "Quantum Handsets"
+    },
+    {
+      "source": "U.S. District Court for the Northern District of California",
+      "type": "docketed",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "assigned_to",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Apex Mobile v. Orion Devices"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "complaint_filed",
+    "camera_image_processing_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 3,
+    "timeline_bucket": 2017
+  }
+}

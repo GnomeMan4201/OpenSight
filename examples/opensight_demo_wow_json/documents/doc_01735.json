@@ -1,0 +1,67 @@
+{
+  "id": "doc_01735",
+  "title": "United States v. Metro Ad Exchange \u2014 Appellate Opinion",
+  "date": "2014-10-10",
+  "source": "Case Activity Update",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "United States v. Metro Ad Exchange",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "appellate_opinion",
+  "summary": "The reviewing court issued an opinion clarifying standards related to self-preferencing.",
+  "entities": [
+    "Appellate Panel",
+    "BrightCart Platform",
+    "Court of Appeals",
+    "Department of Justice Antitrust Division",
+    "Economic Expert",
+    "Judge Naomi Ellis",
+    "Market Analysis",
+    "Precedent",
+    "State Coalition",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States v. Metro Ad Exchange",
+    "self-preferencing"
+  ],
+  "relationships": [
+    {
+      "source": "Court of Appeals",
+      "type": "issued_opinion_in",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "cites",
+      "target": "Precedent"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Naomi Ellis",
+      "type": "assigned_to",
+      "target": "United States v. Metro Ad Exchange"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "appellate_opinion",
+    "self_preferencing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 5,
+    "timeline_bucket": 2014
+  }
+}

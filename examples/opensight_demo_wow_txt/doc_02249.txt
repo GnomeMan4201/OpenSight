@@ -1,0 +1,35 @@
+Federal Trade Commission v. Titan Search — Complaint Filed
+
+Case Name: Federal Trade Commission v. Titan Search
+Date: 2017-10-28
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: complaint_filed
+
+Summary:
+Metro Ad Exchange filed a complaint against State Coalition in U.S. District Court for the District of Columbia, alleging self-preferencing.
+
+Entities:
+- Court of Appeals
+- Economic Expert
+- Expert Witness
+- Federal Trade Commission
+- Federal Trade Commission v. Titan Search
+- Investor Group
+- Judge Naomi Ellis
+- Market Analysis
+- Metro Ad Exchange
+- Regulatory Notice
+- State Coalition
+- Supreme Court
+- U.S. District Court for the District of Columbia
+- self-preferencing
+
+Relationships:
+- Metro Ad Exchange --filed_complaint_against--> State Coalition
+- U.S. District Court for the District of Columbia --docketed--> Federal Trade Commission v. Titan Search
+- Federal Trade Commission v. Titan Search --filed_in--> U.S. District Court for the District of Columbia
+- Federal Trade Commission v. Titan Search --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> Federal Trade Commission v. Titan Search
+- Federal Trade Commission v. Titan Search --references_topic--> self-preferencing
+- Supreme Court --reviewing--> Federal Trade Commission v. Titan Search

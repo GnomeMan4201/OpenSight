@@ -1,0 +1,79 @@
+{
+  "id": "doc_00241",
+  "title": "United States v. Sterling Diagnostics \u2014 Discovery Order",
+  "date": "2020-08-08",
+  "source": "Docket Entry Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Sterling Diagnostics",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "discovery_order",
+  "summary": "The court ordered limited discovery focused on communications and materials tied to wire fraud allegations.",
+  "entities": [
+    "Court of Appeals",
+    "Document Production",
+    "Executive A",
+    "Expert Witness",
+    "Financial Records",
+    "Internal Emails",
+    "Investor Group",
+    "Judge Tessa Monroe",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. Department of Justice",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Sterling Diagnostics",
+    "wire fraud allegations"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "issued_order_in",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "U.S. District Court for the Southern District of New York",
+      "type": "ordered_discovery_in",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "assigned_to",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "U.S. Department of Justice",
+      "type": "involved_in",
+      "target": "United States v. Sterling Diagnostics"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "discovery_order",
+    "wire_fraud_allegations",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 1,
+    "timeline_bucket": 2020
+  }
+}

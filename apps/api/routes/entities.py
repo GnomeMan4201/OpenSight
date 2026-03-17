@@ -18,6 +18,7 @@ router = APIRouter()
 
 @router.get("", response_model=EntityListOut)
 def list_entities(
+    source_tag: Optional[str] = Query(None),
     entity_type: Optional[str] = Query(
         None,
         description="Filter by type: Person, Organization, Location, Aircraft, Phone, Email, Date, Airport",
@@ -41,19 +42,22 @@ def list_entities(
             Mention.entity_id,
             func.count(Mention.id).label("cnt"),
         )
+        .join(Document, Document.id == Mention.document_id)
         .group_by(Mention.entity_id)
-        .subquery("mc")
     )
 
+    if source_tag:
+        mention_counts_sq = mention_counts_sq.filter(Document.source_tag == source_tag)
+
+    mention_counts_sq = mention_counts_sq.subquery("mc")
+
     # Step 2: join entities to the pre-aggregated subquery.
-    # Filtering with .filter() generates WHERE (not HAVING), which is correct
-    # because the aggregation already happened inside the subquery.
     base = (
         db.query(
             Entity,
             func.coalesce(mention_counts_sq.c.cnt, 0).label("mention_count"),
         )
-        .outerjoin(mention_counts_sq, mention_counts_sq.c.entity_id == Entity.id)
+        .join(mention_counts_sq, mention_counts_sq.c.entity_id == Entity.id)
         .filter(func.coalesce(mention_counts_sq.c.cnt, 0) >= min_mentions)
     )
 
@@ -73,11 +77,14 @@ def list_entities(
 
     items = []
     for entity, mention_count in rows:
-        doc_count = (
+        doc_count_q = (
             db.query(func.count(func.distinct(Mention.document_id)))
+            .join(Document, Document.id == Mention.document_id)
             .filter(Mention.entity_id == entity.id)
-            .scalar()
-        ) or 0
+        )
+        if source_tag:
+            doc_count_q = doc_count_q.filter(Document.source_tag == source_tag)
+        doc_count = doc_count_q.scalar() or 0
         items.append(EntityOut(
             id=entity.id,
             entity_type=entity.entity_type,

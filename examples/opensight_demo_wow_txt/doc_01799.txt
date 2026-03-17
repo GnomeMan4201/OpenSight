@@ -1,0 +1,34 @@
+Atlas Software v. Nova Cloud — Hearing Held
+
+Case Name: Atlas Software v. Nova Cloud
+Date: 2018-06-03
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: hearing
+
+Summary:
+Judge Lena Brooks conducted a hearing involving arguments by Vector Stack and CodeForge on API reuse.
+
+Entities:
+- API reuse
+- Atlas Software v. Nova Cloud
+- CodeForge
+- Court Hearing
+- Court of Appeals
+- Developer Ecosystem
+- Judge Lena Brooks
+- Oral Argument
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- Vector Stack
+
+Relationships:
+- Judge Lena Brooks --held_hearing_for--> Atlas Software v. Nova Cloud
+- Vector Stack --appeared_in--> Atlas Software v. Nova Cloud
+- CodeForge --appeared_in--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --filed_in--> U.S. District Court for the Northern District of California
+- Atlas Software v. Nova Cloud --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Lena Brooks --assigned_to--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --references_topic--> API reuse
+- Court of Appeals --reviewing--> Atlas Software v. Nova Cloud

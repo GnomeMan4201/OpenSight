@@ -1,0 +1,70 @@
+{
+  "id": "doc_01231",
+  "title": "CodeForge v. Open Runtime Labs \u2014 Summary Judgment Motion",
+  "date": "2020-12-18",
+  "source": "Opinion Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "CodeForge v. Open Runtime Labs",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "summary_judgment",
+  "summary": "SyntaxWorks moved for summary judgment on a record centered on fair use in developer tools.",
+  "entities": [
+    "CodeForge v. Open Runtime Labs",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Judge William Avery",
+    "Nova Cloud",
+    "Summary Judgment",
+    "Supreme Court",
+    "SyntaxWorks",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Northern District of California",
+    "fair use in developer tools"
+  ],
+  "relationships": [
+    {
+      "source": "SyntaxWorks",
+      "type": "moved_for_summary_judgment_in",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "Judge William Avery",
+      "type": "considering",
+      "target": "Summary Judgment"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge William Avery",
+      "type": "assigned_to",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "references_topic",
+      "target": "fair use in developer tools"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "summary_judgment",
+    "fair_use_in_developer_tools",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 1,
+    "timeline_bucket": 2020
+  }
+}

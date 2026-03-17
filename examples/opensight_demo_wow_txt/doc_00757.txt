@@ -1,0 +1,35 @@
+Northstar Logic v. Quantum Handsets — Hearing Held
+
+Case Name: Northstar Logic v. Quantum Handsets
+Date: 2015-04-19
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: hearing
+
+Summary:
+The court held a hearing in Northstar Logic v. Quantum Handsets to address disputed issues concerning wireless chipset design.
+
+Entities:
+- Court Hearing
+- Court of Appeals
+- Judge Martin Cole
+- Northstar Logic v. Quantum Handsets
+- Oral Argument
+- Orion Devices
+- Precedent
+- Quantum Handsets
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- wireless chipset design
+
+Relationships:
+- Judge Martin Cole --held_hearing_for--> Northstar Logic v. Quantum Handsets
+- Quantum Handsets --appeared_in--> Northstar Logic v. Quantum Handsets
+- Orion Devices --appeared_in--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --filed_in--> U.S. District Court for the Northern District of California
+- Northstar Logic v. Quantum Handsets --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --references_topic--> wireless chipset design
+- Court of Appeals --reviewing--> Northstar Logic v. Quantum Handsets
+- U.S. Patent and Trademark Office --involved_in--> Northstar Logic v. Quantum Handsets

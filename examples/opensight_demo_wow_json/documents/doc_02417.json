@@ -1,0 +1,73 @@
+{
+  "id": "doc_02417",
+  "title": "Federal Trade Commission v. Titan Search \u2014 Hearing Held",
+  "date": "2012-11-12",
+  "source": "Docket Entry Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. Titan Search",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Naomi Ellis conducted a hearing involving arguments by BrightCart Platform and Federal Trade Commission on ad exchange bidding practices.",
+  "entities": [
+    "BrightCart Platform",
+    "Court Hearing",
+    "Court of Appeals",
+    "Economic Expert",
+    "Expert Witness",
+    "Federal Trade Commission",
+    "Federal Trade Commission v. Titan Search",
+    "Investor Group",
+    "Judge Naomi Ellis",
+    "Market Analysis",
+    "Oral Argument",
+    "Regulatory Notice",
+    "U.S. District Court for the Southern District of New York",
+    "ad exchange bidding practices"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Naomi Ellis",
+      "type": "held_hearing_for",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "BrightCart Platform",
+      "type": "appeared_in",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "appeared_in",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Naomi Ellis",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. Titan Search"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "hearing",
+    "ad_exchange_bidding_practices",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 5,
+    "timeline_bucket": 2012
+  }
+}

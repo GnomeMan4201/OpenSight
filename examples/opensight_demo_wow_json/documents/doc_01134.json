@@ -1,0 +1,72 @@
+{
+  "id": "doc_01134",
+  "title": "United States v. Sterling Diagnostics \u2014 Appeal Filed",
+  "date": "2019-03-01",
+  "source": "Hearing Note",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Sterling Diagnostics",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "appeal_filed",
+  "summary": "Sterling Diagnostics appealed the court's decision on issues related to investor disclosures.",
+  "entities": [
+    "Court of Appeals",
+    "Expert Witness",
+    "Federal Trade Commission",
+    "Investor Group",
+    "Judge Tessa Monroe",
+    "Notice of Appeal",
+    "Regulatory Notice",
+    "Sterling Diagnostics",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Sterling Diagnostics",
+    "investor disclosures"
+  ],
+  "relationships": [
+    {
+      "source": "Sterling Diagnostics",
+      "type": "appealed",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Sterling Diagnostics",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "assigned_to",
+      "target": "United States v. Sterling Diagnostics"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Sterling Diagnostics"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "appeal_filed",
+    "investor_disclosures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 5,
+    "timeline_bucket": 2019
+  }
+}

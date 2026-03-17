@@ -1,0 +1,34 @@
+SyntaxWorks v. Horizon Systems — Hearing Held
+
+Case Name: SyntaxWorks v. Horizon Systems
+Date: 2010-12-27
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: hearing
+
+Summary:
+Judge Samuel Hart conducted a hearing involving arguments by Nova Cloud and Vector Stack on API reuse.
+
+Entities:
+- API reuse
+- Court Hearing
+- Court of Appeals
+- Developer Ecosystem
+- Judge Samuel Hart
+- Nova Cloud
+- Oral Argument
+- Supreme Court
+- SyntaxWorks v. Horizon Systems
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- Vector Stack
+
+Relationships:
+- Judge Samuel Hart --held_hearing_for--> SyntaxWorks v. Horizon Systems
+- Nova Cloud --appeared_in--> SyntaxWorks v. Horizon Systems
+- Vector Stack --appeared_in--> SyntaxWorks v. Horizon Systems
+- SyntaxWorks v. Horizon Systems --filed_in--> U.S. District Court for the Western District of Washington
+- SyntaxWorks v. Horizon Systems --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> SyntaxWorks v. Horizon Systems
+- SyntaxWorks v. Horizon Systems --references_topic--> API reuse
+- Court of Appeals --reviewing--> SyntaxWorks v. Horizon Systems

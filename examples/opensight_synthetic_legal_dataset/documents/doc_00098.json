@@ -1,0 +1,69 @@
+{
+  "id": "doc_00098",
+  "title": "Apex Mobile v. Orion Devices \u2014 Motion to Dismiss",
+  "date": "2023-04-27",
+  "source": "Hearing Note",
+  "cluster": "Patent Litigation",
+  "case_name": "Apex Mobile v. Orion Devices",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "motion_to_dismiss",
+  "summary": "Helix Circuits filed a motion to dismiss, arguing the complaint failed to establish wireless chipset design.",
+  "entities": [
+    "Apex Mobile v. Orion Devices",
+    "Court of Appeals",
+    "Helix Circuits",
+    "Judge Martin Cole",
+    "Northstar Logic",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "wireless chipset design"
+  ],
+  "relationships": [
+    {
+      "source": "Helix Circuits",
+      "type": "filed_motion",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "reviewing_motion_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "Apex Mobile v. Orion Devices"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "motion_to_dismiss",
+    "wireless_chipset_design",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 2,
+    "timeline_bucket": 2023
+  }
+}

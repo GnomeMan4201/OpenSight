@@ -1,0 +1,33 @@
+United States v. Rivergate Holdings — Witness Testimony
+
+Case Name: United States v. Rivergate Holdings
+Date: 2014-05-02
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: witness_testimony
+
+Summary:
+Witness testimony described internal events and decisions related to financial reporting fraud.
+
+Entities:
+- Court of Appeals
+- Investor Group
+- Judge Edward Navarro
+- Rivergate Holdings
+- Securities and Exchange Commission
+- Supreme Court
+- Trial Testimony
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Rivergate Holdings
+- Witness
+- financial reporting fraud
+
+Relationships:
+- Witness --testified_in--> United States v. Rivergate Holdings
+- Judge Edward Navarro --heard_testimony_in--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Edward Navarro --assigned_to--> United States v. Rivergate Holdings
+- Court of Appeals --reviewing--> United States v. Rivergate Holdings
+- Securities and Exchange Commission --involved_in--> United States v. Rivergate Holdings

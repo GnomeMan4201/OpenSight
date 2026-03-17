@@ -1,0 +1,66 @@
+{
+  "id": "doc_00294",
+  "title": "United States v. Pine Harbor Capital \u2014 Complaint Filed",
+  "date": "2014-11-15",
+  "source": "Docket Entry Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Pine Harbor Capital",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "United States filed a complaint against Executive B in U.S. District Court for the Southern District of New York, alleging financial reporting fraud.",
+  "entities": [
+    "Court of Appeals",
+    "Executive B",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Daniel Pike",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. Department of Justice",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Pine Harbor Capital",
+    "financial reporting fraud"
+  ],
+  "relationships": [
+    {
+      "source": "United States",
+      "type": "filed_complaint_against",
+      "target": "Executive B"
+    },
+    {
+      "source": "U.S. District Court for the Southern District of New York",
+      "type": "docketed",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Daniel Pike",
+      "type": "assigned_to",
+      "target": "United States v. Pine Harbor Capital"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "complaint_filed",
+    "financial_reporting_fraud",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 5,
+    "timeline_bucket": 2014
+  }
+}

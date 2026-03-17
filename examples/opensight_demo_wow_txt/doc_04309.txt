@@ -1,0 +1,34 @@
+Federal Trade Commission v. Titan Search — Regulatory Notice
+
+Case Name: Federal Trade Commission v. Titan Search
+Date: 2014-07-22
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: regulatory_notice
+
+Summary:
+A regulatory notice was issued concerning reporting and disclosure obligations tied to exclusive dealing.
+
+Entities:
+- Court of Appeals
+- Economic Expert
+- Expert Witness
+- Federal Trade Commission
+- Federal Trade Commission v. Titan Search
+- Investor Group
+- Judge Naomi Ellis
+- Market Analysis
+- Omnidata Retail
+- Regulatory Notice
+- Supreme Court
+- Titan Search
+- U.S. District Court for the Southern District of New York
+- exclusive dealing
+
+Relationships:
+- Federal Trade Commission --issued_notice_involving--> Titan Search
+- Federal Trade Commission --referenced--> Federal Trade Commission v. Titan Search
+- Federal Trade Commission v. Titan Search --filed_in--> U.S. District Court for the Southern District of New York
+- Federal Trade Commission v. Titan Search --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> Federal Trade Commission v. Titan Search
+- Supreme Court --reviewing--> Federal Trade Commission v. Titan Search

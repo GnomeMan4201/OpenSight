@@ -1,0 +1,34 @@
+United States v. Rivergate Holdings — Appellate Opinion
+
+Case Name: United States v. Rivergate Holdings
+Date: 2017-12-28
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: appellate_opinion
+
+Summary:
+An appellate opinion addressed legal questions arising from wire fraud allegations.
+
+Entities:
+- Appellate Panel
+- Court of Appeals
+- Investor Group
+- Judge Tessa Monroe
+- Precedent
+- Securities and Exchange Commission
+- Sterling Diagnostics
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Rivergate Holdings
+- wire fraud allegations
+
+Relationships:
+- Court of Appeals --issued_opinion_in--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --cites--> Precedent
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Tessa Monroe --assigned_to--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --references_topic--> wire fraud allegations
+- Supreme Court --reviewing--> United States v. Rivergate Holdings
+- Securities and Exchange Commission --involved_in--> United States v. Rivergate Holdings

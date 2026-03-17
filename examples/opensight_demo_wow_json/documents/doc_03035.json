@@ -1,0 +1,81 @@
+{
+  "id": "doc_03035",
+  "title": "Federal Trade Commission v. BrightCart Platform \u2014 Hearing Held",
+  "date": "2017-11-03",
+  "source": "Court Filing Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. BrightCart Platform",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Patrick Sloan conducted a hearing involving arguments by United States and Titan Search on platform monopoly allegations.",
+  "entities": [
+    "Court Hearing",
+    "Court of Appeals",
+    "Economic Expert",
+    "Federal Trade Commission",
+    "Federal Trade Commission v. BrightCart Platform",
+    "Judge Patrick Sloan",
+    "Market Analysis",
+    "Oral Argument",
+    "Titan Search",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "platform monopoly allegations"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "held_hearing_for",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "United States",
+      "type": "appeared_in",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Titan Search",
+      "type": "appeared_in",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "references_topic",
+      "target": "platform monopoly allegations"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "hearing",
+    "platform_monopoly_allegations",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 1,
+    "timeline_bucket": 2017
+  }
+}

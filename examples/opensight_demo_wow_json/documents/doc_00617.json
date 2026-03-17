@@ -1,0 +1,86 @@
+{
+  "id": "doc_00617",
+  "title": "SyntaxWorks v. Horizon Systems \u2014 Hearing Held",
+  "date": "2012-01-27",
+  "source": "Opinion Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "SyntaxWorks v. Horizon Systems",
+  "court": "U.S. District Court for the Western District of Washington",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Samuel Hart conducted a hearing involving arguments by Nova Cloud and Vector Stack on software interoperability.",
+  "entities": [
+    "Court Hearing",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Judge Samuel Hart",
+    "Nova Cloud",
+    "Oral Argument",
+    "Supreme Court",
+    "SyntaxWorks v. Horizon Systems",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Western District of Washington",
+    "Vector Stack",
+    "software interoperability"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Samuel Hart",
+      "type": "held_hearing_for",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "Nova Cloud",
+      "type": "appeared_in",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "Vector Stack",
+      "type": "appeared_in",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Western District of Washington"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Samuel Hart",
+      "type": "assigned_to",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "references_topic",
+      "target": "software interoperability"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "U.S. Copyright Office",
+      "type": "involved_in",
+      "target": "SyntaxWorks v. Horizon Systems"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "hearing",
+    "software_interoperability",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 3,
+    "timeline_bucket": 2012
+  }
+}

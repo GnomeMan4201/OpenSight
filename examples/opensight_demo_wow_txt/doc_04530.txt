@@ -1,0 +1,34 @@
+United States v. Meridian BioLabs — Sentencing Hearing
+
+Case Name: United States v. Meridian BioLabs
+Date: 2019-11-11
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: sentencing
+
+Summary:
+Judge Daniel Pike conducted sentencing proceedings following findings related to internal controls failures.
+
+Entities:
+- Court of Appeals
+- Executive B
+- Expert Witness
+- Investor Group
+- Judge Daniel Pike
+- Regulatory Notice
+- Sentencing Memorandum
+- Supreme Court
+- U.S. Department of Justice
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Meridian BioLabs
+- internal controls failures
+
+Relationships:
+- Judge Daniel Pike --sentenced--> Executive B
+- U.S. Department of Justice --prosecuted--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Meridian BioLabs --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Daniel Pike --assigned_to--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --references_topic--> internal controls failures
+- Court of Appeals --reviewing--> United States v. Meridian BioLabs

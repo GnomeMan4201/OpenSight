@@ -1,0 +1,72 @@
+{
+  "id": "doc_02518",
+  "title": "Federal Trade Commission v. BrightCart Platform \u2014 Complaint Filed",
+  "date": "2022-08-13",
+  "source": "Court Filing Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. BrightCart Platform",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "Omnidata Retail filed a complaint against Titan Search in U.S. District Court for the District of Columbia, alleging market foreclosure.",
+  "entities": [
+    "Court of Appeals",
+    "Economic Expert",
+    "Expert Witness",
+    "Federal Trade Commission",
+    "Federal Trade Commission v. BrightCart Platform",
+    "Investor Group",
+    "Judge Patrick Sloan",
+    "Market Analysis",
+    "Omnidata Retail",
+    "Regulatory Notice",
+    "Titan Search",
+    "U.S. District Court for the District of Columbia",
+    "market foreclosure"
+  ],
+  "relationships": [
+    {
+      "source": "Omnidata Retail",
+      "type": "filed_complaint_against",
+      "target": "Titan Search"
+    },
+    {
+      "source": "U.S. District Court for the District of Columbia",
+      "type": "docketed",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "involved_in",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "complaint_filed",
+    "market_foreclosure",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 3,
+    "timeline_bucket": 2022
+  }
+}

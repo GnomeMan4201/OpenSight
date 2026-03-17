@@ -1,0 +1,33 @@
+CodeForge v. Open Runtime Labs — Hearing Held
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2021-03-03
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: hearing
+
+Summary:
+Judge William Avery conducted a hearing involving arguments by SyntaxWorks and Horizon Systems on fair use in developer tools.
+
+Entities:
+- CodeForge v. Open Runtime Labs
+- Court Hearing
+- Court of Appeals
+- Developer Ecosystem
+- Horizon Systems
+- Judge William Avery
+- Oral Argument
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- fair use in developer tools
+
+Relationships:
+- Judge William Avery --held_hearing_for--> CodeForge v. Open Runtime Labs
+- SyntaxWorks --appeared_in--> CodeForge v. Open Runtime Labs
+- Horizon Systems --appeared_in--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Western District of Washington
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge William Avery --assigned_to--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --references_topic--> fair use in developer tools

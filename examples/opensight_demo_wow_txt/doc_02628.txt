@@ -1,0 +1,34 @@
+Apex Mobile v. Orion Devices — Hearing Held
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2020-10-05
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: hearing
+
+Summary:
+Judge Martin Cole conducted a hearing involving arguments by Vertex Labs and Nimbus Systems on wireless chipset design.
+
+Entities:
+- Apex Mobile v. Orion Devices
+- Court Hearing
+- Court of Appeals
+- Judge Martin Cole
+- Nimbus Systems
+- Oral Argument
+- Precedent
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- Vertex Labs
+- wireless chipset design
+
+Relationships:
+- Judge Martin Cole --held_hearing_for--> Apex Mobile v. Orion Devices
+- Vertex Labs --appeared_in--> Apex Mobile v. Orion Devices
+- Nimbus Systems --appeared_in--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the Northern District of California
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --references_topic--> wireless chipset design
+- U.S. Patent and Trademark Office --involved_in--> Apex Mobile v. Orion Devices

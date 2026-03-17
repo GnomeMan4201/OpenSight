@@ -1,0 +1,76 @@
+{
+  "id": "doc_02706",
+  "title": "CodeForge v. Open Runtime Labs \u2014 Hearing Held",
+  "date": "2023-12-09",
+  "source": "Hearing Note",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "CodeForge v. Open Runtime Labs",
+  "court": "U.S. District Court for the Western District of Washington",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "The court held a hearing in CodeForge v. Open Runtime Labs to address disputed issues concerning copyrightability of interfaces.",
+  "entities": [
+    "CodeForge v. Open Runtime Labs",
+    "Court Hearing",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Horizon Systems",
+    "Judge Lena Brooks",
+    "Open Runtime Labs",
+    "Oral Argument",
+    "Supreme Court",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Western District of Washington",
+    "copyrightability of interfaces"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Lena Brooks",
+      "type": "held_hearing_for",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "Open Runtime Labs",
+      "type": "appeared_in",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "Horizon Systems",
+      "type": "appeared_in",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Western District of Washington"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Lena Brooks",
+      "type": "assigned_to",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "U.S. Copyright Office",
+      "type": "involved_in",
+      "target": "CodeForge v. Open Runtime Labs"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "hearing",
+    "copyrightability_of_interfaces",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 2,
+    "timeline_bucket": 2023
+  }
+}

@@ -1,0 +1,30 @@
+CodeForge v. Open Runtime Labs — Appeal Filed
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2013-01-10
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: appeal_filed
+
+Summary:
+Atlas Software appealed the court's decision on issues related to API reuse.
+
+Entities:
+- API reuse
+- Atlas Software
+- CodeForge v. Open Runtime Labs
+- Court of Appeals
+- Developer Ecosystem
+- Judge Samuel Hart
+- Notice of Appeal
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+
+Relationships:
+- Atlas Software --appealed--> CodeForge v. Open Runtime Labs
+- Court of Appeals --reviewing--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Western District of Washington
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> CodeForge v. Open Runtime Labs

@@ -1,0 +1,30 @@
+United States v. Metro Ad Exchange — Appeal Filed
+
+Case Name: United States v. Metro Ad Exchange
+Date: 2012-08-13
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: appeal_filed
+
+Summary:
+Metro Ad Exchange appealed the court's decision on issues related to exclusive dealing.
+
+Entities:
+- Court of Appeals
+- Economic Expert
+- Federal Trade Commission
+- Judge Naomi Ellis
+- Market Analysis
+- Metro Ad Exchange
+- Notice of Appeal
+- State Coalition
+- U.S. District Court for the District of Columbia
+- United States v. Metro Ad Exchange
+- exclusive dealing
+
+Relationships:
+- Metro Ad Exchange --appealed--> United States v. Metro Ad Exchange
+- Court of Appeals --reviewing--> United States v. Metro Ad Exchange
+- United States v. Metro Ad Exchange --filed_in--> U.S. District Court for the District of Columbia
+- United States v. Metro Ad Exchange --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> United States v. Metro Ad Exchange

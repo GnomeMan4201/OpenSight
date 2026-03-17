@@ -1,0 +1,32 @@
+United States v. Meridian BioLabs — Hearing Held
+
+Case Name: United States v. Meridian BioLabs
+Date: 2012-11-05
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: hearing
+
+Summary:
+The court held a hearing in United States v. Meridian BioLabs to address disputed issues concerning wire fraud allegations.
+
+Entities:
+- Court Hearing
+- Court of Appeals
+- Investor Group
+- Judge Tessa Monroe
+- Oral Argument
+- Sterling Diagnostics
+- Supreme Court
+- U.S. Department of Justice
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Meridian BioLabs
+- wire fraud allegations
+
+Relationships:
+- Judge Tessa Monroe --held_hearing_for--> United States v. Meridian BioLabs
+- United States --appeared_in--> United States v. Meridian BioLabs
+- Sterling Diagnostics --appeared_in--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Meridian BioLabs --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Tessa Monroe --assigned_to--> United States v. Meridian BioLabs

@@ -1,0 +1,78 @@
+{
+  "id": "doc_02483",
+  "title": "Atlas Software v. Nova Cloud \u2014 Appeal Filed",
+  "date": "2018-02-13",
+  "source": "Court Filing Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "Atlas Software v. Nova Cloud",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "appeal_filed",
+  "summary": "A notice of appeal was filed challenging rulings concerning copyrightability of interfaces.",
+  "entities": [
+    "Atlas Software v. Nova Cloud",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Expert Witness",
+    "Investor Group",
+    "Judge William Avery",
+    "Notice of Appeal",
+    "Regulatory Notice",
+    "Supreme Court",
+    "SyntaxWorks",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Northern District of California",
+    "Vector Stack",
+    "copyrightability of interfaces"
+  ],
+  "relationships": [
+    {
+      "source": "SyntaxWorks",
+      "type": "appealed",
+      "target": "Atlas Software v. Nova Cloud"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Atlas Software v. Nova Cloud"
+    },
+    {
+      "source": "Atlas Software v. Nova Cloud",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Atlas Software v. Nova Cloud",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge William Avery",
+      "type": "assigned_to",
+      "target": "Atlas Software v. Nova Cloud"
+    },
+    {
+      "source": "Atlas Software v. Nova Cloud",
+      "type": "references_topic",
+      "target": "copyrightability of interfaces"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Atlas Software v. Nova Cloud"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "appeal_filed",
+    "copyrightability_of_interfaces",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 3,
+    "timeline_bucket": 2018
+  }
+}

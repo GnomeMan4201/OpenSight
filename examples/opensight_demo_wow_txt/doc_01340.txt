@@ -1,0 +1,33 @@
+United States v. Meridian BioLabs — Witness Testimony
+
+Case Name: United States v. Meridian BioLabs
+Date: 2018-09-08
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: witness_testimony
+
+Summary:
+A witness testified regarding communications, intent, and actions involving investor disclosures.
+
+Entities:
+- Court of Appeals
+- Executive B
+- Expert Witness
+- Investor Group
+- Judge Daniel Pike
+- Regulatory Notice
+- Supreme Court
+- Trial Testimony
+- U.S. Department of Justice
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Meridian BioLabs
+- Witness
+- investor disclosures
+
+Relationships:
+- Witness --testified_in--> United States v. Meridian BioLabs
+- Judge Daniel Pike --heard_testimony_in--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Meridian BioLabs --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Daniel Pike --assigned_to--> United States v. Meridian BioLabs

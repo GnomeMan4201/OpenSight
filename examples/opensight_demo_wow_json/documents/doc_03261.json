@@ -1,0 +1,77 @@
+{
+  "id": "doc_03261",
+  "title": "United States v. Metro Ad Exchange \u2014 Hearing Held",
+  "date": "2017-05-15",
+  "source": "Court Filing Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "United States v. Metro Ad Exchange",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Patrick Sloan conducted a hearing involving arguments by Metro Ad Exchange and State Coalition on platform monopoly allegations.",
+  "entities": [
+    "Court Hearing",
+    "Court of Appeals",
+    "Economic Expert",
+    "Federal Trade Commission",
+    "Judge Patrick Sloan",
+    "Market Analysis",
+    "Metro Ad Exchange",
+    "Oral Argument",
+    "State Coalition",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States v. Metro Ad Exchange",
+    "platform monopoly allegations"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "held_hearing_for",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "Metro Ad Exchange",
+      "type": "appeared_in",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "State Coalition",
+      "type": "appeared_in",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "assigned_to",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Metro Ad Exchange"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "hearing",
+    "platform_monopoly_allegations",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 4,
+    "timeline_bucket": 2017
+  }
+}

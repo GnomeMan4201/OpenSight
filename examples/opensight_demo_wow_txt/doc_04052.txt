@@ -1,0 +1,34 @@
+State Coalition v. Omnidata Retail — Summary Judgment Motion
+
+Case Name: State Coalition v. Omnidata Retail
+Date: 2020-12-14
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: summary_judgment
+
+Summary:
+Omnidata Retail moved for summary judgment on a record centered on ad exchange bidding practices.
+
+Entities:
+- BrightCart Platform
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Expert Witness
+- Investor Group
+- Judge Robert Kline
+- Market Analysis
+- Omnidata Retail
+- Regulatory Notice
+- State Coalition v. Omnidata Retail
+- Summary Judgment
+- U.S. District Court for the District of Columbia
+- ad exchange bidding practices
+
+Relationships:
+- Omnidata Retail --moved_for_summary_judgment_in--> State Coalition v. Omnidata Retail
+- Judge Robert Kline --considering--> Summary Judgment
+- State Coalition v. Omnidata Retail --filed_in--> U.S. District Court for the District of Columbia
+- State Coalition v. Omnidata Retail --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Robert Kline --assigned_to--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --references_topic--> ad exchange bidding practices

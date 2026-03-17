@@ -1,0 +1,81 @@
+{
+  "id": "doc_03651",
+  "title": "Federal Trade Commission v. BrightCart Platform \u2014 Discovery Order",
+  "date": "2020-05-26",
+  "source": "Opinion Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. BrightCart Platform",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "discovery_order",
+  "summary": "Judge Naomi Ellis issued a discovery order requiring production of records related to ad exchange bidding practices.",
+  "entities": [
+    "Court of Appeals",
+    "Department of Justice Antitrust Division",
+    "Document Production",
+    "Economic Expert",
+    "Expert Witness",
+    "Federal Trade Commission v. BrightCart Platform",
+    "Financial Records",
+    "Internal Emails",
+    "Investor Group",
+    "Judge Naomi Ellis",
+    "Market Analysis",
+    "Omnidata Retail",
+    "Regulatory Notice",
+    "State Coalition",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "ad exchange bidding practices"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Naomi Ellis",
+      "type": "issued_order_in",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "U.S. District Court for the Southern District of New York",
+      "type": "ordered_discovery_in",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Naomi Ellis",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "references_topic",
+      "target": "ad exchange bidding practices"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "discovery_order",
+    "ad_exchange_bidding_practices",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 3,
+    "timeline_bucket": 2020
+  }
+}

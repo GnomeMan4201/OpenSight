@@ -1,0 +1,35 @@
+Apex Mobile v. Orion Devices — Appellate Opinion
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2024-12-26
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: appellate_opinion
+
+Summary:
+The reviewing court issued an opinion clarifying standards related to battery optimization patents.
+
+Entities:
+- Apex Mobile v. Orion Devices
+- Appellate Panel
+- Court of Appeals
+- Expert Witness
+- Helix Circuits
+- Investor Group
+- Judge Lucy Harrow
+- Precedent
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- Vertex Labs
+- battery optimization patents
+
+Relationships:
+- Court of Appeals --issued_opinion_in--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --cites--> Precedent
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the Northern District of California
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Lucy Harrow --assigned_to--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --references_topic--> battery optimization patents
+- Supreme Court --reviewing--> Apex Mobile v. Orion Devices

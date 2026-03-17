@@ -1,0 +1,73 @@
+{
+  "id": "doc_04086",
+  "title": "State Coalition v. Omnidata Retail \u2014 Appeal Filed",
+  "date": "2018-10-29",
+  "source": "Court Filing Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "State Coalition v. Omnidata Retail",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "appeal_filed",
+  "summary": "A notice of appeal was filed challenging rulings concerning ad exchange bidding practices.",
+  "entities": [
+    "BrightCart Platform",
+    "Court of Appeals",
+    "Economic Expert",
+    "Expert Witness",
+    "Federal Trade Commission",
+    "Investor Group",
+    "Judge Robert Kline",
+    "Market Analysis",
+    "Notice of Appeal",
+    "Omnidata Retail",
+    "Regulatory Notice",
+    "State Coalition v. Omnidata Retail",
+    "U.S. District Court for the District of Columbia",
+    "ad exchange bidding practices"
+  ],
+  "relationships": [
+    {
+      "source": "BrightCart Platform",
+      "type": "appealed",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Robert Kline",
+      "type": "assigned_to",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "references_topic",
+      "target": "ad exchange bidding practices"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "appeal_filed",
+    "ad_exchange_bidding_practices",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 1,
+    "timeline_bucket": 2018
+  }
+}

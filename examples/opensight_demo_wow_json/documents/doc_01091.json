@@ -1,0 +1,84 @@
+{
+  "id": "doc_01091",
+  "title": "BluePeak Tech v. Helix Circuits \u2014 Hearing Held",
+  "date": "2020-11-04",
+  "source": "Court Filing Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "BluePeak Tech v. Helix Circuits",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Martin Cole conducted a hearing involving arguments by Orion Devices and Apex Mobile on camera image processing patents.",
+  "entities": [
+    "Apex Mobile",
+    "BluePeak Tech v. Helix Circuits",
+    "Court Hearing",
+    "Court of Appeals",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Martin Cole",
+    "Oral Argument",
+    "Orion Devices",
+    "Precedent",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "camera image processing patents"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Martin Cole",
+      "type": "held_hearing_for",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Orion Devices",
+      "type": "appeared_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Apex Mobile",
+      "type": "appeared_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "references_topic",
+      "target": "camera image processing patents"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "BluePeak Tech v. Helix Circuits"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "hearing",
+    "camera_image_processing_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 1,
+    "timeline_bucket": 2020
+  }
+}

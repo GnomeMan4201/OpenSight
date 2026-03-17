@@ -1,0 +1,65 @@
+{
+  "id": "doc_02163",
+  "title": "Federal Trade Commission v. Titan Search \u2014 Summary Judgment Motion",
+  "date": "2014-06-29",
+  "source": "Docket Entry Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. Titan Search",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "summary_judgment",
+  "summary": "BrightCart Platform moved for summary judgment on a record centered on market foreclosure.",
+  "entities": [
+    "BrightCart Platform",
+    "Court of Appeals",
+    "Economic Expert",
+    "Federal Trade Commission",
+    "Federal Trade Commission v. Titan Search",
+    "Judge Patrick Sloan",
+    "Market Analysis",
+    "Summary Judgment",
+    "U.S. District Court for the District of Columbia",
+    "United States",
+    "market foreclosure"
+  ],
+  "relationships": [
+    {
+      "source": "BrightCart Platform",
+      "type": "moved_for_summary_judgment_in",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "considering",
+      "target": "Summary Judgment"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. Titan Search"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "summary_judgment",
+    "market_foreclosure",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 4,
+    "timeline_bucket": 2014
+  }
+}

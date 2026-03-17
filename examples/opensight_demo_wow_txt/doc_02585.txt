@@ -1,0 +1,34 @@
+United States v. Meridian BioLabs — Discovery Order
+
+Case Name: United States v. Meridian BioLabs
+Date: 2017-01-16
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: discovery_order
+
+Summary:
+Judge Daniel Pike issued a discovery order requiring production of records related to investor disclosures.
+
+Entities:
+- Court of Appeals
+- Document Production
+- Executive A
+- Financial Records
+- Internal Emails
+- Investor Group
+- Judge Daniel Pike
+- Supreme Court
+- U.S. Department of Justice
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Meridian BioLabs
+- investor disclosures
+
+Relationships:
+- Judge Daniel Pike --issued_order_in--> United States v. Meridian BioLabs
+- U.S. District Court for the Southern District of New York --ordered_discovery_in--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Meridian BioLabs --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Daniel Pike --assigned_to--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --references_topic--> investor disclosures
+- U.S. Department of Justice --involved_in--> United States v. Meridian BioLabs

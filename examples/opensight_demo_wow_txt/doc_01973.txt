@@ -1,0 +1,34 @@
+Apex Mobile v. Orion Devices — Summary Judgment Motion
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2024-05-26
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: summary_judgment
+
+Summary:
+A summary judgment motion was filed seeking judgment on issues involving battery optimization patents.
+
+Entities:
+- Apex Mobile v. Orion Devices
+- Court of Appeals
+- Expert Witness
+- Helix Circuits
+- Investor Group
+- Judge Elena Ward
+- Precedent
+- Regulatory Notice
+- Summary Judgment
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- Vertex Labs
+- battery optimization patents
+
+Relationships:
+- Vertex Labs --moved_for_summary_judgment_in--> Apex Mobile v. Orion Devices
+- Judge Elena Ward --considering--> Summary Judgment
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the Northern District of California
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Elena Ward --assigned_to--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --references_topic--> battery optimization patents

@@ -1,0 +1,31 @@
+CodeForge v. Open Runtime Labs — Appeal Filed
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2024-06-08
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: appeal_filed
+
+Summary:
+A notice of appeal was filed challenging rulings concerning copyrightability of interfaces.
+
+Entities:
+- CodeForge v. Open Runtime Labs
+- Court of Appeals
+- Developer Ecosystem
+- Horizon Systems
+- Judge Lena Brooks
+- Notice of Appeal
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- copyrightability of interfaces
+
+Relationships:
+- Horizon Systems --appealed--> CodeForge v. Open Runtime Labs
+- Court of Appeals --reviewing--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Western District of Washington
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Lena Brooks --assigned_to--> CodeForge v. Open Runtime Labs
+- Court of Appeals --reviewing--> CodeForge v. Open Runtime Labs

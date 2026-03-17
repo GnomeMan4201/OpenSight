@@ -1,0 +1,29 @@
+United States v. Rivergate Holdings — Complaint Filed
+
+Case Name: United States v. Rivergate Holdings
+Date: 2013-08-20
+Court: U.S. District Court for the Northern District of California
+Cluster: Corporate Fraud Trial
+Event Type: complaint_filed
+
+Summary:
+A civil complaint was entered in U.S. District Court for the Northern District of California naming Executive A as defendant and alleging wire fraud allegations.
+
+Entities:
+- Court of Appeals
+- Executive A
+- Federal Trade Commission
+- Investor Group
+- Judge Daniel Pike
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- United States
+- United States v. Rivergate Holdings
+- wire fraud allegations
+
+Relationships:
+- United States --filed_complaint_against--> Executive A
+- U.S. District Court for the Northern District of California --docketed--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Northern District of California
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Daniel Pike --assigned_to--> United States v. Rivergate Holdings

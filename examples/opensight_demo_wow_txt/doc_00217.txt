@@ -1,0 +1,36 @@
+Apex Mobile v. Orion Devices — Hearing Held
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2013-01-22
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: hearing
+
+Summary:
+Judge Elena Ward conducted a hearing involving arguments by Nimbus Systems and Apex Mobile on user interface gestures.
+
+Entities:
+- Apex Mobile
+- Apex Mobile v. Orion Devices
+- Court Hearing
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Elena Ward
+- Nimbus Systems
+- Oral Argument
+- Precedent
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- user interface gestures
+
+Relationships:
+- Judge Elena Ward --held_hearing_for--> Apex Mobile v. Orion Devices
+- Nimbus Systems --appeared_in--> Apex Mobile v. Orion Devices
+- Apex Mobile --appeared_in--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the Northern District of California
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Elena Ward --assigned_to--> Apex Mobile v. Orion Devices
+- Supreme Court --reviewing--> Apex Mobile v. Orion Devices

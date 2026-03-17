@@ -19,6 +19,7 @@ earlier committed stages are preserved.
 """
 
 import logging
+from sqlalchemy import create_engine
 import time
 from datetime import datetime
 from pathlib import Path
@@ -35,6 +36,35 @@ from apps.api.services.semantic_bridge import index_page as sem_index_page, inde
 from apps.api.services.storage import storage
 
 log = logging.getLogger(__name__)
+
+
+def _wipe_document_outputs(db: Session, document_id: str, source_tag: str | None = None) -> None:
+    db.query(Mention).filter_by(document_id=document_id).delete()
+    db.query(DocumentPage).filter_by(document_id=document_id).delete()
+    db.query(RedactionFlag).filter_by(document_id=document_id).delete()
+    try:
+        from apps.api.models import Claim
+        db.query(Claim).filter_by(document_id=document_id).delete()
+    except Exception:
+        pass
+    try:
+        db.execute(text("DELETE FROM semantic_chunks WHERE document_id = :id"), {"id": document_id})
+    except Exception:
+        pass
+    try:
+        db.execute(text("DELETE FROM fts_pages WHERE document_id = :id"), {"id": document_id})
+    except Exception:
+        pass
+    if source_tag is not None:
+        try:
+            db.execute(
+                text("DELETE FROM fts_pages WHERE document_id = :id OR source_tag = :source_tag"),
+                {"id": document_id, "source_tag": source_tag},
+            )
+        except Exception:
+            pass
+    db.commit()
+
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -179,16 +209,24 @@ def _index_page_fts(
     filename: str,
     body: str,
 ) -> None:
-    """Insert one page into the FTS5 virtual table. No-op for non-SQLite."""
+    """Insert one page into the FTS5 virtual table. No-op for non-SQLite or missing FTS table."""
     if not settings.database_url.startswith("sqlite"):
         return
-    db.execute(
-        text("""
-            INSERT INTO fts_pages (document_id, page_number, source_tag, filename, body)
-            VALUES (:did, :pn, :st, :fn, :body)
-        """),
-        {"did": document_id, "pn": page_number, "st": source_tag, "fn": filename, "body": body},
-    )
+    try:
+        exists = db.execute(text("SELECT name FROM sqlite_master WHERE type='table' AND name='fts_pages'" )).fetchone()
+        if not exists:
+            log.warning("[fts] fts_pages missing; skipping FTS insert for %s page %s", document_id, page_number)
+            return
+        db.execute(
+            text("""
+                INSERT INTO fts_pages (document_id, page_number, source_tag, filename, body)
+                VALUES (:did, :pn, :st, :fn, :body)
+            """),
+            {"did": document_id, "pn": page_number, "st": source_tag, "fn": filename, "body": body},
+        )
+    except Exception as exc:
+        log.warning("[fts] insert skipped for %s page %s: %s", document_id, page_number, exc)
+        db.rollback()
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -428,22 +466,45 @@ def run_ingestion(document_id: str, db_url: str) -> None:
     """
     Full ingestion pipeline for one document. Opens its own DB session.
     Called by FastAPI BackgroundTasks — runs in a separate thread.
-
-    Uses apps.api.database.SessionLocal so that tests can patch the
-    module-level SessionLocal and have the background thread pick it up,
-    rather than creating an independent engine from db_url.
     """
     from apps.api.database import SessionLocal
 
     db = SessionLocal()
 
     try:
+        doc = db.query(Document).filter_by(id=document_id).first()
+        if not doc:
+            return
+
+        _wipe_document_outputs(db, document_id, getattr(doc, "source_tag", None))
+
+        doc = db.query(Document).filter_by(id=document_id).first()
+        if not doc:
+            return
+
+        doc.status = "processing"
+        doc.page_count = 0
+        doc.has_redactions = False
+        doc.error_message = None
+        db.commit()
+
         _run_pipeline(document_id, db)
+
+        doc = db.query(Document).filter_by(id=document_id).first()
+        if doc:
+            doc.status = "done"
+            doc.error_message = None
+            db.commit()
+
     except Exception as exc:
+        try:
+            db.rollback()
+        except Exception:
+            pass
         log.exception("[pipeline] fatal error for document %s", document_id)
         doc = db.query(Document).filter_by(id=document_id).first()
         if doc:
-            doc.status        = "error"
+            doc.status = "error"
             doc.error_message = str(exc)[:500]
             db.commit()
     finally:

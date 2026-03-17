@@ -1,0 +1,34 @@
+Federal Trade Commission v. Titan Search — Discovery Order
+
+Case Name: Federal Trade Commission v. Titan Search
+Date: 2013-04-19
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: discovery_order
+
+Summary:
+Judge Patrick Sloan issued a discovery order requiring production of records related to self-preferencing.
+
+Entities:
+- BrightCart Platform
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Document Production
+- Economic Expert
+- Federal Trade Commission v. Titan Search
+- Financial Records
+- Internal Emails
+- Judge Patrick Sloan
+- Market Analysis
+- Metro Ad Exchange
+- U.S. District Court for the District of Columbia
+- self-preferencing
+
+Relationships:
+- Judge Patrick Sloan --issued_order_in--> Federal Trade Commission v. Titan Search
+- U.S. District Court for the District of Columbia --ordered_discovery_in--> Federal Trade Commission v. Titan Search
+- Federal Trade Commission v. Titan Search --filed_in--> U.S. District Court for the District of Columbia
+- Federal Trade Commission v. Titan Search --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Patrick Sloan --assigned_to--> Federal Trade Commission v. Titan Search
+- Federal Trade Commission v. Titan Search --references_topic--> self-preferencing
+- Department of Justice Antitrust Division --involved_in--> Federal Trade Commission v. Titan Search

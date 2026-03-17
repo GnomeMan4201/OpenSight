@@ -1,0 +1,70 @@
+{
+  "id": "doc_00374",
+  "title": "United States v. Meridian BioLabs \u2014 Sentencing Hearing",
+  "date": "2010-04-16",
+  "source": "Hearing Note",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Meridian BioLabs",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "sentencing",
+  "summary": "The court imposed sentence after considering evidence tied to clinical test misrepresentation.",
+  "entities": [
+    "Chief Financial Officer",
+    "Court of Appeals",
+    "Investor Group",
+    "Judge Edward Navarro",
+    "Securities and Exchange Commission",
+    "Sentencing Memorandum",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Meridian BioLabs",
+    "clinical test misrepresentation"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Edward Navarro",
+      "type": "sentenced",
+      "target": "Chief Financial Officer"
+    },
+    {
+      "source": "Securities and Exchange Commission",
+      "type": "prosecuted",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Edward Navarro",
+      "type": "assigned_to",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Meridian BioLabs"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "sentencing",
+    "clinical_test_misrepresentation",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 5,
+    "timeline_bucket": 2010
+  }
+}
