@@ -2896,8 +2896,9 @@ async function discoverLeads() {
 
 async function loadBrokerLeaderboard(limit = 10) {
   try {
-    const payload = await api(`/graph/metrics/top?limit=${limit}`);
-    const items = payload?.results || [];
+    // /graph/metrics/top now returns {entities:[{id,name,entity_type,mention_count,score,betweenness,pagerank,connections}]}
+    const payload = await api(`/graph/metrics/top?metric=influence&top_n=${limit}`);
+    const items = payload?.entities || [];
     const el = document.getElementById('broker-leaderboard');
     const count = document.getElementById('broker-count');
     if (!el) return;
@@ -2914,7 +2915,7 @@ async function loadBrokerLeaderboard(limit = 10) {
         <div style="display:flex; justify-content:space-between; gap:8px; align-items:flex-start;">
           <div style="min-width:0;">
             <div style="font-size:10px; color:var(--dim);">#${i+1} · ${b.entity_type || 'unknown'}</div>
-            <div style="font-size:12px; color:var(--hi); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${b.canonical_name || b.id}</div>
+            <div style="font-size:12px; color:var(--hi); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${b.name || b.canonical_name || b.id}</div>
           </div>
           <div style="text-align:right; flex-shrink:0;">
             <div style="font-size:11px; color:#f0a830;">${Number(b.betweenness || 0).toFixed(4)}</div>
@@ -2923,8 +2924,8 @@ async function loadBrokerLeaderboard(limit = 10) {
         </div>
         <div style="margin-top:6px; display:flex; gap:10px; flex-wrap:wrap; font-size:10px; color:var(--text-mid);">
           <span>${b.mention_count || 0} mentions</span>
-          <span>${Math.round((b.degree || 0) * 100)}% degree</span>
-          <span>${Math.round((b.eigenvector || 0) * 100)}% eigen</span>
+          <span>${b.connections || 0} connections</span>
+          <span>${Number(b.score || b.betweenness || 0).toFixed(3)} score</span>
         </div>
       </div>
     `).join('');
@@ -3032,12 +3033,16 @@ async function loadFullGraph() {
   try {
     const [data, metricsPayload, commPayload] = await Promise.all([
       api('/graph/relationships?limit=500'),
-      api('/graph/metrics/map'),
+      api('/graph/metrics?top_n=200'),
       api('/graph/communities')
     ]);
 
     const rels = Array.isArray(data) ? data : (data.items || data.relationships || []);
-    const metricsMap = metricsPayload?.metrics || {};
+    // Build id-keyed metrics map from top_entities array (new API shape)
+    const metricsById = {};
+    for (const e of (metricsPayload?.top_entities || [])) {
+      metricsById[e.id] = e;
+    }
     const membership = commPayload?.membership || {};
     if (!rels.length) {
       if (spinner) spinner.style.display = 'none';
@@ -3050,29 +3055,29 @@ async function loadFullGraph() {
       const b = r.entity_b || r.target;
 
       if (a?.id) {
-        const m = metricsMap[a.id] || {};
+        const m = metricsById[a.id] || {};
         nodeMap[a.id] = {
           id: a.id,
-          canonical_name: a.canonical_name || a.name || m.canonical_name || a.id,
+          canonical_name: a.canonical_name || a.name || m.name || a.id,
           entity_type: a.entity_type || a.type || m.entity_type || 'unknown',
           mention_count: a.mention_count ?? m.mention_count ?? 0,
           degree: m.degree ?? 0,
           betweenness: m.betweenness ?? 0,
-          eigenvector: m.eigenvector ?? 0,
+          eigenvector: m.eigenvector ?? m.pagerank ?? 0,
           community_id: membership[a.id] || 0
         };
       }
 
       if (b?.id) {
-        const m = metricsMap[b.id] || {};
+        const m = metricsById[b.id] || {};
         nodeMap[b.id] = {
           id: b.id,
-          canonical_name: b.canonical_name || b.name || m.canonical_name || b.id,
+          canonical_name: b.canonical_name || b.name || m.name || b.id,
           entity_type: b.entity_type || b.type || m.entity_type || 'unknown',
           mention_count: b.mention_count ?? m.mention_count ?? 0,
           degree: m.degree ?? 0,
           betweenness: m.betweenness ?? 0,
-          eigenvector: m.eigenvector ?? 0,
+          eigenvector: m.eigenvector ?? m.pagerank ?? 0,
           community_id: membership[b.id] || 0
         };
       }
