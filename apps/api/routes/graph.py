@@ -55,14 +55,11 @@ class GraphResponse(BaseModel):
     depth: int
 
 class RelationshipOut(BaseModel):
-    id:                str
-    entity_a:          EntityNode
-    entity_b:          EntityNode
-    weight:            int
-    doc_count:         int
-    relationship_type: str = "co_occurrence"
-    confidence:        float = 0.5
-    sentence_span:     str | None = None
+    id:          str
+    entity_a:    EntityNode
+    entity_b:    EntityNode
+    weight:      int
+    doc_count:   int
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────

@@ -1253,15 +1253,6 @@
         <div id="edge-evidence-list" style="overflow-y:auto; max-height:160px;">
           <div class="list-empty">Click a graph edge to inspect</div>
         </div>
-
-        <div id="det-dossier" style="display:none; margin-top:12px; border-top:1px solid var(--line); padding-top:12px;">
-          <div class="panel-header">
-            <div class="panel-label">DOSSIER</div>
-          </div>
-          <div id="det-dossier-loading" class="list-empty" style="display:none;">Loading dossier...</div>
-          <div id="det-dossier-error" class="list-empty" style="display:none; color:#ff8a8a;"></div>
-          <div id="det-dossier-content"></div>
-        </div>
       </div>
     </div>
 
@@ -1540,18 +1531,6 @@ async function pollPending() {
 
 // ── Entity detail ─────────────────────────────────────────────────────────────
 function showEntityDetail(entity) {
-  const dossierPanel = document.getElementById('det-dossier');
-  const dossierLoading = document.getElementById('det-dossier-loading');
-  const dossierError = document.getElementById('det-dossier-error');
-  const dossierContent = document.getElementById('det-dossier-content');
-  if (dossierPanel) dossierPanel.style.display = 'none';
-  if (dossierLoading) dossierLoading.style.display = 'none';
-  if (dossierError) {
-    dossierError.style.display = 'none';
-    dossierError.textContent = '';
-  }
-  if (dossierContent) dossierContent.innerHTML = '';
-
   state.activeEntity = entity;
   document.getElementById('entity-detail-empty').style.display = 'none';
   const det = document.getElementById('entity-detail');
@@ -1900,7 +1879,7 @@ async function loadDossier(entityId) {
         (members.length
           ? `<div style="display:flex;flex-wrap:wrap;gap:3px;">
               ${members.map(mb =>
-                `<span onclick="selectEntityById('${mb.id || mb.name}')"
+                `<span onclick="selectEntityById('${mb.name}')"
                   style="cursor:pointer;background:var(--panel);padding:1px 6px;border-radius:2px;font-size:10px;${DIM};"
                 >${mb.name}</span>`
               ).join('')}

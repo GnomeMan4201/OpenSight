@@ -30,7 +30,6 @@ from sqlalchemy.orm import Session
 
 from apps.api.config import settings
 from apps.api.services.canonicalize import run_canonicalization, is_noise_entity
-from apps.api.services.relationship_extraction import extract_relationships
 from apps.api.models import Document, DocumentPage, Entity, EntityRelationship, Mention, RedactionFlag
 from apps.api.services.entity_extraction import extract_entities
 from apps.api.services.claim_extraction import extract_claims, ClaimCandidate
@@ -409,76 +408,6 @@ def _upsert_entity(
     return entity
 
 
-
-def _upsert_typed_relationships(
-    db: Session,
-    document_id: str,
-    full_text: str,
-    spacy_model: str = "en_core_web_sm",
-) -> int:
-    """
-    Extract typed relationships for a document and upsert into entity_relationships.
-    For existing edges: keep higher-confidence type. Increment weight on re-ingest.
-    """
-    from apps.api.services.relationship_extraction import extract_relationships
-
-    # Build entity name → id map from mentions in this document
-    from apps.api.models import Mention
-    mention_rows = (
-        db.query(Mention, Entity)
-        .join(Entity, Entity.id == Mention.entity_id)
-        .filter(Mention.document_id == document_id)
-        .all()
-    )
-    entity_name_to_id = {e.canonical_name: e.id for _, e in mention_rows}
-
-    if not entity_name_to_id:
-        log.debug("[%s] No entities for relationship extraction", document_id)
-        return 0
-
-    candidates = extract_relationships(
-        text=full_text,
-        entity_name_to_id=entity_name_to_id,
-        document_id=document_id,
-        spacy_model=spacy_model,
-    )
-
-    upserted = 0
-    for c in candidates:
-        # Normalize pair order
-        id_a = min(c.source_id, c.target_id)
-        id_b = max(c.source_id, c.target_id)
-
-        existing = (
-            db.query(EntityRelationship)
-            .filter_by(entity_a_id=id_a, entity_b_id=id_b)
-            .first()
-        )
-
-        if existing:
-            existing.weight    += 1
-            existing.doc_count  = max(existing.doc_count, 1)
-            # Upgrade relationship_type if new extraction has higher confidence
-            existing_conf = existing.confidence or 0.0
-            if c.confidence > existing_conf:
-                existing.relationship_type = c.relationship_type
-                existing.confidence        = c.confidence
-                existing.sentence_span     = c.sentence_span
-        else:
-            db.add(EntityRelationship(
-                entity_a_id       = id_a,
-                entity_b_id       = id_b,
-                weight            = 1,
-                doc_count         = 1,
-                relationship_type = c.relationship_type,
-                confidence        = c.confidence,
-                sentence_span     = c.sentence_span,
-            ))
-        upserted += 1
-
-    log.info("[%s] Stage 6.5/7 — %d typed relationships upserted", document_id, upserted)
-    return upserted
-
 def _upsert_relationships(db: Session, document_id: str) -> int:
     """
     Build or update entity co-occurrence relationships for a document.
@@ -672,8 +601,8 @@ def _run_pipeline(document_id: str, db: Session) -> None:
                     )
                     db.rollback()
 
-        db.commit()    # Assemble full document text for relationship extraction
-    full_text = " ".join(page_texts.get(pn, "") for pn in sorted(page_texts.keys()))
+        db.commit()
+
     # ── Stage 4.5: Update mention counts ────────────────────────────────────
     try:
         db.execute(text("""
@@ -772,9 +701,9 @@ def _run_pipeline(document_id: str, db: Session) -> None:
 
         db.commit()
 
-    # ── Stage 6.5: Typed relationship extraction ──────────────────────────────
-    log.info("[%s] Stage 6.5/7 — typed relationship extraction", document_id)
-    _upsert_typed_relationships(db, document_id, full_text, settings.spacy_model)
+    # ── Stage 6.5: Entity relationship graph ──────────────────────────────────
+    log.info("[%s] Stage 6.5/7 — building entity co-occurrence graph", document_id)
+    _upsert_relationships(db, document_id)
     db.commit()
 
     # ── Stage 6.6: Canonicalization ───────────────────────────────────────────
