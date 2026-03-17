@@ -1531,6 +1531,13 @@ async function pollPending() {
 
 // ── Entity detail ─────────────────────────────────────────────────────────────
 function showEntityDetail(entity) {
+  const dossierPanel = document.getElementById('det-dossier');
+  const dossierLoading = document.getElementById('det-dossier-loading');
+  const dossierContent = document.getElementById('det-dossier-content');
+  if (dossierPanel) dossierPanel.style.display = 'none';
+  if (dossierLoading) dossierLoading.style.display = 'none';
+  if (dossierContent) dossierContent.innerHTML = '';
+
   state.activeEntity = entity;
   document.getElementById('entity-detail-empty').style.display = 'none';
   const det = document.getElementById('entity-detail');
