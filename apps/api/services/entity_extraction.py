@@ -157,7 +157,6 @@ def _is_noise_entity(name: str, entity_type: str) -> bool:
         return True
 
     # ── Suffix-noise patterns ─────────────────────────────────────────────────
-    # "XYZ Date", "XYZ Event", "XYZ Cluster", "XYZ Case", "XYZ Relationships"
     NOISE_SUFFIXES = (
         " date", " event", " cluster", " case", " relationships",
         " relationship", " ecosystem", " dispute", " proceeding",
@@ -175,6 +174,40 @@ def _is_noise_entity(name: str, entity_type: str) -> bool:
     }
     for kw in NOISE_KEYWORDS:
         if kw in name_lower:
+            return True
+
+    # ── Person-specific: must look like an actual human name ─────────────────
+    # Reject if any token matches a known non-name term
+    if entity_type == "Person":
+        tokens = name.split()
+        # Human names are 1-3 tokens
+        if len(tokens) > 3:
+            return True
+        # Tokens that appear in human names but NOT in these non-name terms
+        NON_NAME_TOKENS = {
+            # Geographic/legal institutions
+            "district", "court", "circuit", "division", "department",
+            "bureau", "office", "commission", "coalition", "council",
+            "committee", "tribunal", "authority", "agency", "board",
+            # Role/procedural labels
+            "expert", "witness", "analysis", "notice", "advisory",
+            "regulatory", "review", "market", "exchange", "capital",
+            "group", "panel", "motion", "argument", "production",
+            "records", "emails", "model", "report", "testimony",
+            "form", "order", "verdict",
+            # Org-type indicators
+            "grid", "stack", "signal", "platform", "logic",
+            "tech", "systems", "software", "labs", "diagnostics",
+        }
+        token_set = {t.lower() for t in tokens}
+        if token_set & NON_NAME_TOKENS:
+            return True
+        # Reject role-prefixed names that aren't Judge (Judge is valid — we merge later)
+        ROLE_PREFIXES = {
+            "dr", "mr", "ms", "mrs", "prof", "attorney",
+            "counsel", "officer", "director", "senior", "chief",
+        }
+        if tokens[0].lower().rstrip(".") in ROLE_PREFIXES:
             return True
 
     return False
@@ -476,6 +509,7 @@ def extract_entities(
     # Filter noise from spacy results
     spacy_results = [e for e in spacy_results if not _is_noise_entity(e.canonical_name, e.entity_type)]
     merged: list[ExtractedEntity] = list(spacy_results)
+    # NOTE: regex results are also filtered below after merging
     for r in regex_results:
         if r.entity_type in _SPACY_AUTHORITATIVE:
             # Regex result for a spaCy-covered type: include only if spaCy
@@ -486,4 +520,6 @@ def extract_entities(
             # Regex-exclusive type (Aircraft, Phone, Email, Airport, Address).
             merged.append(r)
 
+    # Apply noise filter to ALL merged results (spaCy + regex)
+    merged = [e for e in merged if not _is_noise_entity(e.canonical_name, e.entity_type)]
     return merged
