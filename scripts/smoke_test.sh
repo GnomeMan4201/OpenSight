@@ -45,7 +45,15 @@ check "Documents list"       "$BASE/documents"                                  
 
 echo ""
 echo "Analytics:"
-check "Broker paths"         "$BASE/graph/broker-paths/$(sqlite3 opensight.db "SELECT id FROM entities ORDER BY mention_count DESC LIMIT 1")" \
+check "Broker paths"
+
+echo ""
+echo "Dossier:"
+DOSSIER_EID=$(sqlite3 opensight.db "SELECT id FROM entities ORDER BY mention_count DESC LIMIT 1" 2>/dev/null || echo "")
+if [ -n "$DOSSIER_EID" ]; then
+  check "Entity dossier"        "$BASE/entities/$DOSSIER_EID/dossier"                   "'entity' in d and 'metrics' in d and 'relationships' in d"
+  check "Dossier 404"           "$BASE/entities/00000000-0000-0000-0000-000000000000/dossier" "d.get('detail') is not None"
+fi         "$BASE/graph/broker-paths/$(sqlite3 opensight.db "SELECT id FROM entities ORDER BY mention_count DESC LIMIT 1")" \
                                                                                       "isinstance(d,dict) or isinstance(d,list)"
 
 echo ""
