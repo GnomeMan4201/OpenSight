@@ -1792,6 +1792,167 @@ function togglePanel(id) {
   }
 }
 
+
+async function loadDossier(entityId) {
+  const loading = document.getElementById('det-dossier-loading');
+  const error   = document.getElementById('det-dossier-error');
+  const content = document.getElementById('det-dossier-content');
+  if (!content) return;
+
+  if (loading) loading.style.display = 'block';
+  if (error)   { error.style.display = 'none'; error.textContent = ''; }
+  content.innerHTML = '';
+
+  try {
+    const d = await api(`/entities/${entityId}/dossier`);
+    if (loading) loading.style.display = 'none';
+
+    const e    = d.entity        || {};
+    const m    = d.metrics       || {};
+    const c    = d.community     || {};
+    const rels = d.relationships || [];
+    const docs = d.documents     || [];
+    const prov = d.provenance    || {};
+    const bps  = d.broker_paths  || [];
+
+    const DIM = 'color:var(--text-dim)';
+    const HI  = 'color:var(--hi)';
+    const FG  = 'color:var(--fg)';
+
+    const secLabel = (t) =>
+      `<div style="font-size:9px;letter-spacing:.1em;text-transform:uppercase;${DIM};margin-bottom:5px;">${t}</div>`;
+
+    const miniBar = (v) => {
+      const pct = Math.min(100, Math.round((v || 0) * 100));
+      return `<div style="display:flex;align-items:center;gap:5px;margin-bottom:2px;">
+        <div style="flex:1;height:3px;background:var(--border);border-radius:2px;">
+          <div style="width:${pct}%;height:100%;background:var(--hi);border-radius:2px;"></div>
+        </div>
+        <span style="font-size:9px;${DIM};width:24px;text-align:right;">${pct}%</span>
+      </div>`;
+    };
+
+    const sec = (title, body) =>
+      `<div style="padding:8px 12px;border-bottom:1px solid var(--border);">
+        ${secLabel(title)}${body}
+      </div>`;
+
+    let html = '';
+
+    // ── Origin ────────────────────────────────────────────────────────────────
+    const aliases = (e.aliases || []).filter(Boolean);
+    const tags    = (e.source_tags || []);
+    if (aliases.length || tags.length) {
+      html += sec('Origin',
+        (aliases.length
+          ? `<div style="font-size:10px;${DIM};margin-bottom:3px;">aka: ${aliases.join(', ')}</div>`
+          : '') +
+        (tags.length
+          ? `<div style="font-size:10px;${DIM};">${tags.map(t =>
+              `<span style="background:var(--panel);padding:1px 5px;border-radius:2px;margin-right:3px;">${t}</span>`
+            ).join('')}</div>`
+          : '')
+      );
+    }
+
+    // ── Metrics ───────────────────────────────────────────────────────────────
+    html += sec('Metrics',
+      `<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 14px;">
+        <div>${secLabel('Influence')}${miniBar(m.influence)}</div>
+        <div>${secLabel('Betweenness')}${miniBar(m.betweenness)}</div>
+        <div>${secLabel('PageRank')}${miniBar(m.pagerank)}</div>
+        <div>${secLabel('Degree')}${miniBar(m.degree)}</div>
+      </div>
+      <div style="margin-top:5px;font-size:10px;${DIM};">
+        ${m.connections ?? 0} connections · ${m.communities_bridged ?? 0} communities bridged
+      </div>`
+    );
+
+    // ── Community ─────────────────────────────────────────────────────────────
+    if (c.community_id) {
+      const members = (c.community_members || []).slice(0, 6);
+      html += sec(`Community ${c.community_id}`,
+        `<div style="font-size:11px;${FG};margin-bottom:4px;">
+          Key: <span style="${HI};">${c.community_key_actor || '—'}</span>
+          <span style="${DIM};"> · ${c.community_size || 0} members · density ${((c.community_density||0)*100).toFixed(0)}%</span>
+        </div>` +
+        (members.length
+          ? `<div style="display:flex;flex-wrap:wrap;gap:3px;">
+              ${members.map(mb =>
+                `<span onclick="selectEntityById('${mb.name}')"
+                  style="cursor:pointer;background:var(--panel);padding:1px 6px;border-radius:2px;font-size:10px;${DIM};"
+                >${mb.name}</span>`
+              ).join('')}
+            </div>`
+          : '')
+      );
+    }
+
+    // ── Relationships ─────────────────────────────────────────────────────────
+    if (rels.length) {
+      const typeColor = {Organization:'#60a5fa', Person:'#34d399', Location:'#f59e0b'};
+      html += sec(`Relationships (${rels.length})`,
+        rels.slice(0, 8).map(r =>
+          `<div onclick="selectEntityById('${r.entity_id}')"
+            style="cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+                   padding:3px 0;border-bottom:1px solid var(--border);gap:6px;">
+            <div style="min-width:0;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
+              <span style="font-size:10px;${DIM};margin-right:3px;">${r.direction==='outbound'?'→':'←'}</span>
+              <span style="font-size:11px;${FG};">${r.name}</span>
+            </div>
+            <div style="flex-shrink:0;font-size:9px;">
+              <span style="color:${typeColor[r.type]||'var(--text-dim)'};">${(r.type||'').slice(0,3).toUpperCase()}</span>
+              <span style="${DIM};margin-left:3px;">w${r.weight}·${r.doc_count}d</span>
+            </div>
+          </div>`
+        ).join('')
+      );
+    }
+
+    // ── Documents ─────────────────────────────────────────────────────────────
+    if (docs.length) {
+      html += sec(`Documents (${docs.length})`,
+        docs.slice(0, 5).map(doc => {
+          const snip = (doc.snippets || [])[0]?.context || '';
+          return `<div style="padding:4px 0;border-bottom:1px solid var(--border);">
+            <div style="font-size:10px;${FG};">${doc.filename}</div>
+            <div style="font-size:9px;${DIM};">${doc.source_tag}</div>
+            ${snip ? `<div style="font-size:9px;${DIM};margin-top:2px;line-height:1.4;max-height:30px;overflow:hidden;">${snip.slice(0,120)}…</div>` : ''}
+          </div>`;
+        }).join('')
+      );
+    }
+
+    // ── Provenance ────────────────────────────────────────────────────────────
+    html += sec('Provenance',
+      `<div style="font-size:10px;${DIM};line-height:1.7;">
+        method: ${(prov.extraction_methods||[]).join(', ')||'—'}<br>
+        confidence: ${((prov.confidence||0)*100).toFixed(0)}% · status: ${prov.review_status||'—'}<br>
+        first seen: ${prov.first_seen ? prov.first_seen.slice(0,19) : '—'}<br>
+        raw mentions: ${prov.raw_mention_count ?? '—'}
+      </div>`
+    );
+
+    // ── Broker paths ──────────────────────────────────────────────────────────
+    if (bps.length) {
+      html += sec(`Broker Paths (${bps.length})`,
+        bps.map(bp =>
+          `<div style="font-size:10px;${DIM};padding:2px 0;border-bottom:1px solid var(--border);">
+            <span style="${FG};">[${bp.length}h]</span> ${(bp.path||[]).map(n=>n.name).join(' → ')}
+          </div>`
+        ).join('')
+      );
+    }
+
+    content.innerHTML = html || `<div style="padding:12px;${DIM};">No dossier data available.</div>`;
+
+  } catch (err) {
+    if (loading) loading.style.display = 'none';
+    if (error) { error.style.display = 'block'; error.textContent = `Dossier error: ${err.message}`; }
+    console.error('[loadDossier]', entityId, err);
+  }
+}
+
 async function selectEntityById(id) {
   try {
     const entity = await api(`/entities/${id}`);
@@ -1800,6 +1961,7 @@ async function selectEntityById(id) {
     loadEntityEvidence(id);
     loadBrokerPaths(id);
     loadNarrativeSummary(id);
+    loadDossier(id);
     switchTab('entity-tab');
   } catch {}
 }
