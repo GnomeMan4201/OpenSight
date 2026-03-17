@@ -1799,6 +1799,9 @@ async function loadDossier(entityId) {
   const content = document.getElementById('det-dossier-content');
   if (!content) return;
 
+  // Unhide the panel itself
+  const panel = document.getElementById('det-dossier');
+  if (panel) panel.style.display = 'flex';
   if (loading) loading.style.display = 'block';
   if (error)   { error.style.display = 'none'; error.textContent = ''; }
   content.innerHTML = '';
@@ -3195,7 +3198,7 @@ async function loadFullGraph() {
   try {
     const [data, metricsPayload, commPayload] = await Promise.all([
       api('/graph/relationships?limit=500'),
-      api('/graph/metrics?top_n=200'),
+      api('/graph/metrics?top_n=100'),
       api('/graph/communities')
     ]);
 
