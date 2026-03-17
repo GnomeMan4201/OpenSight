@@ -675,7 +675,7 @@ def _run_pipeline(document_id: str, db: Session) -> None:
         db.commit()
 
     # Assemble full document text for relationship extraction
-    full_text = "
+    full_text = " ".join(page_texts.get(pn, "") for pn in sorted(page_texts.keys()))
 ".join(page_texts.get(pn, "") for pn in sorted(page_texts.keys()))
 
     # ── Stage 4.5: Update mention counts ────────────────────────────────────
