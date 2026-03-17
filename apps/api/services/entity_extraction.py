@@ -97,72 +97,89 @@ _NOISE_PATTERNS = [
 ]
 
 def _is_noise_entity(name: str, entity_type: str) -> bool:
-    """Return True if this extraction is likely noise (section header, phrase, etc.)"""
-    if entity_type not in ("Person", "Organization", "Location", "Event", "Facility"):
-        return False
-    
-    stripped = name.strip()
-    
-    # Too short or too long
-    if len(stripped) < 3 or len(stripped) > 60:
-        return True
-    
-    # In noise word list
-    if stripped in _NOISE_WORDS or stripped.rstrip("s") in _NOISE_WORDS:
-        return True
-    
-    # Synthetic relationship / graph text should never become entities
-    if "--" in stripped or "-->" in stripped or "<--" in stripped:
+    """
+    Return True if this extraction is likely noise.
+    Hard rules — no ML needed.
+    """
+    if not name or not name.strip():
         return True
 
-    # Broken trailing fragments
-    if stripped.endswith("-") or stripped.endswith(":"):
+    name = name.strip()
+
+    # ── Strip relation markup artifacts ──────────────────────────────────────
+    # Entities like "Naomi Ellis --Assigned_To-->" are markup leaking through
+    if "--" in name or "→" in name or "|->" in name:
         return True
 
-    # Label-like junk
-    if re.search(r'\b(Date|Relationships?)$', stripped):
+    # ── Newline artifacts (concat from bad OCR/markup) ────────────────────────
+    # "Stack Date", "Cloud Date" etc come from "Stack\nDate" in aliases
+    if "\n" in name:
         return True
 
-    if re.search(
-        r'\b('
-        r'Complaint Filed Case|Appeal Filed Case|Appellate Opinion Case|'
-        r'Discovery Order Case|Hearing Held Case|Jury Verdict Case|'
-        r'Witness Testimony Case|Regulatory Notice Case'
-        r')\b',
-        stripped,
-    ):
+    # ── Reject Date entity type entirely ─────────────────────────────────────
+    if entity_type == "Date":
         return True
 
-    # Matches noise patterns
-    for pattern in _NOISE_PATTERNS:
-        if pattern.search(stripped):
+    tokens = name.split()
+    n = len(tokens)
+
+    if n == 0 or n > 6:
+        return True
+
+    # ── Leading articles ──────────────────────────────────────────────────────
+    if tokens[0].lower() in ("the", "a", "an", "this", "that", "these", "those"):
+        return True
+
+    # ── Starts with digit or punctuation ─────────────────────────────────────
+    if not name[0].isalpha():
+        return True
+
+    name_lower = name.lower()
+
+    # ── Hard blocklist — procedural phrases and label text ───────────────────
+    BLOCKLIST = frozenset([
+        # Legal procedure
+        "complaint filed case", "summary judgment", "summary judgment motion",
+        "appeal filed case", "appellate opinion case", "discovery order case",
+        "hearing held case", "jury verdict case", "regulatory notice case",
+        "witness testimony case", "motion to dismiss", "preliminary injunction",
+        "trial testimony", "court hearing",
+        # Role labels (not actors)
+        "expert witness", "investor group", "appellate panel",
+        # Synthetic artifacts from markup
+        "stack date", "cloud date", "systems date", "circuits date",
+        "search date", "platform date", "holdings date", "retail date",
+        "labs date", "devices date", "diagnostics date",
+        "ad exchange date", "harbor capital date", "vertex labs date",
+        "titan search date", "horizon systems date",
+    ])
+    if name_lower in BLOCKLIST:
+        return True
+
+    # ── Suffix-noise patterns ─────────────────────────────────────────────────
+    # "XYZ Date", "XYZ Event", "XYZ Cluster", "XYZ Case", "XYZ Relationships"
+    NOISE_SUFFIXES = (
+        " date", " event", " cluster", " case", " relationships",
+        " relationship", " ecosystem", " dispute", " proceeding",
+        " network",
+    )
+    for suffix in NOISE_SUFFIXES:
+        if name_lower.endswith(suffix):
             return True
-    
-    # For Person: must look like an actual name (not a phrase)
-    if entity_type == "Person":
-        words = stripped.split()
-        # Reject if any word is a common English word that isn't a surname
-        _COMMON_WORDS = {
-            "summary", "dynamics", "syndrome", "critique", "markers",
-            "identifying", "quantifying", "addressing", "rejecting",
-            "approaches", "perspectives", "challenges", "responses",
-            "impact", "manipulation", "training", "analysis", "hearing",
-            "terminology", "protection", "assessment", "evaluation",
-            "this", "the", "and", "for", "with", "from", "into",
-            "healthy", "harmful", "appropriate", "statistical", "linguistic",
-            "multifaceted", "computational", "international", "judicial",
-        }
-        word_set = {w.lower() for w in words}
-        if word_set & _COMMON_WORDS:
+
+    # ── Keyword-in-name patterns ──────────────────────────────────────────────
+    NOISE_KEYWORDS = {
+        "filed case", "opinion case", "order case", "verdict case",
+        "testimony case", "notice case", "hearing case",
+        "corporate fraud trial", "financial reporting fraud",
+    }
+    for kw in NOISE_KEYWORDS:
+        if kw in name_lower:
             return True
-        # Reject if more than 3 words (names are 1-3 words)
-        if len(words) > 3:
-            return True
-    
+
     return False
 
 
-@lru_cache(maxsize=4)
 def _load_spacy(model_name: str):
     """
     Load a spaCy model, returning None if spaCy or the model is unavailable.
@@ -435,8 +452,8 @@ def extract_entities(
     without spaCy, and uses spaCy automatically when it is installed.
     """
     if not text.strip():
-    text = _strip_relation_markup(text)
         return []
+    text = _strip_relation_markup(text)
 
     # Skip pages that are pure OCR garbage (FOIA redactions, numeric tables)
     if _is_ocr_junk is not None and _is_ocr_junk(text[:2000], "foia"):
