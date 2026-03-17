@@ -52,4 +52,43 @@ conn.commit()
 print(f"✓ {conn.execute('SELECT COUNT(*) FROM entities').fetchone()[0]} entities, {n} relationships rebuilt")
 conn.close()
 PYEOF
+echo ""
+echo "Running canonicalization pass..."
+python3 - << PYEOF
+import sys
+sys.path.insert(0, '.')
+from apps.api.database import SessionLocal
+from apps.api.services.canonicalize import run_canonicalization
+db = SessionLocal()
+try:
+    result = run_canonicalization(db, commit=True)
+    print(f"  noise_deleted={result['noise_deleted']} merged={result['cross_type_merged']+result['judge_prefix_resolved']} type_fixes={result['type_fixes']} entities={result['entities_remaining']}")
+finally:
+    db.close()
+PYEOF
+
+echo "Rebuilding relationships from canonical mentions..."
+python3 - << PYEOF
+import sqlite3, uuid
+from collections import defaultdict
+from itertools import combinations
+conn = sqlite3.connect("opensight.db")
+conn.execute("DELETE FROM entity_relationships")
+doc_to_entities = defaultdict(list)
+for eid, did in conn.execute("SELECT entity_id, document_id FROM mentions").fetchall():
+    doc_to_entities[did].append(eid)
+pairs = defaultdict(lambda: [0, 0])
+for did, eids in doc_to_entities.items():
+    for a, b in combinations(sorted(set(eids)), 2):
+        pairs[(a,b)][0] += 1; pairs[(a,b)][1] += 1
+n = 0
+for (a, b), (w, dc) in pairs.items():
+    conn.execute("INSERT INTO entity_relationships (id,entity_a_id,entity_b_id,weight,doc_count,relationship_type,confidence,created_at,updated_at) VALUES (?,?,?,?,?,'co_occurrence',0.5,datetime('now'),datetime('now'))", (str(uuid.uuid4()), a, b, w, dc))
+    n += 1
+conn.commit()
+e = conn.execute("SELECT COUNT(*) FROM entities").fetchone()[0]
+print(f"  {e} entities, {n} relationships")
+conn.close()
+PYEOF
+
 echo "Done. Run scripts/entity_audit.sh to see updated entities."
