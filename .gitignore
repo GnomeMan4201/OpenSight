@@ -25,3 +25,6 @@ Thumbs.db
 
 # local env
 .env
+
+opensight.db-shm
+opensight.db-wal
