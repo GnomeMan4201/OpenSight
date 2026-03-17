@@ -10,6 +10,7 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from apps.api.database import get_db
+from apps.api.services.dossier import build_dossier
 from apps.api.models import Entity, Mention, Document
 from apps.api.schemas import EntityListOut, EntityOut
 
@@ -186,3 +187,14 @@ def update_review_status(
     entity.review_status = status
     db.commit()
     return {"entity_id": entity_id, "review_status": status}
+
+
+@router.get("/{entity_id}/dossier")
+def get_entity_dossier(entity_id: str, db: Session = Depends(get_db)):
+    """Full investigator dossier for a canonical entity."""
+    from fastapi import HTTPException
+    dossier = build_dossier(entity_id, db)
+    if dossier is None:
+        raise HTTPException(status_code=404, detail=f"Entity {entity_id} not found")
+    return dossier
+
