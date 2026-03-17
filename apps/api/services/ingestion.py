@@ -29,6 +29,7 @@ from sqlalchemy import text, update
 from sqlalchemy.orm import Session
 
 from apps.api.config import settings
+from apps.api.services.canonicalize import run_canonicalization, is_noise_entity
 from apps.api.models import Document, DocumentPage, Entity, EntityRelationship, Mention, RedactionFlag
 from apps.api.services.entity_extraction import extract_entities
 from apps.api.services.claim_extraction import extract_claims, ClaimCandidate
@@ -383,6 +384,10 @@ def _upsert_entity(
     confidence: float,
 ) -> Entity:
     """Get or create an Entity row; merge aliases. Does not commit."""
+    # ── Noise gate: reject junk before it enters the DB ─────────────────────
+    if is_noise_entity(canonical_name, entity_type):
+        return None  # caller must handle None
+
     existing = (
         db.query(Entity)
         .filter_by(entity_type=entity_type, canonical_name=canonical_name)
@@ -580,6 +585,8 @@ def _run_pipeline(document_id: str, db: Session) -> None:
                         raw_name=ex.raw_name,
                         confidence=ex.confidence,
                     )
+                    if entity is None:
+                        continue  # noise gate rejected this entity
                     db.add(Mention(
                         entity_id=entity.id,
                         document_id=document_id,
@@ -702,6 +709,11 @@ def _run_pipeline(document_id: str, db: Session) -> None:
     log.info("[%s] Stage 6.5/7 — building entity co-occurrence graph", document_id)
     _upsert_relationships(db, document_id)
     db.commit()
+
+    # ── Stage 6.6: Canonicalization ───────────────────────────────────────────
+    log.info("[%s] Stage 6.6/7 — running canonicalization pass", document_id)
+    canon_summary = run_canonicalization(db, commit=True)
+    log.info("[%s] Stage 6.6/7 — canon: %s", document_id, canon_summary)
 
     # ── Stage 7: Done ─────────────────────────────────────────────────────────
     doc.status     = "done"
