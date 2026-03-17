@@ -1900,7 +1900,7 @@ async function loadDossier(entityId) {
         (members.length
           ? `<div style="display:flex;flex-wrap:wrap;gap:3px;">
               ${members.map(mb =>
-                `<span onclick="selectEntityById('${mb.name}')"
+                `<span onclick="selectEntityById('${mb.id || mb.name}')"
                   style="cursor:pointer;background:var(--panel);padding:1px 6px;border-radius:2px;font-size:10px;${DIM};"
                 >${mb.name}</span>`
               ).join('')}

@@ -112,7 +112,7 @@ def build_dossier(entity_id: str, db: Session) -> dict | None:
         "community_size":      own_comm["size"] if own_comm else 0,
         "community_density":   own_comm["density"] if own_comm else 0.0,
         "community_members": [
-            {"name": m["name"], "type": m["entity_type"], "mentions": m["mention_count"]}
+            {"id": m["id"], "name": m["name"], "type": m["entity_type"], "mentions": m["mention_count"]}
             for m in (own_comm["members"] if own_comm else [])
             if m["name"] != entity.canonical_name
         ],
