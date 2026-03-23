@@ -1,0 +1,72 @@
+{
+  "id": "doc_00244",
+  "title": "United States v. Rivergate Holdings \u2014 Sentencing Hearing",
+  "date": "2019-02-02",
+  "source": "Case Activity Update",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Rivergate Holdings",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "sentencing",
+  "summary": "Judge Edward Navarro conducted sentencing proceedings following findings related to investor disclosures.",
+  "entities": [
+    "Chief Financial Officer",
+    "Court of Appeals",
+    "Expert Witness",
+    "Federal Trade Commission",
+    "Investor Group",
+    "Judge Edward Navarro",
+    "Regulatory Notice",
+    "Sentencing Memorandum",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Rivergate Holdings",
+    "investor disclosures"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Edward Navarro",
+      "type": "sentenced",
+      "target": "Chief Financial Officer"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "prosecuted",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Edward Navarro",
+      "type": "assigned_to",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "references_topic",
+      "target": "investor disclosures"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "sentencing",
+    "investor_disclosures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 4,
+    "timeline_bucket": 2019
+  }
+}

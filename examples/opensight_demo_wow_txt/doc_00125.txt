@@ -1,0 +1,32 @@
+Federal Trade Commission v. BrightCart Platform — Summary Judgment Motion
+
+Case Name: Federal Trade Commission v. BrightCart Platform
+Date: 2021-10-23
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: summary_judgment
+
+Summary:
+United States moved for summary judgment on a record centered on platform monopoly allegations.
+
+Entities:
+- Court of Appeals
+- Economic Expert
+- Federal Trade Commission
+- Federal Trade Commission v. BrightCart Platform
+- Judge Patrick Sloan
+- Market Analysis
+- Summary Judgment
+- Titan Search
+- U.S. District Court for the Southern District of New York
+- United States
+- platform monopoly allegations
+
+Relationships:
+- United States --moved_for_summary_judgment_in--> Federal Trade Commission v. BrightCart Platform
+- Judge Patrick Sloan --considering--> Summary Judgment
+- Federal Trade Commission v. BrightCart Platform --filed_in--> U.S. District Court for the Southern District of New York
+- Federal Trade Commission v. BrightCart Platform --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Patrick Sloan --assigned_to--> Federal Trade Commission v. BrightCart Platform
+- Federal Trade Commission v. BrightCart Platform --references_topic--> platform monopoly allegations
+- Federal Trade Commission --involved_in--> Federal Trade Commission v. BrightCart Platform

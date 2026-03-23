@@ -1,0 +1,29 @@
+Federal Trade Commission v. Titan Search — Complaint Filed
+
+Case Name: Federal Trade Commission v. Titan Search
+Date: 2011-11-08
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: complaint_filed
+
+Summary:
+BrightCart Platform filed a complaint against Federal Trade Commission in U.S. District Court for the Southern District of New York, alleging self-preferencing.
+
+Entities:
+- BrightCart Platform
+- Court of Appeals
+- Economic Expert
+- Federal Trade Commission
+- Federal Trade Commission v. Titan Search
+- Judge Patrick Sloan
+- Market Analysis
+- U.S. District Court for the Southern District of New York
+- self-preferencing
+
+Relationships:
+- BrightCart Platform --filed_complaint_against--> Federal Trade Commission
+- U.S. District Court for the Southern District of New York --docketed--> Federal Trade Commission v. Titan Search
+- Federal Trade Commission v. Titan Search --filed_in--> U.S. District Court for the Southern District of New York
+- Federal Trade Commission v. Titan Search --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Patrick Sloan --assigned_to--> Federal Trade Commission v. Titan Search
+- Federal Trade Commission --involved_in--> Federal Trade Commission v. Titan Search

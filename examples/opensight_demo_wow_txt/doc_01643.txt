@@ -1,0 +1,33 @@
+United States v. Rivergate Holdings — Appeal Filed
+
+Case Name: United States v. Rivergate Holdings
+Date: 2013-07-05
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: appeal_filed
+
+Summary:
+A notice of appeal was filed challenging rulings concerning investor disclosures.
+
+Entities:
+- Court of Appeals
+- Federal Trade Commission
+- Investor Group
+- Judge Edward Navarro
+- Notice of Appeal
+- Pine Harbor Capital
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Rivergate Holdings
+- investor disclosures
+
+Relationships:
+- Pine Harbor Capital --appealed--> United States v. Rivergate Holdings
+- Court of Appeals --reviewing--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Edward Navarro --assigned_to--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --references_topic--> investor disclosures
+- Supreme Court --reviewing--> United States v. Rivergate Holdings
+- Court of Appeals --reviewing--> United States v. Rivergate Holdings

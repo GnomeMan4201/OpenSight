@@ -1,0 +1,31 @@
+United States v. Sterling Diagnostics — Witness Testimony
+
+Case Name: United States v. Sterling Diagnostics
+Date: 2024-02-20
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: witness_testimony
+
+Summary:
+Witness testimony described internal events and decisions related to investor disclosures.
+
+Entities:
+- Court of Appeals
+- Executive A
+- Investor Group
+- Judge Daniel Pike
+- Securities and Exchange Commission
+- Supreme Court
+- Trial Testimony
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Sterling Diagnostics
+- Witness
+- investor disclosures
+
+Relationships:
+- Witness --testified_in--> United States v. Sterling Diagnostics
+- Judge Daniel Pike --heard_testimony_in--> United States v. Sterling Diagnostics
+- United States v. Sterling Diagnostics --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Sterling Diagnostics --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Daniel Pike --assigned_to--> United States v. Sterling Diagnostics

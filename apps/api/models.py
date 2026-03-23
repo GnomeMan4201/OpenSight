@@ -170,6 +170,9 @@ class EntityRelationship(Base):
     entity_b_id  = Column(String,  ForeignKey("entities.id", ondelete="CASCADE"), nullable=False)
     weight       = Column(Integer, default=1)       # incremented on each co-occurrence
     doc_count    = Column(Integer, default=1)       # number of distinct documents
+    relationship_type = Column(String, default="co_occurrence")
+    confidence        = Column(Float, default=0.5)
+    sentence_span     = Column(Text, nullable=True)
     created_at   = Column(DateTime, default=datetime.utcnow)
     updated_at   = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 

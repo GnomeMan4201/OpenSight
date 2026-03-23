@@ -1,0 +1,66 @@
+{
+  "id": "doc_02875",
+  "title": "United States v. Rivergate Holdings \u2014 Expert Report Submitted",
+  "date": "2014-05-28",
+  "source": "Hearing Note",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Rivergate Holdings",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "expert_report",
+  "summary": "The parties exchanged expert materials concerning damages, causation, and clinical test misrepresentation.",
+  "entities": [
+    "Court of Appeals",
+    "Damages Model",
+    "Executive A",
+    "Expert Witness",
+    "Federal Trade Commission",
+    "Investor Group",
+    "Judge Edward Navarro",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Rivergate Holdings",
+    "clinical test misrepresentation"
+  ],
+  "relationships": [
+    {
+      "source": "Expert Witness",
+      "type": "submitted_report_in",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "includes_issue",
+      "target": "clinical test misrepresentation"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Edward Navarro",
+      "type": "assigned_to",
+      "target": "United States v. Rivergate Holdings"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "expert_report",
+    "clinical_test_misrepresentation",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 4,
+    "timeline_bucket": 2014
+  }
+}

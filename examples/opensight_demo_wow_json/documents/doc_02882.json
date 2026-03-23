@@ -1,0 +1,66 @@
+{
+  "id": "doc_02882",
+  "title": "Federal Trade Commission v. BrightCart Platform \u2014 Expert Report Submitted",
+  "date": "2016-12-01",
+  "source": "Case Activity Update",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. BrightCart Platform",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "expert_report",
+  "summary": "The parties exchanged expert materials concerning damages, causation, and ad exchange bidding practices.",
+  "entities": [
+    "Court of Appeals",
+    "Damages Model",
+    "Economic Expert",
+    "Expert Witness",
+    "Federal Trade Commission",
+    "Federal Trade Commission v. BrightCart Platform",
+    "Judge Robert Kline",
+    "Market Analysis",
+    "Titan Search",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "ad exchange bidding practices"
+  ],
+  "relationships": [
+    {
+      "source": "Expert Witness",
+      "type": "submitted_report_in",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "includes_issue",
+      "target": "ad exchange bidding practices"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Robert Kline",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "expert_report",
+    "ad_exchange_bidding_practices",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 5,
+    "timeline_bucket": 2016
+  }
+}

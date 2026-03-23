@@ -1,0 +1,69 @@
+{
+  "id": "doc_04166",
+  "title": "Federal Trade Commission v. Titan Search \u2014 Summary Judgment Motion",
+  "date": "2017-09-16",
+  "source": "Opinion Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. Titan Search",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "summary_judgment",
+  "summary": "A summary judgment motion was filed seeking judgment on issues involving market foreclosure.",
+  "entities": [
+    "BrightCart Platform",
+    "Court of Appeals",
+    "Department of Justice Antitrust Division",
+    "Economic Expert",
+    "Expert Witness",
+    "Federal Trade Commission v. Titan Search",
+    "Investor Group",
+    "Judge Patrick Sloan",
+    "Market Analysis",
+    "Metro Ad Exchange",
+    "Regulatory Notice",
+    "Summary Judgment",
+    "Supreme Court",
+    "U.S. District Court for the District of Columbia",
+    "market foreclosure"
+  ],
+  "relationships": [
+    {
+      "source": "BrightCart Platform",
+      "type": "moved_for_summary_judgment_in",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "considering",
+      "target": "Summary Judgment"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. Titan Search"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "summary_judgment",
+    "market_foreclosure",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 3,
+    "timeline_bucket": 2017
+  }
+}

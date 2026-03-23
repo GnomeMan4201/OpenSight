@@ -1,0 +1,30 @@
+United States v. Meridian BioLabs — Complaint Filed
+
+Case Name: United States v. Meridian BioLabs
+Date: 2021-10-26
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: complaint_filed
+
+Summary:
+A civil complaint was entered in U.S. District Court for the Southern District of New York naming Executive B as defendant and alleging wire fraud allegations.
+
+Entities:
+- Court of Appeals
+- Executive B
+- Federal Trade Commission
+- Investor Group
+- Judge Edward Navarro
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Meridian BioLabs
+- wire fraud allegations
+
+Relationships:
+- United States --filed_complaint_against--> Executive B
+- U.S. District Court for the Southern District of New York --docketed--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Meridian BioLabs --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Edward Navarro --assigned_to--> United States v. Meridian BioLabs
+- Court of Appeals --reviewing--> United States v. Meridian BioLabs

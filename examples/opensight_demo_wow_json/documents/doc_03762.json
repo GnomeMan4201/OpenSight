@@ -1,0 +1,76 @@
+{
+  "id": "doc_03762",
+  "title": "Northstar Logic v. Quantum Handsets \u2014 Jury Verdict",
+  "date": "2021-03-01",
+  "source": "Case Activity Update",
+  "cluster": "Patent Litigation",
+  "case_name": "Northstar Logic v. Quantum Handsets",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "jury_verdict",
+  "summary": "The jury found on multiple claims after deliberation on allegations involving battery optimization patents.",
+  "entities": [
+    "Apex Mobile",
+    "Court of Appeals",
+    "Judge Elena Ward",
+    "Jury",
+    "Northstar Logic",
+    "Northstar Logic v. Quantum Handsets",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "Verdict Form",
+    "battery optimization patents"
+  ],
+  "relationships": [
+    {
+      "source": "Jury",
+      "type": "returned_verdict_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Judge Elena Ward",
+      "type": "entered_verdict_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Elena Ward",
+      "type": "assigned_to",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "jury_verdict",
+    "battery_optimization_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 1,
+    "timeline_bucket": 2021
+  }
+}

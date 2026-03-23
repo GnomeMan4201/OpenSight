@@ -1,0 +1,70 @@
+{
+  "id": "doc_01152",
+  "title": "Federal Trade Commission v. Titan Search \u2014 Regulatory Notice",
+  "date": "2021-10-20",
+  "source": "Court Filing Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. Titan Search",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "regulatory_notice",
+  "summary": "A regulatory notice was issued concerning reporting and disclosure obligations tied to ad exchange bidding practices.",
+  "entities": [
+    "Court of Appeals",
+    "Department of Justice Antitrust Division",
+    "Economic Expert",
+    "Federal Trade Commission v. Titan Search",
+    "Judge Naomi Ellis",
+    "Market Analysis",
+    "Omnidata Retail",
+    "Regulatory Notice",
+    "State Coalition",
+    "U.S. District Court for the Southern District of New York",
+    "ad exchange bidding practices"
+  ],
+  "relationships": [
+    {
+      "source": "Department of Justice Antitrust Division",
+      "type": "issued_notice_involving",
+      "target": "Omnidata Retail"
+    },
+    {
+      "source": "Department of Justice Antitrust Division",
+      "type": "referenced",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Naomi Ellis",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Federal Trade Commission v. Titan Search"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "regulatory_notice",
+    "ad_exchange_bidding_practices",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 3,
+    "timeline_bucket": 2021
+  }
+}

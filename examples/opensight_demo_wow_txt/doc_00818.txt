@@ -1,0 +1,33 @@
+United States v. Metro Ad Exchange — Discovery Order
+
+Case Name: United States v. Metro Ad Exchange
+Date: 2013-01-30
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: discovery_order
+
+Summary:
+Judge Naomi Ellis issued a discovery order requiring production of records related to platform monopoly allegations.
+
+Entities:
+- Court of Appeals
+- Document Production
+- Economic Expert
+- Federal Trade Commission
+- Financial Records
+- Internal Emails
+- Judge Naomi Ellis
+- Market Analysis
+- Metro Ad Exchange
+- State Coalition
+- U.S. District Court for the District of Columbia
+- United States v. Metro Ad Exchange
+- platform monopoly allegations
+
+Relationships:
+- Judge Naomi Ellis --issued_order_in--> United States v. Metro Ad Exchange
+- U.S. District Court for the District of Columbia --ordered_discovery_in--> United States v. Metro Ad Exchange
+- United States v. Metro Ad Exchange --filed_in--> U.S. District Court for the District of Columbia
+- United States v. Metro Ad Exchange --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> United States v. Metro Ad Exchange
+- Court of Appeals --reviewing--> United States v. Metro Ad Exchange

@@ -1,0 +1,33 @@
+BluePeak Tech v. Helix Circuits — Hearing Held
+
+Case Name: BluePeak Tech v. Helix Circuits
+Date: 2012-12-27
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: hearing
+
+Summary:
+The court held a hearing in BluePeak Tech v. Helix Circuits to address disputed issues concerning camera image processing patents.
+
+Entities:
+- BluePeak Tech v. Helix Circuits
+- Court Hearing
+- Court of Appeals
+- Helix Circuits
+- Judge Lucy Harrow
+- Oral Argument
+- Precedent
+- Quantum Handsets
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- camera image processing patents
+
+Relationships:
+- Judge Lucy Harrow --held_hearing_for--> BluePeak Tech v. Helix Circuits
+- Helix Circuits --appeared_in--> BluePeak Tech v. Helix Circuits
+- Quantum Handsets --appeared_in--> BluePeak Tech v. Helix Circuits
+- BluePeak Tech v. Helix Circuits --filed_in--> U.S. District Court for the Northern District of California
+- BluePeak Tech v. Helix Circuits --belongs_to_cluster--> Patent Litigation
+- Judge Lucy Harrow --assigned_to--> BluePeak Tech v. Helix Circuits
+- U.S. Patent and Trademark Office --involved_in--> BluePeak Tech v. Helix Circuits

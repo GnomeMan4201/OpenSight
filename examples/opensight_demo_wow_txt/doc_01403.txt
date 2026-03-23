@@ -1,0 +1,32 @@
+United States v. Meridian BioLabs — Complaint Filed
+
+Case Name: United States v. Meridian BioLabs
+Date: 2021-12-14
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: complaint_filed
+
+Summary:
+United States filed a complaint against Pine Harbor Capital in U.S. District Court for the Southern District of New York, alleging financial reporting fraud.
+
+Entities:
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Daniel Pike
+- Pine Harbor Capital
+- Regulatory Notice
+- Supreme Court
+- U.S. Department of Justice
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Meridian BioLabs
+- financial reporting fraud
+
+Relationships:
+- United States --filed_complaint_against--> Pine Harbor Capital
+- U.S. District Court for the Southern District of New York --docketed--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Meridian BioLabs --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Daniel Pike --assigned_to--> United States v. Meridian BioLabs
+- U.S. Department of Justice --involved_in--> United States v. Meridian BioLabs

@@ -1,0 +1,29 @@
+Northstar Logic v. Quantum Handsets — Complaint Filed
+
+Case Name: Northstar Logic v. Quantum Handsets
+Date: 2014-10-25
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: complaint_filed
+
+Summary:
+Quantum Handsets filed a complaint against Orion Devices in U.S. District Court for the Northern District of California, alleging wireless chipset design.
+
+Entities:
+- Court of Appeals
+- Judge Martin Cole
+- Northstar Logic v. Quantum Handsets
+- Orion Devices
+- Precedent
+- Quantum Handsets
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- wireless chipset design
+
+Relationships:
+- Quantum Handsets --filed_complaint_against--> Orion Devices
+- U.S. District Court for the Northern District of California --docketed--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --filed_in--> U.S. District Court for the Northern District of California
+- Northstar Logic v. Quantum Handsets --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> Northstar Logic v. Quantum Handsets

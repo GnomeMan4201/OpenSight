@@ -1,0 +1,83 @@
+{
+  "id": "doc_04192",
+  "title": "United States v. Pine Harbor Capital \u2014 Hearing Held",
+  "date": "2013-04-13",
+  "source": "Opinion Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Pine Harbor Capital",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Daniel Pike conducted a hearing involving arguments by United States and Rivergate Holdings on financial reporting fraud.",
+  "entities": [
+    "Court Hearing",
+    "Court of Appeals",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Daniel Pike",
+    "Oral Argument",
+    "Regulatory Notice",
+    "Rivergate Holdings",
+    "Securities and Exchange Commission",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "United States",
+    "United States v. Pine Harbor Capital",
+    "financial reporting fraud"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Daniel Pike",
+      "type": "held_hearing_for",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "United States",
+      "type": "appeared_in",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "Rivergate Holdings",
+      "type": "appeared_in",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Daniel Pike",
+      "type": "assigned_to",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "references_topic",
+      "target": "financial reporting fraud"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "United States v. Pine Harbor Capital"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "hearing",
+    "financial_reporting_fraud",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 1,
+    "timeline_bucket": 2013
+  }
+}

@@ -1,0 +1,36 @@
+CodeForge v. Open Runtime Labs — Appellate Opinion
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2014-03-09
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: appellate_opinion
+
+Summary:
+The reviewing court issued an opinion clarifying standards related to source code licensing.
+
+Entities:
+- Appellate Panel
+- Atlas Software
+- CodeForge v. Open Runtime Labs
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Investor Group
+- Judge Lena Brooks
+- Precedent
+- Regulatory Notice
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- source code licensing
+
+Relationships:
+- Court of Appeals --issued_opinion_in--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --cites--> Precedent
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Western District of Washington
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Lena Brooks --assigned_to--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --references_topic--> source code licensing
+- Supreme Court --reviewing--> CodeForge v. Open Runtime Labs

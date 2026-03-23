@@ -1,0 +1,32 @@
+Federal Trade Commission v. Titan Search — Regulatory Notice
+
+Case Name: Federal Trade Commission v. Titan Search
+Date: 2017-12-08
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: regulatory_notice
+
+Summary:
+Department of Justice Antitrust Division issued a notice connected to allegations involving exclusive dealing.
+
+Entities:
+- BrightCart Platform
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Federal Trade Commission v. Titan Search
+- Judge Patrick Sloan
+- Market Analysis
+- Metro Ad Exchange
+- Regulatory Notice
+- U.S. District Court for the District of Columbia
+- exclusive dealing
+
+Relationships:
+- Department of Justice Antitrust Division --issued_notice_involving--> Metro Ad Exchange
+- Department of Justice Antitrust Division --referenced--> Federal Trade Commission v. Titan Search
+- Federal Trade Commission v. Titan Search --filed_in--> U.S. District Court for the District of Columbia
+- Federal Trade Commission v. Titan Search --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Patrick Sloan --assigned_to--> Federal Trade Commission v. Titan Search
+- Federal Trade Commission v. Titan Search --references_topic--> exclusive dealing
+- Department of Justice Antitrust Division --involved_in--> Federal Trade Commission v. Titan Search

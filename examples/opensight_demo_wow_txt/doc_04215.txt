@@ -1,0 +1,31 @@
+State Coalition v. Omnidata Retail — Appellate Opinion
+
+Case Name: State Coalition v. Omnidata Retail
+Date: 2018-04-27
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: appellate_opinion
+
+Summary:
+The reviewing court issued an opinion clarifying standards related to self-preferencing.
+
+Entities:
+- Appellate Panel
+- Court of Appeals
+- Economic Expert
+- Federal Trade Commission
+- Judge Naomi Ellis
+- Market Analysis
+- Omnidata Retail
+- Precedent
+- State Coalition v. Omnidata Retail
+- U.S. District Court for the Southern District of New York
+- self-preferencing
+
+Relationships:
+- Court of Appeals --issued_opinion_in--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --cites--> Precedent
+- State Coalition v. Omnidata Retail --filed_in--> U.S. District Court for the Southern District of New York
+- State Coalition v. Omnidata Retail --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> State Coalition v. Omnidata Retail
+- Court of Appeals --reviewing--> State Coalition v. Omnidata Retail

@@ -1,0 +1,31 @@
+United States v. Pine Harbor Capital — Complaint Filed
+
+Case Name: United States v. Pine Harbor Capital
+Date: 2023-06-23
+Court: U.S. District Court for the Northern District of California
+Cluster: Corporate Fraud Trial
+Event Type: complaint_filed
+
+Summary:
+A civil complaint was entered in U.S. District Court for the Northern District of California naming Executive B as defendant and alleging investor disclosures.
+
+Entities:
+- Court of Appeals
+- Executive B
+- Investor Group
+- Judge Edward Navarro
+- Securities and Exchange Commission
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- United States
+- United States v. Pine Harbor Capital
+- investor disclosures
+
+Relationships:
+- United States --filed_complaint_against--> Executive B
+- U.S. District Court for the Northern District of California --docketed--> United States v. Pine Harbor Capital
+- United States v. Pine Harbor Capital --filed_in--> U.S. District Court for the Northern District of California
+- United States v. Pine Harbor Capital --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Edward Navarro --assigned_to--> United States v. Pine Harbor Capital
+- United States v. Pine Harbor Capital --references_topic--> investor disclosures
+- Court of Appeals --reviewing--> United States v. Pine Harbor Capital

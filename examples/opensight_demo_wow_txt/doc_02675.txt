@@ -1,0 +1,34 @@
+Federal Trade Commission v. Titan Search — Complaint Filed
+
+Case Name: Federal Trade Commission v. Titan Search
+Date: 2016-03-21
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: complaint_filed
+
+Summary:
+Titan Search filed a complaint against United States in U.S. District Court for the Southern District of New York, alleging market foreclosure.
+
+Entities:
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Expert Witness
+- Federal Trade Commission v. Titan Search
+- Investor Group
+- Judge Patrick Sloan
+- Market Analysis
+- Regulatory Notice
+- Titan Search
+- U.S. District Court for the Southern District of New York
+- United States
+- market foreclosure
+
+Relationships:
+- Titan Search --filed_complaint_against--> United States
+- U.S. District Court for the Southern District of New York --docketed--> Federal Trade Commission v. Titan Search
+- Federal Trade Commission v. Titan Search --filed_in--> U.S. District Court for the Southern District of New York
+- Federal Trade Commission v. Titan Search --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Patrick Sloan --assigned_to--> Federal Trade Commission v. Titan Search
+- Federal Trade Commission v. Titan Search --references_topic--> market foreclosure
+- Department of Justice Antitrust Division --involved_in--> Federal Trade Commission v. Titan Search

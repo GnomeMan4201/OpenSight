@@ -1,0 +1,31 @@
+Signal Grid v. Vector Stack — Appellate Opinion
+
+Case Name: Signal Grid v. Vector Stack
+Date: 2020-03-28
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: appellate_opinion
+
+Summary:
+An appellate opinion addressed legal questions arising from copyrightability of interfaces.
+
+Entities:
+- Appellate Panel
+- Atlas Software
+- Court of Appeals
+- Developer Ecosystem
+- Horizon Systems
+- Judge Lena Brooks
+- Precedent
+- Signal Grid v. Vector Stack
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- copyrightability of interfaces
+
+Relationships:
+- Court of Appeals --issued_opinion_in--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --cites--> Precedent
+- Signal Grid v. Vector Stack --filed_in--> U.S. District Court for the Western District of Washington
+- Signal Grid v. Vector Stack --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Lena Brooks --assigned_to--> Signal Grid v. Vector Stack

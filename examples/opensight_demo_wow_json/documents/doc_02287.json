@@ -1,0 +1,75 @@
+{
+  "id": "doc_02287",
+  "title": "SyntaxWorks v. Horizon Systems \u2014 High Court Review",
+  "date": "2015-04-03",
+  "source": "Court Filing Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "SyntaxWorks v. Horizon Systems",
+  "court": "U.S. District Court for the Western District of Washington",
+  "court_type": "district",
+  "event_type": "supreme_court_review",
+  "summary": "Certiorari was granted on issues concerning software interoperability in SyntaxWorks v. Horizon Systems.",
+  "entities": [
+    "CodeForge",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Judge Lena Brooks",
+    "Nova Cloud",
+    "Petition for Review",
+    "Supreme Court",
+    "SyntaxWorks v. Horizon Systems",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Western District of Washington",
+    "software interoperability"
+  ],
+  "relationships": [
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "raises_issue",
+      "target": "software interoperability"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Western District of Washington"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Lena Brooks",
+      "type": "assigned_to",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "references_topic",
+      "target": "software interoperability"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "SyntaxWorks v. Horizon Systems"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "supreme_court_review",
+    "software_interoperability",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 3,
+    "timeline_bucket": 2015
+  }
+}

@@ -1,0 +1,34 @@
+BluePeak Tech v. Helix Circuits — Complaint Filed
+
+Case Name: BluePeak Tech v. Helix Circuits
+Date: 2012-11-19
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: complaint_filed
+
+Summary:
+Quantum Handsets filed a complaint against Apex Mobile in U.S. District Court for the Northern District of California, alleging user interface gestures.
+
+Entities:
+- Apex Mobile
+- BluePeak Tech v. Helix Circuits
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Lucy Harrow
+- Precedent
+- Quantum Handsets
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- user interface gestures
+
+Relationships:
+- Quantum Handsets --filed_complaint_against--> Apex Mobile
+- U.S. District Court for the Northern District of California --docketed--> BluePeak Tech v. Helix Circuits
+- BluePeak Tech v. Helix Circuits --filed_in--> U.S. District Court for the Northern District of California
+- BluePeak Tech v. Helix Circuits --belongs_to_cluster--> Patent Litigation
+- Judge Lucy Harrow --assigned_to--> BluePeak Tech v. Helix Circuits
+- Supreme Court --reviewing--> BluePeak Tech v. Helix Circuits
+- U.S. Patent and Trademark Office --involved_in--> BluePeak Tech v. Helix Circuits

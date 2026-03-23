@@ -1,0 +1,31 @@
+Apex Mobile v. Orion Devices — Summary Judgment Motion
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2016-10-31
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: summary_judgment
+
+Summary:
+Vertex Labs moved for summary judgment on a record centered on smartphone interface patents.
+
+Entities:
+- Apex Mobile v. Orion Devices
+- Court of Appeals
+- Judge Lucy Harrow
+- Nimbus Systems
+- Precedent
+- Summary Judgment
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- Vertex Labs
+- smartphone interface patents
+
+Relationships:
+- Vertex Labs --moved_for_summary_judgment_in--> Apex Mobile v. Orion Devices
+- Judge Lucy Harrow --considering--> Summary Judgment
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the Northern District of California
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Lucy Harrow --assigned_to--> Apex Mobile v. Orion Devices
+- U.S. Patent and Trademark Office --involved_in--> Apex Mobile v. Orion Devices

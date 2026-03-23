@@ -1,0 +1,80 @@
+{
+  "id": "doc_00440",
+  "title": "Federal Trade Commission v. BrightCart Platform \u2014 Summary Judgment Motion",
+  "date": "2010-12-06",
+  "source": "Case Activity Update",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. BrightCart Platform",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "summary_judgment",
+  "summary": "A summary judgment motion was filed seeking judgment on issues involving exclusive dealing.",
+  "entities": [
+    "Court of Appeals",
+    "Economic Expert",
+    "Federal Trade Commission",
+    "Federal Trade Commission v. BrightCart Platform",
+    "Judge Naomi Ellis",
+    "Market Analysis",
+    "Summary Judgment",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "exclusive dealing"
+  ],
+  "relationships": [
+    {
+      "source": "United States",
+      "type": "moved_for_summary_judgment_in",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Judge Naomi Ellis",
+      "type": "considering",
+      "target": "Summary Judgment"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Naomi Ellis",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "references_topic",
+      "target": "exclusive dealing"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "involved_in",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "summary_judgment",
+    "exclusive_dealing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 2,
+    "timeline_bucket": 2010
+  }
+}

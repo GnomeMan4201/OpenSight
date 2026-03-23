@@ -1,0 +1,32 @@
+United States v. Rivergate Holdings — Expert Report Submitted
+
+Case Name: United States v. Rivergate Holdings
+Date: 2021-01-20
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: expert_report
+
+Summary:
+The parties exchanged expert materials concerning damages, causation, and investor disclosures.
+
+Entities:
+- Chief Financial Officer
+- Court of Appeals
+- Damages Model
+- Expert Witness
+- Investor Group
+- Judge Edward Navarro
+- Securities and Exchange Commission
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Rivergate Holdings
+- investor disclosures
+
+Relationships:
+- Expert Witness --submitted_report_in--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --includes_issue--> investor disclosures
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Edward Navarro --assigned_to--> United States v. Rivergate Holdings
+- Court of Appeals --reviewing--> United States v. Rivergate Holdings

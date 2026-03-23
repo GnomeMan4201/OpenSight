@@ -1,0 +1,31 @@
+Federal Trade Commission v. Titan Search — Appellate Opinion
+
+Case Name: Federal Trade Commission v. Titan Search
+Date: 2016-08-30
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: appellate_opinion
+
+Summary:
+The reviewing court issued an opinion clarifying standards related to self-preferencing.
+
+Entities:
+- Appellate Panel
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Federal Trade Commission v. Titan Search
+- Judge Patrick Sloan
+- Market Analysis
+- Precedent
+- Titan Search
+- U.S. District Court for the Southern District of New York
+- United States
+- self-preferencing
+
+Relationships:
+- Court of Appeals --issued_opinion_in--> Federal Trade Commission v. Titan Search
+- Federal Trade Commission v. Titan Search --cites--> Precedent
+- Federal Trade Commission v. Titan Search --filed_in--> U.S. District Court for the Southern District of New York
+- Federal Trade Commission v. Titan Search --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Patrick Sloan --assigned_to--> Federal Trade Commission v. Titan Search

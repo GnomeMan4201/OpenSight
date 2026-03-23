@@ -1,0 +1,34 @@
+Signal Grid v. Vector Stack — Hearing Held
+
+Case Name: Signal Grid v. Vector Stack
+Date: 2016-07-01
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: hearing
+
+Summary:
+The court held a hearing in Signal Grid v. Vector Stack to address disputed issues concerning API reuse.
+
+Entities:
+- API reuse
+- Atlas Software
+- Court Hearing
+- Court of Appeals
+- Developer Ecosystem
+- Horizon Systems
+- Judge Lena Brooks
+- Oral Argument
+- Signal Grid v. Vector Stack
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+
+Relationships:
+- Judge Lena Brooks --held_hearing_for--> Signal Grid v. Vector Stack
+- Horizon Systems --appeared_in--> Signal Grid v. Vector Stack
+- Atlas Software --appeared_in--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --filed_in--> U.S. District Court for the Western District of Washington
+- Signal Grid v. Vector Stack --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Lena Brooks --assigned_to--> Signal Grid v. Vector Stack
+- Court of Appeals --reviewing--> Signal Grid v. Vector Stack
+- U.S. Copyright Office --involved_in--> Signal Grid v. Vector Stack

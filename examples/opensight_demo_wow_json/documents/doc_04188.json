@@ -1,0 +1,78 @@
+{
+  "id": "doc_04188",
+  "title": "Federal Trade Commission v. Titan Search \u2014 Discovery Order",
+  "date": "2018-02-09",
+  "source": "Court Filing Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. Titan Search",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "discovery_order",
+  "summary": "The court ordered limited discovery focused on communications and materials tied to exclusive dealing.",
+  "entities": [
+    "Court of Appeals",
+    "Department of Justice Antitrust Division",
+    "Document Production",
+    "Economic Expert",
+    "Federal Trade Commission v. Titan Search",
+    "Financial Records",
+    "Internal Emails",
+    "Judge Patrick Sloan",
+    "Market Analysis",
+    "Metro Ad Exchange",
+    "Omnidata Retail",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "exclusive dealing"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "issued_order_in",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "U.S. District Court for the Southern District of New York",
+      "type": "ordered_discovery_in",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "references_topic",
+      "target": "exclusive dealing"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Federal Trade Commission v. Titan Search"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "discovery_order",
+    "exclusive_dealing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 4,
+    "timeline_bucket": 2018
+  }
+}

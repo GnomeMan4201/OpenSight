@@ -1,0 +1,31 @@
+State Coalition v. Omnidata Retail — Regulatory Notice
+
+Case Name: State Coalition v. Omnidata Retail
+Date: 2013-11-24
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: regulatory_notice
+
+Summary:
+A regulatory notice was issued concerning reporting and disclosure obligations tied to platform monopoly allegations.
+
+Entities:
+- Court of Appeals
+- Economic Expert
+- Expert Witness
+- Federal Trade Commission
+- Investor Group
+- Judge Patrick Sloan
+- Market Analysis
+- Regulatory Notice
+- State Coalition
+- State Coalition v. Omnidata Retail
+- U.S. District Court for the District of Columbia
+- platform monopoly allegations
+
+Relationships:
+- Federal Trade Commission --issued_notice_involving--> State Coalition
+- Federal Trade Commission --referenced--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --filed_in--> U.S. District Court for the District of Columbia
+- State Coalition v. Omnidata Retail --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Patrick Sloan --assigned_to--> State Coalition v. Omnidata Retail

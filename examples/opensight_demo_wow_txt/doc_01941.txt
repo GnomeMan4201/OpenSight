@@ -1,0 +1,34 @@
+Signal Grid v. Vector Stack — Complaint Filed
+
+Case Name: Signal Grid v. Vector Stack
+Date: 2022-08-02
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: complaint_filed
+
+Summary:
+A civil complaint was entered in U.S. District Court for the Northern District of California naming Signal Grid as defendant and alleging API reuse.
+
+Entities:
+- API reuse
+- Atlas Software
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Investor Group
+- Judge William Avery
+- Regulatory Notice
+- Signal Grid
+- Signal Grid v. Vector Stack
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+
+Relationships:
+- Atlas Software --filed_complaint_against--> Signal Grid
+- U.S. District Court for the Northern District of California --docketed--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --filed_in--> U.S. District Court for the Northern District of California
+- Signal Grid v. Vector Stack --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge William Avery --assigned_to--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --references_topic--> API reuse
+- Court of Appeals --reviewing--> Signal Grid v. Vector Stack

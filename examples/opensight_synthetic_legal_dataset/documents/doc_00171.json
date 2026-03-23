@@ -1,0 +1,78 @@
+{
+  "id": "doc_00171",
+  "title": "SyntaxWorks v. Horizon Systems \u2014 Summary Judgment Motion",
+  "date": "2023-07-04",
+  "source": "Opinion Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "SyntaxWorks v. Horizon Systems",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "summary_judgment",
+  "summary": "A summary judgment motion was filed seeking judgment on issues involving source code licensing.",
+  "entities": [
+    "Atlas Software",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Lena Brooks",
+    "Regulatory Notice",
+    "Signal Grid",
+    "Summary Judgment",
+    "Supreme Court",
+    "SyntaxWorks v. Horizon Systems",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Northern District of California",
+    "source code licensing"
+  ],
+  "relationships": [
+    {
+      "source": "Signal Grid",
+      "type": "moved_for_summary_judgment_in",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "Judge Lena Brooks",
+      "type": "considering",
+      "target": "Summary Judgment"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Lena Brooks",
+      "type": "assigned_to",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "references_topic",
+      "target": "source code licensing"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "SyntaxWorks v. Horizon Systems"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "summary_judgment",
+    "source_code_licensing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 5,
+    "timeline_bucket": 2023
+  }
+}

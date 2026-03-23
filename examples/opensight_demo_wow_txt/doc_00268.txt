@@ -1,0 +1,34 @@
+Northstar Logic v. Quantum Handsets — Summary Judgment Motion
+
+Case Name: Northstar Logic v. Quantum Handsets
+Date: 2021-06-15
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: summary_judgment
+
+Summary:
+A summary judgment motion was filed seeking judgment on issues involving smartphone interface patents.
+
+Entities:
+- Apex Mobile
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Lucy Harrow
+- Northstar Logic
+- Northstar Logic v. Quantum Handsets
+- Precedent
+- Regulatory Notice
+- Summary Judgment
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- smartphone interface patents
+
+Relationships:
+- Northstar Logic --moved_for_summary_judgment_in--> Northstar Logic v. Quantum Handsets
+- Judge Lucy Harrow --considering--> Summary Judgment
+- Northstar Logic v. Quantum Handsets --filed_in--> U.S. District Court for the District of Delaware
+- Northstar Logic v. Quantum Handsets --belongs_to_cluster--> Patent Litigation
+- Judge Lucy Harrow --assigned_to--> Northstar Logic v. Quantum Handsets
+- Court of Appeals --reviewing--> Northstar Logic v. Quantum Handsets

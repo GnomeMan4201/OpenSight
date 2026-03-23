@@ -1,0 +1,71 @@
+{
+  "id": "doc_03812",
+  "title": "Apex Mobile v. Orion Devices \u2014 Hearing Held",
+  "date": "2019-07-22",
+  "source": "Docket Entry Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "Apex Mobile v. Orion Devices",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Martin Cole conducted a hearing involving arguments by Vertex Labs and BluePeak Tech on wireless chipset design.",
+  "entities": [
+    "Apex Mobile v. Orion Devices",
+    "BluePeak Tech",
+    "Court Hearing",
+    "Court of Appeals",
+    "Judge Martin Cole",
+    "Oral Argument",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "Vertex Labs",
+    "wireless chipset design"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Martin Cole",
+      "type": "held_hearing_for",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Vertex Labs",
+      "type": "appeared_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "BluePeak Tech",
+      "type": "appeared_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "Apex Mobile v. Orion Devices"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "hearing",
+    "wireless_chipset_design",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 1,
+    "timeline_bucket": 2019
+  }
+}

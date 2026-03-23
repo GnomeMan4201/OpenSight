@@ -1,0 +1,31 @@
+CodeForge v. Open Runtime Labs — High Court Review
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2016-10-14
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: supreme_court_review
+
+Summary:
+Certiorari was granted on issues concerning copyrightability of interfaces in CodeForge v. Open Runtime Labs.
+
+Entities:
+- CodeForge v. Open Runtime Labs
+- Court of Appeals
+- Developer Ecosystem
+- Judge Samuel Hart
+- Open Runtime Labs
+- Petition for Review
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- Vector Stack
+- copyrightability of interfaces
+
+Relationships:
+- Supreme Court --reviewing--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --raises_issue--> copyrightability of interfaces
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Northern District of California
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> CodeForge v. Open Runtime Labs
+- U.S. Copyright Office --involved_in--> CodeForge v. Open Runtime Labs

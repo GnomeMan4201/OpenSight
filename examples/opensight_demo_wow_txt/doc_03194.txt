@@ -1,0 +1,34 @@
+CodeForge v. Open Runtime Labs — Hearing Held
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2010-06-09
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: hearing
+
+Summary:
+The court held a hearing in CodeForge v. Open Runtime Labs to address disputed issues concerning source code licensing.
+
+Entities:
+- Atlas Software
+- CodeForge v. Open Runtime Labs
+- Court Hearing
+- Court of Appeals
+- Developer Ecosystem
+- Judge Samuel Hart
+- Oral Argument
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- source code licensing
+
+Relationships:
+- Judge Samuel Hart --held_hearing_for--> CodeForge v. Open Runtime Labs
+- SyntaxWorks --appeared_in--> CodeForge v. Open Runtime Labs
+- Atlas Software --appeared_in--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Western District of Washington
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --references_topic--> source code licensing
+- Court of Appeals --reviewing--> CodeForge v. Open Runtime Labs

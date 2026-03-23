@@ -1,0 +1,34 @@
+Signal Grid v. Vector Stack — Complaint Filed
+
+Case Name: Signal Grid v. Vector Stack
+Date: 2016-03-08
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: complaint_filed
+
+Summary:
+A civil complaint was entered in U.S. District Court for the Western District of Washington naming Vector Stack as defendant and alleging fair use in developer tools.
+
+Entities:
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Horizon Systems
+- Investor Group
+- Judge William Avery
+- Regulatory Notice
+- Signal Grid v. Vector Stack
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- Vector Stack
+- fair use in developer tools
+
+Relationships:
+- Horizon Systems --filed_complaint_against--> Vector Stack
+- U.S. District Court for the Western District of Washington --docketed--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --filed_in--> U.S. District Court for the Western District of Washington
+- Signal Grid v. Vector Stack --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge William Avery --assigned_to--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --references_topic--> fair use in developer tools
+- Court of Appeals --reviewing--> Signal Grid v. Vector Stack

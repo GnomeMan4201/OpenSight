@@ -1,0 +1,79 @@
+{
+  "id": "doc_03342",
+  "title": "United States v. Rivergate Holdings \u2014 Discovery Order",
+  "date": "2020-09-25",
+  "source": "Hearing Note",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Rivergate Holdings",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "discovery_order",
+  "summary": "The court ordered limited discovery focused on communications and materials tied to financial reporting fraud.",
+  "entities": [
+    "Court of Appeals",
+    "Document Production",
+    "Expert Witness",
+    "Federal Trade Commission",
+    "Financial Records",
+    "Internal Emails",
+    "Investor Group",
+    "Judge Edward Navarro",
+    "Pine Harbor Capital",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Rivergate Holdings",
+    "financial reporting fraud"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Edward Navarro",
+      "type": "issued_order_in",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "U.S. District Court for the Southern District of New York",
+      "type": "ordered_discovery_in",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Edward Navarro",
+      "type": "assigned_to",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "references_topic",
+      "target": "financial reporting fraud"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "involved_in",
+      "target": "United States v. Rivergate Holdings"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "discovery_order",
+    "financial_reporting_fraud",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 2,
+    "timeline_bucket": 2020
+  }
+}

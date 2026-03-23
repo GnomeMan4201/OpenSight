@@ -1,0 +1,76 @@
+{
+  "id": "doc_03498",
+  "title": "Nimbus Systems v. Vertex Labs \u2014 Jury Verdict",
+  "date": "2014-05-31",
+  "source": "Case Activity Update",
+  "cluster": "Patent Litigation",
+  "case_name": "Nimbus Systems v. Vertex Labs",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "jury_verdict",
+  "summary": "A jury returned a verdict after reviewing evidence related to battery optimization patents.",
+  "entities": [
+    "Apex Mobile",
+    "Court of Appeals",
+    "Judge Lucy Harrow",
+    "Jury",
+    "Nimbus Systems",
+    "Nimbus Systems v. Vertex Labs",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "Verdict Form",
+    "battery optimization patents"
+  ],
+  "relationships": [
+    {
+      "source": "Jury",
+      "type": "returned_verdict_in",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "entered_verdict_in",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Nimbus Systems v. Vertex Labs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "Nimbus Systems v. Vertex Labs",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "assigned_to",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Nimbus Systems v. Vertex Labs",
+      "type": "references_topic",
+      "target": "battery optimization patents"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Nimbus Systems v. Vertex Labs"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "jury_verdict",
+    "battery_optimization_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 5,
+    "timeline_bucket": 2014
+  }
+}

@@ -1,0 +1,33 @@
+United States v. Metro Ad Exchange — Expert Report Submitted
+
+Case Name: United States v. Metro Ad Exchange
+Date: 2011-07-31
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: expert_report
+
+Summary:
+The parties exchanged expert materials concerning damages, causation, and self-preferencing.
+
+Entities:
+- BrightCart Platform
+- Court of Appeals
+- Damages Model
+- Department of Justice Antitrust Division
+- Economic Expert
+- Expert Witness
+- Investor Group
+- Judge Naomi Ellis
+- Market Analysis
+- Regulatory Notice
+- State Coalition
+- U.S. District Court for the Southern District of New York
+- United States v. Metro Ad Exchange
+- self-preferencing
+
+Relationships:
+- Expert Witness --submitted_report_in--> United States v. Metro Ad Exchange
+- United States v. Metro Ad Exchange --includes_issue--> self-preferencing
+- United States v. Metro Ad Exchange --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Metro Ad Exchange --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> United States v. Metro Ad Exchange

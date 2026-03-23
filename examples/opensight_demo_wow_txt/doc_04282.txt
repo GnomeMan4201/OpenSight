@@ -1,0 +1,33 @@
+Signal Grid v. Vector Stack — Summary Judgment Motion
+
+Case Name: Signal Grid v. Vector Stack
+Date: 2016-04-23
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: summary_judgment
+
+Summary:
+A summary judgment motion was filed seeking judgment on issues involving copyrightability of interfaces.
+
+Entities:
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Investor Group
+- Judge Samuel Hart
+- Open Runtime Labs
+- Regulatory Notice
+- Signal Grid v. Vector Stack
+- Summary Judgment
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- Vector Stack
+- copyrightability of interfaces
+
+Relationships:
+- Open Runtime Labs --moved_for_summary_judgment_in--> Signal Grid v. Vector Stack
+- Judge Samuel Hart --considering--> Summary Judgment
+- Signal Grid v. Vector Stack --filed_in--> U.S. District Court for the Northern District of California
+- Signal Grid v. Vector Stack --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> Signal Grid v. Vector Stack

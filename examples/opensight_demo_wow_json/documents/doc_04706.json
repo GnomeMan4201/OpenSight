@@ -1,0 +1,76 @@
+{
+  "id": "doc_04706",
+  "title": "United States v. Rivergate Holdings \u2014 Witness Testimony",
+  "date": "2015-01-16",
+  "source": "Hearing Note",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Rivergate Holdings",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "witness_testimony",
+  "summary": "A witness testified regarding communications, intent, and actions involving financial reporting fraud.",
+  "entities": [
+    "Court of Appeals",
+    "Executive A",
+    "Investor Group",
+    "Judge Tessa Monroe",
+    "Supreme Court",
+    "Trial Testimony",
+    "U.S. Department of Justice",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Rivergate Holdings",
+    "Witness",
+    "financial reporting fraud"
+  ],
+  "relationships": [
+    {
+      "source": "Witness",
+      "type": "testified_in",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "heard_testimony_in",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "assigned_to",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "references_topic",
+      "target": "financial reporting fraud"
+    },
+    {
+      "source": "U.S. Department of Justice",
+      "type": "involved_in",
+      "target": "United States v. Rivergate Holdings"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "witness_testimony",
+    "financial_reporting_fraud",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 1,
+    "timeline_bucket": 2015
+  }
+}

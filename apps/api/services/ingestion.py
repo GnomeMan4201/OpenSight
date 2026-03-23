@@ -19,6 +19,7 @@ earlier committed stages are preserved.
 """
 
 import logging
+from sqlalchemy import create_engine
 import time
 from datetime import datetime
 from pathlib import Path
@@ -28,6 +29,8 @@ from sqlalchemy import text, update
 from sqlalchemy.orm import Session
 
 from apps.api.config import settings
+from apps.api.services.canonicalize import run_canonicalization, is_noise_entity
+from apps.api.services.relationship_extraction import extract_relationships
 from apps.api.models import Document, DocumentPage, Entity, EntityRelationship, Mention, RedactionFlag
 from apps.api.services.entity_extraction import extract_entities
 from apps.api.services.claim_extraction import extract_claims, ClaimCandidate
@@ -35,6 +38,35 @@ from apps.api.services.semantic_bridge import index_page as sem_index_page, inde
 from apps.api.services.storage import storage
 
 log = logging.getLogger(__name__)
+
+
+def _wipe_document_outputs(db: Session, document_id: str, source_tag: str | None = None) -> None:
+    db.query(Mention).filter_by(document_id=document_id).delete()
+    db.query(DocumentPage).filter_by(document_id=document_id).delete()
+    db.query(RedactionFlag).filter_by(document_id=document_id).delete()
+    try:
+        from apps.api.models import Claim
+        db.query(Claim).filter_by(document_id=document_id).delete()
+    except Exception:
+        pass
+    try:
+        db.execute(text("DELETE FROM semantic_chunks WHERE document_id = :id"), {"id": document_id})
+    except Exception:
+        pass
+    try:
+        db.execute(text("DELETE FROM fts_pages WHERE document_id = :id"), {"id": document_id})
+    except Exception:
+        pass
+    if source_tag is not None:
+        try:
+            db.execute(
+                text("DELETE FROM fts_pages WHERE document_id = :id OR source_tag = :source_tag"),
+                {"id": document_id, "source_tag": source_tag},
+            )
+        except Exception:
+            pass
+    db.commit()
+
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -179,16 +211,24 @@ def _index_page_fts(
     filename: str,
     body: str,
 ) -> None:
-    """Insert one page into the FTS5 virtual table. No-op for non-SQLite."""
+    """Insert one page into the FTS5 virtual table. No-op for non-SQLite or missing FTS table."""
     if not settings.database_url.startswith("sqlite"):
         return
-    db.execute(
-        text("""
-            INSERT INTO fts_pages (document_id, page_number, source_tag, filename, body)
-            VALUES (:did, :pn, :st, :fn, :body)
-        """),
-        {"did": document_id, "pn": page_number, "st": source_tag, "fn": filename, "body": body},
-    )
+    try:
+        exists = db.execute(text("SELECT name FROM sqlite_master WHERE type='table' AND name='fts_pages'" )).fetchone()
+        if not exists:
+            log.warning("[fts] fts_pages missing; skipping FTS insert for %s page %s", document_id, page_number)
+            return
+        db.execute(
+            text("""
+                INSERT INTO fts_pages (document_id, page_number, source_tag, filename, body)
+                VALUES (:did, :pn, :st, :fn, :body)
+            """),
+            {"did": document_id, "pn": page_number, "st": source_tag, "fn": filename, "body": body},
+        )
+    except Exception as exc:
+        log.warning("[fts] insert skipped for %s page %s: %s", document_id, page_number, exc)
+        db.rollback()
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -369,6 +409,64 @@ def _upsert_entity(
     return entity
 
 
+def _upsert_typed_relationships(db: Session, document_id: str, full_text: str) -> int:
+    mention_rows = (
+        db.query(Mention, Entity)
+        .join(Entity, Mention.entity_id == Entity.id)
+        .filter(Mention.document_id == document_id)
+        .all()
+    )
+    entity_name_to_id = {e.canonical_name: e.id for _, e in mention_rows}
+
+    log.info("[%s] typed-rel entity names: %s", document_id, sorted(entity_name_to_id.keys())[:20])
+
+    if not entity_name_to_id:
+        return 0
+
+    candidates = extract_relationships(
+        text=full_text,
+        entity_name_to_id=entity_name_to_id,
+        document_id=document_id,
+    )
+
+    log.info("[%s] typed-rel candidates: %d", document_id, len(candidates))
+    for c in candidates[:10]:
+        log.info(
+            "[%s] typed-rel candidate: %s -> %s | %s | conf=%.2f | span=%r",
+            document_id, c.source_id, c.target_id, c.relationship_type, c.confidence, c.sentence_span
+        )
+
+    # Dedupe by unordered pair, keep highest-confidence candidate
+    pair_best = {}
+    for c in candidates:
+        id_a = min(c.source_id, c.target_id)
+        id_b = max(c.source_id, c.target_id)
+        key = (id_a, id_b)
+        prev = pair_best.get(key)
+        if prev is None or c.confidence > prev.confidence:
+            pair_best[key] = c
+
+    # Delete existing rows for these exact pairs, then insert fresh rows.
+    # This avoids stale ORM update errors during reingest.
+    for (id_a, id_b), c in pair_best.items():
+        db.query(EntityRelationship).filter_by(
+            entity_a_id=id_a,
+            entity_b_id=id_b,
+        ).delete(synchronize_session=False)
+
+        db.add(EntityRelationship(
+            entity_a_id=id_a,
+            entity_b_id=id_b,
+            weight=1,
+            doc_count=1,
+            relationship_type=c.relationship_type,
+            confidence=c.confidence,
+            sentence_span=c.sentence_span,
+        ))
+
+    return len(pair_best)
+
+
 def _upsert_relationships(db: Session, document_id: str) -> int:
     """
     Build or update entity co-occurrence relationships for a document.
@@ -428,22 +526,45 @@ def run_ingestion(document_id: str, db_url: str) -> None:
     """
     Full ingestion pipeline for one document. Opens its own DB session.
     Called by FastAPI BackgroundTasks — runs in a separate thread.
-
-    Uses apps.api.database.SessionLocal so that tests can patch the
-    module-level SessionLocal and have the background thread pick it up,
-    rather than creating an independent engine from db_url.
     """
     from apps.api.database import SessionLocal
 
     db = SessionLocal()
 
     try:
+        doc = db.query(Document).filter_by(id=document_id).first()
+        if not doc:
+            return
+
+        _wipe_document_outputs(db, document_id, getattr(doc, "source_tag", None))
+
+        doc = db.query(Document).filter_by(id=document_id).first()
+        if not doc:
+            return
+
+        doc.status = "processing"
+        doc.page_count = 0
+        doc.has_redactions = False
+        doc.error_message = None
+        db.commit()
+
         _run_pipeline(document_id, db)
+
+        doc = db.query(Document).filter_by(id=document_id).first()
+        if doc:
+            doc.status = "done"
+            doc.error_message = None
+            db.commit()
+
     except Exception as exc:
+        try:
+            db.rollback()
+        except Exception:
+            pass
         log.exception("[pipeline] fatal error for document %s", document_id)
         doc = db.query(Document).filter_by(id=document_id).first()
         if doc:
-            doc.status        = "error"
+            doc.status = "error"
             doc.error_message = str(exc)[:500]
             db.commit()
     finally:
@@ -519,6 +640,8 @@ def _run_pipeline(document_id: str, db: Session) -> None:
                         raw_name=ex.raw_name,
                         confidence=ex.confidence,
                     )
+                    if entity is None:
+                        continue
                     db.add(Mention(
                         entity_id=entity.id,
                         document_id=document_id,
@@ -638,8 +761,10 @@ def _run_pipeline(document_id: str, db: Session) -> None:
         db.commit()
 
     # ── Stage 6.5: Entity relationship graph ──────────────────────────────────
-    log.info("[%s] Stage 6.5/7 — building entity co-occurrence graph", document_id)
-    _upsert_relationships(db, document_id)
+    log.info("[%s] Stage 6.5/7 — building typed entity relationship graph", document_id)
+    full_text = " ".join(page_texts.get(pn, "") for pn in sorted(page_texts.keys()))
+    typed_count = _upsert_typed_relationships(db, document_id, full_text)
+    log.info("[%s] Stage 6.5/7 — typed relationships upserted: %d", document_id, typed_count)
     db.commit()
 
     # ── Stage 7: Done ─────────────────────────────────────────────────────────

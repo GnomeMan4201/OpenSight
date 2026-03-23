@@ -1,0 +1,34 @@
+Nimbus Systems v. Vertex Labs — Discovery Order
+
+Case Name: Nimbus Systems v. Vertex Labs
+Date: 2013-04-21
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: discovery_order
+
+Summary:
+The court ordered limited discovery focused on communications and materials tied to camera image processing patents.
+
+Entities:
+- Court of Appeals
+- Document Production
+- Financial Records
+- Helix Circuits
+- Internal Emails
+- Judge Martin Cole
+- Nimbus Systems v. Vertex Labs
+- Northstar Logic
+- Precedent
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- camera image processing patents
+
+Relationships:
+- Judge Martin Cole --issued_order_in--> Nimbus Systems v. Vertex Labs
+- U.S. District Court for the District of Delaware --ordered_discovery_in--> Nimbus Systems v. Vertex Labs
+- Nimbus Systems v. Vertex Labs --filed_in--> U.S. District Court for the District of Delaware
+- Nimbus Systems v. Vertex Labs --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> Nimbus Systems v. Vertex Labs
+- Nimbus Systems v. Vertex Labs --references_topic--> camera image processing patents
+- Court of Appeals --reviewing--> Nimbus Systems v. Vertex Labs

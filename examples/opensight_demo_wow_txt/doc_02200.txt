@@ -1,0 +1,31 @@
+SyntaxWorks v. Horizon Systems — Appellate Opinion
+
+Case Name: SyntaxWorks v. Horizon Systems
+Date: 2023-01-10
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: appellate_opinion
+
+Summary:
+The reviewing court issued an opinion clarifying standards related to fair use in developer tools.
+
+Entities:
+- Appellate Panel
+- Court of Appeals
+- Developer Ecosystem
+- Horizon Systems
+- Judge Lena Brooks
+- Open Runtime Labs
+- Precedent
+- Supreme Court
+- SyntaxWorks v. Horizon Systems
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- fair use in developer tools
+
+Relationships:
+- Court of Appeals --issued_opinion_in--> SyntaxWorks v. Horizon Systems
+- SyntaxWorks v. Horizon Systems --cites--> Precedent
+- SyntaxWorks v. Horizon Systems --filed_in--> U.S. District Court for the Northern District of California
+- SyntaxWorks v. Horizon Systems --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Lena Brooks --assigned_to--> SyntaxWorks v. Horizon Systems

@@ -1,0 +1,29 @@
+CodeForge v. Open Runtime Labs — Complaint Filed
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2012-01-10
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: complaint_filed
+
+Summary:
+SyntaxWorks filed a complaint against Atlas Software in U.S. District Court for the Western District of Washington, alleging software interoperability.
+
+Entities:
+- Atlas Software
+- CodeForge v. Open Runtime Labs
+- Court of Appeals
+- Developer Ecosystem
+- Judge Lena Brooks
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- software interoperability
+
+Relationships:
+- SyntaxWorks --filed_complaint_against--> Atlas Software
+- U.S. District Court for the Western District of Washington --docketed--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Western District of Washington
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Lena Brooks --assigned_to--> CodeForge v. Open Runtime Labs

@@ -1,0 +1,31 @@
+State Coalition v. Omnidata Retail — Regulatory Notice
+
+Case Name: State Coalition v. Omnidata Retail
+Date: 2017-07-25
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: regulatory_notice
+
+Summary:
+A regulatory notice was issued concerning reporting and disclosure obligations tied to market foreclosure.
+
+Entities:
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Federal Trade Commission
+- Judge Robert Kline
+- Market Analysis
+- Metro Ad Exchange
+- Regulatory Notice
+- State Coalition v. Omnidata Retail
+- U.S. District Court for the Southern District of New York
+- market foreclosure
+
+Relationships:
+- Department of Justice Antitrust Division --issued_notice_involving--> Metro Ad Exchange
+- Department of Justice Antitrust Division --referenced--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --filed_in--> U.S. District Court for the Southern District of New York
+- State Coalition v. Omnidata Retail --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Robert Kline --assigned_to--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --references_topic--> market foreclosure

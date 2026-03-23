@@ -1,0 +1,72 @@
+{
+  "id": "doc_00156",
+  "title": "United States v. Rivergate Holdings \u2014 Sentencing Hearing",
+  "date": "2011-02-14",
+  "source": "Court Filing Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Rivergate Holdings",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "sentencing",
+  "summary": "The court imposed sentence after considering evidence tied to wire fraud allegations.",
+  "entities": [
+    "Chief Financial Officer",
+    "Court of Appeals",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Edward Navarro",
+    "Regulatory Notice",
+    "Securities and Exchange Commission",
+    "Sentencing Memorandum",
+    "Supreme Court",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Rivergate Holdings",
+    "wire fraud allegations"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Edward Navarro",
+      "type": "sentenced",
+      "target": "Chief Financial Officer"
+    },
+    {
+      "source": "Securities and Exchange Commission",
+      "type": "prosecuted",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Edward Navarro",
+      "type": "assigned_to",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "references_topic",
+      "target": "wire fraud allegations"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "sentencing",
+    "wire_fraud_allegations",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 4,
+    "timeline_bucket": 2011
+  }
+}

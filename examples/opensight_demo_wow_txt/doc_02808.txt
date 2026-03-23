@@ -1,0 +1,31 @@
+BluePeak Tech v. Helix Circuits — Motion to Dismiss
+
+Case Name: BluePeak Tech v. Helix Circuits
+Date: 2018-08-29
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: motion_to_dismiss
+
+Summary:
+Helix Circuits filed a motion to dismiss, arguing the complaint failed to establish wireless chipset design.
+
+Entities:
+- BluePeak Tech v. Helix Circuits
+- Court of Appeals
+- Helix Circuits
+- Judge Elena Ward
+- Precedent
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- Vertex Labs
+- wireless chipset design
+
+Relationships:
+- Helix Circuits --filed_motion--> BluePeak Tech v. Helix Circuits
+- Judge Elena Ward --reviewing_motion_in--> BluePeak Tech v. Helix Circuits
+- BluePeak Tech v. Helix Circuits --filed_in--> U.S. District Court for the District of Delaware
+- BluePeak Tech v. Helix Circuits --belongs_to_cluster--> Patent Litigation
+- Judge Elena Ward --assigned_to--> BluePeak Tech v. Helix Circuits
+- Court of Appeals --reviewing--> BluePeak Tech v. Helix Circuits
+- U.S. Patent and Trademark Office --involved_in--> BluePeak Tech v. Helix Circuits

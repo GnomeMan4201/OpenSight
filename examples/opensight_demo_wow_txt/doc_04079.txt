@@ -1,0 +1,31 @@
+BluePeak Tech v. Helix Circuits — Appeal Filed
+
+Case Name: BluePeak Tech v. Helix Circuits
+Date: 2018-07-02
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: appeal_filed
+
+Summary:
+Orion Devices appealed the court's decision on issues related to user interface gestures.
+
+Entities:
+- Apex Mobile
+- BluePeak Tech v. Helix Circuits
+- Court of Appeals
+- Judge Martin Cole
+- Notice of Appeal
+- Orion Devices
+- Precedent
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- user interface gestures
+
+Relationships:
+- Orion Devices --appealed--> BluePeak Tech v. Helix Circuits
+- Court of Appeals --reviewing--> BluePeak Tech v. Helix Circuits
+- BluePeak Tech v. Helix Circuits --filed_in--> U.S. District Court for the Northern District of California
+- BluePeak Tech v. Helix Circuits --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> BluePeak Tech v. Helix Circuits
+- BluePeak Tech v. Helix Circuits --references_topic--> user interface gestures

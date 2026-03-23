@@ -1,0 +1,31 @@
+CodeForge v. Open Runtime Labs — Motion to Dismiss
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2019-09-20
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: motion_to_dismiss
+
+Summary:
+Horizon Systems filed a motion to dismiss, arguing the complaint failed to establish API reuse.
+
+Entities:
+- API reuse
+- CodeForge v. Open Runtime Labs
+- Court of Appeals
+- Developer Ecosystem
+- Horizon Systems
+- Judge Samuel Hart
+- Open Runtime Labs
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+
+Relationships:
+- Horizon Systems --filed_motion--> CodeForge v. Open Runtime Labs
+- Judge Samuel Hart --reviewing_motion_in--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Western District of Washington
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --references_topic--> API reuse
+- Court of Appeals --reviewing--> CodeForge v. Open Runtime Labs

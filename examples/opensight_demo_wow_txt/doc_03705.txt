@@ -1,0 +1,31 @@
+United States v. Metro Ad Exchange — Appeal Filed
+
+Case Name: United States v. Metro Ad Exchange
+Date: 2016-04-28
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: appeal_filed
+
+Summary:
+A notice of appeal was filed challenging rulings concerning platform monopoly allegations.
+
+Entities:
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Judge Patrick Sloan
+- Market Analysis
+- Metro Ad Exchange
+- Notice of Appeal
+- State Coalition
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States v. Metro Ad Exchange
+- platform monopoly allegations
+
+Relationships:
+- State Coalition --appealed--> United States v. Metro Ad Exchange
+- Court of Appeals --reviewing--> United States v. Metro Ad Exchange
+- United States v. Metro Ad Exchange --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Metro Ad Exchange --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Patrick Sloan --assigned_to--> United States v. Metro Ad Exchange

@@ -1,0 +1,33 @@
+United States v. Rivergate Holdings — Sentencing Hearing
+
+Case Name: United States v. Rivergate Holdings
+Date: 2024-06-09
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: sentencing
+
+Summary:
+Judge Daniel Pike conducted sentencing proceedings following findings related to wire fraud allegations.
+
+Entities:
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Daniel Pike
+- Regulatory Notice
+- Rivergate Holdings
+- Sentencing Memorandum
+- Supreme Court
+- U.S. Department of Justice
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Rivergate Holdings
+- wire fraud allegations
+
+Relationships:
+- Judge Daniel Pike --sentenced--> Rivergate Holdings
+- U.S. Department of Justice --prosecuted--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Daniel Pike --assigned_to--> United States v. Rivergate Holdings
+- Court of Appeals --reviewing--> United States v. Rivergate Holdings

@@ -1,0 +1,30 @@
+Signal Grid v. Vector Stack — Summary Judgment Motion
+
+Case Name: Signal Grid v. Vector Stack
+Date: 2016-07-06
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: summary_judgment
+
+Summary:
+Horizon Systems moved for summary judgment on a record centered on fair use in developer tools.
+
+Entities:
+- Atlas Software
+- Court of Appeals
+- Developer Ecosystem
+- Horizon Systems
+- Judge Lena Brooks
+- Signal Grid v. Vector Stack
+- Summary Judgment
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- fair use in developer tools
+
+Relationships:
+- Horizon Systems --moved_for_summary_judgment_in--> Signal Grid v. Vector Stack
+- Judge Lena Brooks --considering--> Summary Judgment
+- Signal Grid v. Vector Stack --filed_in--> U.S. District Court for the Western District of Washington
+- Signal Grid v. Vector Stack --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Lena Brooks --assigned_to--> Signal Grid v. Vector Stack

@@ -1,0 +1,34 @@
+United States v. Pine Harbor Capital — Jury Verdict
+
+Case Name: United States v. Pine Harbor Capital
+Date: 2017-05-12
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: jury_verdict
+
+Summary:
+A jury returned a verdict after reviewing evidence related to financial reporting fraud.
+
+Entities:
+- Court of Appeals
+- Investor Group
+- Judge Edward Navarro
+- Jury
+- Pine Harbor Capital
+- Securities and Exchange Commission
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Pine Harbor Capital
+- Verdict Form
+- financial reporting fraud
+
+Relationships:
+- Jury --returned_verdict_in--> United States v. Pine Harbor Capital
+- Judge Edward Navarro --entered_verdict_in--> United States v. Pine Harbor Capital
+- United States v. Pine Harbor Capital --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Pine Harbor Capital --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Edward Navarro --assigned_to--> United States v. Pine Harbor Capital
+- Supreme Court --reviewing--> United States v. Pine Harbor Capital
+- Court of Appeals --reviewing--> United States v. Pine Harbor Capital
+- Securities and Exchange Commission --involved_in--> United States v. Pine Harbor Capital

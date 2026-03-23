@@ -1,0 +1,85 @@
+{
+  "id": "doc_01982",
+  "title": "Northstar Logic v. Quantum Handsets \u2014 Discovery Order",
+  "date": "2013-01-17",
+  "source": "Docket Entry Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "Northstar Logic v. Quantum Handsets",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "discovery_order",
+  "summary": "The court ordered limited discovery focused on communications and materials tied to battery optimization patents.",
+  "entities": [
+    "Apex Mobile",
+    "Court of Appeals",
+    "Document Production",
+    "Expert Witness",
+    "Financial Records",
+    "Internal Emails",
+    "Investor Group",
+    "Judge Martin Cole",
+    "Northstar Logic v. Quantum Handsets",
+    "Precedent",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "Vertex Labs",
+    "battery optimization patents"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Martin Cole",
+      "type": "issued_order_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "U.S. District Court for the Northern District of California",
+      "type": "ordered_discovery_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "references_topic",
+      "target": "battery optimization patents"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "discovery_order",
+    "battery_optimization_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 3,
+    "timeline_bucket": 2013
+  }
+}

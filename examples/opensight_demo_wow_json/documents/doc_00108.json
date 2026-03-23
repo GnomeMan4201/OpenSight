@@ -1,0 +1,77 @@
+{
+  "id": "doc_00108",
+  "title": "United States v. Metro Ad Exchange \u2014 Discovery Order",
+  "date": "2018-07-12",
+  "source": "Opinion Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "United States v. Metro Ad Exchange",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "discovery_order",
+  "summary": "The court ordered limited discovery focused on communications and materials tied to market foreclosure.",
+  "entities": [
+    "Court of Appeals",
+    "Document Production",
+    "Economic Expert",
+    "Federal Trade Commission",
+    "Financial Records",
+    "Internal Emails",
+    "Judge Robert Kline",
+    "Market Analysis",
+    "Metro Ad Exchange",
+    "State Coalition",
+    "U.S. District Court for the Southern District of New York",
+    "United States v. Metro Ad Exchange",
+    "market foreclosure"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Robert Kline",
+      "type": "issued_order_in",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "U.S. District Court for the Southern District of New York",
+      "type": "ordered_discovery_in",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Robert Kline",
+      "type": "assigned_to",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "involved_in",
+      "target": "United States v. Metro Ad Exchange"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "discovery_order",
+    "market_foreclosure",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 4,
+    "timeline_bucket": 2018
+  }
+}

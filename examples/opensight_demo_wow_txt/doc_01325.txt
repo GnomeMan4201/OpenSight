@@ -1,0 +1,31 @@
+United States v. Rivergate Holdings — Expert Report Submitted
+
+Case Name: United States v. Rivergate Holdings
+Date: 2015-05-23
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: expert_report
+
+Summary:
+The parties exchanged expert materials concerning damages, causation, and clinical test misrepresentation.
+
+Entities:
+- Court of Appeals
+- Damages Model
+- Expert Witness
+- Investor Group
+- Judge Tessa Monroe
+- Meridian BioLabs
+- Supreme Court
+- U.S. Department of Justice
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Rivergate Holdings
+- clinical test misrepresentation
+
+Relationships:
+- Expert Witness --submitted_report_in--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --includes_issue--> clinical test misrepresentation
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Tessa Monroe --assigned_to--> United States v. Rivergate Holdings

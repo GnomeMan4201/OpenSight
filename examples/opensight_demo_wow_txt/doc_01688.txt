@@ -1,0 +1,33 @@
+State Coalition v. Omnidata Retail — Hearing Held
+
+Case Name: State Coalition v. Omnidata Retail
+Date: 2022-11-19
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: hearing
+
+Summary:
+The court held a hearing in State Coalition v. Omnidata Retail to address disputed issues concerning self-preferencing.
+
+Entities:
+- Court Hearing
+- Court of Appeals
+- Economic Expert
+- Federal Trade Commission
+- Judge Robert Kline
+- Market Analysis
+- Omnidata Retail
+- Oral Argument
+- State Coalition v. Omnidata Retail
+- U.S. District Court for the Southern District of New York
+- self-preferencing
+
+Relationships:
+- Judge Robert Kline --held_hearing_for--> State Coalition v. Omnidata Retail
+- Omnidata Retail --appeared_in--> State Coalition v. Omnidata Retail
+- Federal Trade Commission --appeared_in--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --filed_in--> U.S. District Court for the Southern District of New York
+- State Coalition v. Omnidata Retail --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Robert Kline --assigned_to--> State Coalition v. Omnidata Retail
+- Court of Appeals --reviewing--> State Coalition v. Omnidata Retail
+- Federal Trade Commission --involved_in--> State Coalition v. Omnidata Retail

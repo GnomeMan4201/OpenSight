@@ -1,0 +1,36 @@
+CodeForge v. Open Runtime Labs — Hearing Held
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2014-05-26
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: hearing
+
+Summary:
+Judge Lena Brooks conducted a hearing involving arguments by SyntaxWorks and Atlas Software on API reuse.
+
+Entities:
+- API reuse
+- Atlas Software
+- CodeForge v. Open Runtime Labs
+- Court Hearing
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Investor Group
+- Judge Lena Brooks
+- Oral Argument
+- Regulatory Notice
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+
+Relationships:
+- Judge Lena Brooks --held_hearing_for--> CodeForge v. Open Runtime Labs
+- SyntaxWorks --appeared_in--> CodeForge v. Open Runtime Labs
+- Atlas Software --appeared_in--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Western District of Washington
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Lena Brooks --assigned_to--> CodeForge v. Open Runtime Labs
+- Court of Appeals --reviewing--> CodeForge v. Open Runtime Labs

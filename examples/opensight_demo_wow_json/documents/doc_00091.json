@@ -1,0 +1,75 @@
+{
+  "id": "doc_00091",
+  "title": "United States v. Pine Harbor Capital \u2014 Regulatory Notice",
+  "date": "2011-03-10",
+  "source": "Court Filing Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Pine Harbor Capital",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "regulatory_notice",
+  "summary": "A regulatory notice was issued concerning reporting and disclosure obligations tied to clinical test misrepresentation.",
+  "entities": [
+    "Court of Appeals",
+    "Executive B",
+    "Investor Group",
+    "Judge Tessa Monroe",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. Department of Justice",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Pine Harbor Capital",
+    "clinical test misrepresentation"
+  ],
+  "relationships": [
+    {
+      "source": "U.S. Department of Justice",
+      "type": "issued_notice_involving",
+      "target": "Executive B"
+    },
+    {
+      "source": "U.S. Department of Justice",
+      "type": "referenced",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "assigned_to",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "U.S. Department of Justice",
+      "type": "involved_in",
+      "target": "United States v. Pine Harbor Capital"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "regulatory_notice",
+    "clinical_test_misrepresentation",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 1,
+    "timeline_bucket": 2011
+  }
+}

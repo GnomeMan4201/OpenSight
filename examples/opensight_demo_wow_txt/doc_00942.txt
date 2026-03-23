@@ -1,0 +1,35 @@
+Atlas Software v. Nova Cloud — Motion to Dismiss
+
+Case Name: Atlas Software v. Nova Cloud
+Date: 2016-02-28
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: motion_to_dismiss
+
+Summary:
+Defense counsel for SyntaxWorks moved to dismiss portions of the complaint involving fair use in developer tools.
+
+Entities:
+- Atlas Software v. Nova Cloud
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Investor Group
+- Judge Samuel Hart
+- Open Runtime Labs
+- Regulatory Notice
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- fair use in developer tools
+
+Relationships:
+- SyntaxWorks --filed_motion--> Atlas Software v. Nova Cloud
+- Judge Samuel Hart --reviewing_motion_in--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --filed_in--> U.S. District Court for the Northern District of California
+- Atlas Software v. Nova Cloud --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --references_topic--> fair use in developer tools
+- Supreme Court --reviewing--> Atlas Software v. Nova Cloud
+- U.S. Copyright Office --involved_in--> Atlas Software v. Nova Cloud

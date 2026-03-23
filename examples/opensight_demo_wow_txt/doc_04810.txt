@@ -1,0 +1,33 @@
+Signal Grid v. Vector Stack — Hearing Held
+
+Case Name: Signal Grid v. Vector Stack
+Date: 2012-05-23
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: hearing
+
+Summary:
+The court held a hearing in Signal Grid v. Vector Stack to address disputed issues concerning software interoperability.
+
+Entities:
+- CodeForge
+- Court Hearing
+- Court of Appeals
+- Developer Ecosystem
+- Judge William Avery
+- Oral Argument
+- Signal Grid
+- Signal Grid v. Vector Stack
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- software interoperability
+
+Relationships:
+- Judge William Avery --held_hearing_for--> Signal Grid v. Vector Stack
+- Signal Grid --appeared_in--> Signal Grid v. Vector Stack
+- CodeForge --appeared_in--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --filed_in--> U.S. District Court for the Western District of Washington
+- Signal Grid v. Vector Stack --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge William Avery --assigned_to--> Signal Grid v. Vector Stack
+- U.S. Copyright Office --involved_in--> Signal Grid v. Vector Stack

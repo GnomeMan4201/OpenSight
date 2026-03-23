@@ -1,0 +1,34 @@
+United States v. Metro Ad Exchange — Discovery Order
+
+Case Name: United States v. Metro Ad Exchange
+Date: 2011-07-22
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: discovery_order
+
+Summary:
+Judge Naomi Ellis issued a discovery order requiring production of records related to ad exchange bidding practices.
+
+Entities:
+- BrightCart Platform
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Document Production
+- Economic Expert
+- Financial Records
+- Internal Emails
+- Judge Naomi Ellis
+- Market Analysis
+- State Coalition
+- U.S. District Court for the Southern District of New York
+- United States v. Metro Ad Exchange
+- ad exchange bidding practices
+
+Relationships:
+- Judge Naomi Ellis --issued_order_in--> United States v. Metro Ad Exchange
+- U.S. District Court for the Southern District of New York --ordered_discovery_in--> United States v. Metro Ad Exchange
+- United States v. Metro Ad Exchange --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Metro Ad Exchange --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> United States v. Metro Ad Exchange
+- Court of Appeals --reviewing--> United States v. Metro Ad Exchange
+- Department of Justice Antitrust Division --involved_in--> United States v. Metro Ad Exchange

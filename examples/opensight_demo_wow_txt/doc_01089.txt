@@ -1,0 +1,32 @@
+Federal Trade Commission v. BrightCart Platform — Regulatory Notice
+
+Case Name: Federal Trade Commission v. BrightCart Platform
+Date: 2017-01-28
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: regulatory_notice
+
+Summary:
+Department of Justice Antitrust Division issued a notice connected to allegations involving self-preferencing.
+
+Entities:
+- BrightCart Platform
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Federal Trade Commission v. BrightCart Platform
+- Judge Robert Kline
+- Market Analysis
+- Metro Ad Exchange
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the District of Columbia
+- self-preferencing
+
+Relationships:
+- Department of Justice Antitrust Division --issued_notice_involving--> BrightCart Platform
+- Department of Justice Antitrust Division --referenced--> Federal Trade Commission v. BrightCart Platform
+- Federal Trade Commission v. BrightCart Platform --filed_in--> U.S. District Court for the District of Columbia
+- Federal Trade Commission v. BrightCart Platform --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Robert Kline --assigned_to--> Federal Trade Commission v. BrightCart Platform
+- Court of Appeals --reviewing--> Federal Trade Commission v. BrightCart Platform

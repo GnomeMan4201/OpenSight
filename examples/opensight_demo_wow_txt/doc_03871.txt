@@ -1,0 +1,34 @@
+United States v. Meridian BioLabs — Sentencing Hearing
+
+Case Name: United States v. Meridian BioLabs
+Date: 2012-10-07
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: sentencing
+
+Summary:
+Judge Tessa Monroe conducted sentencing proceedings following findings related to investor disclosures.
+
+Entities:
+- Court of Appeals
+- Executive A
+- Expert Witness
+- Investor Group
+- Judge Tessa Monroe
+- Regulatory Notice
+- Sentencing Memorandum
+- Supreme Court
+- U.S. Department of Justice
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Meridian BioLabs
+- investor disclosures
+
+Relationships:
+- Judge Tessa Monroe --sentenced--> Executive A
+- U.S. Department of Justice --prosecuted--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Meridian BioLabs --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Tessa Monroe --assigned_to--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --references_topic--> investor disclosures
+- U.S. Department of Justice --involved_in--> United States v. Meridian BioLabs

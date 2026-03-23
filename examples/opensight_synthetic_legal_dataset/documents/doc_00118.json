@@ -1,0 +1,74 @@
+{
+  "id": "doc_00118",
+  "title": "Nimbus Systems v. Vertex Labs \u2014 Motion to Dismiss",
+  "date": "2018-07-26",
+  "source": "Opinion Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "Nimbus Systems v. Vertex Labs",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "motion_to_dismiss",
+  "summary": "Apex Mobile filed a motion to dismiss, arguing the complaint failed to establish wireless chipset design.",
+  "entities": [
+    "Apex Mobile",
+    "Court of Appeals",
+    "Judge Elena Ward",
+    "Nimbus Systems v. Vertex Labs",
+    "Precedent",
+    "Quantum Handsets",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "wireless chipset design"
+  ],
+  "relationships": [
+    {
+      "source": "Apex Mobile",
+      "type": "filed_motion",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Judge Elena Ward",
+      "type": "reviewing_motion_in",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Nimbus Systems v. Vertex Labs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Nimbus Systems v. Vertex Labs",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Elena Ward",
+      "type": "assigned_to",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Nimbus Systems v. Vertex Labs",
+      "type": "references_topic",
+      "target": "wireless chipset design"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "Nimbus Systems v. Vertex Labs"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "motion_to_dismiss",
+    "wireless_chipset_design",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 3,
+    "timeline_bucket": 2018
+  }
+}

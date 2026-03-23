@@ -1,0 +1,33 @@
+United States v. Rivergate Holdings — Discovery Order
+
+Case Name: United States v. Rivergate Holdings
+Date: 2012-10-14
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: discovery_order
+
+Summary:
+The court ordered limited discovery focused on communications and materials tied to wire fraud allegations.
+
+Entities:
+- Court of Appeals
+- Document Production
+- Federal Trade Commission
+- Financial Records
+- Internal Emails
+- Investor Group
+- Judge Tessa Monroe
+- Pine Harbor Capital
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Rivergate Holdings
+- wire fraud allegations
+
+Relationships:
+- Judge Tessa Monroe --issued_order_in--> United States v. Rivergate Holdings
+- U.S. District Court for the Southern District of New York --ordered_discovery_in--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Tessa Monroe --assigned_to--> United States v. Rivergate Holdings
+- Supreme Court --reviewing--> United States v. Rivergate Holdings

@@ -1,0 +1,33 @@
+United States v. Meridian BioLabs — Sentencing Hearing
+
+Case Name: United States v. Meridian BioLabs
+Date: 2016-07-31
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: sentencing
+
+Summary:
+The court imposed sentence after considering evidence tied to investor disclosures.
+
+Entities:
+- Court of Appeals
+- Executive B
+- Federal Trade Commission
+- Investor Group
+- Judge Edward Navarro
+- Sentencing Memorandum
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Meridian BioLabs
+- investor disclosures
+
+Relationships:
+- Judge Edward Navarro --sentenced--> Executive B
+- Federal Trade Commission --prosecuted--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Meridian BioLabs --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Edward Navarro --assigned_to--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --references_topic--> investor disclosures
+- Court of Appeals --reviewing--> United States v. Meridian BioLabs
+- Federal Trade Commission --involved_in--> United States v. Meridian BioLabs

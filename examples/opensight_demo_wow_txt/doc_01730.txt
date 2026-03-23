@@ -1,0 +1,32 @@
+Federal Trade Commission v. Titan Search — Summary Judgment Motion
+
+Case Name: Federal Trade Commission v. Titan Search
+Date: 2014-07-14
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: summary_judgment
+
+Summary:
+State Coalition moved for summary judgment on a record centered on ad exchange bidding practices.
+
+Entities:
+- BrightCart Platform
+- Court of Appeals
+- Economic Expert
+- Federal Trade Commission
+- Federal Trade Commission v. Titan Search
+- Judge Patrick Sloan
+- Market Analysis
+- State Coalition
+- Summary Judgment
+- Supreme Court
+- U.S. District Court for the District of Columbia
+- ad exchange bidding practices
+
+Relationships:
+- State Coalition --moved_for_summary_judgment_in--> Federal Trade Commission v. Titan Search
+- Judge Patrick Sloan --considering--> Summary Judgment
+- Federal Trade Commission v. Titan Search --filed_in--> U.S. District Court for the District of Columbia
+- Federal Trade Commission v. Titan Search --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Patrick Sloan --assigned_to--> Federal Trade Commission v. Titan Search
+- Federal Trade Commission --involved_in--> Federal Trade Commission v. Titan Search

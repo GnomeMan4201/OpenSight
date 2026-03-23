@@ -1,0 +1,36 @@
+Northstar Logic v. Quantum Handsets — Jury Verdict
+
+Case Name: Northstar Logic v. Quantum Handsets
+Date: 2015-03-15
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: jury_verdict
+
+Summary:
+A jury returned a verdict after reviewing evidence related to camera image processing patents.
+
+Entities:
+- Apex Mobile
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Martin Cole
+- Jury
+- Northstar Logic v. Quantum Handsets
+- Precedent
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- Verdict Form
+- Vertex Labs
+- camera image processing patents
+
+Relationships:
+- Jury --returned_verdict_in--> Northstar Logic v. Quantum Handsets
+- Judge Martin Cole --entered_verdict_in--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --filed_in--> U.S. District Court for the Northern District of California
+- Northstar Logic v. Quantum Handsets --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --references_topic--> camera image processing patents
+- U.S. Patent and Trademark Office --involved_in--> Northstar Logic v. Quantum Handsets

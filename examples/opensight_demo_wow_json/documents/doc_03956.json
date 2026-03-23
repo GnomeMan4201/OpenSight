@@ -1,0 +1,74 @@
+{
+  "id": "doc_03956",
+  "title": "SyntaxWorks v. Horizon Systems \u2014 Complaint Filed",
+  "date": "2022-04-23",
+  "source": "Case Activity Update",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "SyntaxWorks v. Horizon Systems",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "Open Runtime Labs filed a complaint against Horizon Systems in U.S. District Court for the Northern District of California, alleging fair use in developer tools.",
+  "entities": [
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Horizon Systems",
+    "Judge Samuel Hart",
+    "Open Runtime Labs",
+    "Supreme Court",
+    "SyntaxWorks v. Horizon Systems",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Northern District of California",
+    "fair use in developer tools"
+  ],
+  "relationships": [
+    {
+      "source": "Open Runtime Labs",
+      "type": "filed_complaint_against",
+      "target": "Horizon Systems"
+    },
+    {
+      "source": "U.S. District Court for the Northern District of California",
+      "type": "docketed",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Samuel Hart",
+      "type": "assigned_to",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "SyntaxWorks v. Horizon Systems"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "complaint_filed",
+    "fair_use_in_developer_tools",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 1,
+    "timeline_bucket": 2022
+  }
+}

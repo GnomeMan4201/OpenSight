@@ -1,0 +1,76 @@
+{
+  "id": "doc_01757",
+  "title": "Apex Mobile v. Orion Devices \u2014 Hearing Held",
+  "date": "2016-05-10",
+  "source": "Docket Entry Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "Apex Mobile v. Orion Devices",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Martin Cole conducted a hearing involving arguments by Vertex Labs and Orion Devices on camera image processing patents.",
+  "entities": [
+    "Apex Mobile v. Orion Devices",
+    "Court Hearing",
+    "Court of Appeals",
+    "Judge Martin Cole",
+    "Oral Argument",
+    "Orion Devices",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "Vertex Labs",
+    "camera image processing patents"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Martin Cole",
+      "type": "held_hearing_for",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Vertex Labs",
+      "type": "appeared_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Orion Devices",
+      "type": "appeared_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Apex Mobile v. Orion Devices"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "hearing",
+    "camera_image_processing_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 2,
+    "timeline_bucket": 2016
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "doc_00943",
+  "title": "Federal Trade Commission v. Titan Search \u2014 Discovery Order",
+  "date": "2020-02-07",
+  "source": "Hearing Note",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. Titan Search",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "discovery_order",
+  "summary": "The court ordered limited discovery focused on communications and materials tied to exclusive dealing.",
+  "entities": [
+    "BrightCart Platform",
+    "Court of Appeals",
+    "Document Production",
+    "Economic Expert",
+    "Federal Trade Commission",
+    "Federal Trade Commission v. Titan Search",
+    "Financial Records",
+    "Internal Emails",
+    "Judge Patrick Sloan",
+    "Market Analysis",
+    "Metro Ad Exchange",
+    "U.S. District Court for the District of Columbia",
+    "exclusive dealing"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "issued_order_in",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "U.S. District Court for the District of Columbia",
+      "type": "ordered_discovery_in",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. Titan Search"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "discovery_order",
+    "exclusive_dealing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 3,
+    "timeline_bucket": 2020
+  }
+}

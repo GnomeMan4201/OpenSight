@@ -97,50 +97,122 @@ _NOISE_PATTERNS = [
 ]
 
 def _is_noise_entity(name: str, entity_type: str) -> bool:
-    """Return True if this extraction is likely noise (section header, phrase, etc.)"""
-    if entity_type not in ("Person", "Organization", "Location", "Event", "Facility"):
-        return False
-    
-    stripped = name.strip()
-    
-    # Too short or too long
-    if len(stripped) < 3 or len(stripped) > 60:
+    """
+    Return True if this extraction is likely noise.
+    Hard rules — no ML needed.
+    """
+    if not name or not name.strip():
         return True
-    
-    # In noise word list
-    if stripped in _NOISE_WORDS or stripped.rstrip("s") in _NOISE_WORDS:
+
+    name = name.strip()
+
+    # ── Strip relation markup artifacts ──────────────────────────────────────
+    # Entities like "Naomi Ellis --Assigned_To-->" are markup leaking through
+    if "--" in name or "→" in name or "|->" in name:
         return True
-    
-    # Matches noise patterns
-    for pattern in _NOISE_PATTERNS:
-        if pattern.search(stripped):
+
+    # ── Newline artifacts (concat from bad OCR/markup) ────────────────────────
+    # "Stack Date", "Cloud Date" etc come from "Stack\nDate" in aliases
+    if "\n" in name:
+        return True
+
+    # ── Reject Date entity type entirely ─────────────────────────────────────
+    if entity_type == "Date":
+        return True
+
+    tokens = name.split()
+    n = len(tokens)
+
+    if n == 0 or n > 6:
+        return True
+
+    # ── Leading articles ──────────────────────────────────────────────────────
+    if tokens[0].lower() in ("the", "a", "an", "this", "that", "these", "those"):
+        return True
+
+    # ── Starts with digit or punctuation ─────────────────────────────────────
+    if not name[0].isalpha():
+        return True
+
+    name_lower = name.lower()
+
+    # ── Hard blocklist — procedural phrases and label text ───────────────────
+    BLOCKLIST = frozenset([
+        # Legal procedure
+        "complaint filed case", "summary judgment", "summary judgment motion",
+        "appeal filed case", "appellate opinion case", "discovery order case",
+        "hearing held case", "jury verdict case", "regulatory notice case",
+        "witness testimony case", "motion to dismiss", "preliminary injunction",
+        "trial testimony", "court hearing",
+        # Role labels (not actors)
+        "expert witness", "investor group", "appellate panel",
+        # Synthetic artifacts from markup
+        "stack date", "cloud date", "systems date", "circuits date",
+        "search date", "platform date", "holdings date", "retail date",
+        "labs date", "devices date", "diagnostics date",
+        "ad exchange date", "harbor capital date", "vertex labs date",
+        "titan search date", "horizon systems date",
+    ])
+    if name_lower in BLOCKLIST:
+        return True
+
+    # ── Suffix-noise patterns ─────────────────────────────────────────────────
+    NOISE_SUFFIXES = (
+        " date", " event", " cluster", " case", " relationships",
+        " relationship", " ecosystem", " dispute", " proceeding",
+        " network",
+    )
+    for suffix in NOISE_SUFFIXES:
+        if name_lower.endswith(suffix):
             return True
-    
-    # For Person: must look like an actual name (not a phrase)
+
+    # ── Keyword-in-name patterns ──────────────────────────────────────────────
+    NOISE_KEYWORDS = {
+        "filed case", "opinion case", "order case", "verdict case",
+        "testimony case", "notice case", "hearing case",
+        "corporate fraud trial", "financial reporting fraud",
+    }
+    for kw in NOISE_KEYWORDS:
+        if kw in name_lower:
+            return True
+
+    # ── Person-specific: must look like an actual human name ─────────────────
+    # Reject if any token matches a known non-name term
     if entity_type == "Person":
-        words = stripped.split()
-        # Reject if any word is a common English word that isn't a surname
-        _COMMON_WORDS = {
-            "summary", "dynamics", "syndrome", "critique", "markers",
-            "identifying", "quantifying", "addressing", "rejecting",
-            "approaches", "perspectives", "challenges", "responses",
-            "impact", "manipulation", "training", "analysis", "hearing",
-            "terminology", "protection", "assessment", "evaluation",
-            "this", "the", "and", "for", "with", "from", "into",
-            "healthy", "harmful", "appropriate", "statistical", "linguistic",
-            "multifaceted", "computational", "international", "judicial",
+        tokens = name.split()
+        # Human names are 1-3 tokens
+        if len(tokens) > 3:
+            return True
+        # Tokens that appear in human names but NOT in these non-name terms
+        NON_NAME_TOKENS = {
+            # Geographic/legal institutions
+            "district", "court", "circuit", "division", "department",
+            "bureau", "office", "commission", "coalition", "council",
+            "committee", "tribunal", "authority", "agency", "board",
+            # Role/procedural labels
+            "expert", "witness", "analysis", "notice", "advisory",
+            "regulatory", "review", "market", "exchange", "capital",
+            "group", "panel", "motion", "argument", "production",
+            "records", "emails", "model", "report", "testimony",
+            "form", "order", "verdict",
+            # Org-type indicators
+            "grid", "stack", "signal", "platform", "logic",
+            "tech", "systems", "software", "labs", "diagnostics",
         }
-        word_set = {w.lower() for w in words}
-        if word_set & _COMMON_WORDS:
+        token_set = {t.lower() for t in tokens}
+        if token_set & NON_NAME_TOKENS:
             return True
-        # Reject if more than 3 words (names are 1-3 words)
-        if len(words) > 3:
+        # Reject role-prefixed names that aren't Judge (Judge is valid — we merge later)
+        ROLE_PREFIXES = {
+            "dr", "mr", "ms", "mrs", "prof", "attorney",
+            "counsel", "officer", "director", "senior", "chief",
+        }
+        if tokens[0].lower().rstrip(".") in ROLE_PREFIXES:
             return True
-    
+
     return False
 
 
-@lru_cache(maxsize=4)
 def _load_spacy(model_name: str):
     """
     Load a spaCy model, returning None if spaCy or the model is unavailable.
@@ -161,6 +233,16 @@ def _load_spacy(model_name: str):
         )
         return None
 
+
+
+
+def _strip_relation_markup(text: str) -> str:
+    cleaned_lines = []
+    for line in text.splitlines():
+        if "--" in line and ">" in line:
+            continue
+        cleaned_lines.append(line)
+    return "\n".join(cleaned_lines)
 
 def extract_spacy(
     text: str,
@@ -404,6 +486,7 @@ def extract_entities(
     """
     if not text.strip():
         return []
+    text = _strip_relation_markup(text)
 
     # Skip pages that are pure OCR garbage (FOIA redactions, numeric tables)
     if _is_ocr_junk is not None and _is_ocr_junk(text[:2000], "foia"):
@@ -426,6 +509,7 @@ def extract_entities(
     # Filter noise from spacy results
     spacy_results = [e for e in spacy_results if not _is_noise_entity(e.canonical_name, e.entity_type)]
     merged: list[ExtractedEntity] = list(spacy_results)
+    # NOTE: regex results are also filtered below after merging
     for r in regex_results:
         if r.entity_type in _SPACY_AUTHORITATIVE:
             # Regex result for a spaCy-covered type: include only if spaCy
@@ -436,4 +520,6 @@ def extract_entities(
             # Regex-exclusive type (Aircraft, Phone, Email, Airport, Address).
             merged.append(r)
 
+    # Apply noise filter to ALL merged results (spaCy + regex)
+    merged = [e for e in merged if not _is_noise_entity(e.canonical_name, e.entity_type)]
     return merged

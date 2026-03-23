@@ -1,0 +1,30 @@
+Signal Grid v. Vector Stack — Motion to Dismiss
+
+Case Name: Signal Grid v. Vector Stack
+Date: 2010-05-29
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: motion_to_dismiss
+
+Summary:
+Defense counsel for Nova Cloud moved to dismiss portions of the complaint involving API reuse.
+
+Entities:
+- API reuse
+- Court of Appeals
+- Developer Ecosystem
+- Judge William Avery
+- Nova Cloud
+- Signal Grid
+- Signal Grid v. Vector Stack
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+
+Relationships:
+- Nova Cloud --filed_motion--> Signal Grid v. Vector Stack
+- Judge William Avery --reviewing_motion_in--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --filed_in--> U.S. District Court for the Western District of Washington
+- Signal Grid v. Vector Stack --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge William Avery --assigned_to--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --references_topic--> API reuse

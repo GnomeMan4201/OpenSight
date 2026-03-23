@@ -1,0 +1,65 @@
+{
+  "id": "doc_02465",
+  "title": "Apex Mobile v. Orion Devices \u2014 Summary Judgment Motion",
+  "date": "2020-02-18",
+  "source": "Opinion Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "Apex Mobile v. Orion Devices",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "summary_judgment",
+  "summary": "Vertex Labs moved for summary judgment on a record centered on wireless chipset design.",
+  "entities": [
+    "Apex Mobile v. Orion Devices",
+    "Court of Appeals",
+    "Judge Lucy Harrow",
+    "Nimbus Systems",
+    "Precedent",
+    "Summary Judgment",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "Vertex Labs",
+    "wireless chipset design"
+  ],
+  "relationships": [
+    {
+      "source": "Vertex Labs",
+      "type": "moved_for_summary_judgment_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "considering",
+      "target": "Summary Judgment"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "assigned_to",
+      "target": "Apex Mobile v. Orion Devices"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "summary_judgment",
+    "wireless_chipset_design",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 3,
+    "timeline_bucket": 2020
+  }
+}

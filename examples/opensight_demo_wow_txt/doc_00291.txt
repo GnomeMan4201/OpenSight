@@ -1,0 +1,35 @@
+CodeForge v. Open Runtime Labs — Complaint Filed
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2018-05-31
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: complaint_filed
+
+Summary:
+CodeForge filed a complaint against SyntaxWorks in U.S. District Court for the Northern District of California, alleging source code licensing.
+
+Entities:
+- CodeForge
+- CodeForge v. Open Runtime Labs
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Investor Group
+- Judge Lena Brooks
+- Regulatory Notice
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- source code licensing
+
+Relationships:
+- CodeForge --filed_complaint_against--> SyntaxWorks
+- U.S. District Court for the Northern District of California --docketed--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Northern District of California
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Lena Brooks --assigned_to--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --references_topic--> source code licensing
+- Supreme Court --reviewing--> CodeForge v. Open Runtime Labs
+- U.S. Copyright Office --involved_in--> CodeForge v. Open Runtime Labs

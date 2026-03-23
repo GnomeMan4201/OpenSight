@@ -1,0 +1,85 @@
+{
+  "id": "doc_03561",
+  "title": "SyntaxWorks v. Horizon Systems \u2014 Summary Judgment Motion",
+  "date": "2014-01-31",
+  "source": "Court Filing Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "SyntaxWorks v. Horizon Systems",
+  "court": "U.S. District Court for the Western District of Washington",
+  "court_type": "district",
+  "event_type": "summary_judgment",
+  "summary": "CodeForge moved for summary judgment on a record centered on software interoperability.",
+  "entities": [
+    "CodeForge",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Judge Samuel Hart",
+    "Nova Cloud",
+    "Summary Judgment",
+    "Supreme Court",
+    "SyntaxWorks v. Horizon Systems",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Western District of Washington",
+    "software interoperability"
+  ],
+  "relationships": [
+    {
+      "source": "CodeForge",
+      "type": "moved_for_summary_judgment_in",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "Judge Samuel Hart",
+      "type": "considering",
+      "target": "Summary Judgment"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Western District of Washington"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Samuel Hart",
+      "type": "assigned_to",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "references_topic",
+      "target": "software interoperability"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "U.S. Copyright Office",
+      "type": "involved_in",
+      "target": "SyntaxWorks v. Horizon Systems"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "summary_judgment",
+    "software_interoperability",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 5,
+    "timeline_bucket": 2014
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "doc_04640",
+  "title": "CodeForge v. Open Runtime Labs \u2014 Hearing Held",
+  "date": "2021-01-13",
+  "source": "Docket Entry Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "CodeForge v. Open Runtime Labs",
+  "court": "U.S. District Court for the Western District of Washington",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Lena Brooks conducted a hearing involving arguments by Open Runtime Labs and Horizon Systems on copyrightability of interfaces.",
+  "entities": [
+    "CodeForge v. Open Runtime Labs",
+    "Court Hearing",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Expert Witness",
+    "Horizon Systems",
+    "Investor Group",
+    "Judge Lena Brooks",
+    "Open Runtime Labs",
+    "Oral Argument",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Western District of Washington",
+    "copyrightability of interfaces"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Lena Brooks",
+      "type": "held_hearing_for",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "Open Runtime Labs",
+      "type": "appeared_in",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "Horizon Systems",
+      "type": "appeared_in",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Western District of Washington"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Lena Brooks",
+      "type": "assigned_to",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "references_topic",
+      "target": "copyrightability of interfaces"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "CodeForge v. Open Runtime Labs"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "hearing",
+    "copyrightability_of_interfaces",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 5,
+    "timeline_bucket": 2021
+  }
+}

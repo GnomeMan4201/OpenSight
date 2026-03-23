@@ -1,0 +1,75 @@
+{
+  "id": "doc_00568",
+  "title": "Northstar Logic v. Quantum Handsets \u2014 Summary Judgment Motion",
+  "date": "2013-04-23",
+  "source": "Opinion Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "Northstar Logic v. Quantum Handsets",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "summary_judgment",
+  "summary": "Quantum Handsets moved for summary judgment on a record centered on user interface gestures.",
+  "entities": [
+    "Court of Appeals",
+    "Judge Martin Cole",
+    "Northstar Logic v. Quantum Handsets",
+    "Orion Devices",
+    "Precedent",
+    "Quantum Handsets",
+    "Summary Judgment",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "user interface gestures"
+  ],
+  "relationships": [
+    {
+      "source": "Quantum Handsets",
+      "type": "moved_for_summary_judgment_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "considering",
+      "target": "Summary Judgment"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "references_topic",
+      "target": "user interface gestures"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "summary_judgment",
+    "user_interface_gestures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 2,
+    "timeline_bucket": 2013
+  }
+}

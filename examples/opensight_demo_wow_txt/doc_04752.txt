@@ -1,0 +1,34 @@
+United States v. Rivergate Holdings — Witness Testimony
+
+Case Name: United States v. Rivergate Holdings
+Date: 2012-01-02
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: witness_testimony
+
+Summary:
+A witness testified regarding communications, intent, and actions involving clinical test misrepresentation.
+
+Entities:
+- Chief Financial Officer
+- Court of Appeals
+- Expert Witness
+- Federal Trade Commission
+- Investor Group
+- Judge Tessa Monroe
+- Regulatory Notice
+- Supreme Court
+- Trial Testimony
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Rivergate Holdings
+- Witness
+- clinical test misrepresentation
+
+Relationships:
+- Witness --testified_in--> United States v. Rivergate Holdings
+- Judge Tessa Monroe --heard_testimony_in--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Tessa Monroe --assigned_to--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --references_topic--> clinical test misrepresentation

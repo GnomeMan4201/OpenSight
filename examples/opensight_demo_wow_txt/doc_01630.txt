@@ -1,0 +1,34 @@
+Northstar Logic v. Quantum Handsets — Discovery Order
+
+Case Name: Northstar Logic v. Quantum Handsets
+Date: 2016-09-18
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: discovery_order
+
+Summary:
+Judge Martin Cole issued a discovery order requiring production of records related to battery optimization patents.
+
+Entities:
+- Apex Mobile
+- Court of Appeals
+- Document Production
+- Financial Records
+- Internal Emails
+- Judge Martin Cole
+- Northstar Logic v. Quantum Handsets
+- Precedent
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- Vertex Labs
+- battery optimization patents
+
+Relationships:
+- Judge Martin Cole --issued_order_in--> Northstar Logic v. Quantum Handsets
+- U.S. District Court for the Northern District of California --ordered_discovery_in--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --filed_in--> U.S. District Court for the Northern District of California
+- Northstar Logic v. Quantum Handsets --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> Northstar Logic v. Quantum Handsets
+- Court of Appeals --reviewing--> Northstar Logic v. Quantum Handsets
+- U.S. Patent and Trademark Office --involved_in--> Northstar Logic v. Quantum Handsets

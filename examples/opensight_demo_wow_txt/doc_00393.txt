@@ -1,0 +1,33 @@
+Northstar Logic v. Quantum Handsets — Motion to Dismiss
+
+Case Name: Northstar Logic v. Quantum Handsets
+Date: 2018-03-16
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: motion_to_dismiss
+
+Summary:
+Defense counsel for BluePeak Tech moved to dismiss portions of the complaint involving camera image processing patents.
+
+Entities:
+- BluePeak Tech
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Lucy Harrow
+- Northstar Logic
+- Northstar Logic v. Quantum Handsets
+- Precedent
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- camera image processing patents
+
+Relationships:
+- BluePeak Tech --filed_motion--> Northstar Logic v. Quantum Handsets
+- Judge Lucy Harrow --reviewing_motion_in--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --filed_in--> U.S. District Court for the District of Delaware
+- Northstar Logic v. Quantum Handsets --belongs_to_cluster--> Patent Litigation
+- Judge Lucy Harrow --assigned_to--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --references_topic--> camera image processing patents

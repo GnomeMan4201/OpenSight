@@ -1,0 +1,34 @@
+Northstar Logic v. Quantum Handsets — Hearing Held
+
+Case Name: Northstar Logic v. Quantum Handsets
+Date: 2017-10-30
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: hearing
+
+Summary:
+The court held a hearing in Northstar Logic v. Quantum Handsets to address disputed issues concerning wireless chipset design.
+
+Entities:
+- Apex Mobile
+- Court Hearing
+- Court of Appeals
+- Judge Elena Ward
+- Northstar Logic
+- Northstar Logic v. Quantum Handsets
+- Oral Argument
+- Precedent
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- wireless chipset design
+
+Relationships:
+- Judge Elena Ward --held_hearing_for--> Northstar Logic v. Quantum Handsets
+- Northstar Logic --appeared_in--> Northstar Logic v. Quantum Handsets
+- Apex Mobile --appeared_in--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --filed_in--> U.S. District Court for the District of Delaware
+- Northstar Logic v. Quantum Handsets --belongs_to_cluster--> Patent Litigation
+- Judge Elena Ward --assigned_to--> Northstar Logic v. Quantum Handsets
+- Court of Appeals --reviewing--> Northstar Logic v. Quantum Handsets
+- U.S. Patent and Trademark Office --involved_in--> Northstar Logic v. Quantum Handsets

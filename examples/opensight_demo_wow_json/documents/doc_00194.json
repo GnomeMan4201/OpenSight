@@ -1,0 +1,65 @@
+{
+  "id": "doc_00194",
+  "title": "Apex Mobile v. Orion Devices \u2014 Summary Judgment Motion",
+  "date": "2010-09-13",
+  "source": "Case Activity Update",
+  "cluster": "Patent Litigation",
+  "case_name": "Apex Mobile v. Orion Devices",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "summary_judgment",
+  "summary": "Helix Circuits moved for summary judgment on a record centered on camera image processing patents.",
+  "entities": [
+    "Apex Mobile v. Orion Devices",
+    "Court of Appeals",
+    "Helix Circuits",
+    "Judge Martin Cole",
+    "Northstar Logic",
+    "Precedent",
+    "Summary Judgment",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "camera image processing patents"
+  ],
+  "relationships": [
+    {
+      "source": "Helix Circuits",
+      "type": "moved_for_summary_judgment_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "considering",
+      "target": "Summary Judgment"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "Apex Mobile v. Orion Devices"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "summary_judgment",
+    "camera_image_processing_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 5,
+    "timeline_bucket": 2010
+  }
+}

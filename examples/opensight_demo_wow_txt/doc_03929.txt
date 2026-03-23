@@ -1,0 +1,30 @@
+CodeForge v. Open Runtime Labs — Complaint Filed
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2022-06-05
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: complaint_filed
+
+Summary:
+SyntaxWorks filed a complaint against Nova Cloud in U.S. District Court for the Northern District of California, alleging fair use in developer tools.
+
+Entities:
+- CodeForge v. Open Runtime Labs
+- Court of Appeals
+- Developer Ecosystem
+- Judge Lena Brooks
+- Nova Cloud
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- fair use in developer tools
+
+Relationships:
+- SyntaxWorks --filed_complaint_against--> Nova Cloud
+- U.S. District Court for the Northern District of California --docketed--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Northern District of California
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Lena Brooks --assigned_to--> CodeForge v. Open Runtime Labs
+- U.S. Copyright Office --involved_in--> CodeForge v. Open Runtime Labs

@@ -1,0 +1,32 @@
+Atlas Software v. Nova Cloud — Summary Judgment Motion
+
+Case Name: Atlas Software v. Nova Cloud
+Date: 2015-04-06
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: summary_judgment
+
+Summary:
+Open Runtime Labs moved for summary judgment on a record centered on API reuse.
+
+Entities:
+- API reuse
+- Atlas Software v. Nova Cloud
+- CodeForge
+- Court of Appeals
+- Developer Ecosystem
+- Judge William Avery
+- Open Runtime Labs
+- Summary Judgment
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+
+Relationships:
+- Open Runtime Labs --moved_for_summary_judgment_in--> Atlas Software v. Nova Cloud
+- Judge William Avery --considering--> Summary Judgment
+- Atlas Software v. Nova Cloud --filed_in--> U.S. District Court for the Northern District of California
+- Atlas Software v. Nova Cloud --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge William Avery --assigned_to--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --references_topic--> API reuse
+- Court of Appeals --reviewing--> Atlas Software v. Nova Cloud

@@ -1,0 +1,36 @@
+Apex Mobile v. Orion Devices — Discovery Order
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2017-12-19
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: discovery_order
+
+Summary:
+Judge Lucy Harrow issued a discovery order requiring production of records related to battery optimization patents.
+
+Entities:
+- Apex Mobile v. Orion Devices
+- Court of Appeals
+- Document Production
+- Expert Witness
+- Financial Records
+- Internal Emails
+- Investor Group
+- Judge Lucy Harrow
+- Nimbus Systems
+- Precedent
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- Vertex Labs
+- battery optimization patents
+
+Relationships:
+- Judge Lucy Harrow --issued_order_in--> Apex Mobile v. Orion Devices
+- U.S. District Court for the Northern District of California --ordered_discovery_in--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the Northern District of California
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Lucy Harrow --assigned_to--> Apex Mobile v. Orion Devices
+- U.S. Patent and Trademark Office --involved_in--> Apex Mobile v. Orion Devices

@@ -1,0 +1,29 @@
+Northstar Logic v. Quantum Handsets — Motion to Dismiss
+
+Case Name: Northstar Logic v. Quantum Handsets
+Date: 2015-06-03
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: motion_to_dismiss
+
+Summary:
+Orion Devices filed a motion to dismiss, arguing the complaint failed to establish camera image processing patents.
+
+Entities:
+- Court of Appeals
+- Judge Martin Cole
+- Northstar Logic v. Quantum Handsets
+- Orion Devices
+- Precedent
+- Quantum Handsets
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- camera image processing patents
+
+Relationships:
+- Orion Devices --filed_motion--> Northstar Logic v. Quantum Handsets
+- Judge Martin Cole --reviewing_motion_in--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --filed_in--> U.S. District Court for the Northern District of California
+- Northstar Logic v. Quantum Handsets --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> Northstar Logic v. Quantum Handsets

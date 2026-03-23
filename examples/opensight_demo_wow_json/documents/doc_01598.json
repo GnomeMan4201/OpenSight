@@ -1,0 +1,80 @@
+{
+  "id": "doc_01598",
+  "title": "Federal Trade Commission v. Titan Search \u2014 Summary Judgment Motion",
+  "date": "2010-09-02",
+  "source": "Case Activity Update",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. Titan Search",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "summary_judgment",
+  "summary": "A summary judgment motion was filed seeking judgment on issues involving self-preferencing.",
+  "entities": [
+    "BrightCart Platform",
+    "Court of Appeals",
+    "Department of Justice Antitrust Division",
+    "Economic Expert",
+    "Federal Trade Commission v. Titan Search",
+    "Judge Patrick Sloan",
+    "Market Analysis",
+    "Summary Judgment",
+    "U.S. District Court for the District of Columbia",
+    "United States",
+    "self-preferencing"
+  ],
+  "relationships": [
+    {
+      "source": "BrightCart Platform",
+      "type": "moved_for_summary_judgment_in",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "considering",
+      "target": "Summary Judgment"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Federal Trade Commission v. Titan Search",
+      "type": "references_topic",
+      "target": "self-preferencing"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Federal Trade Commission v. Titan Search"
+    },
+    {
+      "source": "Department of Justice Antitrust Division",
+      "type": "involved_in",
+      "target": "Federal Trade Commission v. Titan Search"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "summary_judgment",
+    "self_preferencing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 1,
+    "timeline_bucket": 2010
+  }
+}

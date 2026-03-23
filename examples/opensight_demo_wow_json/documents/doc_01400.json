@@ -1,0 +1,71 @@
+{
+  "id": "doc_01400",
+  "title": "State Coalition v. Omnidata Retail \u2014 Hearing Held",
+  "date": "2014-10-14",
+  "source": "Opinion Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "State Coalition v. Omnidata Retail",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Patrick Sloan conducted a hearing involving arguments by BrightCart Platform and United States on self-preferencing.",
+  "entities": [
+    "BrightCart Platform",
+    "Court Hearing",
+    "Court of Appeals",
+    "Department of Justice Antitrust Division",
+    "Economic Expert",
+    "Judge Patrick Sloan",
+    "Market Analysis",
+    "Oral Argument",
+    "State Coalition v. Omnidata Retail",
+    "U.S. District Court for the District of Columbia",
+    "United States",
+    "self-preferencing"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "held_hearing_for",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "BrightCart Platform",
+      "type": "appeared_in",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "United States",
+      "type": "appeared_in",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "assigned_to",
+      "target": "State Coalition v. Omnidata Retail"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "hearing",
+    "self_preferencing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 1,
+    "timeline_bucket": 2014
+  }
+}

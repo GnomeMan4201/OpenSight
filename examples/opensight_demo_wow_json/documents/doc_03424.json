@@ -1,0 +1,79 @@
+{
+  "id": "doc_03424",
+  "title": "Nimbus Systems v. Vertex Labs \u2014 Hearing Held",
+  "date": "2011-08-13",
+  "source": "Case Activity Update",
+  "cluster": "Patent Litigation",
+  "case_name": "Nimbus Systems v. Vertex Labs",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "The court held a hearing in Nimbus Systems v. Vertex Labs to address disputed issues concerning battery optimization patents.",
+  "entities": [
+    "Court Hearing",
+    "Court of Appeals",
+    "Expert Witness",
+    "Helix Circuits",
+    "Investor Group",
+    "Judge Lucy Harrow",
+    "Nimbus Systems v. Vertex Labs",
+    "Oral Argument",
+    "Precedent",
+    "Quantum Handsets",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "battery optimization patents"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "held_hearing_for",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Quantum Handsets",
+      "type": "appeared_in",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Helix Circuits",
+      "type": "appeared_in",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Nimbus Systems v. Vertex Labs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "Nimbus Systems v. Vertex Labs",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "assigned_to",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "Nimbus Systems v. Vertex Labs"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "hearing",
+    "battery_optimization_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 1,
+    "timeline_bucket": 2011
+  }
+}

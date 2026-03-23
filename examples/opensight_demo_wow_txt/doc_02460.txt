@@ -1,0 +1,28 @@
+State Coalition v. Omnidata Retail — Complaint Filed
+
+Case Name: State Coalition v. Omnidata Retail
+Date: 2017-06-16
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: complaint_filed
+
+Summary:
+A civil complaint was entered in U.S. District Court for the District of Columbia naming State Coalition as defendant and alleging platform monopoly allegations.
+
+Entities:
+- Court of Appeals
+- Economic Expert
+- Federal Trade Commission
+- Judge Naomi Ellis
+- Market Analysis
+- State Coalition
+- State Coalition v. Omnidata Retail
+- U.S. District Court for the District of Columbia
+- platform monopoly allegations
+
+Relationships:
+- Federal Trade Commission --filed_complaint_against--> State Coalition
+- U.S. District Court for the District of Columbia --docketed--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --filed_in--> U.S. District Court for the District of Columbia
+- State Coalition v. Omnidata Retail --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> State Coalition v. Omnidata Retail

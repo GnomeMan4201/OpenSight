@@ -1,0 +1,31 @@
+BluePeak Tech v. Helix Circuits — Complaint Filed
+
+Case Name: BluePeak Tech v. Helix Circuits
+Date: 2020-02-20
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: complaint_filed
+
+Summary:
+A civil complaint was entered in U.S. District Court for the District of Delaware naming Helix Circuits as defendant and alleging camera image processing patents.
+
+Entities:
+- BluePeak Tech v. Helix Circuits
+- Court of Appeals
+- Helix Circuits
+- Judge Lucy Harrow
+- Precedent
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- Vertex Labs
+- camera image processing patents
+
+Relationships:
+- Vertex Labs --filed_complaint_against--> Helix Circuits
+- U.S. District Court for the District of Delaware --docketed--> BluePeak Tech v. Helix Circuits
+- BluePeak Tech v. Helix Circuits --filed_in--> U.S. District Court for the District of Delaware
+- BluePeak Tech v. Helix Circuits --belongs_to_cluster--> Patent Litigation
+- Judge Lucy Harrow --assigned_to--> BluePeak Tech v. Helix Circuits
+- BluePeak Tech v. Helix Circuits --references_topic--> camera image processing patents
+- Court of Appeals --reviewing--> BluePeak Tech v. Helix Circuits

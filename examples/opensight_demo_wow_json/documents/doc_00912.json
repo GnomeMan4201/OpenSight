@@ -1,0 +1,68 @@
+{
+  "id": "doc_00912",
+  "title": "State Coalition v. Omnidata Retail \u2014 Complaint Filed",
+  "date": "2018-04-08",
+  "source": "Docket Entry Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "State Coalition v. Omnidata Retail",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "A civil complaint was entered in U.S. District Court for the Southern District of New York naming Federal Trade Commission as defendant and alleging self-preferencing.",
+  "entities": [
+    "Court of Appeals",
+    "Economic Expert",
+    "Federal Trade Commission",
+    "Judge Naomi Ellis",
+    "Market Analysis",
+    "Omnidata Retail",
+    "State Coalition v. Omnidata Retail",
+    "U.S. District Court for the Southern District of New York",
+    "self-preferencing"
+  ],
+  "relationships": [
+    {
+      "source": "Omnidata Retail",
+      "type": "filed_complaint_against",
+      "target": "Federal Trade Commission"
+    },
+    {
+      "source": "U.S. District Court for the Southern District of New York",
+      "type": "docketed",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Naomi Ellis",
+      "type": "assigned_to",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "references_topic",
+      "target": "self-preferencing"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "complaint_filed",
+    "self_preferencing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 1,
+    "timeline_bucket": 2018
+  }
+}

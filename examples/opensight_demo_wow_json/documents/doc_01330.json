@@ -1,0 +1,80 @@
+{
+  "id": "doc_01330",
+  "title": "United States v. Metro Ad Exchange \u2014 Discovery Order",
+  "date": "2011-08-30",
+  "source": "Hearing Note",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "United States v. Metro Ad Exchange",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "discovery_order",
+  "summary": "Judge Robert Kline issued a discovery order requiring production of records related to exclusive dealing.",
+  "entities": [
+    "Court of Appeals",
+    "Document Production",
+    "Economic Expert",
+    "Expert Witness",
+    "Federal Trade Commission",
+    "Financial Records",
+    "Internal Emails",
+    "Investor Group",
+    "Judge Robert Kline",
+    "Market Analysis",
+    "Metro Ad Exchange",
+    "Regulatory Notice",
+    "State Coalition",
+    "U.S. District Court for the District of Columbia",
+    "United States v. Metro Ad Exchange",
+    "exclusive dealing"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Robert Kline",
+      "type": "issued_order_in",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "U.S. District Court for the District of Columbia",
+      "type": "ordered_discovery_in",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Robert Kline",
+      "type": "assigned_to",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "Federal Trade Commission",
+      "type": "involved_in",
+      "target": "United States v. Metro Ad Exchange"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "discovery_order",
+    "exclusive_dealing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 3,
+    "timeline_bucket": 2011
+  }
+}

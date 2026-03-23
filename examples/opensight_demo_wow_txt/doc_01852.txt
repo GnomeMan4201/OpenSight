@@ -1,0 +1,35 @@
+Apex Mobile v. Orion Devices — Hearing Held
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2016-12-16
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: hearing
+
+Summary:
+Judge Lucy Harrow conducted a hearing involving arguments by Helix Circuits and Quantum Handsets on battery optimization patents.
+
+Entities:
+- Apex Mobile v. Orion Devices
+- Court Hearing
+- Court of Appeals
+- Expert Witness
+- Helix Circuits
+- Investor Group
+- Judge Lucy Harrow
+- Oral Argument
+- Precedent
+- Quantum Handsets
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- battery optimization patents
+
+Relationships:
+- Judge Lucy Harrow --held_hearing_for--> Apex Mobile v. Orion Devices
+- Helix Circuits --appeared_in--> Apex Mobile v. Orion Devices
+- Quantum Handsets --appeared_in--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the Northern District of California
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Lucy Harrow --assigned_to--> Apex Mobile v. Orion Devices

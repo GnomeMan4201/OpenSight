@@ -1,0 +1,35 @@
+Apex Mobile v. Orion Devices — Jury Verdict
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2010-09-14
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: jury_verdict
+
+Summary:
+The jury found on multiple claims after deliberation on allegations involving user interface gestures.
+
+Entities:
+- Apex Mobile v. Orion Devices
+- Court of Appeals
+- Expert Witness
+- Helix Circuits
+- Investor Group
+- Judge Martin Cole
+- Jury
+- Northstar Logic
+- Precedent
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- Verdict Form
+- user interface gestures
+
+Relationships:
+- Jury --returned_verdict_in--> Apex Mobile v. Orion Devices
+- Judge Martin Cole --entered_verdict_in--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the District of Delaware
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> Apex Mobile v. Orion Devices
+- U.S. Patent and Trademark Office --involved_in--> Apex Mobile v. Orion Devices

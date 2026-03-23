@@ -1,0 +1,32 @@
+CodeForge v. Open Runtime Labs — Motion to Dismiss
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2020-08-26
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: motion_to_dismiss
+
+Summary:
+Horizon Systems filed a motion to dismiss, arguing the complaint failed to establish copyrightability of interfaces.
+
+Entities:
+- CodeForge v. Open Runtime Labs
+- Court of Appeals
+- Developer Ecosystem
+- Horizon Systems
+- Judge William Avery
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- copyrightability of interfaces
+
+Relationships:
+- Horizon Systems --filed_motion--> CodeForge v. Open Runtime Labs
+- Judge William Avery --reviewing_motion_in--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Western District of Washington
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge William Avery --assigned_to--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --references_topic--> copyrightability of interfaces
+- Court of Appeals --reviewing--> CodeForge v. Open Runtime Labs
+- U.S. Copyright Office --involved_in--> CodeForge v. Open Runtime Labs

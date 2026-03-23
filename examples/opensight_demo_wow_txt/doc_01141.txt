@@ -1,0 +1,33 @@
+SyntaxWorks v. Horizon Systems — Summary Judgment Motion
+
+Case Name: SyntaxWorks v. Horizon Systems
+Date: 2021-07-21
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: summary_judgment
+
+Summary:
+SyntaxWorks moved for summary judgment on a record centered on source code licensing.
+
+Entities:
+- CodeForge
+- Court of Appeals
+- Developer Ecosystem
+- Judge Samuel Hart
+- Summary Judgment
+- Supreme Court
+- SyntaxWorks
+- SyntaxWorks v. Horizon Systems
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- source code licensing
+
+Relationships:
+- SyntaxWorks --moved_for_summary_judgment_in--> SyntaxWorks v. Horizon Systems
+- Judge Samuel Hart --considering--> Summary Judgment
+- SyntaxWorks v. Horizon Systems --filed_in--> U.S. District Court for the Northern District of California
+- SyntaxWorks v. Horizon Systems --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> SyntaxWorks v. Horizon Systems
+- SyntaxWorks v. Horizon Systems --references_topic--> source code licensing
+- Supreme Court --reviewing--> SyntaxWorks v. Horizon Systems
+- Court of Appeals --reviewing--> SyntaxWorks v. Horizon Systems

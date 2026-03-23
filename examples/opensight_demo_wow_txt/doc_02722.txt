@@ -1,0 +1,31 @@
+State Coalition v. Omnidata Retail — Regulatory Notice
+
+Case Name: State Coalition v. Omnidata Retail
+Date: 2014-07-26
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: regulatory_notice
+
+Summary:
+A regulatory notice was issued concerning reporting and disclosure obligations tied to platform monopoly allegations.
+
+Entities:
+- Court of Appeals
+- Economic Expert
+- Federal Trade Commission
+- Judge Naomi Ellis
+- Market Analysis
+- Metro Ad Exchange
+- Regulatory Notice
+- State Coalition v. Omnidata Retail
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- platform monopoly allegations
+
+Relationships:
+- Federal Trade Commission --issued_notice_involving--> Metro Ad Exchange
+- Federal Trade Commission --referenced--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --filed_in--> U.S. District Court for the Southern District of New York
+- State Coalition v. Omnidata Retail --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> State Coalition v. Omnidata Retail
+- Federal Trade Commission --involved_in--> State Coalition v. Omnidata Retail

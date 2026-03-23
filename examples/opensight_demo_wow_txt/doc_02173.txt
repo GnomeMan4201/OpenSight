@@ -1,0 +1,31 @@
+CodeForge v. Open Runtime Labs — Motion to Dismiss
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2020-03-26
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: motion_to_dismiss
+
+Summary:
+Defense counsel for SyntaxWorks moved to dismiss portions of the complaint involving source code licensing.
+
+Entities:
+- CodeForge
+- CodeForge v. Open Runtime Labs
+- Court of Appeals
+- Developer Ecosystem
+- Judge William Avery
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- source code licensing
+
+Relationships:
+- SyntaxWorks --filed_motion--> CodeForge v. Open Runtime Labs
+- Judge William Avery --reviewing_motion_in--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Northern District of California
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge William Avery --assigned_to--> CodeForge v. Open Runtime Labs
+- Supreme Court --reviewing--> CodeForge v. Open Runtime Labs
+- Court of Appeals --reviewing--> CodeForge v. Open Runtime Labs

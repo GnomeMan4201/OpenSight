@@ -1,0 +1,38 @@
+CodeForge v. Open Runtime Labs — Hearing Held
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2021-01-13
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: hearing
+
+Summary:
+Judge Lena Brooks conducted a hearing involving arguments by Open Runtime Labs and Horizon Systems on copyrightability of interfaces.
+
+Entities:
+- CodeForge v. Open Runtime Labs
+- Court Hearing
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Horizon Systems
+- Investor Group
+- Judge Lena Brooks
+- Open Runtime Labs
+- Oral Argument
+- Regulatory Notice
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- copyrightability of interfaces
+
+Relationships:
+- Judge Lena Brooks --held_hearing_for--> CodeForge v. Open Runtime Labs
+- Open Runtime Labs --appeared_in--> CodeForge v. Open Runtime Labs
+- Horizon Systems --appeared_in--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Western District of Washington
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Lena Brooks --assigned_to--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --references_topic--> copyrightability of interfaces
+- Supreme Court --reviewing--> CodeForge v. Open Runtime Labs
+- Court of Appeals --reviewing--> CodeForge v. Open Runtime Labs

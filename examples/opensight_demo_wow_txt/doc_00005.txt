@@ -1,0 +1,35 @@
+Signal Grid v. Vector Stack — Appeal Filed
+
+Case Name: Signal Grid v. Vector Stack
+Date: 2019-06-15
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: appeal_filed
+
+Summary:
+CodeForge appealed the court's decision on issues related to fair use in developer tools.
+
+Entities:
+- CodeForge
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Investor Group
+- Judge Samuel Hart
+- Notice of Appeal
+- Nova Cloud
+- Regulatory Notice
+- Signal Grid v. Vector Stack
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- fair use in developer tools
+
+Relationships:
+- CodeForge --appealed--> Signal Grid v. Vector Stack
+- Court of Appeals --reviewing--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --filed_in--> U.S. District Court for the Western District of Washington
+- Signal Grid v. Vector Stack --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --references_topic--> fair use in developer tools
+- U.S. Copyright Office --involved_in--> Signal Grid v. Vector Stack

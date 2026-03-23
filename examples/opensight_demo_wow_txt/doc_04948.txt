@@ -1,0 +1,31 @@
+Apex Mobile v. Orion Devices — Summary Judgment Motion
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2015-03-23
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: summary_judgment
+
+Summary:
+Nimbus Systems moved for summary judgment on a record centered on battery optimization patents.
+
+Entities:
+- Apex Mobile
+- Apex Mobile v. Orion Devices
+- Court of Appeals
+- Judge Elena Ward
+- Nimbus Systems
+- Precedent
+- Summary Judgment
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- battery optimization patents
+
+Relationships:
+- Nimbus Systems --moved_for_summary_judgment_in--> Apex Mobile v. Orion Devices
+- Judge Elena Ward --considering--> Summary Judgment
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the Northern District of California
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Elena Ward --assigned_to--> Apex Mobile v. Orion Devices
+- Supreme Court --reviewing--> Apex Mobile v. Orion Devices

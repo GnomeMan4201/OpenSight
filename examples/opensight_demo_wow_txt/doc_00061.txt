@@ -1,0 +1,34 @@
+Nimbus Systems v. Vertex Labs — Expert Report Submitted
+
+Case Name: Nimbus Systems v. Vertex Labs
+Date: 2018-12-21
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: expert_report
+
+Summary:
+The parties exchanged expert materials concerning damages, causation, and user interface gestures.
+
+Entities:
+- Apex Mobile
+- Court of Appeals
+- Damages Model
+- Expert Witness
+- Judge Martin Cole
+- Nimbus Systems
+- Nimbus Systems v. Vertex Labs
+- Precedent
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- user interface gestures
+
+Relationships:
+- Expert Witness --submitted_report_in--> Nimbus Systems v. Vertex Labs
+- Nimbus Systems v. Vertex Labs --includes_issue--> user interface gestures
+- Nimbus Systems v. Vertex Labs --filed_in--> U.S. District Court for the District of Delaware
+- Nimbus Systems v. Vertex Labs --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> Nimbus Systems v. Vertex Labs
+- Nimbus Systems v. Vertex Labs --references_topic--> user interface gestures
+- Supreme Court --reviewing--> Nimbus Systems v. Vertex Labs
+- Court of Appeals --reviewing--> Nimbus Systems v. Vertex Labs

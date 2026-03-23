@@ -1,0 +1,34 @@
+United States v. Metro Ad Exchange — Complaint Filed
+
+Case Name: United States v. Metro Ad Exchange
+Date: 2010-04-19
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: complaint_filed
+
+Summary:
+BrightCart Platform filed a complaint against State Coalition in U.S. District Court for the Southern District of New York, alleging market foreclosure.
+
+Entities:
+- BrightCart Platform
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Expert Witness
+- Investor Group
+- Judge Naomi Ellis
+- Market Analysis
+- Regulatory Notice
+- State Coalition
+- U.S. District Court for the Southern District of New York
+- United States v. Metro Ad Exchange
+- market foreclosure
+
+Relationships:
+- BrightCart Platform --filed_complaint_against--> State Coalition
+- U.S. District Court for the Southern District of New York --docketed--> United States v. Metro Ad Exchange
+- United States v. Metro Ad Exchange --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Metro Ad Exchange --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> United States v. Metro Ad Exchange
+- United States v. Metro Ad Exchange --references_topic--> market foreclosure
+- Department of Justice Antitrust Division --involved_in--> United States v. Metro Ad Exchange

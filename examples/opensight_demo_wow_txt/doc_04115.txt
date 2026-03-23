@@ -1,0 +1,34 @@
+Signal Grid v. Vector Stack — Appellate Opinion
+
+Case Name: Signal Grid v. Vector Stack
+Date: 2023-07-10
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: appellate_opinion
+
+Summary:
+The reviewing court issued an opinion clarifying standards related to fair use in developer tools.
+
+Entities:
+- Appellate Panel
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Horizon Systems
+- Investor Group
+- Judge Samuel Hart
+- Precedent
+- Regulatory Notice
+- Signal Grid
+- Signal Grid v. Vector Stack
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- fair use in developer tools
+
+Relationships:
+- Court of Appeals --issued_opinion_in--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --cites--> Precedent
+- Signal Grid v. Vector Stack --filed_in--> U.S. District Court for the Northern District of California
+- Signal Grid v. Vector Stack --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> Signal Grid v. Vector Stack

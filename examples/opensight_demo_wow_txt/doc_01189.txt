@@ -1,0 +1,35 @@
+Atlas Software v. Nova Cloud — Appellate Opinion
+
+Case Name: Atlas Software v. Nova Cloud
+Date: 2014-12-04
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: appellate_opinion
+
+Summary:
+The reviewing court issued an opinion clarifying standards related to API reuse.
+
+Entities:
+- API reuse
+- Appellate Panel
+- Atlas Software v. Nova Cloud
+- CodeForge
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Investor Group
+- Judge William Avery
+- Open Runtime Labs
+- Precedent
+- Regulatory Notice
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+
+Relationships:
+- Court of Appeals --issued_opinion_in--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --cites--> Precedent
+- Atlas Software v. Nova Cloud --filed_in--> U.S. District Court for the Northern District of California
+- Atlas Software v. Nova Cloud --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge William Avery --assigned_to--> Atlas Software v. Nova Cloud
+- U.S. Copyright Office --involved_in--> Atlas Software v. Nova Cloud

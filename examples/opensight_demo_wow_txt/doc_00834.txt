@@ -1,0 +1,34 @@
+Federal Trade Commission v. Titan Search — Hearing Held
+
+Case Name: Federal Trade Commission v. Titan Search
+Date: 2016-11-02
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: hearing
+
+Summary:
+The court held a hearing in Federal Trade Commission v. Titan Search to address disputed issues concerning self-preferencing.
+
+Entities:
+- Court Hearing
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Federal Trade Commission v. Titan Search
+- Judge Patrick Sloan
+- Market Analysis
+- Metro Ad Exchange
+- Omnidata Retail
+- Oral Argument
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- self-preferencing
+
+Relationships:
+- Judge Patrick Sloan --held_hearing_for--> Federal Trade Commission v. Titan Search
+- Metro Ad Exchange --appeared_in--> Federal Trade Commission v. Titan Search
+- Omnidata Retail --appeared_in--> Federal Trade Commission v. Titan Search
+- Federal Trade Commission v. Titan Search --filed_in--> U.S. District Court for the Southern District of New York
+- Federal Trade Commission v. Titan Search --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Patrick Sloan --assigned_to--> Federal Trade Commission v. Titan Search
+- Department of Justice Antitrust Division --involved_in--> Federal Trade Commission v. Titan Search

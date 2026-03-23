@@ -1,0 +1,34 @@
+Federal Trade Commission v. Titan Search — Complaint Filed
+
+Case Name: Federal Trade Commission v. Titan Search
+Date: 2015-03-11
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: complaint_filed
+
+Summary:
+Omnidata Retail filed a complaint against Titan Search in U.S. District Court for the Southern District of New York, alleging self-preferencing.
+
+Entities:
+- Court of Appeals
+- Economic Expert
+- Expert Witness
+- Federal Trade Commission
+- Federal Trade Commission v. Titan Search
+- Investor Group
+- Judge Naomi Ellis
+- Market Analysis
+- Omnidata Retail
+- Regulatory Notice
+- Supreme Court
+- Titan Search
+- U.S. District Court for the Southern District of New York
+- self-preferencing
+
+Relationships:
+- Omnidata Retail --filed_complaint_against--> Titan Search
+- U.S. District Court for the Southern District of New York --docketed--> Federal Trade Commission v. Titan Search
+- Federal Trade Commission v. Titan Search --filed_in--> U.S. District Court for the Southern District of New York
+- Federal Trade Commission v. Titan Search --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> Federal Trade Commission v. Titan Search
+- Court of Appeals --reviewing--> Federal Trade Commission v. Titan Search

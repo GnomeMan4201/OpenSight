@@ -1,0 +1,64 @@
+{
+  "id": "doc_01354",
+  "title": "Signal Grid v. Vector Stack \u2014 Complaint Filed",
+  "date": "2017-07-13",
+  "source": "Opinion Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "Signal Grid v. Vector Stack",
+  "court": "U.S. District Court for the Western District of Washington",
+  "court_type": "district",
+  "event_type": "complaint_filed",
+  "summary": "Nova Cloud filed a complaint against CodeForge in U.S. District Court for the Western District of Washington, alleging source code licensing.",
+  "entities": [
+    "CodeForge",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Judge Samuel Hart",
+    "Nova Cloud",
+    "Signal Grid v. Vector Stack",
+    "Supreme Court",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Western District of Washington",
+    "source code licensing"
+  ],
+  "relationships": [
+    {
+      "source": "Nova Cloud",
+      "type": "filed_complaint_against",
+      "target": "CodeForge"
+    },
+    {
+      "source": "U.S. District Court for the Western District of Washington",
+      "type": "docketed",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Western District of Washington"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Samuel Hart",
+      "type": "assigned_to",
+      "target": "Signal Grid v. Vector Stack"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "complaint_filed",
+    "source_code_licensing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 4,
+    "timeline_bucket": 2017
+  }
+}

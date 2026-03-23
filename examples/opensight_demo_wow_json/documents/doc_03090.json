@@ -1,0 +1,79 @@
+{
+  "id": "doc_03090",
+  "title": "Federal Trade Commission v. BrightCart Platform \u2014 Hearing Held",
+  "date": "2016-02-04",
+  "source": "Court Filing Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "Federal Trade Commission v. BrightCart Platform",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "The court held a hearing in Federal Trade Commission v. BrightCart Platform to address disputed issues concerning self-preferencing.",
+  "entities": [
+    "BrightCart Platform",
+    "Court Hearing",
+    "Court of Appeals",
+    "Department of Justice Antitrust Division",
+    "Economic Expert",
+    "Expert Witness",
+    "Federal Trade Commission v. BrightCart Platform",
+    "Investor Group",
+    "Judge Robert Kline",
+    "Market Analysis",
+    "Metro Ad Exchange",
+    "Oral Argument",
+    "Regulatory Notice",
+    "U.S. District Court for the District of Columbia",
+    "self-preferencing"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Robert Kline",
+      "type": "held_hearing_for",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Metro Ad Exchange",
+      "type": "appeared_in",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "BrightCart Platform",
+      "type": "appeared_in",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Robert Kline",
+      "type": "assigned_to",
+      "target": "Federal Trade Commission v. BrightCart Platform"
+    },
+    {
+      "source": "Federal Trade Commission v. BrightCart Platform",
+      "type": "references_topic",
+      "target": "self-preferencing"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "hearing",
+    "self_preferencing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 1,
+    "timeline_bucket": 2016
+  }
+}

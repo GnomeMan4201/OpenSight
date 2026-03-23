@@ -1,0 +1,33 @@
+United States v. Rivergate Holdings — Hearing Held
+
+Case Name: United States v. Rivergate Holdings
+Date: 2013-01-02
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: hearing
+
+Summary:
+Judge Edward Navarro conducted a hearing involving arguments by United States and Executive B on internal controls failures.
+
+Entities:
+- Court Hearing
+- Court of Appeals
+- Executive B
+- Federal Trade Commission
+- Investor Group
+- Judge Edward Navarro
+- Oral Argument
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Rivergate Holdings
+- internal controls failures
+
+Relationships:
+- Judge Edward Navarro --held_hearing_for--> United States v. Rivergate Holdings
+- United States --appeared_in--> United States v. Rivergate Holdings
+- Executive B --appeared_in--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Edward Navarro --assigned_to--> United States v. Rivergate Holdings
+- Federal Trade Commission --involved_in--> United States v. Rivergate Holdings

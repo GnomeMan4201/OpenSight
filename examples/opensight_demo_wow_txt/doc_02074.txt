@@ -1,0 +1,34 @@
+United States v. Metro Ad Exchange — Appellate Opinion
+
+Case Name: United States v. Metro Ad Exchange
+Date: 2014-08-27
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: appellate_opinion
+
+Summary:
+The reviewing court issued an opinion clarifying standards related to ad exchange bidding practices.
+
+Entities:
+- Appellate Panel
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Judge Robert Kline
+- Market Analysis
+- Metro Ad Exchange
+- Precedent
+- State Coalition
+- Supreme Court
+- U.S. District Court for the District of Columbia
+- United States v. Metro Ad Exchange
+- ad exchange bidding practices
+
+Relationships:
+- Court of Appeals --issued_opinion_in--> United States v. Metro Ad Exchange
+- United States v. Metro Ad Exchange --cites--> Precedent
+- United States v. Metro Ad Exchange --filed_in--> U.S. District Court for the District of Columbia
+- United States v. Metro Ad Exchange --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Robert Kline --assigned_to--> United States v. Metro Ad Exchange
+- Court of Appeals --reviewing--> United States v. Metro Ad Exchange
+- Department of Justice Antitrust Division --involved_in--> United States v. Metro Ad Exchange

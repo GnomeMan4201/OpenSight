@@ -1,0 +1,69 @@
+{
+  "id": "doc_00132",
+  "title": "CodeForge v. Open Runtime Labs \u2014 Motion to Dismiss",
+  "date": "2021-03-26",
+  "source": "Hearing Note",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "CodeForge v. Open Runtime Labs",
+  "court": "U.S. District Court for the Western District of Washington",
+  "court_type": "district",
+  "event_type": "motion_to_dismiss",
+  "summary": "Horizon Systems filed a motion to dismiss, arguing the complaint failed to establish copyrightability of interfaces.",
+  "entities": [
+    "CodeForge v. Open Runtime Labs",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Horizon Systems",
+    "Judge William Avery",
+    "Supreme Court",
+    "SyntaxWorks",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Western District of Washington",
+    "copyrightability of interfaces"
+  ],
+  "relationships": [
+    {
+      "source": "Horizon Systems",
+      "type": "filed_motion",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "Judge William Avery",
+      "type": "reviewing_motion_in",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Western District of Washington"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge William Avery",
+      "type": "assigned_to",
+      "target": "CodeForge v. Open Runtime Labs"
+    },
+    {
+      "source": "CodeForge v. Open Runtime Labs",
+      "type": "references_topic",
+      "target": "copyrightability of interfaces"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "motion_to_dismiss",
+    "copyrightability_of_interfaces",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 5,
+    "timeline_bucket": 2021
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "doc_02610",
+  "title": "BluePeak Tech v. Helix Circuits \u2014 Hearing Held",
+  "date": "2017-05-12",
+  "source": "Court Filing Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "BluePeak Tech v. Helix Circuits",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "The court held a hearing in BluePeak Tech v. Helix Circuits to address disputed issues concerning user interface gestures.",
+  "entities": [
+    "BluePeak Tech v. Helix Circuits",
+    "Court Hearing",
+    "Court of Appeals",
+    "Judge Martin Cole",
+    "Oral Argument",
+    "Orion Devices",
+    "Precedent",
+    "Quantum Handsets",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "U.S. Patent and Trademark Office",
+    "user interface gestures"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Martin Cole",
+      "type": "held_hearing_for",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Orion Devices",
+      "type": "appeared_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Quantum Handsets",
+      "type": "appeared_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "BluePeak Tech v. Helix Circuits",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "BluePeak Tech v. Helix Circuits"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "BluePeak Tech v. Helix Circuits"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "hearing",
+    "user_interface_gestures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 1,
+    "timeline_bucket": 2017
+  }
+}

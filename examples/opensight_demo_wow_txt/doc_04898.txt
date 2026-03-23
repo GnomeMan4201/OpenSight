@@ -1,0 +1,32 @@
+CodeForge v. Open Runtime Labs — High Court Review
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2017-04-14
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: supreme_court_review
+
+Summary:
+Certiorari was granted on issues concerning source code licensing in CodeForge v. Open Runtime Labs.
+
+Entities:
+- CodeForge
+- CodeForge v. Open Runtime Labs
+- Court of Appeals
+- Developer Ecosystem
+- Judge William Avery
+- Petition for Review
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- source code licensing
+
+Relationships:
+- Supreme Court --reviewing--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --raises_issue--> source code licensing
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Northern District of California
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge William Avery --assigned_to--> CodeForge v. Open Runtime Labs
+- Court of Appeals --reviewing--> CodeForge v. Open Runtime Labs
+- U.S. Copyright Office --involved_in--> CodeForge v. Open Runtime Labs

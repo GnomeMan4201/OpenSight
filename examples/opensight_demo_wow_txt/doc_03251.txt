@@ -1,0 +1,29 @@
+State Coalition v. Omnidata Retail — Complaint Filed
+
+Case Name: State Coalition v. Omnidata Retail
+Date: 2013-04-11
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: complaint_filed
+
+Summary:
+Federal Trade Commission filed a complaint against Metro Ad Exchange in U.S. District Court for the Southern District of New York, alleging ad exchange bidding practices.
+
+Entities:
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Federal Trade Commission
+- Judge Robert Kline
+- Market Analysis
+- Metro Ad Exchange
+- State Coalition v. Omnidata Retail
+- U.S. District Court for the Southern District of New York
+- ad exchange bidding practices
+
+Relationships:
+- Federal Trade Commission --filed_complaint_against--> Metro Ad Exchange
+- U.S. District Court for the Southern District of New York --docketed--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --filed_in--> U.S. District Court for the Southern District of New York
+- State Coalition v. Omnidata Retail --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Robert Kline --assigned_to--> State Coalition v. Omnidata Retail

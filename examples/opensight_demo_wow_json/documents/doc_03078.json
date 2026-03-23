@@ -1,0 +1,65 @@
+{
+  "id": "doc_03078",
+  "title": "United States v. Rivergate Holdings \u2014 Sentencing Hearing",
+  "date": "2010-05-07",
+  "source": "Hearing Note",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Rivergate Holdings",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "sentencing",
+  "summary": "Judge Tessa Monroe conducted sentencing proceedings following findings related to financial reporting fraud.",
+  "entities": [
+    "Court of Appeals",
+    "Executive B",
+    "Investor Group",
+    "Judge Tessa Monroe",
+    "Securities and Exchange Commission",
+    "Sentencing Memorandum",
+    "Supreme Court",
+    "U.S. District Court for the Northern District of California",
+    "United States",
+    "United States v. Rivergate Holdings",
+    "financial reporting fraud"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "sentenced",
+      "target": "Executive B"
+    },
+    {
+      "source": "Securities and Exchange Commission",
+      "type": "prosecuted",
+      "target": "United States v. Rivergate Holdings"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "United States v. Rivergate Holdings",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "assigned_to",
+      "target": "United States v. Rivergate Holdings"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "sentencing",
+    "financial_reporting_fraud",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 4,
+    "timeline_bucket": 2010
+  }
+}

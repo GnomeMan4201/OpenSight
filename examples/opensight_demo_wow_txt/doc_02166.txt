@@ -1,0 +1,31 @@
+Northstar Logic v. Quantum Handsets — High Court Review
+
+Case Name: Northstar Logic v. Quantum Handsets
+Date: 2015-05-07
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: supreme_court_review
+
+Summary:
+Certiorari was granted on issues concerning camera image processing patents in Northstar Logic v. Quantum Handsets.
+
+Entities:
+- Apex Mobile
+- Court of Appeals
+- Judge Martin Cole
+- Northstar Logic v. Quantum Handsets
+- Petition for Review
+- Precedent
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- Vertex Labs
+- camera image processing patents
+
+Relationships:
+- Supreme Court --reviewing--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --raises_issue--> camera image processing patents
+- Northstar Logic v. Quantum Handsets --filed_in--> U.S. District Court for the Northern District of California
+- Northstar Logic v. Quantum Handsets --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> Northstar Logic v. Quantum Handsets
+- U.S. Patent and Trademark Office --involved_in--> Northstar Logic v. Quantum Handsets

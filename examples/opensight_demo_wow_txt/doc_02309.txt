@@ -1,0 +1,31 @@
+Federal Trade Commission v. Titan Search — Summary Judgment Motion
+
+Case Name: Federal Trade Commission v. Titan Search
+Date: 2010-09-23
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: summary_judgment
+
+Summary:
+A summary judgment motion was filed seeking judgment on issues involving ad exchange bidding practices.
+
+Entities:
+- Court of Appeals
+- Economic Expert
+- Federal Trade Commission
+- Federal Trade Commission v. Titan Search
+- Judge Naomi Ellis
+- Market Analysis
+- Omnidata Retail
+- Summary Judgment
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- ad exchange bidding practices
+
+Relationships:
+- Omnidata Retail --moved_for_summary_judgment_in--> Federal Trade Commission v. Titan Search
+- Judge Naomi Ellis --considering--> Summary Judgment
+- Federal Trade Commission v. Titan Search --filed_in--> U.S. District Court for the Southern District of New York
+- Federal Trade Commission v. Titan Search --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> Federal Trade Commission v. Titan Search

@@ -1,0 +1,81 @@
+{
+  "id": "doc_03523",
+  "title": "Apex Mobile v. Orion Devices \u2014 Hearing Held",
+  "date": "2020-01-11",
+  "source": "Hearing Note",
+  "cluster": "Patent Litigation",
+  "case_name": "Apex Mobile v. Orion Devices",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "The court held a hearing in Apex Mobile v. Orion Devices to address disputed issues concerning user interface gestures.",
+  "entities": [
+    "Apex Mobile v. Orion Devices",
+    "BluePeak Tech",
+    "Court Hearing",
+    "Court of Appeals",
+    "Judge Elena Ward",
+    "Oral Argument",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "Vertex Labs",
+    "user interface gestures"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Elena Ward",
+      "type": "held_hearing_for",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Vertex Labs",
+      "type": "appeared_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "BluePeak Tech",
+      "type": "appeared_in",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "Apex Mobile v. Orion Devices",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Elena Ward",
+      "type": "assigned_to",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Apex Mobile v. Orion Devices"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "Apex Mobile v. Orion Devices"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "hearing",
+    "user_interface_gestures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 1,
+    "timeline_bucket": 2020
+  }
+}

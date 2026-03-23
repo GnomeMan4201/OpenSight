@@ -1,0 +1,33 @@
+Northstar Logic v. Quantum Handsets — High Court Review
+
+Case Name: Northstar Logic v. Quantum Handsets
+Date: 2013-01-25
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: supreme_court_review
+
+Summary:
+Certiorari was granted on issues concerning user interface gestures in Northstar Logic v. Quantum Handsets.
+
+Entities:
+- Court of Appeals
+- Judge Elena Ward
+- Northstar Logic v. Quantum Handsets
+- Orion Devices
+- Petition for Review
+- Precedent
+- Quantum Handsets
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- user interface gestures
+
+Relationships:
+- Supreme Court --reviewing--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --raises_issue--> user interface gestures
+- Northstar Logic v. Quantum Handsets --filed_in--> U.S. District Court for the Northern District of California
+- Northstar Logic v. Quantum Handsets --belongs_to_cluster--> Patent Litigation
+- Judge Elena Ward --assigned_to--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --references_topic--> user interface gestures
+- Court of Appeals --reviewing--> Northstar Logic v. Quantum Handsets
+- U.S. Patent and Trademark Office --involved_in--> Northstar Logic v. Quantum Handsets

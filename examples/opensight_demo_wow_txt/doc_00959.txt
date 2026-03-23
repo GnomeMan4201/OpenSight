@@ -1,0 +1,34 @@
+Signal Grid v. Vector Stack — High Court Review
+
+Case Name: Signal Grid v. Vector Stack
+Date: 2014-02-09
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: supreme_court_review
+
+Summary:
+The high court agreed to review questions involving fair use in developer tools.
+
+Entities:
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Horizon Systems
+- Investor Group
+- Judge Samuel Hart
+- Open Runtime Labs
+- Petition for Review
+- Regulatory Notice
+- Signal Grid v. Vector Stack
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- fair use in developer tools
+
+Relationships:
+- Supreme Court --reviewing--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --raises_issue--> fair use in developer tools
+- Signal Grid v. Vector Stack --filed_in--> U.S. District Court for the Northern District of California
+- Signal Grid v. Vector Stack --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --references_topic--> fair use in developer tools

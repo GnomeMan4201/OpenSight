@@ -1,0 +1,70 @@
+{
+  "id": "doc_03720",
+  "title": "United States v. Meridian BioLabs \u2014 Regulatory Notice",
+  "date": "2021-07-18",
+  "source": "Case Activity Update",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Meridian BioLabs",
+  "court": "U.S. District Court for the Southern District of New York",
+  "court_type": "district",
+  "event_type": "regulatory_notice",
+  "summary": "U.S. Department of Justice issued a notice connected to allegations involving financial reporting fraud.",
+  "entities": [
+    "Court of Appeals",
+    "Investor Group",
+    "Judge Tessa Monroe",
+    "Regulatory Notice",
+    "Rivergate Holdings",
+    "Supreme Court",
+    "U.S. Department of Justice",
+    "U.S. District Court for the Southern District of New York",
+    "United States",
+    "United States v. Meridian BioLabs",
+    "financial reporting fraud"
+  ],
+  "relationships": [
+    {
+      "source": "U.S. Department of Justice",
+      "type": "issued_notice_involving",
+      "target": "Rivergate Holdings"
+    },
+    {
+      "source": "U.S. Department of Justice",
+      "type": "referenced",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Southern District of New York"
+    },
+    {
+      "source": "United States v. Meridian BioLabs",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Tessa Monroe",
+      "type": "assigned_to",
+      "target": "United States v. Meridian BioLabs"
+    },
+    {
+      "source": "U.S. Department of Justice",
+      "type": "involved_in",
+      "target": "United States v. Meridian BioLabs"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "regulatory_notice",
+    "financial_reporting_fraud",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 1,
+    "timeline_bucket": 2021
+  }
+}

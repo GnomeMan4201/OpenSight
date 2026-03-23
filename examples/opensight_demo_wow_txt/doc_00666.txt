@@ -1,0 +1,34 @@
+BluePeak Tech v. Helix Circuits — Motion to Dismiss
+
+Case Name: BluePeak Tech v. Helix Circuits
+Date: 2016-07-06
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: motion_to_dismiss
+
+Summary:
+Orion Devices filed a motion to dismiss, arguing the complaint failed to establish smartphone interface patents.
+
+Entities:
+- Apex Mobile
+- BluePeak Tech v. Helix Circuits
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Lucy Harrow
+- Orion Devices
+- Precedent
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- smartphone interface patents
+
+Relationships:
+- Orion Devices --filed_motion--> BluePeak Tech v. Helix Circuits
+- Judge Lucy Harrow --reviewing_motion_in--> BluePeak Tech v. Helix Circuits
+- BluePeak Tech v. Helix Circuits --filed_in--> U.S. District Court for the Northern District of California
+- BluePeak Tech v. Helix Circuits --belongs_to_cluster--> Patent Litigation
+- Judge Lucy Harrow --assigned_to--> BluePeak Tech v. Helix Circuits
+- Court of Appeals --reviewing--> BluePeak Tech v. Helix Circuits
+- U.S. Patent and Trademark Office --involved_in--> BluePeak Tech v. Helix Circuits

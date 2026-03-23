@@ -1,0 +1,68 @@
+{
+  "id": "doc_02235",
+  "title": "State Coalition v. Omnidata Retail \u2014 Appeal Filed",
+  "date": "2013-09-29",
+  "source": "Hearing Note",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "State Coalition v. Omnidata Retail",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "appeal_filed",
+  "summary": "United States appealed the court's decision on issues related to self-preferencing.",
+  "entities": [
+    "BrightCart Platform",
+    "Court of Appeals",
+    "Department of Justice Antitrust Division",
+    "Economic Expert",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Patrick Sloan",
+    "Market Analysis",
+    "Notice of Appeal",
+    "Regulatory Notice",
+    "State Coalition v. Omnidata Retail",
+    "U.S. District Court for the District of Columbia",
+    "United States",
+    "self-preferencing"
+  ],
+  "relationships": [
+    {
+      "source": "United States",
+      "type": "appealed",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "State Coalition v. Omnidata Retail"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "State Coalition v. Omnidata Retail",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Patrick Sloan",
+      "type": "assigned_to",
+      "target": "State Coalition v. Omnidata Retail"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "appeal_filed",
+    "self_preferencing",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "disputed",
+    "importance": 4,
+    "timeline_bucket": 2013
+  }
+}

@@ -1,0 +1,36 @@
+United States v. Rivergate Holdings — Discovery Order
+
+Case Name: United States v. Rivergate Holdings
+Date: 2020-09-25
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: discovery_order
+
+Summary:
+The court ordered limited discovery focused on communications and materials tied to financial reporting fraud.
+
+Entities:
+- Court of Appeals
+- Document Production
+- Expert Witness
+- Federal Trade Commission
+- Financial Records
+- Internal Emails
+- Investor Group
+- Judge Edward Navarro
+- Pine Harbor Capital
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Rivergate Holdings
+- financial reporting fraud
+
+Relationships:
+- Judge Edward Navarro --issued_order_in--> United States v. Rivergate Holdings
+- U.S. District Court for the Southern District of New York --ordered_discovery_in--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Edward Navarro --assigned_to--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --references_topic--> financial reporting fraud
+- Federal Trade Commission --involved_in--> United States v. Rivergate Holdings

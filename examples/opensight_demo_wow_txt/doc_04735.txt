@@ -1,0 +1,34 @@
+United States v. Sterling Diagnostics — Appeal Filed
+
+Case Name: United States v. Sterling Diagnostics
+Date: 2014-09-30
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: appeal_filed
+
+Summary:
+A notice of appeal was filed challenging rulings concerning clinical test misrepresentation.
+
+Entities:
+- Court of Appeals
+- Federal Trade Commission
+- Investor Group
+- Judge Daniel Pike
+- Notice of Appeal
+- Sterling Diagnostics
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Sterling Diagnostics
+- clinical test misrepresentation
+
+Relationships:
+- Sterling Diagnostics --appealed--> United States v. Sterling Diagnostics
+- Court of Appeals --reviewing--> United States v. Sterling Diagnostics
+- United States v. Sterling Diagnostics --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Sterling Diagnostics --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Daniel Pike --assigned_to--> United States v. Sterling Diagnostics
+- United States v. Sterling Diagnostics --references_topic--> clinical test misrepresentation
+- Supreme Court --reviewing--> United States v. Sterling Diagnostics
+- Court of Appeals --reviewing--> United States v. Sterling Diagnostics
+- Federal Trade Commission --involved_in--> United States v. Sterling Diagnostics

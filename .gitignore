@@ -25,3 +25,13 @@ Thumbs.db
 
 # local env
 .env
+
+opensight.db-shm
+opensight.db-wal
+
+# Explicit exclusions for files that keep slipping through
+opensight.db
+opensight.db.backup.20260316_141634
+opensight.db.backup.20260316_151859
+uploads/
+uploads/default/

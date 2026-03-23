@@ -1,0 +1,36 @@
+Atlas Software v. Nova Cloud — Hearing Held
+
+Case Name: Atlas Software v. Nova Cloud
+Date: 2013-11-25
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: hearing
+
+Summary:
+Judge Samuel Hart conducted a hearing involving arguments by Open Runtime Labs and SyntaxWorks on API reuse.
+
+Entities:
+- API reuse
+- Atlas Software v. Nova Cloud
+- Court Hearing
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Investor Group
+- Judge Samuel Hart
+- Open Runtime Labs
+- Oral Argument
+- Regulatory Notice
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+
+Relationships:
+- Judge Samuel Hart --held_hearing_for--> Atlas Software v. Nova Cloud
+- Open Runtime Labs --appeared_in--> Atlas Software v. Nova Cloud
+- SyntaxWorks --appeared_in--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --filed_in--> U.S. District Court for the Northern District of California
+- Atlas Software v. Nova Cloud --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --references_topic--> API reuse

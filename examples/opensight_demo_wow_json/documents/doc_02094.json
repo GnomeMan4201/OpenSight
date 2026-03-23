@@ -1,0 +1,79 @@
+{
+  "id": "doc_02094",
+  "title": "United States v. Metro Ad Exchange \u2014 Hearing Held",
+  "date": "2010-08-05",
+  "source": "Court Filing Summary",
+  "cluster": "Antitrust and Market Conduct",
+  "case_name": "United States v. Metro Ad Exchange",
+  "court": "U.S. District Court for the District of Columbia",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Robert Kline conducted a hearing involving arguments by State Coalition and Metro Ad Exchange on ad exchange bidding practices.",
+  "entities": [
+    "Court Hearing",
+    "Court of Appeals",
+    "Economic Expert",
+    "Expert Witness",
+    "Federal Trade Commission",
+    "Investor Group",
+    "Judge Robert Kline",
+    "Market Analysis",
+    "Metro Ad Exchange",
+    "Oral Argument",
+    "Regulatory Notice",
+    "State Coalition",
+    "U.S. District Court for the District of Columbia",
+    "United States v. Metro Ad Exchange",
+    "ad exchange bidding practices"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Robert Kline",
+      "type": "held_hearing_for",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "State Coalition",
+      "type": "appeared_in",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "Metro Ad Exchange",
+      "type": "appeared_in",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Columbia"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "belongs_to_cluster",
+      "target": "Antitrust and Market Conduct"
+    },
+    {
+      "source": "Judge Robert Kline",
+      "type": "assigned_to",
+      "target": "United States v. Metro Ad Exchange"
+    },
+    {
+      "source": "United States v. Metro Ad Exchange",
+      "type": "references_topic",
+      "target": "ad exchange bidding practices"
+    }
+  ],
+  "tags": [
+    "antitrust_and_market_conduct",
+    "hearing",
+    "ad_exchange_bidding_practices",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 3,
+    "timeline_bucket": 2010
+  }
+}

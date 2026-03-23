@@ -1,0 +1,34 @@
+United States v. Rivergate Holdings — Hearing Held
+
+Case Name: United States v. Rivergate Holdings
+Date: 2024-12-29
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: hearing
+
+Summary:
+The court held a hearing in United States v. Rivergate Holdings to address disputed issues concerning wire fraud allegations.
+
+Entities:
+- Court Hearing
+- Court of Appeals
+- Federal Trade Commission
+- Investor Group
+- Judge Tessa Monroe
+- Meridian BioLabs
+- Oral Argument
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Rivergate Holdings
+- wire fraud allegations
+
+Relationships:
+- Judge Tessa Monroe --held_hearing_for--> United States v. Rivergate Holdings
+- United States --appeared_in--> United States v. Rivergate Holdings
+- Meridian BioLabs --appeared_in--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Rivergate Holdings --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Tessa Monroe --assigned_to--> United States v. Rivergate Holdings
+- United States v. Rivergate Holdings --references_topic--> wire fraud allegations
+- Supreme Court --reviewing--> United States v. Rivergate Holdings

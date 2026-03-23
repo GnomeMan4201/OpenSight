@@ -1,0 +1,74 @@
+{
+  "id": "doc_03495",
+  "title": "Signal Grid v. Vector Stack \u2014 Motion to Dismiss",
+  "date": "2023-06-19",
+  "source": "Court Filing Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "Signal Grid v. Vector Stack",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "motion_to_dismiss",
+  "summary": "Signal Grid filed a motion to dismiss, arguing the complaint failed to establish copyrightability of interfaces.",
+  "entities": [
+    "Atlas Software",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Judge William Avery",
+    "Signal Grid",
+    "Signal Grid v. Vector Stack",
+    "Supreme Court",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Northern District of California",
+    "copyrightability of interfaces"
+  ],
+  "relationships": [
+    {
+      "source": "Signal Grid",
+      "type": "filed_motion",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Judge William Avery",
+      "type": "reviewing_motion_in",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Signal Grid v. Vector Stack",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge William Avery",
+      "type": "assigned_to",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "Signal Grid v. Vector Stack"
+    },
+    {
+      "source": "U.S. Copyright Office",
+      "type": "involved_in",
+      "target": "Signal Grid v. Vector Stack"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "motion_to_dismiss",
+    "copyrightability_of_interfaces",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 2,
+    "timeline_bucket": 2023
+  }
+}

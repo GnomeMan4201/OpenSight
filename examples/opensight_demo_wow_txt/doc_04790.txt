@@ -1,0 +1,31 @@
+Federal Trade Commission v. Titan Search — Complaint Filed
+
+Case Name: Federal Trade Commission v. Titan Search
+Date: 2013-08-06
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: complaint_filed
+
+Summary:
+A civil complaint was entered in U.S. District Court for the District of Columbia naming State Coalition as defendant and alleging ad exchange bidding practices.
+
+Entities:
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Federal Trade Commission v. Titan Search
+- Judge Patrick Sloan
+- Market Analysis
+- Metro Ad Exchange
+- State Coalition
+- U.S. District Court for the District of Columbia
+- ad exchange bidding practices
+
+Relationships:
+- Metro Ad Exchange --filed_complaint_against--> State Coalition
+- U.S. District Court for the District of Columbia --docketed--> Federal Trade Commission v. Titan Search
+- Federal Trade Commission v. Titan Search --filed_in--> U.S. District Court for the District of Columbia
+- Federal Trade Commission v. Titan Search --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Patrick Sloan --assigned_to--> Federal Trade Commission v. Titan Search
+- Court of Appeals --reviewing--> Federal Trade Commission v. Titan Search
+- Department of Justice Antitrust Division --involved_in--> Federal Trade Commission v. Titan Search

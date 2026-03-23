@@ -1,0 +1,34 @@
+United States v. Pine Harbor Capital — Appellate Opinion
+
+Case Name: United States v. Pine Harbor Capital
+Date: 2014-08-01
+Court: U.S. District Court for the Northern District of California
+Cluster: Corporate Fraud Trial
+Event Type: appellate_opinion
+
+Summary:
+The reviewing court issued an opinion clarifying standards related to financial reporting fraud.
+
+Entities:
+- Appellate Panel
+- Court of Appeals
+- Executive B
+- Investor Group
+- Judge Edward Navarro
+- Precedent
+- Supreme Court
+- U.S. Department of Justice
+- U.S. District Court for the Northern District of California
+- United States
+- United States v. Pine Harbor Capital
+- financial reporting fraud
+
+Relationships:
+- Court of Appeals --issued_opinion_in--> United States v. Pine Harbor Capital
+- United States v. Pine Harbor Capital --cites--> Precedent
+- United States v. Pine Harbor Capital --filed_in--> U.S. District Court for the Northern District of California
+- United States v. Pine Harbor Capital --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Edward Navarro --assigned_to--> United States v. Pine Harbor Capital
+- United States v. Pine Harbor Capital --references_topic--> financial reporting fraud
+- Court of Appeals --reviewing--> United States v. Pine Harbor Capital
+- U.S. Department of Justice --involved_in--> United States v. Pine Harbor Capital

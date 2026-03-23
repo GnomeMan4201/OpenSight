@@ -1,0 +1,75 @@
+{
+  "id": "doc_00591",
+  "title": "SyntaxWorks v. Horizon Systems \u2014 Summary Judgment Motion",
+  "date": "2021-03-20",
+  "source": "Opinion Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "SyntaxWorks v. Horizon Systems",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "summary_judgment",
+  "summary": "A summary judgment motion was filed seeking judgment on issues involving fair use in developer tools.",
+  "entities": [
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Horizon Systems",
+    "Judge Lena Brooks",
+    "Open Runtime Labs",
+    "Summary Judgment",
+    "Supreme Court",
+    "SyntaxWorks v. Horizon Systems",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Northern District of California",
+    "fair use in developer tools"
+  ],
+  "relationships": [
+    {
+      "source": "Open Runtime Labs",
+      "type": "moved_for_summary_judgment_in",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "Judge Lena Brooks",
+      "type": "considering",
+      "target": "Summary Judgment"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge Lena Brooks",
+      "type": "assigned_to",
+      "target": "SyntaxWorks v. Horizon Systems"
+    },
+    {
+      "source": "SyntaxWorks v. Horizon Systems",
+      "type": "references_topic",
+      "target": "fair use in developer tools"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "SyntaxWorks v. Horizon Systems"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "summary_judgment",
+    "fair_use_in_developer_tools",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 1,
+    "timeline_bucket": 2021
+  }
+}

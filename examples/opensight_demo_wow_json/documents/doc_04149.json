@@ -1,0 +1,64 @@
+{
+  "id": "doc_04149",
+  "title": "Atlas Software v. Nova Cloud \u2014 Motion to Dismiss",
+  "date": "2021-06-10",
+  "source": "Opinion Summary",
+  "cluster": "Copyright and Platform Dispute",
+  "case_name": "Atlas Software v. Nova Cloud",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "motion_to_dismiss",
+  "summary": "Defense counsel for SyntaxWorks moved to dismiss portions of the complaint involving copyrightability of interfaces.",
+  "entities": [
+    "Atlas Software v. Nova Cloud",
+    "CodeForge",
+    "Court of Appeals",
+    "Developer Ecosystem",
+    "Judge William Avery",
+    "Supreme Court",
+    "SyntaxWorks",
+    "U.S. Copyright Office",
+    "U.S. District Court for the Northern District of California",
+    "copyrightability of interfaces"
+  ],
+  "relationships": [
+    {
+      "source": "SyntaxWorks",
+      "type": "filed_motion",
+      "target": "Atlas Software v. Nova Cloud"
+    },
+    {
+      "source": "Judge William Avery",
+      "type": "reviewing_motion_in",
+      "target": "Atlas Software v. Nova Cloud"
+    },
+    {
+      "source": "Atlas Software v. Nova Cloud",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "Atlas Software v. Nova Cloud",
+      "type": "belongs_to_cluster",
+      "target": "Copyright and Platform Dispute"
+    },
+    {
+      "source": "Judge William Avery",
+      "type": "assigned_to",
+      "target": "Atlas Software v. Nova Cloud"
+    }
+  ],
+  "tags": [
+    "copyright_and_platform_dispute",
+    "motion_to_dismiss",
+    "copyrightability_of_interfaces",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "neutral",
+    "importance": 2,
+    "timeline_bucket": 2021
+  }
+}

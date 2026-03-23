@@ -1,0 +1,30 @@
+CodeForge v. Open Runtime Labs — Appeal Filed
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2014-07-15
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: appeal_filed
+
+Summary:
+Nova Cloud appealed the court's decision on issues related to source code licensing.
+
+Entities:
+- CodeForge v. Open Runtime Labs
+- Court of Appeals
+- Developer Ecosystem
+- Judge Samuel Hart
+- Notice of Appeal
+- Nova Cloud
+- Open Runtime Labs
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- source code licensing
+
+Relationships:
+- Nova Cloud --appealed--> CodeForge v. Open Runtime Labs
+- Court of Appeals --reviewing--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Northern District of California
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> CodeForge v. Open Runtime Labs

@@ -1,0 +1,3 @@
+OpenSight observed discussion around example.com and admin@example.com on 2026-03-14.
+The IP 192.168.1.50 appeared in notes associated with Pascal.
+A related reference to opensight.local appeared on 2026-03-15.

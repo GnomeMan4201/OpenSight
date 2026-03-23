@@ -1,0 +1,29 @@
+United States v. Metro Ad Exchange — Complaint Filed
+
+Case Name: United States v. Metro Ad Exchange
+Date: 2012-05-17
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: complaint_filed
+
+Summary:
+A civil complaint was entered in U.S. District Court for the District of Columbia naming Metro Ad Exchange as defendant and alleging platform monopoly allegations.
+
+Entities:
+- Court of Appeals
+- Economic Expert
+- Federal Trade Commission
+- Judge Robert Kline
+- Market Analysis
+- Metro Ad Exchange
+- State Coalition
+- U.S. District Court for the District of Columbia
+- United States v. Metro Ad Exchange
+- platform monopoly allegations
+
+Relationships:
+- State Coalition --filed_complaint_against--> Metro Ad Exchange
+- U.S. District Court for the District of Columbia --docketed--> United States v. Metro Ad Exchange
+- United States v. Metro Ad Exchange --filed_in--> U.S. District Court for the District of Columbia
+- United States v. Metro Ad Exchange --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Robert Kline --assigned_to--> United States v. Metro Ad Exchange

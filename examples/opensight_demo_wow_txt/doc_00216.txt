@@ -1,0 +1,34 @@
+Signal Grid v. Vector Stack — Hearing Held
+
+Case Name: Signal Grid v. Vector Stack
+Date: 2016-07-31
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: hearing
+
+Summary:
+Judge Samuel Hart conducted a hearing involving arguments by Nova Cloud and CodeForge on fair use in developer tools.
+
+Entities:
+- CodeForge
+- Court Hearing
+- Court of Appeals
+- Developer Ecosystem
+- Judge Samuel Hart
+- Nova Cloud
+- Oral Argument
+- Signal Grid v. Vector Stack
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- fair use in developer tools
+
+Relationships:
+- Judge Samuel Hart --held_hearing_for--> Signal Grid v. Vector Stack
+- Nova Cloud --appeared_in--> Signal Grid v. Vector Stack
+- CodeForge --appeared_in--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --filed_in--> U.S. District Court for the Western District of Washington
+- Signal Grid v. Vector Stack --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> Signal Grid v. Vector Stack
+- Signal Grid v. Vector Stack --references_topic--> fair use in developer tools
+- U.S. Copyright Office --involved_in--> Signal Grid v. Vector Stack

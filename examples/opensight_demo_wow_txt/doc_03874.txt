@@ -1,0 +1,32 @@
+United States v. Sterling Diagnostics — Jury Verdict
+
+Case Name: United States v. Sterling Diagnostics
+Date: 2019-04-08
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: jury_verdict
+
+Summary:
+A jury returned a verdict after reviewing evidence related to financial reporting fraud.
+
+Entities:
+- Court of Appeals
+- Executive A
+- Federal Trade Commission
+- Investor Group
+- Judge Tessa Monroe
+- Jury
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Sterling Diagnostics
+- Verdict Form
+- financial reporting fraud
+
+Relationships:
+- Jury --returned_verdict_in--> United States v. Sterling Diagnostics
+- Judge Tessa Monroe --entered_verdict_in--> United States v. Sterling Diagnostics
+- United States v. Sterling Diagnostics --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Sterling Diagnostics --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Tessa Monroe --assigned_to--> United States v. Sterling Diagnostics
+- Court of Appeals --reviewing--> United States v. Sterling Diagnostics

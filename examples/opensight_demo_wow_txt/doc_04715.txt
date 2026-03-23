@@ -1,0 +1,34 @@
+BluePeak Tech v. Helix Circuits — Complaint Filed
+
+Case Name: BluePeak Tech v. Helix Circuits
+Date: 2013-06-11
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: complaint_filed
+
+Summary:
+A civil complaint was entered in U.S. District Court for the Northern District of California naming BluePeak Tech as defendant and alleging wireless chipset design.
+
+Entities:
+- BluePeak Tech
+- BluePeak Tech v. Helix Circuits
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Lucy Harrow
+- Northstar Logic
+- Precedent
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- wireless chipset design
+
+Relationships:
+- Northstar Logic --filed_complaint_against--> BluePeak Tech
+- U.S. District Court for the Northern District of California --docketed--> BluePeak Tech v. Helix Circuits
+- BluePeak Tech v. Helix Circuits --filed_in--> U.S. District Court for the Northern District of California
+- BluePeak Tech v. Helix Circuits --belongs_to_cluster--> Patent Litigation
+- Judge Lucy Harrow --assigned_to--> BluePeak Tech v. Helix Circuits
+- Court of Appeals --reviewing--> BluePeak Tech v. Helix Circuits
+- U.S. Patent and Trademark Office --involved_in--> BluePeak Tech v. Helix Circuits

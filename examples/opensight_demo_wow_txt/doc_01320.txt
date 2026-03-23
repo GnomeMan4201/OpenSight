@@ -1,0 +1,31 @@
+State Coalition v. Omnidata Retail — Complaint Filed
+
+Case Name: State Coalition v. Omnidata Retail
+Date: 2016-06-07
+Court: U.S. District Court for the District of Columbia
+Cluster: Antitrust and Market Conduct
+Event Type: complaint_filed
+
+Summary:
+Omnidata Retail filed a complaint against BrightCart Platform in U.S. District Court for the District of Columbia, alleging self-preferencing.
+
+Entities:
+- BrightCart Platform
+- Court of Appeals
+- Economic Expert
+- Federal Trade Commission
+- Judge Robert Kline
+- Market Analysis
+- Omnidata Retail
+- State Coalition v. Omnidata Retail
+- U.S. District Court for the District of Columbia
+- self-preferencing
+
+Relationships:
+- Omnidata Retail --filed_complaint_against--> BrightCart Platform
+- U.S. District Court for the District of Columbia --docketed--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --filed_in--> U.S. District Court for the District of Columbia
+- State Coalition v. Omnidata Retail --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Robert Kline --assigned_to--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --references_topic--> self-preferencing
+- Federal Trade Commission --involved_in--> State Coalition v. Omnidata Retail

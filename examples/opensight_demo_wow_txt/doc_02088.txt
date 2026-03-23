@@ -1,0 +1,35 @@
+Northstar Logic v. Quantum Handsets — Jury Verdict
+
+Case Name: Northstar Logic v. Quantum Handsets
+Date: 2019-01-13
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: jury_verdict
+
+Summary:
+The jury found on multiple claims after deliberation on allegations involving camera image processing patents.
+
+Entities:
+- BluePeak Tech
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Martin Cole
+- Jury
+- Northstar Logic
+- Northstar Logic v. Quantum Handsets
+- Precedent
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- Verdict Form
+- camera image processing patents
+
+Relationships:
+- Jury --returned_verdict_in--> Northstar Logic v. Quantum Handsets
+- Judge Martin Cole --entered_verdict_in--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --filed_in--> U.S. District Court for the District of Delaware
+- Northstar Logic v. Quantum Handsets --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --references_topic--> camera image processing patents

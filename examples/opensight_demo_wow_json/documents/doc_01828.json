@@ -1,0 +1,81 @@
+{
+  "id": "doc_01828",
+  "title": "United States v. Pine Harbor Capital \u2014 Expert Report Submitted",
+  "date": "2022-10-31",
+  "source": "Opinion Summary",
+  "cluster": "Corporate Fraud Trial",
+  "case_name": "United States v. Pine Harbor Capital",
+  "court": "U.S. District Court for the Northern District of California",
+  "court_type": "district",
+  "event_type": "expert_report",
+  "summary": "An expert report was submitted addressing technical issues related to wire fraud allegations.",
+  "entities": [
+    "Chief Financial Officer",
+    "Court of Appeals",
+    "Damages Model",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Daniel Pike",
+    "Supreme Court",
+    "U.S. Department of Justice",
+    "U.S. District Court for the Northern District of California",
+    "United States",
+    "United States v. Pine Harbor Capital",
+    "wire fraud allegations"
+  ],
+  "relationships": [
+    {
+      "source": "Expert Witness",
+      "type": "submitted_report_in",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "includes_issue",
+      "target": "wire fraud allegations"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "filed_in",
+      "target": "U.S. District Court for the Northern District of California"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "belongs_to_cluster",
+      "target": "Corporate Fraud Trial"
+    },
+    {
+      "source": "Judge Daniel Pike",
+      "type": "assigned_to",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "United States v. Pine Harbor Capital",
+      "type": "references_topic",
+      "target": "wire fraud allegations"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "United States v. Pine Harbor Capital"
+    },
+    {
+      "source": "Court of Appeals",
+      "type": "reviewing",
+      "target": "United States v. Pine Harbor Capital"
+    }
+  ],
+  "tags": [
+    "corporate_fraud_trial",
+    "expert_report",
+    "wire_fraud_allegations",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 1,
+    "timeline_bucket": 2022
+  }
+}

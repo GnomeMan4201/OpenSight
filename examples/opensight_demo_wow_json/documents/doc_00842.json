@@ -1,0 +1,66 @@
+{
+  "id": "doc_00842",
+  "title": "Northstar Logic v. Quantum Handsets \u2014 Jury Verdict",
+  "date": "2018-04-17",
+  "source": "Court Filing Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "Northstar Logic v. Quantum Handsets",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "jury_verdict",
+  "summary": "A jury returned a verdict after reviewing evidence related to smartphone interface patents.",
+  "entities": [
+    "BluePeak Tech",
+    "Court of Appeals",
+    "Judge Lucy Harrow",
+    "Jury",
+    "Northstar Logic",
+    "Northstar Logic v. Quantum Handsets",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "Verdict Form",
+    "smartphone interface patents"
+  ],
+  "relationships": [
+    {
+      "source": "Jury",
+      "type": "returned_verdict_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "entered_verdict_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "assigned_to",
+      "target": "Northstar Logic v. Quantum Handsets"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "jury_verdict",
+    "smartphone_interface_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "adverse",
+    "importance": 3,
+    "timeline_bucket": 2018
+  }
+}

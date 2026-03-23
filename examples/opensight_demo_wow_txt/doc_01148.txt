@@ -1,0 +1,31 @@
+Atlas Software v. Nova Cloud — High Court Review
+
+Case Name: Atlas Software v. Nova Cloud
+Date: 2012-07-06
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: supreme_court_review
+
+Summary:
+Certiorari was granted on issues concerning copyrightability of interfaces in Atlas Software v. Nova Cloud.
+
+Entities:
+- Atlas Software v. Nova Cloud
+- CodeForge
+- Court of Appeals
+- Developer Ecosystem
+- Judge Lena Brooks
+- Nova Cloud
+- Petition for Review
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- copyrightability of interfaces
+
+Relationships:
+- Supreme Court --reviewing--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --raises_issue--> copyrightability of interfaces
+- Atlas Software v. Nova Cloud --filed_in--> U.S. District Court for the Western District of Washington
+- Atlas Software v. Nova Cloud --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Lena Brooks --assigned_to--> Atlas Software v. Nova Cloud
+- Supreme Court --reviewing--> Atlas Software v. Nova Cloud

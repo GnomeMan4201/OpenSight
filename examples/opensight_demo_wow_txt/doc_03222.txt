@@ -1,0 +1,34 @@
+Federal Trade Commission v. BrightCart Platform — Regulatory Notice
+
+Case Name: Federal Trade Commission v. BrightCart Platform
+Date: 2012-03-07
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: regulatory_notice
+
+Summary:
+Federal Trade Commission issued a notice connected to allegations involving platform monopoly allegations.
+
+Entities:
+- Court of Appeals
+- Economic Expert
+- Federal Trade Commission
+- Federal Trade Commission v. BrightCart Platform
+- Judge Robert Kline
+- Market Analysis
+- Regulatory Notice
+- State Coalition
+- Supreme Court
+- Titan Search
+- U.S. District Court for the Southern District of New York
+- platform monopoly allegations
+
+Relationships:
+- Federal Trade Commission --issued_notice_involving--> Titan Search
+- Federal Trade Commission --referenced--> Federal Trade Commission v. BrightCart Platform
+- Federal Trade Commission v. BrightCart Platform --filed_in--> U.S. District Court for the Southern District of New York
+- Federal Trade Commission v. BrightCart Platform --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Robert Kline --assigned_to--> Federal Trade Commission v. BrightCart Platform
+- Federal Trade Commission v. BrightCart Platform --references_topic--> platform monopoly allegations
+- Court of Appeals --reviewing--> Federal Trade Commission v. BrightCart Platform
+- Federal Trade Commission --involved_in--> Federal Trade Commission v. BrightCart Platform

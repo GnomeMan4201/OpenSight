@@ -1,0 +1,32 @@
+Northstar Logic v. Quantum Handsets — Hearing Held
+
+Case Name: Northstar Logic v. Quantum Handsets
+Date: 2016-12-17
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: hearing
+
+Summary:
+Judge Lucy Harrow conducted a hearing involving arguments by Northstar Logic and BluePeak Tech on smartphone interface patents.
+
+Entities:
+- BluePeak Tech
+- Court Hearing
+- Court of Appeals
+- Judge Lucy Harrow
+- Northstar Logic
+- Northstar Logic v. Quantum Handsets
+- Oral Argument
+- Precedent
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- smartphone interface patents
+
+Relationships:
+- Judge Lucy Harrow --held_hearing_for--> Northstar Logic v. Quantum Handsets
+- Northstar Logic --appeared_in--> Northstar Logic v. Quantum Handsets
+- BluePeak Tech --appeared_in--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --filed_in--> U.S. District Court for the District of Delaware
+- Northstar Logic v. Quantum Handsets --belongs_to_cluster--> Patent Litigation
+- Judge Lucy Harrow --assigned_to--> Northstar Logic v. Quantum Handsets

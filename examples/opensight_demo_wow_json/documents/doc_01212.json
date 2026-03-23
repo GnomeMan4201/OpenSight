@@ -1,0 +1,81 @@
+{
+  "id": "doc_01212",
+  "title": "Nimbus Systems v. Vertex Labs \u2014 Hearing Held",
+  "date": "2014-04-08",
+  "source": "Court Filing Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "Nimbus Systems v. Vertex Labs",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "The court held a hearing in Nimbus Systems v. Vertex Labs to address disputed issues concerning user interface gestures.",
+  "entities": [
+    "Apex Mobile",
+    "Court Hearing",
+    "Court of Appeals",
+    "Judge Martin Cole",
+    "Nimbus Systems",
+    "Nimbus Systems v. Vertex Labs",
+    "Oral Argument",
+    "Precedent",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "user interface gestures"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Martin Cole",
+      "type": "held_hearing_for",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Apex Mobile",
+      "type": "appeared_in",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Nimbus Systems",
+      "type": "appeared_in",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Nimbus Systems v. Vertex Labs",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "Nimbus Systems v. Vertex Labs",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Martin Cole",
+      "type": "assigned_to",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "Supreme Court",
+      "type": "reviewing",
+      "target": "Nimbus Systems v. Vertex Labs"
+    },
+    {
+      "source": "U.S. Patent and Trademark Office",
+      "type": "involved_in",
+      "target": "Nimbus Systems v. Vertex Labs"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "hearing",
+    "user_interface_gestures",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "supportive",
+    "importance": 4,
+    "timeline_bucket": 2014
+  }
+}

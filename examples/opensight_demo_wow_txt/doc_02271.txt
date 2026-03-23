@@ -1,0 +1,30 @@
+BluePeak Tech v. Helix Circuits — Complaint Filed
+
+Case Name: BluePeak Tech v. Helix Circuits
+Date: 2012-06-29
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: complaint_filed
+
+Summary:
+A civil complaint was entered in U.S. District Court for the District of Delaware naming Orion Devices as defendant and alleging smartphone interface patents.
+
+Entities:
+- BluePeak Tech v. Helix Circuits
+- Court of Appeals
+- Judge Martin Cole
+- Northstar Logic
+- Orion Devices
+- Precedent
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- smartphone interface patents
+
+Relationships:
+- Northstar Logic --filed_complaint_against--> Orion Devices
+- U.S. District Court for the District of Delaware --docketed--> BluePeak Tech v. Helix Circuits
+- BluePeak Tech v. Helix Circuits --filed_in--> U.S. District Court for the District of Delaware
+- BluePeak Tech v. Helix Circuits --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> BluePeak Tech v. Helix Circuits
+- Supreme Court --reviewing--> BluePeak Tech v. Helix Circuits

@@ -1,0 +1,74 @@
+{
+  "id": "doc_03139",
+  "title": "Northstar Logic v. Quantum Handsets \u2014 Hearing Held",
+  "date": "2021-05-29",
+  "source": "Opinion Summary",
+  "cluster": "Patent Litigation",
+  "case_name": "Northstar Logic v. Quantum Handsets",
+  "court": "U.S. District Court for the District of Delaware",
+  "court_type": "district",
+  "event_type": "hearing",
+  "summary": "Judge Lucy Harrow conducted a hearing involving arguments by Northstar Logic and BluePeak Tech on camera image processing patents.",
+  "entities": [
+    "BluePeak Tech",
+    "Court Hearing",
+    "Court of Appeals",
+    "Expert Witness",
+    "Investor Group",
+    "Judge Lucy Harrow",
+    "Northstar Logic",
+    "Northstar Logic v. Quantum Handsets",
+    "Oral Argument",
+    "Precedent",
+    "Regulatory Notice",
+    "Supreme Court",
+    "U.S. District Court for the District of Delaware",
+    "U.S. Patent and Trademark Office",
+    "camera image processing patents"
+  ],
+  "relationships": [
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "held_hearing_for",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Northstar Logic",
+      "type": "appeared_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "BluePeak Tech",
+      "type": "appeared_in",
+      "target": "Northstar Logic v. Quantum Handsets"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "filed_in",
+      "target": "U.S. District Court for the District of Delaware"
+    },
+    {
+      "source": "Northstar Logic v. Quantum Handsets",
+      "type": "belongs_to_cluster",
+      "target": "Patent Litigation"
+    },
+    {
+      "source": "Judge Lucy Harrow",
+      "type": "assigned_to",
+      "target": "Northstar Logic v. Quantum Handsets"
+    }
+  ],
+  "tags": [
+    "patent_litigation",
+    "hearing",
+    "camera_image_processing_patents",
+    "synthetic",
+    "legal",
+    "opensight-demo"
+  ],
+  "analysis_hints": {
+    "sentiment": "procedural",
+    "importance": 5,
+    "timeline_bucket": 2021
+  }
+}

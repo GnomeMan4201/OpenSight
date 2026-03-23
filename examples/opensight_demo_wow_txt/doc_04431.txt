@@ -1,0 +1,34 @@
+United States v. Meridian BioLabs — Hearing Held
+
+Case Name: United States v. Meridian BioLabs
+Date: 2013-05-15
+Court: U.S. District Court for the Northern District of California
+Cluster: Corporate Fraud Trial
+Event Type: hearing
+
+Summary:
+The court held a hearing in United States v. Meridian BioLabs to address disputed issues concerning internal controls failures.
+
+Entities:
+- Court Hearing
+- Court of Appeals
+- Federal Trade Commission
+- Investor Group
+- Judge Daniel Pike
+- Oral Argument
+- Rivergate Holdings
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- United States
+- United States v. Meridian BioLabs
+- internal controls failures
+
+Relationships:
+- Judge Daniel Pike --held_hearing_for--> United States v. Meridian BioLabs
+- United States --appeared_in--> United States v. Meridian BioLabs
+- Rivergate Holdings --appeared_in--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --filed_in--> U.S. District Court for the Northern District of California
+- United States v. Meridian BioLabs --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Daniel Pike --assigned_to--> United States v. Meridian BioLabs
+- United States v. Meridian BioLabs --references_topic--> internal controls failures
+- Supreme Court --reviewing--> United States v. Meridian BioLabs

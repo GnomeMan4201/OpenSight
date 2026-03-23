@@ -1,0 +1,35 @@
+Atlas Software v. Nova Cloud — Hearing Held
+
+Case Name: Atlas Software v. Nova Cloud
+Date: 2014-05-28
+Court: U.S. District Court for the Western District of Washington
+Cluster: Copyright and Platform Dispute
+Event Type: hearing
+
+Summary:
+The court held a hearing in Atlas Software v. Nova Cloud to address disputed issues concerning fair use in developer tools.
+
+Entities:
+- Atlas Software v. Nova Cloud
+- CodeForge
+- Court Hearing
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Investor Group
+- Judge Samuel Hart
+- Open Runtime Labs
+- Oral Argument
+- Regulatory Notice
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Western District of Washington
+- fair use in developer tools
+
+Relationships:
+- Judge Samuel Hart --held_hearing_for--> Atlas Software v. Nova Cloud
+- CodeForge --appeared_in--> Atlas Software v. Nova Cloud
+- Open Runtime Labs --appeared_in--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --filed_in--> U.S. District Court for the Western District of Washington
+- Atlas Software v. Nova Cloud --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Samuel Hart --assigned_to--> Atlas Software v. Nova Cloud

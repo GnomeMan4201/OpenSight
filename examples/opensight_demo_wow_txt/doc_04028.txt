@@ -1,0 +1,34 @@
+United States v. Sterling Diagnostics — Discovery Order
+
+Case Name: United States v. Sterling Diagnostics
+Date: 2022-06-04
+Court: U.S. District Court for the Southern District of New York
+Cluster: Corporate Fraud Trial
+Event Type: discovery_order
+
+Summary:
+The court ordered limited discovery focused on communications and materials tied to investor disclosures.
+
+Entities:
+- Court of Appeals
+- Document Production
+- Federal Trade Commission
+- Financial Records
+- Internal Emails
+- Investor Group
+- Judge Daniel Pike
+- Sterling Diagnostics
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- United States
+- United States v. Sterling Diagnostics
+- investor disclosures
+
+Relationships:
+- Judge Daniel Pike --issued_order_in--> United States v. Sterling Diagnostics
+- U.S. District Court for the Southern District of New York --ordered_discovery_in--> United States v. Sterling Diagnostics
+- United States v. Sterling Diagnostics --filed_in--> U.S. District Court for the Southern District of New York
+- United States v. Sterling Diagnostics --belongs_to_cluster--> Corporate Fraud Trial
+- Judge Daniel Pike --assigned_to--> United States v. Sterling Diagnostics
+- Supreme Court --reviewing--> United States v. Sterling Diagnostics
+- Court of Appeals --reviewing--> United States v. Sterling Diagnostics

@@ -1,0 +1,34 @@
+Northstar Logic v. Quantum Handsets — Complaint Filed
+
+Case Name: Northstar Logic v. Quantum Handsets
+Date: 2017-06-13
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: complaint_filed
+
+Summary:
+Northstar Logic filed a complaint against Apex Mobile in U.S. District Court for the District of Delaware, alleging battery optimization patents.
+
+Entities:
+- Apex Mobile
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Elena Ward
+- Northstar Logic
+- Northstar Logic v. Quantum Handsets
+- Precedent
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- battery optimization patents
+
+Relationships:
+- Northstar Logic --filed_complaint_against--> Apex Mobile
+- U.S. District Court for the District of Delaware --docketed--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --filed_in--> U.S. District Court for the District of Delaware
+- Northstar Logic v. Quantum Handsets --belongs_to_cluster--> Patent Litigation
+- Judge Elena Ward --assigned_to--> Northstar Logic v. Quantum Handsets
+- Supreme Court --reviewing--> Northstar Logic v. Quantum Handsets
+- U.S. Patent and Trademark Office --involved_in--> Northstar Logic v. Quantum Handsets

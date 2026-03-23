@@ -1,0 +1,34 @@
+Apex Mobile v. Orion Devices — Motion to Dismiss
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2016-01-11
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: motion_to_dismiss
+
+Summary:
+Defense counsel for Quantum Handsets moved to dismiss portions of the complaint involving battery optimization patents.
+
+Entities:
+- Apex Mobile v. Orion Devices
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Martin Cole
+- Nimbus Systems
+- Precedent
+- Quantum Handsets
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- battery optimization patents
+
+Relationships:
+- Quantum Handsets --filed_motion--> Apex Mobile v. Orion Devices
+- Judge Martin Cole --reviewing_motion_in--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the Northern District of California
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> Apex Mobile v. Orion Devices
+- Supreme Court --reviewing--> Apex Mobile v. Orion Devices
+- Court of Appeals --reviewing--> Apex Mobile v. Orion Devices

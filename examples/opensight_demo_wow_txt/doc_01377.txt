@@ -1,0 +1,34 @@
+CodeForge v. Open Runtime Labs — Summary Judgment Motion
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2021-06-17
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: summary_judgment
+
+Summary:
+CodeForge moved for summary judgment on a record centered on software interoperability.
+
+Entities:
+- CodeForge
+- CodeForge v. Open Runtime Labs
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Investor Group
+- Judge William Avery
+- Regulatory Notice
+- Summary Judgment
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- software interoperability
+
+Relationships:
+- CodeForge --moved_for_summary_judgment_in--> CodeForge v. Open Runtime Labs
+- Judge William Avery --considering--> Summary Judgment
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Northern District of California
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge William Avery --assigned_to--> CodeForge v. Open Runtime Labs
+- Court of Appeals --reviewing--> CodeForge v. Open Runtime Labs

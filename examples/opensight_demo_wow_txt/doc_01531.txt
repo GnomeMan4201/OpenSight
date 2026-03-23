@@ -1,0 +1,34 @@
+Federal Trade Commission v. BrightCart Platform — Appeal Filed
+
+Case Name: Federal Trade Commission v. BrightCart Platform
+Date: 2016-02-02
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: appeal_filed
+
+Summary:
+A notice of appeal was filed challenging rulings concerning ad exchange bidding practices.
+
+Entities:
+- Court of Appeals
+- Department of Justice Antitrust Division
+- Economic Expert
+- Expert Witness
+- Federal Trade Commission v. BrightCart Platform
+- Investor Group
+- Judge Naomi Ellis
+- Market Analysis
+- Notice of Appeal
+- Omnidata Retail
+- Regulatory Notice
+- State Coalition
+- U.S. District Court for the Southern District of New York
+- ad exchange bidding practices
+
+Relationships:
+- State Coalition --appealed--> Federal Trade Commission v. BrightCart Platform
+- Court of Appeals --reviewing--> Federal Trade Commission v. BrightCart Platform
+- Federal Trade Commission v. BrightCart Platform --filed_in--> U.S. District Court for the Southern District of New York
+- Federal Trade Commission v. BrightCart Platform --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> Federal Trade Commission v. BrightCart Platform
+- Department of Justice Antitrust Division --involved_in--> Federal Trade Commission v. BrightCart Platform

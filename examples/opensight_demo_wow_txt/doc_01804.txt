@@ -1,0 +1,32 @@
+CodeForge v. Open Runtime Labs — Summary Judgment Motion
+
+Case Name: CodeForge v. Open Runtime Labs
+Date: 2017-07-07
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: summary_judgment
+
+Summary:
+A summary judgment motion was filed seeking judgment on issues involving fair use in developer tools.
+
+Entities:
+- CodeForge v. Open Runtime Labs
+- Court of Appeals
+- Developer Ecosystem
+- Judge Lena Brooks
+- Open Runtime Labs
+- Summary Judgment
+- Supreme Court
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- Vector Stack
+- fair use in developer tools
+
+Relationships:
+- Vector Stack --moved_for_summary_judgment_in--> CodeForge v. Open Runtime Labs
+- Judge Lena Brooks --considering--> Summary Judgment
+- CodeForge v. Open Runtime Labs --filed_in--> U.S. District Court for the Northern District of California
+- CodeForge v. Open Runtime Labs --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge Lena Brooks --assigned_to--> CodeForge v. Open Runtime Labs
+- CodeForge v. Open Runtime Labs --references_topic--> fair use in developer tools
+- Supreme Court --reviewing--> CodeForge v. Open Runtime Labs

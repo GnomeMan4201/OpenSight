@@ -1,0 +1,33 @@
+Atlas Software v. Nova Cloud — High Court Review
+
+Case Name: Atlas Software v. Nova Cloud
+Date: 2019-05-30
+Court: U.S. District Court for the Northern District of California
+Cluster: Copyright and Platform Dispute
+Event Type: supreme_court_review
+
+Summary:
+The high court agreed to review questions involving software interoperability.
+
+Entities:
+- Atlas Software v. Nova Cloud
+- CodeForge
+- Court of Appeals
+- Developer Ecosystem
+- Expert Witness
+- Investor Group
+- Judge William Avery
+- Petition for Review
+- Regulatory Notice
+- Supreme Court
+- SyntaxWorks
+- U.S. Copyright Office
+- U.S. District Court for the Northern District of California
+- software interoperability
+
+Relationships:
+- Supreme Court --reviewing--> Atlas Software v. Nova Cloud
+- Atlas Software v. Nova Cloud --raises_issue--> software interoperability
+- Atlas Software v. Nova Cloud --filed_in--> U.S. District Court for the Northern District of California
+- Atlas Software v. Nova Cloud --belongs_to_cluster--> Copyright and Platform Dispute
+- Judge William Avery --assigned_to--> Atlas Software v. Nova Cloud

@@ -1,0 +1,31 @@
+State Coalition v. Omnidata Retail — Regulatory Notice
+
+Case Name: State Coalition v. Omnidata Retail
+Date: 2016-02-21
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: regulatory_notice
+
+Summary:
+Federal Trade Commission issued a notice connected to allegations involving ad exchange bidding practices.
+
+Entities:
+- Court of Appeals
+- Economic Expert
+- Federal Trade Commission
+- Judge Robert Kline
+- Market Analysis
+- Metro Ad Exchange
+- Regulatory Notice
+- State Coalition v. Omnidata Retail
+- Supreme Court
+- U.S. District Court for the Southern District of New York
+- ad exchange bidding practices
+
+Relationships:
+- Federal Trade Commission --issued_notice_involving--> Metro Ad Exchange
+- Federal Trade Commission --referenced--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --filed_in--> U.S. District Court for the Southern District of New York
+- State Coalition v. Omnidata Retail --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Robert Kline --assigned_to--> State Coalition v. Omnidata Retail
+- State Coalition v. Omnidata Retail --references_topic--> ad exchange bidding practices

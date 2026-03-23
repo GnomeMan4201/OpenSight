@@ -1,0 +1,36 @@
+Northstar Logic v. Quantum Handsets — Complaint Filed
+
+Case Name: Northstar Logic v. Quantum Handsets
+Date: 2021-06-29
+Court: U.S. District Court for the District of Delaware
+Cluster: Patent Litigation
+Event Type: complaint_filed
+
+Summary:
+Northstar Logic filed a complaint against Apex Mobile in U.S. District Court for the District of Delaware, alleging wireless chipset design.
+
+Entities:
+- Apex Mobile
+- Court of Appeals
+- Expert Witness
+- Investor Group
+- Judge Lucy Harrow
+- Northstar Logic
+- Northstar Logic v. Quantum Handsets
+- Precedent
+- Regulatory Notice
+- Supreme Court
+- U.S. District Court for the District of Delaware
+- U.S. Patent and Trademark Office
+- wireless chipset design
+
+Relationships:
+- Northstar Logic --filed_complaint_against--> Apex Mobile
+- U.S. District Court for the District of Delaware --docketed--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --filed_in--> U.S. District Court for the District of Delaware
+- Northstar Logic v. Quantum Handsets --belongs_to_cluster--> Patent Litigation
+- Judge Lucy Harrow --assigned_to--> Northstar Logic v. Quantum Handsets
+- Northstar Logic v. Quantum Handsets --references_topic--> wireless chipset design
+- Supreme Court --reviewing--> Northstar Logic v. Quantum Handsets
+- Court of Appeals --reviewing--> Northstar Logic v. Quantum Handsets
+- U.S. Patent and Trademark Office --involved_in--> Northstar Logic v. Quantum Handsets

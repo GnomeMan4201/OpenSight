@@ -1,0 +1,33 @@
+Apex Mobile v. Orion Devices — Hearing Held
+
+Case Name: Apex Mobile v. Orion Devices
+Date: 2016-05-10
+Court: U.S. District Court for the Northern District of California
+Cluster: Patent Litigation
+Event Type: hearing
+
+Summary:
+Judge Martin Cole conducted a hearing involving arguments by Vertex Labs and Orion Devices on camera image processing patents.
+
+Entities:
+- Apex Mobile v. Orion Devices
+- Court Hearing
+- Court of Appeals
+- Judge Martin Cole
+- Oral Argument
+- Orion Devices
+- Precedent
+- Supreme Court
+- U.S. District Court for the Northern District of California
+- U.S. Patent and Trademark Office
+- Vertex Labs
+- camera image processing patents
+
+Relationships:
+- Judge Martin Cole --held_hearing_for--> Apex Mobile v. Orion Devices
+- Vertex Labs --appeared_in--> Apex Mobile v. Orion Devices
+- Orion Devices --appeared_in--> Apex Mobile v. Orion Devices
+- Apex Mobile v. Orion Devices --filed_in--> U.S. District Court for the Northern District of California
+- Apex Mobile v. Orion Devices --belongs_to_cluster--> Patent Litigation
+- Judge Martin Cole --assigned_to--> Apex Mobile v. Orion Devices
+- Court of Appeals --reviewing--> Apex Mobile v. Orion Devices

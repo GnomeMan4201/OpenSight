@@ -1,0 +1,30 @@
+State Coalition v. Omnidata Retail — Summary Judgment Motion
+
+Case Name: State Coalition v. Omnidata Retail
+Date: 2023-10-05
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: summary_judgment
+
+Summary:
+A summary judgment motion was filed seeking judgment on issues involving ad exchange bidding practices.
+
+Entities:
+- Court of Appeals
+- Economic Expert
+- Federal Trade Commission
+- Judge Naomi Ellis
+- Market Analysis
+- Omnidata Retail
+- State Coalition v. Omnidata Retail
+- Summary Judgment
+- U.S. District Court for the Southern District of New York
+- ad exchange bidding practices
+
+Relationships:
+- Omnidata Retail --moved_for_summary_judgment_in--> State Coalition v. Omnidata Retail
+- Judge Naomi Ellis --considering--> Summary Judgment
+- State Coalition v. Omnidata Retail --filed_in--> U.S. District Court for the Southern District of New York
+- State Coalition v. Omnidata Retail --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Naomi Ellis --assigned_to--> State Coalition v. Omnidata Retail
+- Federal Trade Commission --involved_in--> State Coalition v. Omnidata Retail

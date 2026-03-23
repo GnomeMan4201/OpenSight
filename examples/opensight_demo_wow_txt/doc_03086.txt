@@ -1,0 +1,34 @@
+Federal Trade Commission v. Titan Search — Appeal Filed
+
+Case Name: Federal Trade Commission v. Titan Search
+Date: 2021-02-14
+Court: U.S. District Court for the Southern District of New York
+Cluster: Antitrust and Market Conduct
+Event Type: appeal_filed
+
+Summary:
+Federal Trade Commission appealed the court's decision on issues related to exclusive dealing.
+
+Entities:
+- Court of Appeals
+- Economic Expert
+- Expert Witness
+- Federal Trade Commission
+- Federal Trade Commission v. Titan Search
+- Investor Group
+- Judge Robert Kline
+- Market Analysis
+- Metro Ad Exchange
+- Notice of Appeal
+- Regulatory Notice
+- U.S. District Court for the Southern District of New York
+- exclusive dealing
+
+Relationships:
+- Federal Trade Commission --appealed--> Federal Trade Commission v. Titan Search
+- Court of Appeals --reviewing--> Federal Trade Commission v. Titan Search
+- Federal Trade Commission v. Titan Search --filed_in--> U.S. District Court for the Southern District of New York
+- Federal Trade Commission v. Titan Search --belongs_to_cluster--> Antitrust and Market Conduct
+- Judge Robert Kline --assigned_to--> Federal Trade Commission v. Titan Search
+- Federal Trade Commission v. Titan Search --references_topic--> exclusive dealing
+- Court of Appeals --reviewing--> Federal Trade Commission v. Titan Search
