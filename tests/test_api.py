@@ -472,7 +472,7 @@ def test_extract_entities_empty_text():
 
 def test_redaction_flag_endpoint_accessible(client):
     doc_id = upload_txt(client, "Redaction test content")
-    r = client.get(f"/api/v1/documents/{doc_id}/redaction-flags")
+    r = client.get(f"/api/v1/documents/{doc_id}/redactions")
     assert r.status_code == 200
     assert isinstance(r.json(), list)
 
