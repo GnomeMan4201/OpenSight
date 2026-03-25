@@ -64,6 +64,4 @@ tests/             test suite
   <img src="assets/opensight_graph2.png" alt="OpenSight entity network" width="780"/>
 </p>
 
-<p align="center">
-  <img src="assets/opensight_entities.png" alt="OpenSight entity extraction" width="780"/>
-</p>
+
