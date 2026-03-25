@@ -1,5 +1,4 @@
 # OpenSight
-# OpenSight
 
 Document intelligence and OSINT platform for local corpus analysis.
 
