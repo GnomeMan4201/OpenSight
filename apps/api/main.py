@@ -81,7 +81,7 @@ def root():
 
 # ── Static UI — MUST BE LAST ───────────────────────────────────────────────────
 _ui_dir = Path("/home/bad_banana/Downloads/opensight")
-app.mount("/ui", StaticFiles(directory=str(_ui_dir), html=True), name="ui")
+app.mount("/ui", StaticFiles(directory=str(_ui_dir) if _ui_dir.exists() else str(Path(__file__).parent.parent.parent / "ui"), html=True), name="ui")
 
 app.include_router(narrative_intel_router)
 app.include_router(provenance_router, prefix="/api/v1")
