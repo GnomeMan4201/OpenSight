@@ -1,4 +1,6 @@
 # OpenSight
+[![CI](https://github.com/GnomeMan4201/OpenSight/actions/workflows/ci.yml/badge.svg)](https://github.com/GnomeMan4201/OpenSight/actions/workflows/ci.yml)
+
 
 Document intelligence and OSINT platform for local corpus analysis.
 
